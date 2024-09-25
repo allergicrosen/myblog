@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/categories/test/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 09 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/categories/test/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Chinese Test</title>
         <link>https://allergicrosen.github.io/myblog/p/test-chinese/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/p/test-chinese/</guid>
         <description>&lt;img src="https://allergicrosen.github.io/myblog/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Chinese Test" /&gt;&lt;h2 id=&#34;正文测试&#34;&gt;正文测试
@@ -99,7 +99,7 @@
         <item>
         <title>Placeholder Text</title>
         <link>https://allergicrosen.github.io/myblog/p/placeholder-text/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/p/placeholder-text/</guid>
         <description>&lt;img src="https://allergicrosen.github.io/myblog/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
@@ -130,7 +130,7 @@
         <item>
         <title>Emoji Support</title>
         <link>https://allergicrosen.github.io/myblog/p/emoji-support/</link>
-        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/p/emoji-support/</guid>
         <description>&lt;img src="https://allergicrosen.github.io/myblog/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
