@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 25 Sep 2024 17:53:13 +0800</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 Sep 2024 17:59:27 +0800</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test</title>
+        <link>https://allergicrosen.github.io/myblog/p/test/</link>
+        <pubDate>Wed, 25 Sep 2024 17:59:27 +0800</pubDate>
+        
+        <guid>https://allergicrosen.github.io/myblog/p/test/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test1</title>
         <link>https://allergicrosen.github.io/myblog/p/test1/</link>
         <pubDate>Wed, 25 Sep 2024 17:53:13 +0800</pubDate>
