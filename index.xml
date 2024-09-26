@@ -7,21 +7,162 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 25 Sep 2024 17:59:27 +0800</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://allergicrosen.github.io/myblog/p/test/</link>
-        <pubDate>Wed, 25 Sep 2024 17:59:27 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo增加utterances功能</title>
+        <link>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</link>
+        <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/test/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test1</title>
-        <link>https://allergicrosen.github.io/myblog/p/test1/</link>
-        <pubDate>Wed, 25 Sep 2024 17:53:13 +0800</pubDate>
-        
-        <guid>https://allergicrosen.github.io/myblog/p/test1/</guid>
-        <description></description>
+        <guid>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</guid>
+        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h2 id=&#34;分享下如何使用hugo在个人网站增加评论区的功能&#34;&gt;#分享下如何使用hugo在个人网站增加评论区的功能
+&lt;/h2&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;E:%5cgithub%20repository%5chugo-public%5ccontent%5cpost%5chugo%e5%a2%9e%e5%8a%a0utterances%e5%8a%9f%e8%83%bd%5c%e4%b8%bb%e7%9b%ae%e5%bd%95.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;主目录.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step2-打开hugoyaml配置文件移到comments&#34;&gt;Step2 :打开hugo.yaml配置文件，移到comments:
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    comments:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        enabled: true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        provider:   utterances
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        disqusjs:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            shortname:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            apiUrl:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            apiKey:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            admin:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            adminLabel:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        utterances:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            repo: allergicrosen/myblog
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            issueTerm: pathname
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            label:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        beaudar:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            repo:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            issueTerm: pathname
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            label:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            theme:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        remark42:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            host:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            site:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            locale:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        vssue:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            platform:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            owner:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            repo:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            clientId:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            clientSecret:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            autoCreateIssue: false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确保&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    enabled: true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    provider:   utteranc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其它的不用可以删掉，保留&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    utterances:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        repo: GitHub名字/静态网页仓库名字（一定注意仓库名字后面什么都不要加）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        issueTerm: pathname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;step2-为你所需要的仓库配置utterances&#34;&gt;Step2 :为你所需要的仓库配置utterances
+&lt;/h2&gt;&lt;p&gt;打开链接&lt;a class=&#34;link&#34; href=&#34;https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapps%2Futterances&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/apps/utterances&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/29759891-eef71481b6db7700.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1019/format/webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/29759891-75000fc05348b346.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/733/format/webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;完毕后检查是否安装：所需仓库-&amp;gt;Settings-&amp;gt;Integrations-&amp;gt;Github Apps里可以看到utterances。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/29759891-a6ec6f869aba9b2c.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/792/format/webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step3-重新生成publichugoexe在主目录&#34;&gt;Step3 :重新生成public(hugo.exe在主目录)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hugo.exe server-D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此时应该已经成功了。&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Chinese Test</title>
@@ -110,6 +251,65 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;相册语法来自 &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Typlog&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>博客网站</title>
+        <link>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</link>
+        <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</guid>
+        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h2 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;#本人咸鱼，有空就更，没空就在划水
+&lt;/h2&gt;&lt;p&gt;主要记录一些想法，日常，还有知识分享。&lt;/p&gt;
+&lt;h2 id=&#34;个人喜欢的一首歌&#34;&gt;个人喜欢的一首歌
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;三月走过 柳絮散落&lt;/p&gt;
+&lt;p&gt;恋人们匆匆&lt;/p&gt;
+&lt;p&gt;我的爱情 闻风不动&lt;/p&gt;
+&lt;p&gt;翻阅昨日 仍有温度&lt;/p&gt;
+&lt;p&gt;蒙尘的心事&lt;/p&gt;
+&lt;p&gt;恍恍惚惚 已经隔世&lt;/p&gt;
+&lt;p&gt;遗憾无法说 惊觉心一缩&lt;/p&gt;
+&lt;p&gt;紧紧握着 青花信物&lt;/p&gt;
+&lt;p&gt;信守着承诺&lt;/p&gt;
+&lt;p&gt;离别总在 失意中度过&lt;/p&gt;
+&lt;p&gt;记忆油膏 反复涂抹&lt;/p&gt;
+&lt;p&gt;无法愈合的伤口&lt;/p&gt;
+&lt;p&gt;你的回头 划伤了沉默&lt;/p&gt;
+&lt;p&gt;那夜重逢 停止漂泊&lt;/p&gt;
+&lt;p&gt;你曾回来过&lt;/p&gt;
+&lt;p&gt;相濡相忘 都是疼痛&lt;/p&gt;
+&lt;p&gt;只因昨日 善良固执&lt;/p&gt;
+&lt;p&gt;委屈着彼此&lt;/p&gt;
+&lt;p&gt;打碎信物 取消来世&lt;/p&gt;
+&lt;p&gt;遗憾无法说 惊觉心一缩&lt;/p&gt;
+&lt;p&gt;紧紧握着 青花信物&lt;/p&gt;
+&lt;p&gt;信守着承诺&lt;/p&gt;
+&lt;p&gt;离别总在 失意中度过&lt;/p&gt;
+&lt;p&gt;记忆油膏 反复涂抹&lt;/p&gt;
+&lt;p&gt;无法愈合的伤口&lt;/p&gt;
+&lt;p&gt;你的回头 划伤了沉默&lt;/p&gt;
+&lt;p&gt;紧紧握着 青花信物&lt;/p&gt;
+&lt;p&gt;雕刻着寂寞&lt;/p&gt;
+&lt;p&gt;就好像我 无主的魂魄&lt;/p&gt;
+&lt;p&gt;纠缠过往 无端神伤&lt;/p&gt;
+&lt;p&gt;摔碎谁也带不走&lt;/p&gt;
+&lt;p&gt;你我一场 唤不醒的梦&lt;/p&gt;
+&lt;p&gt;紧紧握着 青花信物&lt;/p&gt;
+&lt;p&gt;信守着承诺&lt;/p&gt;
+&lt;p&gt;离别总在 失意中度过&lt;/p&gt;
+&lt;p&gt;记忆油膏 反复涂抹&lt;/p&gt;
+&lt;p&gt;无法愈合的伤口&lt;/p&gt;
+&lt;p&gt;你的回头 划伤了沉默&lt;/p&gt;
+&lt;p&gt;紧紧握着 青花信物&lt;/p&gt;
+&lt;p&gt;雕刻着寂寞&lt;/p&gt;
+&lt;p&gt;就好像我 无主的魂魄&lt;/p&gt;
+&lt;p&gt;纠缠过往 无端神伤&lt;/p&gt;
+&lt;p&gt;摔碎谁也带不走&lt;/p&gt;
+&lt;p&gt;你我一场 唤不醒的梦&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://music.163.com/#/song?id=189602&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;青花 - 周传雄 &lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
         </item>
         <item>
@@ -444,7 +644,7 @@ $$</description>
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>归档</title>
+        <title>分类</title>
         <link>https://allergicrosen.github.io/myblog/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
@@ -457,7 +657,10 @@ $$</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+        <description>&lt;p&gt;GitHub主页：&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;https://github.com/allergicrosen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;个人主页：&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;allergicrosen.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Email：&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;liaojinbo1999@163.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如有发现遗漏或者什么错误请指正，欢迎交流！&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -466,33 +669,7 @@ $$</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/%E9%93%BE%E6%8E%A5/</guid>
-        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
-&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+        <description>&lt;p&gt;相关链接&lt;/p&gt;
 </description>
         </item>
         <item>
