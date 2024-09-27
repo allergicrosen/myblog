@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="仍然筹建中">
-<title>博客网站</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="utterances评论区">
+<title>hugo增加utterances功能</title>
 
-<link rel='canonical' href='https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/'>
+<link rel='canonical' href='https://allergicrosen.github.io/myblog/p/hugo/'>
 
-<link rel="stylesheet" href="/myblog/scss/style.min.b8787627db91d539519fbc1febe3f5c27c7fc9b892645c84cb88db449a5c5d62.css"><meta property='og:title' content="博客网站">
-<meta property='og:description' content="仍然筹建中">
-<meta property='og:url' content='https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/'>
+<link rel="stylesheet" href="/myblog/scss/style.min.b8787627db91d539519fbc1febe3f5c27c7fc9b892645c84cb88db449a5c5d62.css"><meta property='og:title' content="hugo增加utterances功能">
+<meta property='og:description' content="utterances评论区">
+<meta property='og:url' content='https://allergicrosen.github.io/myblog/p/hugo/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-09-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-09-09T00:00:00&#43;00:00'/><meta property='og:image' content='https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2.jpg' />
-<meta name="twitter:title" content="博客网站">
-<meta name="twitter:description" content="仍然筹建中"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-09-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-09-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://allergicrosen.github.io/myblog/p/hugo/%E5%B0%81%E9%9D%A2.jpg' />
+<meta name="twitter:title" content="hugo增加utterances功能">
+<meta name="twitter:description" content="utterances评论区"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://allergicrosen.github.io/myblog/p/hugo/%E5%B0%81%E9%9D%A2.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -285,7 +285,10 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#个人喜欢的一首歌">个人喜欢的一首歌</a></li>
+    <li><a href="#step1-打开hugo主目录前提已经部署好">Step1 :打开hugo主目录（前提已经部署好）</a></li>
+    <li><a href="#step2-打开hugoyaml配置文件移到comments">Step2 :打开hugo.yaml配置文件，移到comments:</a></li>
+    <li><a href="#step2-为你所需要的仓库配置utterances">Step2 :为你所需要的仓库配置utterances</a></li>
+    <li><a href="#step3-重新生成publichugoexe在主目录">Step3 :重新生成public(hugo.exe在主目录)</a></li>
   </ol>
 </nav>
         </div>
@@ -300,13 +303,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/myblog/p/%E9%9A%8F%E7%AC%94/">
-                <img src="/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2_hu13004176642778930040.jpg"
-                        srcset="/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2_hu13004176642778930040.jpg 800w, /myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2_hu693686366475012264.jpg 1600w"
+            <a href="/myblog/p/hugo/">
+                <img src="/myblog/p/hugo/%E5%B0%81%E9%9D%A2_hu7150001383296659859.jpg"
+                        srcset="/myblog/p/hugo/%E5%B0%81%E9%9D%A2_hu7150001383296659859.jpg 800w, /myblog/p/hugo/%E5%B0%81%E9%9D%A2_hu980738612605807625.jpg 1600w"
                         width="800" 
                         height="533" 
                         loading="lazy"
-                        alt="Featured image of post 博客网站" />
+                        alt="Featured image of post hugo增加utterances功能" />
                 
             </a>
         </div>
@@ -316,12 +319,12 @@
     
     <header class="article-category">
         
-            <a href="/myblog/categories/%E9%9A%8F%E7%AC%94/" >
-                随笔
+            <a href="/myblog/categories/hugo/" >
+                Hugo
             </a>
         
-            <a href="/myblog/categories/%E6%97%A5%E5%B8%B8/" >
-                日常
+            <a href="/myblog/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/" >
+                网页开发
             </a>
         
     </header>
@@ -329,12 +332,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/myblog/p/%E9%9A%8F%E7%AC%94/">博客网站</a>
+            <a href="/myblog/p/hugo/">hugo增加utterances功能</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            仍然筹建中
+            utterances评论区
         </h3>
         
     </div>
@@ -355,7 +358,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-09-09</time>
+                <time class="article-time--published">2024-09-27</time>
             </div>
         
 
@@ -385,57 +388,155 @@
     <section class="article-content">
     
     
-    <h1 id="本人咸鱼有空就更没空就在划水">本人咸鱼，有空就更，没空就在划水
-</h1><p>主要记录一些想法，日常，还有知识分享。</p>
-<h2 id="个人喜欢的一首歌">个人喜欢的一首歌
-</h2><blockquote>
-<p>三月走过 柳絮散落</p>
-<p>恋人们匆匆</p>
-<p>我的爱情 闻风不动</p>
-<p>翻阅昨日 仍有温度</p>
-<p>蒙尘的心事</p>
-<p>恍恍惚惚 已经隔世</p>
-<p>遗憾无法说 惊觉心一缩</p>
-<p>紧紧握着 青花信物</p>
-<p>信守着承诺</p>
-<p>离别总在 失意中度过</p>
-<p>记忆油膏 反复涂抹</p>
-<p>无法愈合的伤口</p>
-<p>你的回头 划伤了沉默</p>
-<p>那夜重逢 停止漂泊</p>
-<p>你曾回来过</p>
-<p>相濡相忘 都是疼痛</p>
-<p>只因昨日 善良固执</p>
-<p>委屈着彼此</p>
-<p>打碎信物 取消来世</p>
-<p>遗憾无法说 惊觉心一缩</p>
-<p>紧紧握着 青花信物</p>
-<p>信守着承诺</p>
-<p>离别总在 失意中度过</p>
-<p>记忆油膏 反复涂抹</p>
-<p>无法愈合的伤口</p>
-<p>你的回头 划伤了沉默</p>
-<p>紧紧握着 青花信物</p>
-<p>雕刻着寂寞</p>
-<p>就好像我 无主的魂魄</p>
-<p>纠缠过往 无端神伤</p>
-<p>摔碎谁也带不走</p>
-<p>你我一场 唤不醒的梦</p>
-<p>紧紧握着 青花信物</p>
-<p>信守着承诺</p>
-<p>离别总在 失意中度过</p>
-<p>记忆油膏 反复涂抹</p>
-<p>无法愈合的伤口</p>
-<p>你的回头 划伤了沉默</p>
-<p>紧紧握着 青花信物</p>
-<p>雕刻着寂寞</p>
-<p>就好像我 无主的魂魄</p>
-<p>纠缠过往 无端神伤</p>
-<p>摔碎谁也带不走</p>
-<p>你我一场 唤不醒的梦</p>
-<p><a class="link" href="https://music.163.com/#/song?id=189602"  target="_blank" rel="noopener"
-    >青花 - 周传雄 </a></p>
-</blockquote>
+    <h1 id="分享下如何使用hugo在个人网站增加评论区的功能">分享下如何使用hugo在个人网站增加评论区的功能
+</h1><h2 id="step1-打开hugo主目录前提已经部署好">Step1 :打开hugo主目录（前提已经部署好）
+</h2><p><img src="E:%5cgithub%20repository%5chugo-public%5ccontent%5cpost%5chugo%e5%a2%9e%e5%8a%a0utterances%e5%8a%9f%e8%83%bd%5c%e4%b8%bb%e7%9b%ae%e5%bd%95.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="主目录.png"
+	
+	
+></p>
+<h2 id="step2-打开hugoyaml配置文件移到comments">Step2 :打开hugo.yaml配置文件，移到comments:
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    comments:
+</span></span><span class="line"><span class="cl">        enabled: true
+</span></span><span class="line"><span class="cl">        provider:   utterances
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        disqusjs:
+</span></span><span class="line"><span class="cl">            shortname:
+</span></span><span class="line"><span class="cl">            apiUrl:
+</span></span><span class="line"><span class="cl">            apiKey:
+</span></span><span class="line"><span class="cl">            admin:
+</span></span><span class="line"><span class="cl">            adminLabel:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        utterances:
+</span></span><span class="line"><span class="cl">            repo: allergicrosen/myblog
+</span></span><span class="line"><span class="cl">            issueTerm: pathname
+</span></span><span class="line"><span class="cl">            label:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        beaudar:
+</span></span><span class="line"><span class="cl">            repo:
+</span></span><span class="line"><span class="cl">            issueTerm: pathname
+</span></span><span class="line"><span class="cl">            label:
+</span></span><span class="line"><span class="cl">            theme:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        remark42:
+</span></span><span class="line"><span class="cl">            host:
+</span></span><span class="line"><span class="cl">            site:
+</span></span><span class="line"><span class="cl">            locale:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        vssue:
+</span></span><span class="line"><span class="cl">            platform:
+</span></span><span class="line"><span class="cl">            owner:
+</span></span><span class="line"><span class="cl">            repo:
+</span></span><span class="line"><span class="cl">            clientId:
+</span></span><span class="line"><span class="cl">            clientSecret:
+</span></span><span class="line"><span class="cl">            autoCreateIssue: false
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>确保</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    enabled: true
+</span></span><span class="line"><span class="cl">    provider:   utteranc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其它的不用可以删掉，保留</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    utterances:
+</span></span><span class="line"><span class="cl">        repo: GitHub名字/静态网页仓库名字（一定注意仓库名字后面什么都不要加）
+</span></span><span class="line"><span class="cl">        issueTerm: pathname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="step2-为你所需要的仓库配置utterances">Step2 :为你所需要的仓库配置utterances
+</h2><p>打开链接<a class="link" href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapps%2Futterances"  target="_blank" rel="noopener"
+    >https://github.com/apps/utterances</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/29759891-eef71481b6db7700.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1019/format/webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>登录验证，按照提示操作，选择所需仓库进行安装<img src="https://upload-images.jianshu.io/upload_images/29759891-75000fc05348b346.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/733/format/webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>完毕后检查是否安装：所需仓库-&gt;Settings-&gt;Integrations-&gt;Github Apps里可以看到utterances。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/29759891-a6ec6f869aba9b2c.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/792/format/webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="step3-重新生成publichugoexe在主目录">Step3 :重新生成public(hugo.exe在主目录)
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./hugo.exe server-D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时应该已经成功了。</p>
 
 </section>
 
