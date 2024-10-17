@@ -7,7 +7,36 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Fri, 27 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 17 Oct 2024 17:12:51 +0800</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test Page</title>
+        <link>https://allergicrosen.github.io/myblog/p/test-page/</link>
+        <pubDate>Thu, 17 Oct 2024 17:12:51 +0800</pubDate>
+        
+        <guid>https://allergicrosen.github.io/myblog/p/test-page/</guid>
+        <description>&lt;h1 id=&#34;1大标题&#34;&gt;1大标题
+&lt;/h1&gt;&lt;h2 id=&#34;二级标题&#34;&gt;二级标题
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;这是&lt;/li&gt;
+&lt;li&gt;3456&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;这是图片插入&#34;&gt;这是图片插入
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/test-page/NX606J-d6c046dc-screenshot-2024_10_11_13_54_27.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;2160&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/test-page/NX606J-d6c046dc-screenshot-2024_10_11_13_54_27_hu15580566097897921836.jpg 480w, https://allergicrosen.github.io/myblog/myblog/p/test-page/NX606J-d6c046dc-screenshot-2024_10_11_13_54_27_hu14858992509516748497.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;实例图片&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;50&#34;
+		data-flex-basis=&#34;120px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>hugo增加utterances功能</title>
         <link>https://allergicrosen.github.io/myblog/p/hugo/</link>
         <pubDate>Fri, 27 Sep 2024 00:00:00 +0000</pubDate>
