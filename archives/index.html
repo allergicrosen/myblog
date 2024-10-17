@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://allergicrosen.github.io/myblog/archives/'>
 
-<link rel="stylesheet" href="/myblog/scss/style.min.6dc4ec4eada2f71a997d7d92c97a2cf9172d44f9c8f254e9d7a86c7dc5242849.css"><meta property='og:title' content="分类">
+<link rel="stylesheet" href="/myblog/scss/style.min.b1f682e01d3339ec2700487bbc9f277eb4b305a2d3e3d7d4f2ad7d23419e8db2.css"><meta property='og:title' content="分类">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://allergicrosen.github.io/myblog/archives/'>
 <meta property='og:site_name' content='allergicrosen'>
@@ -582,6 +582,11 @@ fill="#000000" stroke="none">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span><br><br><br>
+    </section>
 </footer>
 
 
@@ -627,6 +632,19 @@ fill="#000000" stroke="none">
 </style>
 
 
+<script>
+  let s1 = '2024-9-09'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
 
 <script>
 

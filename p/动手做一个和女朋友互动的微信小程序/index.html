@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/'>
 
-<link rel="stylesheet" href="/myblog/scss/style.min.6dc4ec4eada2f71a997d7d92c97a2cf9172d44f9c8f254e9d7a86c7dc5242849.css"><meta property='og:title' content="动手做一个和女朋友互动的微信小程序">
+<link rel="stylesheet" href="/myblog/scss/style.min.b1f682e01d3339ec2700487bbc9f277eb4b305a2d3e3d7d4f2ad7d23419e8db2.css"><meta property='og:title' content="动手做一个和女朋友互动的微信小程序">
 <meta property='og:description' content="微信小程序">
 <meta property='og:url' content='https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/'>
 <meta property='og:site_name' content='allergicrosen'>
@@ -470,12 +470,14 @@ fill="#000000" stroke="none">
 <li>有一定的HTML+CSS+Javascript的经验（小程序与网页设计非常类似）</li>
 <li>安装node.js</li>
 <li>申请注册微信公众平台：<a class="link" href="https://mp.weixin.qq.com/"  target="_blank" rel="noopener"
-    >微信公众平台</a></li>
+    >微信公众平台</a>
+</li>
 </ul>
 <h1 id="好了正式开始">好了，正式开始
 </h1><h2 id="1-获取源码">1. 获取源码
 </h2><p>这位大佬做的源码<a class="link" href="https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram"  target="_blank" rel="noopener"
-    >UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram</a></p>
+    >UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram</a>
+</p>
 <blockquote>
 <p>其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能</p>
 </blockquote>
@@ -557,7 +559,8 @@ fill="#000000" stroke="none">
 </blockquote>
 <h2 id="订阅通知">订阅通知
 </h2><p>来到微信小程序平台<a class="link" href="https://mp.weixin.qq.com/"  target="_blank" rel="noopener"
-    >微信小程序平台</a><br>
+    >微信小程序平台</a>
+<br>
 点击<code>基础功能———订阅消息</code>，去挑选一个适合自己的模板<br>
 <img src="/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png"
 	width="1700"
@@ -583,11 +586,14 @@ fill="#000000" stroke="none">
 <p><em>相关链接</em></p>
 <blockquote>
 <p><a class="link" href="https://www.runoob.com/html/html-examples.html"  target="_blank" rel="noopener"
-    >HTML菜鸟教程</a><br>
+    >HTML菜鸟教程</a>
+<br>
 <a class="link" href="https://www.runoob.com/js/js-examples.html"  target="_blank" rel="noopener"
-    >Javascript菜鸟教程</a><br>
+    >Javascript菜鸟教程</a>
+<br>
 <a class="link" href="https://www.runoob.com/css/css-tutorial.html"  target="_blank" rel="noopener"
-    >CSS菜鸟教程</a></p>
+    >CSS菜鸟教程</a>
+</p>
 </blockquote>
 
 </section>
@@ -691,6 +697,11 @@ fill="#000000" stroke="none">
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span><br><br><br>
     </section>
 </footer>
 
@@ -815,6 +826,19 @@ fill="#000000" stroke="none">
 </style>
 
 
+<script>
+  let s1 = '2024-9-09'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
 
 <script>
 

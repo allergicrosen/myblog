@@ -34,12 +34,14 @@
 &lt;li&gt;有一定的HTML+CSS+Javascript的经验（小程序与网页设计非常类似）&lt;/li&gt;
 &lt;li&gt;安装node.js&lt;/li&gt;
 &lt;li&gt;申请注册微信公众平台：&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;微信公众平台&lt;/a&gt;&lt;/li&gt;
+    &gt;微信公众平台&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;好了正式开始&#34;&gt;好了，正式开始
 &lt;/h1&gt;&lt;h2 id=&#34;1-获取源码&#34;&gt;1. 获取源码
 &lt;/h2&gt;&lt;p&gt;这位大佬做的源码&lt;a class=&#34;link&#34; href=&#34;https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&lt;/a&gt;&lt;/p&gt;
+    &gt;UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&lt;/a&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -121,7 +123,8 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;订阅通知&#34;&gt;订阅通知
 &lt;/h2&gt;&lt;p&gt;来到微信小程序平台&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;微信小程序平台&lt;/a&gt;&lt;br&gt;
+    &gt;微信小程序平台&lt;/a&gt;
+&lt;br&gt;
 点击&lt;code&gt;基础功能———订阅消息&lt;/code&gt;，去挑选一个适合自己的模板&lt;br&gt;
 &lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png&#34;
 	width=&#34;1700&#34;
@@ -147,11 +150,14 @@
 &lt;p&gt;&lt;em&gt;相关链接&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/html/html-examples.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;HTML菜鸟教程&lt;/a&gt;&lt;br&gt;
+    &gt;HTML菜鸟教程&lt;/a&gt;
+&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/js/js-examples.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Javascript菜鸟教程&lt;/a&gt;&lt;br&gt;
+    &gt;Javascript菜鸟教程&lt;/a&gt;
+&lt;br&gt;
 &lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/css/css-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;CSS菜鸟教程&lt;/a&gt;&lt;/p&gt;
+    &gt;CSS菜鸟教程&lt;/a&gt;
+&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         </item>
