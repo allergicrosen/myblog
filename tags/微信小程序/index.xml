@@ -38,7 +38,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;好了正式开始&#34;&gt;好了，正式开始
-&lt;/h1&gt;&lt;h2 id=&#34;1-获取源码&#34;&gt;1. 获取源码
+&lt;/h1&gt;&lt;h2 id=&#34;获取源码&#34;&gt;获取源码
 &lt;/h2&gt;&lt;p&gt;这位大佬做的源码&lt;a class=&#34;link&#34; href=&#34;https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&lt;/a&gt;
 &lt;/p&gt;
@@ -50,7 +50,7 @@
 &lt;p&gt;修改的主要是主页，增加了一个轮转的图册，优化了样式，增加开盲盒功能等等。。。&lt;br&gt;
 好的废话不多说，继续。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;2-微信开发者工具导入源码&#34;&gt;2. 微信开发者工具导入源码
+&lt;h2 id=&#34;微信开发者工具导入源码&#34;&gt;微信开发者工具导入源码
 &lt;/h2&gt;&lt;p&gt;打开微信开发者工具，导入&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
