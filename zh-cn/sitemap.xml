@@ -40,37 +40,6 @@
     <loc>https://allergicrosen.github.io/myblog/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2024-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/comments/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/hugo/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/tags/"
-                />
-  </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/tutorial/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/utterances/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/utterances%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/web-development/</loc>
-    <lastmod>2024-09-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2024-09-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -91,6 +60,18 @@
     <loc>https://allergicrosen.github.io/myblog/gallery/</loc>
   </url><url>
     <loc>https://allergicrosen.github.io/myblog/categories/python/</loc>
+  </url><url>
+    <loc>https://allergicrosen.github.io/myblog/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://allergicrosen.github.io/myblog/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://allergicrosen.github.io/myblog/tags/"
+                />
   </url><url>
     <loc>https://allergicrosen.github.io/myblog/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</loc>
   </url><url>
