@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>微信小程序 on allergicrosen</title>
+        <link>https://allergicrosen.github.io/myblog/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+        <description>Recent content in 微信小程序 on allergicrosen</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>allergicrosen</copyright>
+        <lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>动手做一个和女朋友互动的微信小程序</title>
+        <link>https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+        <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/cover.png" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1032&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F_hu3388840023852650524.png 480w, https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F_hu12095080571415801425.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;小程序主页&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;所需东西有&#34;&gt;所需东西有：
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;微信开发者工具&lt;/li&gt;
+&lt;li&gt;本项目源码&lt;/li&gt;
+&lt;li&gt;有一定的HTML+CSS+Javascript的经验（小程序与网页设计非常类似）&lt;/li&gt;
+&lt;li&gt;安装node.js&lt;/li&gt;
+&lt;li&gt;申请注册微信公众平台：&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;微信公众平台&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;好了正式开始&#34;&gt;好了，正式开始
+&lt;/h1&gt;&lt;h2 id=&#34;1-获取源码&#34;&gt;1. 获取源码
+&lt;/h2&gt;&lt;p&gt;这位大佬做的源码&lt;a class=&#34;link&#34; href=&#34;https://github.com/UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是原本的主页及其它页面见以上链接&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;修改的主要是主页，增加了一个轮转的图册，优化了样式，增加开盲盒功能等等。。。&lt;br&gt;
+好的废话不多说，继续。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-微信开发者工具导入源码&#34;&gt;2. 微信开发者工具导入源码
+&lt;/h2&gt;&lt;p&gt;打开微信开发者工具，导入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/15     17:26                cloudfunctions
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/14     16:02                miniprogram
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/14     17:20                node_modules
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/14     16:02                Pics
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----         2023/8/15     21:15            551 .eslintrc.js
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----         2023/8/15     21:15             13 .gitignore
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----         2023/8/15     21:15           1069 LICENSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----        2024/10/14     17:20          80249 package-lock.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----        2024/10/14     17:20             58 package.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----        2024/10/15     11:00           1899 project.config.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----        2024/10/14     16:09            359 project.private.config.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-a----         2023/8/15     21:15           5891 README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意应当是导入这个目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/14     16:02                miniprogram
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;因为作者写的云函数，所以需要用到云开发工具，点击左上角的云开发按钮&lt;br&gt;
+&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91.png&#34;
+	width=&#34;396&#34;
+	height=&#34;96&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91_hu8186150990198856240.png 480w, https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91_hu7040849180948002327.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;云开发&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;412&#34;
+		data-flex-basis=&#34;990px&#34;
+	
+&gt;&lt;br&gt;
+云开发是收费的，不过第一个月可以白嫖，可以开了后把自动续费关掉&lt;br&gt;
+这个目录就是存放所有云函数的文件夹，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/15     17:26                cloudfunctions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意到这里需要运行&lt;code&gt;cloudfunctions/Install-WX-Server-SDK.bat&lt;/code&gt;，然后一个一个将函数上传。（请注意其它所需操作我并未列出，因为UxxHan大佬源码主页有明确过程）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实到这一步基本全部完成了，按作者要求填写好自己和对方&lt;code&gt;_openid&lt;/code&gt;就行了&lt;br&gt;
+这里主要讲下订阅微信通知需要怎么做&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;订阅通知&#34;&gt;订阅通知
+&lt;/h2&gt;&lt;p&gt;来到微信小程序平台&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;微信小程序平台&lt;/a&gt;
+&lt;br&gt;
+点击&lt;code&gt;基础功能———订阅消息&lt;/code&gt;，去挑选一个适合自己的模板&lt;br&gt;
+&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png&#34;
+	width=&#34;1700&#34;
+	height=&#34;539&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5_hu8968775659235958915.png 480w, https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5_hu2112078649838488878.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;订阅消息&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;315&#34;
+		data-flex-basis=&#34;756px&#34;
+	
+&gt;&lt;br&gt;
+复制模板ID到&lt;code&gt;miniprogram/pages/MainPage/index.js&lt;/code&gt;和&lt;code&gt;miniprogram/pages/MissionAdd/index.js&lt;/code&gt;里把模板号换成自己想要的模板号
+记得在&lt;code&gt;cloudfunctions/information/index.js&lt;/code&gt;里把UserA和UserB的openid值替换&lt;/p&gt;
+&lt;h2 id=&#34;样式和内容修改&#34;&gt;样式和内容修改
+&lt;/h2&gt;&lt;p&gt;如果你并不喜欢这些页面内容，修改&lt;code&gt;index.wxml&lt;/code&gt;,修改样式，修改&lt;code&gt;index.wxss&lt;/code&gt;，增加新功能等等，修改&lt;code&gt;index.js&lt;/code&gt;&lt;br&gt;
+导航栏名字和图标修改只需要修改&lt;code&gt;miniprogram/app.json&lt;/code&gt;文件&lt;/p&gt;
+&lt;h2 id=&#34;代码提交&#34;&gt;代码提交
+&lt;/h2&gt;&lt;p&gt;右上角上传按钮就行了，记得去微信小程序平台提交审核并发布。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;相关链接&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/html/html-examples.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HTML菜鸟教程&lt;/a&gt;
+&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/js/js-examples.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Javascript菜鸟教程&lt;/a&gt;
+&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/css/css-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSS菜鸟教程&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
