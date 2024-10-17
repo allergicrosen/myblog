@@ -15,14 +15,18 @@
         <guid>https://allergicrosen.github.io/myblog/p/hugo/</guid>
         <description>&lt;img src="https://allergicrosen.github.io/myblog/p/hugo/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;分享下如何使用hugo在个人网站增加评论区的功能&#34;&gt;分享下如何使用hugo在个人网站增加评论区的功能
 &lt;/h1&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;E:%5cgithub%20repository%5chugo-public%5ccontent%5cpost%5chugo%e5%a2%9e%e5%8a%a0utterances%e5%8a%9f%e8%83%bd%5c%e4%b8%bb%e7%9b%ae%e5%bd%95.png&#34;
-	
-	
-	
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
+	width=&#34;651&#34;
+	height=&#34;692&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95_hu18433187788271989656.png 480w, https://allergicrosen.github.io/myblog/myblog/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95_hu8054346604905566536.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;主目录.png&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;94&#34;
+		data-flex-basis=&#34;225px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;step2-打开hugoyaml配置文件移到comments&#34;&gt;Step2 :打开hugo.yaml配置文件，移到comments:
@@ -124,35 +128,47 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        issueTerm: pathname
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;step2-为你所需要的仓库配置utterances&#34;&gt;Step2 :为你所需要的仓库配置utterances
+&lt;/div&gt;&lt;h2 id=&#34;step3-为你所需要的仓库配置utterances&#34;&gt;Step3 :为你所需要的仓库配置utterances
 &lt;/h2&gt;&lt;p&gt;打开链接&lt;a class=&#34;link&#34; href=&#34;https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapps%2Futterances&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/apps/utterances&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/29759891-eef71481b6db7700.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/1019/format/webp&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/1.png&#34;
+	width=&#34;1019&#34;
+	height=&#34;402&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/1_hu14258667596131212689.png 480w, https://allergicrosen.github.io/myblog/myblog/p/hugo/1_hu16251532963320489289.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;608px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/29759891-75000fc05348b346.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/733/format/webp&#34;
-	
-	
-	
+&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/2.png&#34;
+	width=&#34;733&#34;
+	height=&#34;892&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/2_hu14544938287035834816.png 480w, https://allergicrosen.github.io/myblog/myblog/p/hugo/2_hu17875815076503093173.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;197px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;完毕后检查是否安装：所需仓库-&amp;gt;Settings-&amp;gt;Integrations-&amp;gt;Github Apps里可以看到utterances。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://upload-images.jianshu.io/upload_images/29759891-a6ec6f869aba9b2c.png?imageMogr2/auto-orient/strip%7cimageView2/2/w/792/format/webp&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/3.png&#34;
+	width=&#34;792&#34;
+	height=&#34;193&#34;
+	srcset=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/3_hu6357415812874996607.png 480w, https://allergicrosen.github.io/myblog/myblog/p/hugo/3_hu8334354905865883504.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;410&#34;
+		data-flex-basis=&#34;984px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;step3-重新生成publichugoexe在主目录&#34;&gt;Step3 :重新生成public(hugo.exe在主目录)
+&lt;h2 id=&#34;step4-重新生成publichugoexe在主目录&#34;&gt;Step4 :重新生成public(hugo.exe在主目录)
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
