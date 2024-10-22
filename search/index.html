@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://allergicrosen.github.io/myblog/search/'>
 
-<link rel="stylesheet" href="/myblog/scss/style.min.b77af417d25a1a6877ab1e1fcd30749062d2e47e2859fdf1fef1764314c4fb04.css"><meta property='og:title' content="搜索">
+<link rel="stylesheet" href="/myblog/scss/style.min.a59b44ebd3ebfd32de3f9f6f86f1e1fb80333272e3da42baad02121c3a7dca07.css"><meta property='og:title' content="搜索">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://allergicrosen.github.io/myblog/search/'>
 <meta property='og:site_name' content='allergicrosen'>
@@ -231,7 +231,7 @@ fill="#000000" stroke="none">
 
 
                 
-                <span>分类</span>
+                <span>归档</span>
             </a>
         </li>
         
@@ -367,7 +367,7 @@ fill="#000000" stroke="none">
     
     <section class="running-time">
     本博客已稳定运行
-    <span id="runningdays" class="running-days"></span><br><br><br>
+    <span id="runningdays" class="running-days"></span>
     </section>
 </footer>
 
@@ -393,25 +393,6 @@ fill="#000000" stroke="none">
 
 
 <script src=https://allergicrosen.github.io/myblog/background/sakura.js></script>
-
-<div id="particles-js"></div>
-
-<script src=https://allergicrosen.github.io/myblog/background/particles.min.js></script>
-<script>
-  particlesJS.load('particles-js', "https://allergicrosen.github.io/myblog/background/particlesjs-config.json", function() {
-    console.log('particles.js loaded - callback');
-  });
-</script>
-
-<style>
-  #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-</style>
 
 
 <script>
@@ -486,6 +467,27 @@ if (screen.width >= 768) {
 	type="playlist"
 	id="2566074903">
 </meting-js>
+
+<script
+    src="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/js/nprogress.min.js"
+    integrity="sha384-bHDlAEUFxsRI7JfULv3DTpL2IXbbgn4JHQJibgo5iiXSK6Iu8muwqHANhun74Cqg"
+    crossorigin="anonymous"
+></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/css/nprogress.css"
+    integrity="sha384-KJyhr2syt5+4M9Pz5dipCvTrtvOmLk/olWVdfhAp858UCa64Ia5GFpTN7+G4BWpE"
+    crossorigin="anonymous"
+/>
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+
 
     </body>
 </html>
