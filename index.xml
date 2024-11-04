@@ -6,14 +6,318 @@
         <description>Recent content on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>allergicrosen</copyright>
-        <lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.github.io/myblog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>建站Notes</title>
+        <link>https://allergicrosen.github.io/myblog/p/notes/</link>
+        <pubDate>Mon, 04 Nov 2024 20:26:54 +0800</pubDate>
+        
+        <guid>https://allergicrosen.github.io/myblog/p/notes/</guid>
+        <description>&lt;img src="https://cdn.pixabay.com/photo/2016/11/30/20/44/computer-1873831_1280.png" alt="Featured image of post 建站Notes" /&gt;&lt;p&gt;记录所需的工具&lt;/p&gt;
+&lt;h2 id=&#34;markdown语法&#34;&gt;Markdown语法
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/mrluo735/article/details/136643692&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;markdown语法&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;h2 id=&#34;在线图片&#34;&gt;在线图片
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pixabay.com/images/search/?cat=feelings&amp;amp;colors=gray&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pixabay&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://wallhaven.cc/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wallhaven&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;h2 id=&#34;图片排列&#34;&gt;图片排列
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.typlog.com/en/article/markdown-images/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Type A Log(&lt;em&gt;貌似不起作用&lt;/em&gt;)&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;h2 id=&#34;主题修改&#34;&gt;主题修改
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://site.zhelper.net/Hugo/hugo-template/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;front matter&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/categories/hugo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Echosec&amp;rsquo;s blog&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.reincarnatey.net/tags/hugo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;失迹の博客&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/685991593&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Stack主题装修笔记&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://jinli.io/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;锦李本鲤&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.xalaok.top/post/hugo-shortcodes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;短代码1&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.sleepymoon.cyou/2023/hugo-shortcodes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;短代码2&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://yelleis.top/p/61fdb627/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;短代码3&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://limuran.top/p/hugo-%E5%88%9B%E5%BB%BA%E5%9F%BA%E4%BA%8E%E7%9B%AE%E5%BD%95%E7%9A%84archetypes%E6%A8%A1%E6%9D%BF/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;post模板&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://xrg.fj.cn/p/hugo-stack%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E5%B0%8F%E8%AE%B0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo Stack主题更新小记&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;&lt;h3 id=&#34;版权信息&#34;&gt;版权信息
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>video Test</title>
+        <link>https://allergicrosen.github.io/myblog/p/video-test/</link>
+        <pubDate>Mon, 04 Nov 2024 16:32:18 +0800</pubDate>
+        
+        <guid>https://allergicrosen.github.io/myblog/p/video-test/</guid>
+        <description>&lt;img src="https://w.wallhaven.cc/full/5g/wallhaven-5gxj88.png" alt="Featured image of post video Test" /&gt;&lt;p&gt;bilibili&lt;br&gt;
+
+
+
+
+  
+
+    
+
+  
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=PART_NUMBER&amp;bvid=BV1r9SEYpEQ9&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1r9SEYpEQ9/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.bilibili.com/video/BV1r9SEYpEQ9/&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+video/后面为BV号&lt;br&gt;
+Tencent  &lt;br&gt;
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://v.qq.com/txp/iframe/player.html?vid=v4100552aqu&amp;auto=0&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;a class=&#34;link&#34; href=&#34;https://v.qq.com/x/cover/mzc00200usjbvkj/v4100552aqu.html?url_from=share&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://v.qq.com/x/cover/mzc00200usjbvkj/v4100552aqu.html?url_from=share&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+html前面为vid&lt;br&gt;
+本地视频&lt;br&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;video
+    controls
+    src=&#34;./mov_bbb.mp4&#34;
+    
+    
+    &gt;
+        &lt;p&gt;
+            Your browser doesn&#39;t support HTML5 video. Here is a
+            &lt;a href=&#34;./mov_bbb.mp4&#34;&gt;link to the video&lt;/a&gt; instead.
+        &lt;/p&gt;
+    &lt;/video&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&amp;mdash;网络图片&amp;mdash;&lt;br&gt;
+&lt;img src=&#34;https://w.wallhaven.cc/full/5g/wallhaven-5gxj88.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;网络图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.pixabay.com/photo/2024/10/22/06/19/ai-generated-9138734_1280.jpg&#34; title=&#34;123&#34; alt=&#34;123123&#34; data-align=&#34;center&#34;&gt;&lt;img src=&#34;https://cdn.pixabay.com/photo/2024/10/06/07/50/ai-generated-9099293_1280.jpg&#34; title=&#34;&#34; alt=&#34;img-2&#34; data-align=&#34;center&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://cdn.pixabay.com/photo/2024/10/24/20/16/ai-generated-9146912_1280.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img-3&#34;
+	
+	
+&gt;&lt;img src=&#34;https://cdn.pixabay.com/photo/2024/10/16/07/51/ai-generated-9124068_1280.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img-4&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.xalaok.top/post/hugo-shortcodes/#%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Naive Koala 的博客&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.echosec.top/p/hugo-shortcode/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Echosec @QIN2DIM 的博客&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;h3 id=&#34;版权信息&#34;&gt;版权信息
+&lt;/h3&gt;</description>
+        </item>
+        <item>
         <title>hugo增加utterances功能</title>
         <link>https://allergicrosen.github.io/myblog/p/hugo/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/p/hugo/</guid>
-        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/hugo/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
+        <description>&lt;img src="https://w.wallhaven.cc/full/rr/wallhaven-rr855q.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
 &lt;/h1&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
 	width=&#34;651&#34;
@@ -201,7 +505,7 @@
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
-        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/cover.png" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
+        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/WeChatminiprogram.webp" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1032&#34;
 	
@@ -403,7 +707,7 @@
         <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</guid>
-        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/%E5%B0%81%E9%9D%A2.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h1 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;本人咸鱼，有空就更，没空就在划水
+        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/wallhaven-x6r1wd.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h1 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;本人咸鱼，有空就更，没空就在划水
 &lt;/h1&gt;&lt;p&gt;主要记录一些想法，日常，还有知识分享。&lt;/p&gt;
 &lt;h2 id=&#34;个人喜欢的一首歌&#34;&gt;个人喜欢的一首歌
 &lt;/h2&gt;&lt;blockquote&gt;
