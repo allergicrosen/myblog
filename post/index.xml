@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 06 Nov 2024 10:00:49 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Nov 2024 10:07:12 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>建站Notes</title>
         <link>https://allergicrosen.fun/p/notes/</link>
         <pubDate>Mon, 04 Nov 2024 20:26:54 +0800</pubDate>
@@ -239,7 +239,7 @@
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
         <guid>https://allergicrosen.fun/p/hugo/</guid>
-        <description>&lt;img src="https://w.wallhaven.cc/full/rr/wallhaven-rr855q.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
+        <description>&lt;img src="https://allergicrosen.fun/p/hugo/cover.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
 &lt;/h1&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
 	width=&#34;651&#34;
