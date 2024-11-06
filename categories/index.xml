@@ -2,33 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on allergicrosen</title>
-        <link>https://allergicrosen.github.io/myblog/categories/</link>
+        <link>https://allergicrosen.fun/categories/</link>
         <description>Recent content in Categories on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 05 Nov 2024 12:56:18 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 06 Nov 2024 09:42:47 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo</title>
+        <link>https://allergicrosen.fun/categories/hugo/</link>
+        <pubDate>Mon, 04 Nov 2024 20:26:54 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/categories/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test-Timeline</title>
-        <link>https://allergicrosen.github.io/myblog/categories/test-timeline/</link>
+        <link>https://allergicrosen.fun/categories/test-timeline/</link>
         <pubDate>Tue, 22 Oct 2024 19:11:51 +0800</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/categories/test-timeline/</guid>
+        <guid>https://allergicrosen.fun/categories/test-timeline/</guid>
         <description></description>
         </item>
         <item>
         <title>网页开发</title>
-        <link>https://allergicrosen.github.io/myblog/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</link>
+        <link>https://allergicrosen.fun/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</guid>
+        <guid>https://allergicrosen.fun/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</guid>
         <description></description>
         </item>
         <item>
         <title>随笔</title>
-        <link>https://allergicrosen.github.io/myblog/categories/%E9%9A%8F%E7%AC%94/</link>
+        <link>https://allergicrosen.fun/categories/%E9%9A%8F%E7%AC%94/</link>
         <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/categories/%E9%9A%8F%E7%AC%94/</guid>
+        <guid>https://allergicrosen.fun/categories/%E9%9A%8F%E7%AC%94/</guid>
         <description></description>
         </item>
         

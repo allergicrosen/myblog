@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>allergicrosen</title>
-        <link>https://allergicrosen.github.io/myblog/</link>
+        <link>https://allergicrosen.fun/</link>
         <description>Recent content on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.github.io/myblog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.fun/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>建站Notes</title>
-        <link>https://allergicrosen.github.io/myblog/p/notes/</link>
+        <link>https://allergicrosen.fun/p/notes/</link>
         <pubDate>Mon, 04 Nov 2024 20:26:54 +0800</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/notes/</guid>
+        <guid>https://allergicrosen.fun/p/notes/</guid>
         <description>&lt;img src="https://cdn.pixabay.com/photo/2016/11/30/20/44/computer-1873831_1280.png" alt="Featured image of post 建站Notes" /&gt;&lt;p&gt;记录所需的工具&lt;/p&gt;
 &lt;h2 id=&#34;markdown语法&#34;&gt;Markdown语法
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/mrluo735/article/details/136643692&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -234,13 +234,13 @@
         </item>
         <item>
         <title>hugo增加utterances功能</title>
-        <link>https://allergicrosen.github.io/myblog/p/hugo/</link>
+        <link>https://allergicrosen.fun/p/hugo/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/hugo/</guid>
+        <guid>https://allergicrosen.fun/p/hugo/</guid>
         <description>&lt;img src="https://w.wallhaven.cc/full/rr/wallhaven-rr855q.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
 &lt;/h1&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
 	width=&#34;651&#34;
 	height=&#34;692&#34;
 	
@@ -308,7 +308,7 @@
    &lt;/svg&gt;&lt;/span&gt;
    
     &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/1.png&#34;
 	width=&#34;1019&#34;
 	height=&#34;402&#34;
 	
@@ -322,7 +322,7 @@
 		data-flex-basis=&#34;608px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/2.png&#34;
+&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://allergicrosen.fun/p/hugo/2.png&#34;
 	width=&#34;733&#34;
 	height=&#34;892&#34;
 	
@@ -337,7 +337,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;完毕后检查是否安装：所需仓库-&amp;gt;Settings-&amp;gt;Integrations-&amp;gt;Github Apps里可以看到utterances。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/hugo/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/3.png&#34;
 	width=&#34;792&#34;
 	height=&#34;193&#34;
 	
@@ -358,11 +358,11 @@
         </item>
         <item>
         <title>动手做一个和女朋友互动的微信小程序</title>
-        <link>https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+        <link>https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
-        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/WeChatminiprogram.webp" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
+        <guid>https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+        <description>&lt;img src="https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/WeChatminiprogram.webp" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1032&#34;
 	
@@ -432,7 +432,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意应当是导入这个目录&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/14     16:02                miniprogram
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为作者写的云函数，所以需要用到云开发工具，点击左上角的云开发按钮&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91.png&#34;
+&lt;img src=&#34;https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91.png&#34;
 	width=&#34;396&#34;
 	height=&#34;96&#34;
 	
@@ -467,7 +467,7 @@
    
     &lt;br&gt;
 点击&lt;code&gt;基础功能———订阅消息&lt;/code&gt;，去挑选一个适合自己的模板&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.github.io/myblog/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png&#34;
+&lt;img src=&#34;https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png&#34;
 	width=&#34;1700&#34;
 	height=&#34;539&#34;
 	
@@ -528,11 +528,11 @@
         </item>
         <item>
         <title>博客网站</title>
-        <link>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</link>
+        <link>https://allergicrosen.fun/p/%E9%9A%8F%E7%AC%94/</link>
         <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</guid>
-        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/wallhaven-x6r1wd.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h1 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;本人咸鱼，有空就更，没空就在划水
+        <guid>https://allergicrosen.fun/p/%E9%9A%8F%E7%AC%94/</guid>
+        <description>&lt;img src="https://allergicrosen.fun/p/%E9%9A%8F%E7%AC%94/wallhaven-x6r1wd.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h1 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;本人咸鱼，有空就更，没空就在划水
 &lt;/h1&gt;&lt;p&gt;主要记录一些想法，日常，还有知识分享。&lt;/p&gt;
 &lt;h2 id=&#34;个人喜欢的一首歌&#34;&gt;个人喜欢的一首歌
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -596,18 +596,18 @@
         </item>
         <item>
         <title>归档</title>
-        <link>https://allergicrosen.github.io/myblog/archives/</link>
+        <link>https://allergicrosen.fun/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/archives/</guid>
+        <guid>https://allergicrosen.fun/archives/</guid>
         <description></description>
         </item>
         <item>
         <title></title>
-        <link>https://allergicrosen.github.io/myblog/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</link>
+        <link>https://allergicrosen.fun/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</guid>
+        <guid>https://allergicrosen.fun/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;content
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── gallery
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └─hugo增加utterances功能
@@ -620,10 +620,10 @@
         </item>
         <item>
         <title>关于</title>
-        <link>https://allergicrosen.github.io/myblog/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://allergicrosen.fun/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://allergicrosen.fun/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;GitHub主页：&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;https://github.com/allergicrosen&lt;/a&gt;
 
     &lt;/p&gt;
@@ -638,18 +638,18 @@
         </item>
         <item>
         <title>链接</title>
-        <link>https://allergicrosen.github.io/myblog/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://allergicrosen.fun/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://allergicrosen.fun/%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://allergicrosen.github.io/myblog/search/</link>
+        <link>https://allergicrosen.fun/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/search/</guid>
+        <guid>https://allergicrosen.fun/search/</guid>
         <description></description>
         </item>
         
