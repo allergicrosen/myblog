@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="// 键盘样式 kbd { margin: 0 .1em; padding: .1em .6em; font-size: .8em; color: #242729; background: #fff; border: 1px solid #adb3b9; border-radius: 3px; box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset; white-space: nowrap; vertical-align: middle; font-family: monospace; } // 键盘样式 kbd { margin: 0 .1em; padding: .1em .6em; font-size: .8em; color: #242729; background: #fff; border: 1px solid #adb3b9; border-radius: 3px; box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset; white-space: nowrap; vertical-align: middle; font-family: monospace; }\n">
-<title>Test</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="这是一个vasp.5.4.4的编译教程（以广州超算为例）\n准备好vasp.5.4.4安装包 自行下载，或者邮件给我留言 点击发送电子邮件至liaojinbo1999@163.com ，vasp为商业软件，请确保有授权！\n好了，准备好压缩包vasp.5.4.4.tar.gz，解压，进入解压后的目录。\n">
+<title>广州超算编译安装Vasp.5.4.4</title>
 
-<link rel='canonical' href='https://allergicrosen.fun/p/test/'>
+<link rel='canonical' href='https://allergicrosen.fun/p/vasp_compile/'>
 
-<link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="Test">
-<meta property='og:description' content="// 键盘样式 kbd { margin: 0 .1em; padding: .1em .6em; font-size: .8em; color: #242729; background: #fff; border: 1px solid #adb3b9; border-radius: 3px; box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset; white-space: nowrap; vertical-align: middle; font-family: monospace; } // 键盘样式 kbd { margin: 0 .1em; padding: .1em .6em; font-size: .8em; color: #242729; background: #fff; border: 1px solid #adb3b9; border-radius: 3px; box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset; white-space: nowrap; vertical-align: middle; font-family: monospace; }\n">
-<meta property='og:url' content='https://allergicrosen.fun/p/test/'>
+<link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="广州超算编译安装Vasp.5.4.4">
+<meta property='og:description' content="这是一个vasp.5.4.4的编译教程（以广州超算为例）\n准备好vasp.5.4.4安装包 自行下载，或者邮件给我留言 点击发送电子邮件至liaojinbo1999@163.com ，vasp为商业软件，请确保有授权！\n好了，准备好压缩包vasp.5.4.4.tar.gz，解压，进入解压后的目录。\n">
+<meta property='og:url' content='https://allergicrosen.fun/p/vasp_compile/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2024-10-22T19:11:51&#43;08:00'/><meta property='article:modified_time' content='2024-11-27T12:53:51&#43;00:00'/>
-<meta name="twitter:title" content="Test">
-<meta name="twitter:description" content="// 键盘样式 kbd { margin: 0 .1em; padding: .1em .6em; font-size: .8em; color: #242729; background: #fff; border: 1px solid #adb3b9; border-radius: 3px; box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset; white-space: nowrap; vertical-align: middle; font-family: monospace; } // 键盘样式 kbd { margin: 0 .1em; padding: .1em .6em; font-size: .8em; color: #242729; background: #fff; border: 1px solid #adb3b9; border-radius: 3px; box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset; white-space: nowrap; vertical-align: middle; font-family: monospace; }\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:published_time' content='2024-11-27T18:01:14&#43;08:00'/><meta property='article:modified_time' content='2024-11-27T12:53:51&#43;00:00'/><meta property='og:image' content='https://allergicrosen.fun/p/vasp_compile/vasp.webp' />
+<meta name="twitter:title" content="广州超算编译安装Vasp.5.4.4">
+<meta name="twitter:description" content="这是一个vasp.5.4.4的编译教程（以广州超算为例）\n准备好vasp.5.4.4安装包 自行下载，或者邮件给我留言 点击发送电子邮件至liaojinbo1999@163.com ，vasp为商业软件，请确保有授权！\n好了，准备好压缩包vasp.5.4.4.tar.gz，解压，进入解压后的目录。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://allergicrosen.fun/p/vasp_compile/vasp.webp' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -349,10 +350,24 @@ fill="#000000" stroke="none">
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#附录">附录</a>
+    <li><a href="#准备好vasp544安装包">准备好vasp.5.4.4安装包</a></li>
+    <li><a href="#配置环境">配置环境</a>
       <ol>
-        <li><a href="#参考文章">参考文章</a></li>
-        <li><a href="#版权信息">版权信息</a></li>
+        <li><a href="#查看hpc已有的编译器">查看HPC已有的编译器</a></li>
+        <li><a href="#确保编译环境已加载也就是前面提到的">确保编译环境已加载（也就是前面提到的）</a></li>
+        <li><a href="#开始编译">开始编译</a></li>
+        <li><a href="#设置环境变量">设置环境变量</a></li>
+      </ol>
+    </li>
+    <li><a href="#测试">测试</a>
+      <ol>
+        <li><a href="#脚本编写">脚本编写</a>
+          <ol>
+            <li><a href="#查看官方手册">查看官方手册</a></li>
+            <li><a href="#编写脚本">编写脚本</a></li>
+          </ol>
+        </li>
+        <li><a href="#运行测试">运行测试</a></li>
       </ol>
     </li>
   </ol>
@@ -366,15 +381,27 @@ fill="#000000" stroke="none">
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/vasp_compile/">
+                <img src="/p/vasp_compile/vasp_hu1446252897614071250.webp"
+                        srcset="/p/vasp_compile/vasp_hu1446252897614071250.webp 800w, /p/vasp_compile/vasp_hu11370664355576090516.webp 1600w"
+                        width="800" 
+                        height="561" 
+                        loading="lazy"
+                        alt="Featured image of post 广州超算编译安装Vasp.5.4.4" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
     <header class="article-category">
         
-            <a href="/categories/test-timeline/" >
-                Test-Timeline
+            <a href="/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/" >
+                材料计算
             </a>
         
     </header>
@@ -382,7 +409,7 @@ fill="#000000" stroke="none">
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/test/">Test</a>
+            <a href="/p/vasp_compile/">广州超算编译安装Vasp.5.4.4</a>
         </h2>
     
         
@@ -404,7 +431,7 @@ fill="#000000" stroke="none">
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-10-22</time>
+                <time class="article-time--published">2024-11-27</time>
             </div>
             <div>|</div>
         
@@ -452,7 +479,7 @@ fill="#000000" stroke="none">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 6 分钟
                 </time>
             </div>
         
@@ -467,211 +494,224 @@ fill="#000000" stroke="none">
     <section class="article-content">
     
     
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 键盘样式
-</span></span><span class="line"><span class="cl">kbd {
-</span></span><span class="line"><span class="cl">  margin: 0 .1em;
-</span></span><span class="line"><span class="cl">  padding: .1em .6em;
-</span></span><span class="line"><span class="cl">  font-size: .8em;
-</span></span><span class="line"><span class="cl">  color: #242729;
-</span></span><span class="line"><span class="cl">  background: #fff;
-</span></span><span class="line"><span class="cl">  border: 1px solid #adb3b9;
-</span></span><span class="line"><span class="cl">  border-radius: 3px;
-</span></span><span class="line"><span class="cl">  box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset;
-</span></span><span class="line"><span class="cl">  white-space: nowrap;
-</span></span><span class="line"><span class="cl">  vertical-align: middle;
-</span></span><span class="line"><span class="cl">  font-family: monospace;
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><p>// 键盘样式
-kbd {
-margin: 0 .1em;
-padding: .1em .6em;
-font-size: .8em;
-color: #242729;
-background: #fff;
-border: 1px solid #adb3b9;
-border-radius: 3px;
-box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset;
-white-space: nowrap;
-vertical-align: middle;
-font-family: monospace;
-}</p>
-<div class="timeline__row">
-    <div class="timeline__time">
-        <div class="timeline__time">2024-09-09</div>
-        <div class="timeline__split-line"></div>
-    </div>
-    <div class="timeline__content">
-        <div class="timeline__tags">
-            <span class="timeline__tag">first blog</span>
-        </div>
-        <a href="/myblog/tags/first-blog/">
-            <div class="timeline__title">第一篇文章</div>
-        </a>
-        
-        <div class="timeline__description">
-            first blog
-        </div>
-    </div>
-</div>
+    <p>这是一个vasp.5.4.4的编译教程（以广州超算为例）</p>
+<h2 id="准备好vasp544安装包">准备好vasp.5.4.4安装包
+</h2><p>自行下载，或者邮件给我留言 <a href="mailto:liaojinbo1999@163.com">点击发送电子邮件至liaojinbo1999@163.com </a>，vasp为商业软件，请确保有授权！</p>
+<p>好了，准备好压缩包<code>vasp.5.4.4.tar.gz</code>，解压，进入解压后的目录。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -zxvf vasp.5.4.4.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> vasp.5.4.4/
+</span></span></code></pre></div><p><code>ls</code>发现有以下文件和目录</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">arch  bin  build  makefile  README  src
+</span></span></code></pre></div><p><strong><span style="color: blue; font-size:15px">arch/：该目录通常包含特定于硬件架构的配置文件，例如针对不同操作系统和硬件架构的Makefile模板。你可以在这里选择或创建适合你系统的配置文件。<br>bin/：该目录通常为空，或者包含最终编译的VASP可执行文件。在编译完成后，VASP的可执行文件会放在这个目录下。<br>build/：此目录通常包含用于编译过程的临时文件。编译时会生成对象文件和中间文件，最终会被链接到 bin/ 目录中的可执行文件<u>(std、gam、ncl)</u>。<br>makefile：这个文件是VASP的主Makefile，包含编译VASP所需的各种参数设置和规则。你需要根据你系统的环境编辑这个文件以适应你的编译器和库。<br>README：该文件通常包含VASP的安装说明、编译和运行的基本指导。在安装之前，建议阅读该文件。<br>src/：这个目录包含VASP的源代码。编译时，所有源代码文件将被编译成目标文件，然后链接成最终的VASP可执行文件。</span></strong></p>
+<h2 id="配置环境">配置环境
+</h2><h3 id="查看hpc已有的编译器">查看HPC已有的编译器
+</h3><p>命令行输入<code>module av</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ module av
+</span></span><span class="line"><span class="cl">--------------------------------------------------- /APP/u22/x86/modulepath/Compilers ---------------------------------------------------
+</span></span><span class="line"><span class="cl">gcc/9.5.0                               mpi/mpich/4.1.2-gcc-11.4.0-ch4                 mpi/mpich/4.1.2-icx-oneapi2024.2-ch4-dbg
+</span></span><span class="line"><span class="cl">intel/oneapi2023.2_impi                 mpi/mpich/4.1.2-gcc-11.4.0-ch4-dbg             mpi/mpich/4.3.2-icc-oneapi2023.2-ch4
+</span></span><span class="line"><span class="cl">intel/oneapi2023.2_noimpi               mpi/mpich/4.1.2-icc-oneapi2023.2-ch3-shared    mpi/openmpi/4.1.1-icc-oneapi2023.2-ch4
+</span></span><span class="line"><span class="cl">intel/oneapi2024.2_impi                 mpi/mpich/4.1.2-icc-oneapi2023.2-ch4           mpi/openmpi/4.1.6-icc-oneapi2023.2-ch4
+</span></span><span class="line"><span class="cl">intel/oneapi2024.2_noimpi               mpi/mpich/4.1.2-icc-oneapi2023.2-ch4-dbg       mpi/openmpi/5.0.0-gcc-9.5.0-ch4
+</span></span><span class="line"><span class="cl">mpi/mpich/3.4.3-gcc-9.5.0-ch4           mpi/mpich/4.1.2-icx-oneapi2023.2-ch4           mpi/openmpi/5.0.0-gcc-11.4.0-ch4
+</span></span><span class="line"><span class="cl">mpi/mpich/4.1.2-gcc-9.5.0-ch4           mpi/mpich/4.1.2-icx-oneapi2023.2-ch4-dbg       mpi/openmpi/5.0.0-icc-oneapi2023.2-ch4
+</span></span><span class="line"><span class="cl">mpi/mpich/4.1.2-gcc-9.5.0-ch4_openfoam  mpi/mpich/4.1.2-icx-oneapi2023.2-ch4_openfoam  mpi/openmpi/5.0.0-icx-oneapi2023.2-ch4
+</span></span><span class="line"><span class="cl">mpi/mpich/4.1.2-gcc-11.4.0-ch3          mpi/mpich/4.1.2-icx-oneapi2024.2-ch4
+</span></span></code></pre></div><p>我需要使用Intel编译器和MPI编译环境，所以我选择加载这两个</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">module purge
+</span></span><span class="line"><span class="cl">module load intel/oneapi2023.2_impi
+</span></span><span class="line"><span class="cl">module load mpi/mpich/4.1.2-gcc-11.4.0-ch4
+</span></span><span class="line"><span class="cl">module list
+</span></span></code></pre></div><p>为了确保不与其它模块冲突，所以使用<code>module purge</code>最开始先卸载所有模块，为了确认是否成功加载模块，使用了<code>module list</code>命令 检查已加载的模块。</p>
+<p>进入arch目录下，选择所需的makefile文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$cd</span> arch/
+</span></span><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">    makefile.include.linux_gnu  makefile.include.linux_intel  makefile.include.linux_intel_serial  makefile.include.linux_pgi
+</span></span></code></pre></div><p>因为我使用intel的编译器，所以我将<code>makefile.include.linux_intel</code>复制到上一级目录，命名为<code>makefile.include</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cp makefile.include.linux_intel ../makefile.include
+</span></span></code></pre></div><p>打开上一级目录中自己刚复制过来的<code>makefile.include</code>发现其内容如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Precompiler options</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CPP_OPTIONS</span><span class="o">=</span> -DHOST<span class="o">=</span><span class="se">\&#34;</span>LinuxIFC<span class="se">\&#34;\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -DMPI -DMPI_BLOCK<span class="o">=</span><span class="m">8000</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Duse_collective <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -DscaLAPACK <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -DCACHE_SIZE<span class="o">=</span><span class="m">4000</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Davoidalloc <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Duse_bse_te <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Dtbdyn <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Duse_shmem
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">CPP</span>        <span class="o">=</span> fpp -f_com<span class="o">=</span>no -free -w0  <span class="nv">$*</span><span class="k">$(</span>FUFFIX<span class="k">)</span> <span class="nv">$*</span><span class="k">$(</span>SUFFIX<span class="k">)</span> <span class="k">$(</span>CPP_OPTIONS<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">FC</span>         <span class="o">=</span> mpiifort
+</span></span><span class="line"><span class="cl"><span class="nv">FCL</span>        <span class="o">=</span> mpiifort -mkl<span class="o">=</span>sequential -lstdc++
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">FREE</span>       <span class="o">=</span> -free -names lowercase
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">FFLAGS</span>     <span class="o">=</span> -assume byterecl -w
+</span></span><span class="line"><span class="cl"><span class="nv">OFLAG</span>      <span class="o">=</span> -O2
+</span></span><span class="line"><span class="cl"><span class="nv">OFLAG_IN</span>   <span class="o">=</span> <span class="k">$(</span>OFLAG<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEBUG</span>      <span class="o">=</span> -O0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">MKL_PATH</span>   <span class="o">=</span> <span class="k">$(</span>MKLROOT<span class="k">)</span>/lib/intel64
+</span></span><span class="line"><span class="cl"><span class="nv">BLAS</span>       <span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LAPACK</span>     <span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nv">BLACS</span>      <span class="o">=</span> -lmkl_blacs_intelmpi_lp64
+</span></span><span class="line"><span class="cl"><span class="nv">SCALAPACK</span>  <span class="o">=</span> <span class="k">$(</span>MKL_PATH<span class="k">)</span>/libmkl_scalapack_lp64.a <span class="k">$(</span>BLACS<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">OBJECTS</span>    <span class="o">=</span> fftmpiw.o fftmpi_map.o fft3dlib.o fftw3d.o
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">INCS</span>       <span class="o">=</span>-I<span class="k">$(</span>MKLROOT<span class="k">)</span>/include/fftw
+</span></span><span class="line"><span class="cl">................
+</span></span></code></pre></div><p>这个文件是编译所需的环境，确保环境正常</p>
+<h3 id="确保编译环境已加载也就是前面提到的">确保编译环境已加载（也就是前面提到的）
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">module purge
+</span></span><span class="line"><span class="cl">module load intel/oneapi2023.2_impi
+</span></span><span class="line"><span class="cl">module load mpi/mpich/4.1.2-gcc-11.4.0-ch4
+</span></span><span class="line"><span class="cl">module list
+</span></span></code></pre></div><p>不放心可以再次执行下，或者<code>module list</code>查看下</p>
+<h3 id="开始编译">开始编译
+</h3><p>回到vasp主目录下，开始编译<br>
+因为我需要std、gam、和ncl，所以我直接输入<code>make all</code>，如果没有问题那就会开始编译，等待即可<u>（需要几十分钟）</u>。<br>
+编译完成进入<code>./bin</code>目录下,发现多了这三个执行文件，那么表示以及成功了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ <span class="nb">cd</span> bin/<span class="p">;</span>ls
+</span></span><span class="line"><span class="cl">vasp_gam  vasp_ncl  vasp_std
+</span></span></code></pre></div><h3 id="设置环境变量">设置环境变量
+</h3><p>两种方法</p>
+<ol>
+<li>将<code>vasp_gam  vasp_ncl  vasp_std</code>所在路径添加到<code>~/.bashrc</code><strong>（推荐使用）</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi ~/.bashrc
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/your path/vasp.5.4.4/bin/:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></div><ol start="2">
+<li>将其写入脚本<br>
+后续会讲到</li>
+</ol>
+<h2 id="测试">测试
+</h2><p>编译完后测试下是否能正常运行，准备好测试文件<br>
+我这里准备了5个文件，分别为<code>INCAR、POSCAR、POTCAR、KPOINTS、vasp-sbatch.sh</code></p>
+<h3 id="脚本编写">脚本编写
+</h3><p>在测试前，可能很多人并不知道如何编写一个合适的任务提交脚本，这里我简单介绍下脚本的编写规则</p>
+<h4 id="查看官方手册">查看官方手册
+</h4><p>最简单的就是查看官方的手册，以广州超算来说，打开<code>HPC1系统用户手册</code>可以找到脚本的编写规则</p>
+<blockquote>
+<p>目前 HPC1 系统部署的资源管理系统包括多种作业提交方式，包括<code>批处理作业提交方式 yhbatch 和交互作业提交方式 yhrun</code>。作业终止方式为 yhcancel 命令，需要获取作业的 jobid，可以通过 yhq 命令查看获得。</p>
+</blockquote>
+<blockquote>
+<p><strong>如果没有交互需求，请使用 yhbatch 提交任务</strong>。yhbatch 提交的作业终端关闭
+时不会受到影响，登陆结点 down 机时也不会受到影响，强烈推荐使用 yhbatch 提
+交任务。</p>
+</blockquote>
+<blockquote>
+<p>yhbatch 运行的主要格式如下：<br>
+<code>yhbatch [options] program </code><br>
+yhbatch 包括多个选项，用户最常使用的选项如下：<br></p>
+</blockquote>
+<hr>  
+<p><code>-n, --ntasks=ntasks </code> <br>
+指定要运行的进程数。请求 yhrun 分配/加载 ntasks 个进程。省缺的情况是每
+个 CPU 核运行一个进程，但是-c 参数将改变此省缺值。</p>
+<p><code>-N, --nodes=minnodes[-maxnodes] </code><br>
+请求为此作业至少分配 minnodes 个结点。调度器可能决定在多于 minnodes
+个结点上启动作业。可以通过指定 maxnodes 限制最多分配的结点数（如“&ndash;
+nodes=2-4”）。最少和最多结点数可以相同以便指定确切的结点数（如“&ndash;
+nodes=2-2”将请求两个并且仅仅两个结点）。如果没有指定-N，省缺的行为是分
+配足够的结点以满足-n 选项的要求。<br>
+<code>-p, --partition=partition</code> <br>
+从分区 partition 请求资源。如未指定，则省缺为默认分区。</p>
+<p><code>-t, --time=minutes </code> <br>
+设置作业的运行时间限制为 minutes 分钟。省缺值为分区的时间限制值。当到
+达时间限制时，作业的进程将被发送 SIGTERM 以及 SIGKILL 信号终止执行。完
+整格式为&ndash;time=days-hours:minutes:seconds，建议包机时用户使用该选项。</p>
+<p><code>-D, --chdir=path</code><br>
+加载的作业进程在执行前将工作目录改变到 path 。省缺情况下作业 yhrun 进
+程的当前工作目录。</p>
+<p><code>-l, --label </code><br>
+在标准输出/标准错误的每行之前添加任务号。通常，远程任务的标准输出和
+标准错误通过行缓冲直接传递到 yhrun 的标准输出和标准错误。&ndash;label 选项将在
+每行输出前面添加远程任务的 ID。</p>
+<p><code>-J, --job-name=jobname </code> <br>
+指定作业的名字。省缺值是可执行程序的名字 program 。</p>
+<p><code>-W, --wait=seconds </code><br>
+指定在第一个任务退出后，到终止所有剩余任务之前的等待时间。0 表示无限
+等待（60 秒后将发出一个警告）。省缺值可由系统配置文件中的参数设置。此选
+项用于确保作业在一个或多个任务提前退出时能够及时终止。</p>
+<p><code>-w, --nodelist=nodelist|filename </code><br>
+请求指定列表中的结点。分配给作业的将至少包含这些结点。nodelist 可以是
+逗号分割的结点列表或范围表达式（如 cn[1-5,7,12]）。如果包含“/”字符，则
+nodelist 将会被当作是一个文件名，其中包含了所请求的结点列表。</p>
+<p>具体不多赘述了，有需要的可以向我要官方文档[ <a href="mailto:liaojinbo1999@163.com">点击发送电子邮件 </a>]</p>
+<h4 id="编写脚本">编写脚本
+</h4><h5 id="以手册为例">以手册为例：
+</h5><p>sub.sh 如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">VASP_BIN</span><span class="o">=</span>/your path/vasp.5.4.4/bin/vasp_std
+</span></span><span class="line"><span class="cl">yhrun -n <span class="m">28</span> -p TH_HPC1 <span class="nv">$VASP_BIN</span>
+</span></span></code></pre></div><p>前面提到<code>yhrun</code>是交互提交作业,虽然可以提交任务，但是要保证窗口一直挂着，且不能断链，这显然是很不方便的，所以还需要<code>yhbatch</code>提交脚本。<br>
+将脚本命名为<code>run.sh</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>module purge
+</span></span><span class="line"><span class="cl">module load intel/oneapi2023.2_impi
+</span></span><span class="line"><span class="cl">module load mpi/mpich/4.1.2-gcc-11.4.0-ch4
+</span></span><span class="line"><span class="cl">module list
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/your path/vasp.5.4.4/bin/:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">yhbatch -n <span class="m">28</span> -p TH_HPC1 -J example1 ./sub.sh
+</span></span></code></pre></div><h5 id="自己写sbatch任务脚本">自己写sbatch任务脚本
+</h5><p>虽然以上脚本可以满足要求了，但是我还是觉得很麻烦，为什么我需要写两个脚本，我直接写一个多好，所以这是另一个方法，使用的是<code>sbatch</code><br>
+具体用法参照官方手册<a class="link" href="https://slurm.schedmd.com/sbatch.html"  target="_blank" rel="noopener"
+    >slurm官方手册</a>
 
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    <br>
+这是我自己的脚本：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">#SBATCH -J ljb         ## Job Name</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -o out.%j            ## standard output</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -e err.%j              ## standard error</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -p mars               ## Partition</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -N 1                   ## Number of nodes</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH --ntasks-per-node=64   ## Each node has n tasks</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -t 07-23:57:25         ## time for your job: 2 d，23 h ，57 min and 23 s</span>
+</span></span><span class="line"><span class="cl">module purge
+</span></span><span class="line"><span class="cl">module load intel/oneapi2023.2
+</span></span><span class="line"><span class="cl">module load mpi/mpich/4.1.2-gcc-11.4.0-ch4
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/your path/vasp.5.4.4/bin/vasp_ncl:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">module list
+</span></span><span class="line"><span class="cl"><span class="nb">ulimit</span> -s unlimited
+</span></span><span class="line"><span class="cl"><span class="nv">VASP_BIN</span><span class="o">=</span>/your path/vasp.5.4.4/bin/vasp_std
+</span></span><span class="line"><span class="cl">yhrun <span class="nv">$VASP_BIN</span>
+</span></span></code></pre></div><h3 id="运行测试">运行测试
+</h3><p>准备好vasp所需文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl">INCAR  KPOINTS  POSCAR  POTCAR  vasp-sbatch.sh
+</span></span><span class="line"><span class="cl">sbatch vasp-sbatch.sh
+</span></span><span class="line"><span class="cl">Submitted batch job <span class="m">133974</span>
+</span></span></code></pre></div><p><code>squeue</code>查看节点状态，显示R</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST<span class="o">(</span>REASON<span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="m">133974</span>      mars      ljb caep_lts  R       1:28      <span class="m">1</span> cnode5131
+</span></span></code></pre></div><p>显示已提交成功。<br>
+检查<code>OUTCAR</code>或者<code>out.133974</code>（根据实际名字查看）文件是否正常运行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tail out.133974
+</span></span><span class="line"><span class="cl"> POSCAR found <span class="nb">type</span> information on POSCAR  Pb I  C  N  H
+</span></span><span class="line"><span class="cl"> POSCAR found :  <span class="m">5</span> types and      <span class="m">92</span> ions
+</span></span><span class="line"><span class="cl"> scaLAPACK will be used
+</span></span><span class="line"><span class="cl"> LDA part: xc-table <span class="k">for</span> Pade appr. of Perdew
+</span></span><span class="line"><span class="cl"> POSCAR, INCAR and KPOINTS ok, starting setup
+</span></span><span class="line"><span class="cl"> FFT: planning ...
+</span></span><span class="line"><span class="cl"> WAVECAR not <span class="nb">read</span>
+</span></span><span class="line"><span class="cl"> entering main loop
+</span></span><span class="line"><span class="cl">       N       E                     dE             d eps       ncg     rms          rms<span class="o">(</span>c<span class="o">)</span>
+</span></span><span class="line"><span class="cl">DAV:   <span class="m">1</span>     0.129655355373E+04    0.12966E+04   -0.13885E+05 <span class="m">17024</span>   0.108E+03
+</span></span></code></pre></div><p>顺利运行且无报错，完毕。</p>
 
-<style>
-    .timeline {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .timeline__row {
-        display: flex;
-        padding-left: 4%;
-        height: 90px;
-    }
-    
-    .timeline__time {
-        flex: 0 0 110px;
-        color: #5d5d5d;
-        font-size: 17px;
-        text-transform: uppercase;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem 0;
-    }
-    
-    .timeline__time-text {
-        margin: 0;
-    }
-    
-    .timeline__split-line {
-        position: absolute;
-        top: 0.5rem;
-        right: -20px;
-        height: 100%;
-        width: 2px;
-        background-color: #84c4e240;
-        z-index: 0;
-    }
-    
-    .timeline__split-line:before {
-        content: "";
-        position: absolute;
-        top: 24%;
-        right: -4px;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        background-color: #c9e5f2;
-        box-shadow: 0 0 0 4px var(--theme);
-        border-radius: 50%;
-        border: 0px solid #84c4e2;
-        z-index: -1;
-    }
-    
-    .timeline__content {
-        flex: 1;
-        margin-left: 4.5rem;
-        padding: 0.5rem 0 1.2rem 0;
-    }
-    
-    .timeline__title {
-        margin: 0;
-        margin-bottom: 2px;
-        padding-top: 3px;
-        margin-left: 0.5rem;
-        color: var(--content);
-        font-family: var(--font-family-teshu);
-        font-size: 19px;
-        font-weight: 600;
-        width: fit-content;
-        display: inline-block;
-        vertical-align: middle;
-         
-    }
-    
-    .timeline__tags {
-        display: inline-block;
-        padding: 0;
-        margin-left: 0.3rem;
-        align-items: center;
-        gap: 0.3rem;
-    }
-    
-    .timeline__tag {
-        display: inline-block;
-        color: var(--secondary);
-        background-color: #84c4e230;
-        border: 1.5px solid #84c4e230;
-        border-radius: 999px;
-        padding: 0rem 0.5rem;
-        font-size: 12px;
-        white-space: nowrap;
-        line-height: 1.4rem;
-        opacity: 0.8;
-        vertical-align: middle;
-         
-    }
-    
-    .timeline__description {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #5d5d5d;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin: 0.5rem 0 0.4rem 1.5rem;
-         
-    }
-     
-    
-    .timeline__tag-style {
-        background-color: #c581da;
-         
-        border-color: #c581da;
-         
-        color: #FFFFFF;
-         
-    }
-     
-    
-    .timeline__tag-article {
-        background-color: #92d392;
-         
-        border-color: #92d392;
-         
-        color: #000000;
-         
-    }
-     
-    
-    .timeline__tag-page {
-        background-color: #707070;
-         
-        border-color: #707070;
-         
-        color: #FFFFFF;
-         
-    }
-    
-    @media screen and (max-width: 768px) {
-        .timeline__time {
-            font-size: 14px;
-             
-        }
-        .timeline__title {
-            font-size: 16px;
-             
-        }
-        .timeline__description {
-            font-size: 14px;
-             
-        }
-    }
-</style>
-
-<h2 id="附录">附录
-</h2><h3 id="参考文章">参考文章
-</h3><h3 id="版权信息">版权信息
-</h3>
 </section>
 
 
@@ -679,7 +719,7 @@ font-family: monospace;
     
     <section class="article-tags">
         
-            <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+            <a href="/tags/vasp/">Vasp</a>
         
     </section>
 
