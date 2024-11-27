@@ -7,13 +7,14 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 27 Nov 2024 12:55:17 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/vasp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 27 Nov 2024 13:03:43 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/vasp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>广州超算编译安装Vasp.5.4.4</title>
         <link>https://allergicrosen.fun/p/vasp_compile/</link>
         <pubDate>Wed, 27 Nov 2024 18:01:14 +0800</pubDate>
         
         <guid>https://allergicrosen.fun/p/vasp_compile/</guid>
         <description>&lt;img src="https://allergicrosen.fun/p/vasp_compile/vasp.webp" alt="Featured image of post 广州超算编译安装Vasp.5.4.4" /&gt;&lt;p&gt;这是一个vasp.5.4.4的编译教程（以广州超算为例）&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;准备好vasp544安装包&#34;&gt;准备好vasp.5.4.4安装包
 &lt;/h2&gt;&lt;p&gt;自行下载，或者邮件给我留言 &lt;a href=&#34;mailto:liaojinbo1999@163.com&#34;&gt;点击发送电子邮件至liaojinbo1999@163.com &lt;/a&gt;，vasp为商业软件，请确保有授权！&lt;/p&gt;
 &lt;p&gt;好了，准备好压缩包&lt;code&gt;vasp.5.4.4.tar.gz&lt;/code&gt;，解压，进入解压后的目录。&lt;/p&gt;
@@ -230,6 +231,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       N       E                     dE             d eps       ncg     rms          rms&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DAV:   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;     0.129655355373E+04    0.12966E+04   -0.13885E+05 &lt;span class=&#34;m&#34;&gt;17024&lt;/span&gt;   0.108E+03
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;顺利运行且无报错，完毕。&lt;/p&gt;
+&lt;hr&gt;
 </description>
         </item>
         
