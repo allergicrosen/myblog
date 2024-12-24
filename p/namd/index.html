@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
+<title>NAC计算</title>
+
+<link rel='canonical' href='https://allergicrosen.fun/p/namd/'>
+
+<link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="NAC计算">
+<meta property='og:description' content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
+<meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
+<meta property='og:site_name' content='allergicrosen'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2024-12-24T13:46:21&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta name="twitter:title" content="NAC计算">
+<meta name="twitter:description" content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16395594842853161405.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">allergicrosen</a></h1>
+            <h2 class="site-description">个人博客，aaaallllergicrooosen。。。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/386854280'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="872" height="834" viewBox="0 0 872 834">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<image id="图层_1" data-name="图层 1" width="872" height="834" xlink:href="data:img/png;base64,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"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/allergicrosen'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://main.allergicrosen.dynv6.net/'
+                        target="_blank"
+                        title="Personal Page"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="35.000000pt" height="18.000000pt" viewBox="0 0 35.000000 18.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,18.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M147 148 c76 -129 75 -128 59 -128 -9 0 -29 21 -44 46 -15 25 -35 59
+-45 76 l-19 31 -44 -79 c-24 -43 -44 -82 -44 -86 0 -5 15 -8 33 -8 27 0 36 6
+51 34 10 19 16 40 14 46 -2 7 -12 -4 -23 -24 -12 -21 -27 -36 -38 -36 -17 0
+-17 2 4 38 13 20 28 45 33 55 15 24 20 22 39 -19 16 -32 16 -37 2 -57 -17 -25
+-19 -37 -6 -37 5 0 13 9 16 20 3 11 10 20 15 20 5 0 12 -9 15 -20 5 -15 15
+-20 41 -20 19 0 34 3 34 8 0 4 -13 30 -29 59 -16 28 -25 57 -21 63 5 8 22 -14
+45 -59 35 -67 40 -71 71 -71 19 0 34 3 34 6 0 15 -93 174 -102 174 -9 0 8 -35
+64 -127 19 -32 19 -33 1 -33 -12 0 -31 24 -58 75 -22 41 -42 75 -44 75 -2 0
+-9 -8 -16 -17 -11 -15 -13 -15 -24 5 -6 12 -16 22 -22 22 -6 0 -2 -15 8 -32z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://allergicrosen.fun/en/" >English</option>
+                                
+                                    <option value="https://allergicrosen.fun/" selected>简体中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#heating">heating</a></li>
+    <li><a href="#md">MD</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#附录">附录</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/namd/">
+                
+                    <img src="https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png" loading="lazy" alt="Featured image of post NAC计算" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/" >
+                材料计算
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/namd/">NAC计算</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-12-10</time>
+            </div>
+            <div>|</div>
+        
+        <div class="article-lastmod">
+                <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="59px" height="64px"
+	 viewBox="0 0 59 64" enable-background="new 0 0 59 64" xml:space="preserve">
+<title>Document-edit</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Document-edit" transform="translate(1.000000, 1.000000)" sketch:type="MSLayerGroup">
+		<path id="Shape_1_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M47,45v15c0,1.1-0.9,2-2,2H2
+			c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h25.9L47,18.1V33"/>
+		<path id="Shape" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M47,18.9H30c-1.1,0-2-0.9-2-2V1"/>
+		<path id="Shape_2_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,17h13"/>
+		<path id="Shape_3_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,27h31"/>
+		<path id="Shape_4_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,34h31"/>
+		<path id="Shape_5_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,43h24"/>
+		<path id="Shape_6_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,49h17"/>
+		<g id="Group" transform="translate(27.000000, 29.000000)" sketch:type="MSShapeGroup">
+			<path id="Shape_8_" fill="none" stroke="#6B6C6E" stroke-width="2" stroke-linejoin="round" d="M0,30l3.9-9.4L24.2,0.3
+				c0.4-0.4,1.1-0.4,1.6,0l3.9,3.9c0.4,0.4,0.4,1.1,0,1.6L9.4,26.1L0,30z"/>
+			<path id="Shape_9_" fill="none" stroke="#6B6C6E" stroke-width="2" d="M21.9,2.7l5.4,5.4"/>
+		</g>
+	</g>
+</g>
+</svg>
+
+                <time>
+                    Dec 24, 2024 13:46 UTC
+                </time>
+            </div>
+            <div>|</div>
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)<br>
+<strong>基于凯峰给的NAMD-example</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">NAMD_example
+</span></span><span class="line"><span class="cl">    Mode                 LastWriteTime         Length Name
+</span></span><span class="line"><span class="cl">    ----                 -------------         ------ ----
+</span></span><span class="line"><span class="cl">    dar--l        2024/12/10      0:52                NA_couplings
+</span></span><span class="line"><span class="cl">    dar--l        2024/12/10      0:52                step1
+</span></span><span class="line"><span class="cl">    dar--l        2024/12/10      0:52                step2
+</span></span><span class="line"><span class="cl">    dar--l        2024/12/10      0:52                step3
+</span></span><span class="line"><span class="cl">    dar--l        2024/12/10      0:52                vasp.5.4.4-nac-intel
+</span></span><span class="line"><span class="cl">    -a---l        2022/11/19     10:39            <span class="m">390</span> readme
+</span></span></code></pre></div><p>NAC计算大致分为三步</p>
+<ol>
+<li>跑MD（包括heating部分和MD部分）</li>
+<li>将MD获得的轨迹分割成5000个POSCAR，并对每个POSCAR进行一遍scf</li>
+<li>计算寿命，退相干</li>
+</ol>
+<p>其中<code>NA_couplings</code>包含计算所需脚本及可执行文件</p>
+<h1 id="step1进行vasp的md计算">Step1，进行vasp的MD计算
+</h1><h2 id="heating">heating
+</h2><p>step1下包含heating和MD</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ ls
+</span></span><span class="line"><span class="cl">heating  MD
+</span></span></code></pre></div><p>MD过程包含heating和MD两个部分<br>
+heating过程主要使结构在300K下跑1000步（或者500步），并写入<code>WAVECAR</code>,<code>INCAR</code>设置如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">SYSTEM</span>  <span class="o">=</span> crystal
+</span></span><span class="line"><span class="cl"><span class="c1">#ISYM = 0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ENCUT</span>   <span class="o">=</span> <span class="m">500</span> <span class="c1">#和先前计算保持一致</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LREAL</span> <span class="o">=</span> A
+</span></span><span class="line"><span class="cl"><span class="nv">ISTART</span>  <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ISYM</span> <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NELM</span> <span class="o">=</span> <span class="m">200</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NPAR</span>    <span class="o">=</span> <span class="m">6</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ICHARG</span>  <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ISMEAR</span>  <span class="o">=</span> <span class="m">0</span> <span class="c1">#feimi 0 gass</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SIGMA</span>   <span class="o">=</span> 0.02
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFF</span>   <span class="o">=</span> 1E-4 <span class="c1">#can be modified</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NBANDS</span>  <span class="o">=</span>  <span class="m">846</span> <span class="c1"># should be modified grep NABNDS OUTCAR</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PREC</span>    <span class="o">=</span> M    <span class="c1"># Low | Medium | High | Normal | Accurate | Single</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##################### MD  Ionic Relaxation#######################</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IBRION</span><span class="o">=</span><span class="m">0</span>      <span class="c1">#(df:0/(-1 if NSW=0/1))relax method,non:-1,MD:0,CG:2.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">POTIM</span><span class="o">=</span>1.0     <span class="c1">#(df:0.5)controll the length of the trial step for ionic relax.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ISIF</span><span class="o">=</span><span class="m">2</span>        <span class="c1">#(df:2)Control what to relax. usually:0,all:3.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NSW</span><span class="o">=</span><span class="m">1000</span>       <span class="c1">#(df:0)max. ion relax steps.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFFG</span><span class="o">=</span>-0.01  <span class="c1">#(df:EDIFF*10)ionic rel. brake cond. loop force:(-),Ener.(+)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NELMIN</span><span class="o">=</span><span class="m">6</span>      <span class="c1">#(df:2)minimum steps of electronic SC.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ALGO</span> <span class="o">=</span> N        <span class="c1"># FAST is faster than Normal</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NBLOCK</span> <span class="o">=</span> <span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TEBEG</span><span class="o">=</span><span class="m">300</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TEEND</span><span class="o">=</span><span class="m">300</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SMASS</span><span class="o">=</span>-1      <span class="c1">#-1 heating;-3 normal MD.controls the velocities during an ab-initio molecular dynamics</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">######################Write Flags############################</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LWAVE</span>   <span class="o">=</span> .T.
+</span></span><span class="line"><span class="cl"><span class="nv">LCHARG</span>  <span class="o">=</span> .FALSE.
+</span></span><span class="line"><span class="cl"><span class="nv">IVDW</span>    <span class="o">=</span> <span class="m">12</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NWRUTE</span>  <span class="o">=</span> <span class="m">1</span>
+</span></span></code></pre></div><p>根据自己需求可以适当修改，使用<code>vasp_gam</code>进行计算</p>
+<h2 id="md">MD
+</h2><p>MD过程的POSCAR为计算完heating的CONTCAR，且需要读取heating的WAVECAR
+<code>ICNAR</code>设置如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">SYSTEM</span>  <span class="o">=</span> crystal
+</span></span><span class="line"><span class="cl"><span class="c1">#ISYM = 0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ENCUT</span>   <span class="o">=</span> <span class="m">500</span> <span class="c1">#和先前计算保持一致</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LREAL</span> <span class="o">=</span> A
+</span></span><span class="line"><span class="cl"><span class="nv">ISTART</span>  <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ISYM</span> <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NELM</span> <span class="o">=</span> <span class="m">120</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NPAR</span>    <span class="o">=</span> <span class="m">8</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ICHARG</span>  <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ISMEAR</span>  <span class="o">=</span> <span class="m">0</span> <span class="c1">#feimi 0 gass</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SIGMA</span>   <span class="o">=</span> 0.02
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFF</span>   <span class="o">=</span> 1E-4 <span class="c1">#can be modified</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#NBANDS =  856 # should be modified grep NABNDS OUTCAR</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PREC</span>    <span class="o">=</span> M  <span class="c1"># Low | Medium | High | Normal | Accurate | Single</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##################### MD  Ionic Relaxation#######################</span>
+</span></span><span class="line"><span class="cl"><span class="nv">IBRION</span><span class="o">=</span><span class="m">0</span>      <span class="c1">#(df:0/(-1 if NSW=0/1))relax method,non:-1,MD:0,CG:2.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">POTIM</span><span class="o">=</span>1.0     <span class="c1">#(df:0.5)controll the length of the trial step for ionic relax.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ISIF</span><span class="o">=</span><span class="m">2</span>        <span class="c1">#(df:2)Control what to relax. usually:0,all:3.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NSW</span><span class="o">=</span><span class="m">5020</span>       <span class="c1">#(df:0)max. ion relax steps.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFFG</span><span class="o">=</span>-0.01  <span class="c1">#(df:EDIFF*10)ionic rel. brake cond. loop force:(-),Ener.(+)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NELMIN</span><span class="o">=</span><span class="m">6</span>      <span class="c1">#(df:2)minimum steps of electronic SC.</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ALGO</span> <span class="o">=</span> N        <span class="c1"># FAST is faster than Normal</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NBLOCK</span> <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TEBEG</span><span class="o">=</span><span class="m">300</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TEEND</span><span class="o">=</span><span class="m">300</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SMASS</span><span class="o">=</span>-3      <span class="c1">#-1 heating;-3 normal MD.controls the velocities during an ab-initio molecular dynamics</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">######################Write Flags############################</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LWAVE</span>   <span class="o">=</span> .F.
+</span></span><span class="line"><span class="cl"><span class="nv">LCHARG</span>  <span class="o">=</span> .FALSE.
+</span></span><span class="line"><span class="cl"><span class="nv">IVDW</span>    <span class="o">=</span> <span class="m">12</span>
+</span></span></code></pre></div><p>MD过程<code>NSW</code>离子步设置为5020，使用vasp_gam计算</p>
+<p>计算完成后，需要将MD的轨迹拆分为一个一个POSCAR，可以使用脚本实现。<br>
+轨迹文件在MD目录下生成的<code>XDATCAR</code>，脚本位于<code>NA_couplings</code>文件夹下的<code>gxdatpos</code><br>
+需要将脚本和轨迹文件放入<code>/step2/pfile/</code>, 然后执行脚本拆分轨迹，获得所需的5020个结构</p>
+<p><strong>接下来计算NAC</strong></p>
+<h1 id="step2进行nac计算">Step2，进行NAC计算
+</h1><p>step2目录下，有如下文件:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ ls
+</span></span><span class="line"><span class="cl">combine_complex.py  NAC      pfile                 readme            real
+</span></span><span class="line"><span class="cl">energy              name.py  read-en-diff-vasp.pl  read-nac-vasp.pl  res
+</span></span></code></pre></div><p>首先先计算NAC<br>
+NAC目录下，有如下文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ ls
+</span></span><span class="line"><span class="cl">FIRSTCAR  readme  nac.sh  STARTCAR
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ cat FIRSTCAR
+</span></span><span class="line"><span class="cl">Step <span class="m">1</span> adiabatic MD INCAR
+</span></span><span class="line"><span class="cl"><span class="nv">ISTART</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ALGO</span><span class="o">=</span>N    <span class="c1">#VASP relaxation algorithm</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NELMDL</span><span class="o">=</span>-2
+</span></span><span class="line"><span class="cl"><span class="nv">LWAVE</span> <span class="o">=</span> .TRUE.
+</span></span><span class="line"><span class="cl"><span class="nv">LCHARG</span> <span class="o">=</span> .FALSE.
+</span></span><span class="line"><span class="cl"><span class="nv">LREAL</span> <span class="o">=</span> A
+</span></span><span class="line"><span class="cl"><span class="nv">NPAR</span> <span class="o">=</span> <span class="m">8</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PREC</span><span class="o">=</span>M
+</span></span><span class="line"><span class="cl"><span class="nv">ISMEAR</span><span class="o">=</span> <span class="m">0</span>         <span class="c1">#set to 0 for partial occupencies of wavefunction have Gaussian smearing</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SIGMA</span><span class="o">=</span>0.02
+</span></span><span class="line"><span class="cl"><span class="nv">ISYM</span> <span class="o">=</span> <span class="m">0</span>          <span class="c1">#symmetry not considered in calculation</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NSW</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFF</span><span class="o">=</span> 1E-4
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFFG</span><span class="o">=</span>-0.01
+</span></span><span class="line"><span class="cl"><span class="nv">IVDW</span>    <span class="o">=</span> <span class="m">12</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ cat STARTCAR
+</span></span><span class="line"><span class="cl">Step <span class="m">1</span> adiabatic MD INCAR
+</span></span><span class="line"><span class="cl"><span class="nv">ISTART</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ALGO</span><span class="o">=</span>N    <span class="c1">#VASP relaxation algorithm</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NELMDL</span><span class="o">=</span>-2
+</span></span><span class="line"><span class="cl"><span class="nv">LWAVE</span> <span class="o">=</span> .TRUE.
+</span></span><span class="line"><span class="cl"><span class="nv">LCHARG</span> <span class="o">=</span> .FALSE.
+</span></span><span class="line"><span class="cl"><span class="nv">LREAL</span> <span class="o">=</span> A
+</span></span><span class="line"><span class="cl"><span class="nv">NPAR</span> <span class="o">=</span> <span class="m">8</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PREC</span><span class="o">=</span>M
+</span></span><span class="line"><span class="cl"><span class="nv">ISMEAR</span><span class="o">=</span> <span class="m">0</span>         <span class="c1">#set to 0 for partial occupencies of wavefunction have Gaussian smearing</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SIGMA</span><span class="o">=</span>0.02
+</span></span><span class="line"><span class="cl"><span class="nv">ISYM</span> <span class="o">=</span> <span class="m">0</span>          <span class="c1">#symmetry not considered in calculation</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NSW</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFF</span><span class="o">=</span> 1E-4
+</span></span><span class="line"><span class="cl"><span class="nv">EDIFFG</span><span class="o">=</span>-0.01
+</span></span><span class="line"><span class="cl"><span class="nv">IVDW</span>    <span class="o">=</span> <span class="m">12</span>
+</span></span></code></pre></div><p><code>nac.sh</code>脚本需要设置好路径，包括<code>NA_couplings</code>路径 <code>pfile</code>路径（有两处）<br>
+<code>MINB</code>:电子可以激发的最低能量轨道
+<code>MAXB</code>:电子可以激发的最高能量轨道
+一般<code>MINB</code>设置为VBM占据轨道减去4,<code>MAXB</code>设置为CBM占据轨道加上4(可以在本征值文件EIGENVAL查到)<br>
+<code>MINT</code>和<code>MAXT</code>:起始步和结束步。（若要分段算最好第二段往前多算几步，比如1-2505；2500-5005）</p>
+<p><strong>计算结束后检查energy文件行数和real文件夹中的real文件数是否是对的</strong>(多次计算生成的energy内容并不会被覆盖，而是会在末尾继续写入，一定要检查好)<br>
+然后cp energy和real文件到<code>/step2/energy</code>文件和<code>real</code>文件夹</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ cat nac.sh
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -J ljb-nac              # 作业名</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -o out.%j               # 标准输出文件（%j 为作业 ID）</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -e err.%j               # 标准错误文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -p mars                 # 分区名称</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -N 1                    # 申请 1 个节点</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH --ntasks-per-node=64    # 每个节点 64 个任务</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -t 07-23:57:25          # 运行时间限制 (7天23小时57分25秒)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 加载必要的模块</span>
+</span></span><span class="line"><span class="cl">module purge
+</span></span><span class="line"><span class="cl">module load intel/oneapi2023.2_noimpi
+</span></span><span class="line"><span class="cl">module load mpi/mpich/4.1.2-gcc-11.4.0-ch4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置 VASP 路径</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/GLOBALFS/caep_lts_qrhzh_1/liaojinbo/soft/vasp.5.4.4-nac-intel/bin/:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">module list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 当前工作目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="nv">$SLURM_SUBMIT_DIR</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;ENV Load Done&#34;</span> &gt; Debug.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/GLOBALFS/caep_lts_qrhzh_1/liaojinbo/soft/NA_couplings  <span class="c1"># puts perl scripts in path</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 参数设置</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MINB</span><span class="o">=</span><span class="m">168</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MAXB</span><span class="o">=</span><span class="m">177</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MINT</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MAXT</span><span class="o">=</span><span class="m">5000</span>
+</span></span><span class="line"><span class="cl"><span class="nv">total_k</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TMSTP</span><span class="o">=</span>1.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 打印参数</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;\n\n======= INITIAL PARAMETERS (MINBAND MAXBAND MINTIME MAXTIME) ========\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;%10d%10d%10d%10d\n\n&#34;</span> <span class="nv">$MINB</span> <span class="nv">$MAXB</span> <span class="nv">$MINT</span> <span class="nv">$MAXT</span>
+</span></span><span class="line"><span class="cl">rm -f billdata OS_STRENGTH in_SPECTRUM test_coupling_os coupling
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Set up Calcs Done&#34;</span> &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取初始 POSCAR 文件</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SUFX</span><span class="o">=</span><span class="k">$(</span> <span class="nb">printf</span> <span class="s2">&#34;%04d&#34;</span> <span class="s2">&#34;</span><span class="nv">$MINT</span><span class="s2">&#34;</span> <span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">POSFILE</span><span class="o">=</span><span class="s2">&#34;p</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">cp /GLOBALFS/caep_lts_qrhzh_1/liaojinbo/pvk/nac/strain-free/step2/pfile/<span class="nv">$POSFILE</span> POSCAR
+</span></span><span class="line"><span class="cl">cp FIRSTCAR INCAR
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行 VASP 初始化计算</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;Running VASP and getting initial set of good orbitals\n&#34;</span>
+</span></span><span class="line"><span class="cl">yhrun -N <span class="m">1</span> -n <span class="m">64</span> vasp_std &gt; vasp.out 2&gt; err
+</span></span><span class="line"><span class="cl">cat vasp.out &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">cp WAVECAR WAVECAROLD
+</span></span><span class="line"><span class="cl">cp WAVECAR WAVECARNEW
+</span></span><span class="line"><span class="cl">cp OUTCAR OUTCAR_total
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Set Good ORBITALS Done&#34;</span> &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 逐步计算 NAC</span>
+</span></span><span class="line"><span class="cl"><span class="o">((</span> MINT++ <span class="o">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> i in <span class="k">$(</span>seq <span class="nv">$MINT</span> <span class="nv">$MAXT</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">SUFX</span><span class="o">=</span><span class="k">$(</span> <span class="nb">printf</span> <span class="s2">&#34;%04d&#34;</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">POSFILE</span><span class="o">=</span><span class="s2">&#34;p</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    cp /GLOBALFS/caep_lts_qrhzh_1/liaojinbo/pvk/nac/strain-free/step2/pfile/<span class="nv">$POSFILE</span> POSCAR
+</span></span><span class="line"><span class="cl">    cp STARTCAR INCAR
+</span></span><span class="line"><span class="cl">    <span class="nb">printf</span> <span class="s2">&#34;Running VASP at t = </span><span class="nv">$i</span><span class="s2"> fs\n&#34;</span>
+</span></span><span class="line"><span class="cl">    yhrun -N <span class="m">1</span> -n <span class="m">64</span> vasp_std &gt; vasp.out 2&gt; err
+</span></span><span class="line"><span class="cl">    cat vasp.out &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    mv WAVECARNEW WAVECAROLD
+</span></span><span class="line"><span class="cl">    cp WAVECAR WAVECARNEW
+</span></span><span class="line"><span class="cl">    cat OUTCAR &gt;&gt; OUTCAR_total
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">printf</span> <span class="s2">&#34;Getting band energies at t = </span><span class="nv">$i</span><span class="s2"> fs\n&#34;</span>
+</span></span><span class="line"><span class="cl">    state_energy_extractor_allk.pl <span class="nv">$MINB</span> <span class="nv">$MAXB</span>
+</span></span><span class="line"><span class="cl">    cat energy_by_band &gt;&gt; energy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 计算 NAC</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Calculating the NAC among k points&#34;</span> &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">    yhrun -N <span class="m">1</span> -n <span class="m">16</span> ovlap_NORM_OS_allk_mpi <span class="nv">$MINB</span> <span class="nv">$MAXB</span> <span class="nv">$TMSTP</span> <span class="nv">$total_k</span> <span class="nv">$SUFX</span> &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">    rm -f billdata OS_STRENGTH in_SPECTRUM test_coupling_os
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 合并 real 文件</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> j in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$total_k</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        mv <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_1&#34;</span> <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> k in <span class="k">$(</span>seq <span class="m">2</span> <span class="nv">$total_k</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">            paste <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">&#34;</span> &gt; temp
+</span></span><span class="line"><span class="cl">            mv temp <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">            rm -f <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">done</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    mv <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_1&#34;</span> <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> j in <span class="k">$(</span>seq <span class="m">2</span> <span class="nv">$total_k</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        cat <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        rm -f <span class="s2">&#34;real</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Combine the real files Done&#34;</span> &gt;&gt; Debug.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 将 real 文件移入目录</span>
+</span></span><span class="line"><span class="cl"><span class="o">((</span> MINT-- <span class="o">))</span>
+</span></span><span class="line"><span class="cl"><span class="nv">REALDIR</span><span class="o">=</span><span class="s2">&#34;REAL_</span><span class="si">${</span><span class="nv">MINT</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">MAXT</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">mkdir -p <span class="nv">$REALDIR</span>
+</span></span><span class="line"><span class="cl">mv real* <span class="nv">$REALDIR</span>/
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Finish&#34;</span> &gt;&gt; Debug.log
+</span></span></code></pre></div><p>可以看到，NAC计算过程还是比较复杂的，在nac.sh脚本帮助下可以大大提高效率。<br>
+计算完成，会在当前目录下创建<code>REALDIR=&quot;REAL_${MINT}_${MAXT}&quot;</code>目录，并将计算得到的real文件移动到此。</p>
+<p>确保<code>step2</code>目录下含:<code> combine_complex.py</code>和<code>name.py</code>，如果没有<code>res</code>文件夹则<code>mkdir res</code><br>
+使用<code>combine_complex.py</code>脚本在<code>real</code>文件夹中生成哈密顿量的实部和虚部，然后<code>cp real</code>文件夹的实部和虚部到<code>res</code>文件夹</p>
+<p>获取带隙波动和<code>NAC</code>：可以将<code>read-en-diff-vasp.pl</code>和<code>read-nac-vasp.pl</code>脚本放到<code>step2</code>最终的<code>res</code>文件，执行这两个脚本得到en-diff.dat和nac.dat。(注意：nac.dat的数值需要取绝对值并算平均值。)</p>
+<h1 id="step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）
+</h1><p>step3包含如下文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">total <span class="m">329</span>
+</span></span><span class="line"><span class="cl">    <span class="m">0</span> Dec <span class="m">24</span> 17:02 err.273230
+</span></span><span class="line"><span class="cl"><span class="m">11776</span> Dec <span class="m">23</span> 16:41 FFT
+</span></span><span class="line"><span class="cl"><span class="m">11776</span> Dec <span class="m">24</span> 17:00 macro
+</span></span><span class="line"><span class="cl">  <span class="m">916</span> Dec <span class="m">23</span> 16:41 name_new1.py
+</span></span><span class="line"><span class="cl">  <span class="m">916</span> Dec <span class="m">23</span> 16:41 name_new2.py
+</span></span><span class="line"><span class="cl">  <span class="m">916</span> Dec <span class="m">23</span> 16:41 name_new3.py
+</span></span><span class="line"><span class="cl"><span class="m">11776</span> Dec <span class="m">23</span> 16:41 out
+</span></span><span class="line"><span class="cl"> <span class="m">6146</span> Dec <span class="m">24</span> 17:02 out.273230
+</span></span><span class="line"><span class="cl"> <span class="m">8507</span> Dec <span class="m">24</span> 17:07 py-scr3.py
+</span></span><span class="line"><span class="cl">  <span class="m">811</span> Dec <span class="m">24</span> 17:01 pyxaid-slurm.sh
+</span></span><span class="line"><span class="cl"> <span class="m">1596</span> Dec <span class="m">24</span> 17:20 readme
+</span></span><span class="line"><span class="cl"><span class="m">12800</span> Dec <span class="m">24</span> 17:08 res
+</span></span><span class="line"><span class="cl"><span class="m">12800</span> Dec <span class="m">24</span> 16:59 res1
+</span></span><span class="line"><span class="cl"><span class="m">13824</span> Dec <span class="m">24</span> 16:59 res2
+</span></span><span class="line"><span class="cl"><span class="m">13824</span> Dec <span class="m">24</span> 16:59 res3
+</span></span></code></pre></div><p><code>name_new.py</code>作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个<code>res1，res2，res3</code>。如，设初始<code>res</code>顺序为ABC,则经过脚本处理后<code>res1</code>为ABCBA,<code>res2</code>为ABCBC,<code>res3</code>为ABCAB,将<code>res1、2、3</code>中所有文件<code>cp</code>到新的<code>res</code>文件，会去掉相同的部分，最终得到ABCBABCBA。</p>
+<blockquote>
+<p>使用<code>name_new.py</code>需要<code>python2.7</code>版本，<code>python3</code>会报错不兼容。<br>
+<code>py-scr3.py</code>脚本（需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量）
+<code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p>
+</blockquote>
+<p>其中<code>py-scr3.py</code>内容为:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$  cat py-scr3.py
+</span></span><span class="line"><span class="cl">from PYXAID import *
+</span></span><span class="line"><span class="cl"><span class="c1">#from pyxaid_core import *</span>
+</span></span><span class="line"><span class="cl">import os
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;import Done&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#############################################################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Input section: Here everything can be defined in programable way, not just in strict format</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#############################################################################################</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Init Params!&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">params</span> <span class="o">=</span> <span class="o">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define general control parameters (file names, directories, etc.)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Path to Hamiltonians</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># These paths must direct to the folder that contains the results of</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the step2 calculations (Ham_ and (optinally) Hprime_ files) and give</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the prefixes and suffixes of the files to read in</span>
+</span></span><span class="line"><span class="cl"><span class="nv">rt</span> <span class="o">=</span>os.getcwd<span class="o">()</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Ham_re_prefix&#34;</span><span class="o">]</span> <span class="o">=</span> rt+<span class="s2">&#34;/res/0_Ham_&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Ham_re_suffix&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;_re&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Ham_im_prefix&#34;</span><span class="o">]</span> <span class="o">=</span> rt+<span class="s2">&#34;/res/0_Ham_&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Ham_im_suffix&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;_im&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Hprime_x_prefix&#34;</span><span class="o">]</span> <span class="o">=</span> rt + <span class="s2">&#34;/res/0_Hprime_&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Hprime_x_suffix&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;x_re&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Hprime_y_prefix&#34;</span><span class="o">]</span> <span class="o">=</span> rt + <span class="s2">&#34;/res/0_Hprime_&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Hprime_y_suffix&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;y_re&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Hprime_z_prefix&#34;</span><span class="o">]</span> <span class="o">=</span> rt + <span class="s2">&#34;/res/0_Hprime_&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Hprime_z_suffix&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;z_re&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;energy_units&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;Ry&#34;</span>                <span class="c1"># This specifies the units of the Hamiltonian matrix elements as they</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># are written in Ham_ files. Possible values: &#34;Ry&#34;, &#34;eV&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set up other simulation parameters:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Files and directories (apart from the Ham_ and Hprime_)</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;scratch_dir&#34;</span><span class="o">]</span> <span class="o">=</span>  os.getcwd<span class="o">()</span>+<span class="s2">&#34;/out&#34;</span>  <span class="c1"># Hey! : you need to create this folder in the current directory</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># This is were all (may be too many) output files will be written</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;read_couplings&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;batch&#34;</span>           <span class="c1"># How to read all input (Ham_ and Hprime_) files. Possible values:</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># &#34;batch&#34;, &#34;online&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Simulation type</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;runtype&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;namd&#34;</span>                   <span class="c1"># Type of calculation to perform. Possible values:</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># &#34;namd&#34; - to do NA-MD calculations, &#34;no-namd&#34;(or any other) - to</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># perform only pre-processing steps - this will create the files with</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># the energies of basis states and will output some useful information,</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># it may be particularly helpful for preparing your input</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;decoherence&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">1</span>                    <span class="c1"># Do you want to include decoherence via DISH? Possible values:</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># 0 - no, 1 - yes</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;is_field&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">0</span>                       <span class="c1"># Do you want to include laser excitation via explicit light-matter</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># interaction Hamiltonian? Possible values: 0 - no, 1 - yes</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Integrator parameters</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;elec_dt&#34;</span><span class="o">]</span> <span class="o">=</span> 1.0                      <span class="c1"># Electronic integration time step, fs</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;nucl_dt&#34;</span><span class="o">]</span> <span class="o">=</span> 1.0                      <span class="c1"># Nuclear integration time step, fs (this parameter comes from</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># you x.md.in file)</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;integrator&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">0</span>                     <span class="c1"># Integrator to solve TD-SE. Possible values: 0, 10,11, 2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># NA-MD trajectory and SH control</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;namdtime&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">2000</span>                      <span class="c1"># Trajectory time, fs 计算步数，需要修改</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;num_sh_traj&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">300</span>                 <span class="c1"># Number of stochastic realizations for each initial condition</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;boltz_flag&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">1</span>                     <span class="c1"># Boltzmann flag (set to 1 anyways)</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;Temp&#34;</span><span class="o">]</span> <span class="o">=</span> 300.0                       <span class="c1"># Temperature of the system</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;alp_bet&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">0</span>                        <span class="c1"># How to treat spin. Possible values: 0 - alpha and beta spins are not</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># coupled to each other, 1 - don&#39;t care about spins, only orbitals matter</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;debug_flag&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">0</span>                     <span class="c1"># If you want extra output. Possible values: 0, 1, 2, ...</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># as the number increases the amount of the output increases too</span>
+</span></span><span class="line"><span class="cl">                                             <span class="c1"># Be carefull - it may result in a huge output!</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Parameters of the field (if it is included)&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Parameters of the field (if it is included)</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_dir&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;xyz&#34;</span>                 <span class="c1"># Direction of the field. Possible values: &#34;x&#34;,&#34;y&#34;,&#34;z&#34;,&#34;xy&#34;,&#34;xz&#34;,&#34;yz&#34;,&#34;xyz&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_protocol&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="m">1</span>                <span class="c1"># Envelope function. Possible values: 1 - step function, 2 - saw-tooth</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_Tm&#34;</span><span class="o">]</span> <span class="o">=</span> 25.0                   <span class="c1"># Middle of the time interval during which the field is active</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_T&#34;</span><span class="o">]</span> <span class="o">=</span> 25.0                    <span class="c1"># The period (duration) of the field pulse</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_freq&#34;</span><span class="o">]</span> <span class="o">=</span> 3.0                  <span class="c1"># The frequency of the field radiation = energy of the photons</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_freq_units&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;eV&#34;</span>           <span class="c1"># Units of the above quantity. Possible values: &#34;eV&#34;, &#34;nm&#34;,&#34;1/fs&#34;,&#34;rad/fs&#34;</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;field_fluence&#34;</span><span class="o">]</span> <span class="o">=</span> 1.0               <span class="c1"># Defines the light radiation intensity (fluence), mJ/cm^2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Params Done!&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define states:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Example of indexing convention with Nmin = 5, HOMO = 5, Nmax = 8</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the orbitals indices are consistent with QE (e.g. PP or DOS) indexing, which starts from 1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] - all computed orbitals</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [ 1, 2, 3, 4, 5, 6]                     - occupied orbitals</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                   [ 7, 8, 9, 10, 11] - unoccupied orbitals</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#              [5, 6, 7, 8]            - active space</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Set active space and the basis states&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Set active space and the basis states</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;active_space&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span>4,5,6,7<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;states&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;states&#34;</span><span class="o">]</span>.append<span class="o">([</span><span class="s2">&#34;GS&#34;</span>,<span class="o">[</span>4,-4,5,-5<span class="o">]</span>,0.00<span class="o">])</span>  <span class="c1"># ground state</span>
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;states&#34;</span><span class="o">]</span>.append<span class="o">([</span><span class="s2">&#34;S1&#34;</span>,<span class="o">[</span>4,-4,5,-6<span class="o">]</span>,0.00<span class="o">])</span>  <span class="c1"># excited state -5 -&gt; -6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Initial conditions&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Initial conditions</span>
+</span></span><span class="line"><span class="cl"><span class="nv">nmicrost</span> <span class="o">=</span> len<span class="o">(</span>params<span class="o">[</span><span class="s2">&#34;states&#34;</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ic</span> <span class="o">=</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">i</span> <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> i&lt;1000:
+</span></span><span class="line"><span class="cl">    <span class="nv">j</span> <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> j&lt;nmicrost:
+</span></span><span class="line"><span class="cl">        ic.append<span class="o">([</span>i,j<span class="o">])</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">j</span> <span class="o">=</span> j + <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">i</span> <span class="o">=</span> i + <span class="m">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">params<span class="o">[</span><span class="s2">&#34;iconds&#34;</span><span class="o">]</span> <span class="o">=</span> ic
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#############################################################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Execution section: Here we actually start the NA-MD calculations and the analysis</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#############################################################################################</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Run calculations&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">############ Run calculations ######################</span>
+</span></span><span class="line"><span class="cl">print params                   <span class="c1"># print out all simulation parameters first</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;\t&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;print params&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;\t&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pyxaid_core.info<span class="o">()</span>.version<span class="o">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;\t&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;pyxaid_core.info done&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;\t&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">pyxaid_core.namd<span class="o">(</span>params<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;\t&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;pyxaid_core.namd done&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;\t&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Below we will be using the average.py module&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">########### Below we will be using the average.py module ########</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Note: If you want to re-run averaging calculations - just comment out the line</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># calling namd() functions (or may be some other unnecessary calculations)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">Nstates</span> <span class="o">=</span> len<span class="o">(</span>params<span class="o">[</span><span class="s2">&#34;states&#34;</span><span class="o">])</span>  <span class="c1"># Total number of basis states</span>
+</span></span><span class="line"><span class="cl"><span class="nv">inp_dir</span> <span class="o">=</span> os.getcwd<span class="o">()</span>+<span class="s2">&#34;/out&#34;</span>     <span class="c1"># this is the directory containing the input for this stage</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># it is the directory where pyxaid_core.namd() has written all</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># it output (raw output)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">opt</span> <span class="o">=</span> <span class="m">12</span>                         <span class="c1"># Defines the type of the averaging we want to do. Possible values:</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># 1 - average over intial conditions, independnetly for each state</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># 2 - sum the averages for groups of states (calculations with opt=1 must</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># already be done). One can do this for different groups of states without</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># recomputing initial-conditions averages - they stay the same</span>
+</span></span><span class="line"><span class="cl">                                 <span class="c1"># 12 - do the steps 1 and 2 one after another</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;Define the groups of states for which we want to know the total population as a function of time&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Define the groups of states for which we want to know the total population as a function of time</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MS</span> <span class="o">=</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> i in range<span class="o">(</span>0,Nstates<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">    MS.append<span class="o">([</span>i<span class="o">])</span>   <span class="c1"># In our case - each group of states (macrostate) contains only a single basis configuration</span>
+</span></span><span class="line"><span class="cl">                     <span class="c1"># (microstate)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">res_dir</span> <span class="o">=</span> os.getcwd<span class="o">()</span>+<span class="s2">&#34;/macro&#34;</span>  <span class="c1"># Hey! : you need to create this folder in the current directory</span>
+</span></span><span class="line"><span class="cl">                                <span class="c1"># This is where the averaged results will be written</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39; Finally, run the averaging&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Finally, run the averaging</span>
+</span></span><span class="line"><span class="cl">average.average<span class="o">(</span>params<span class="o">[</span><span class="s2">&#34;namdtime&#34;</span><span class="o">]</span>,Nstates,params<span class="o">[</span><span class="s2">&#34;iconds&#34;</span><span class="o">]</span>,opt,MS,inp_dir,res_dir<span class="o">)</span>
+</span></span></code></pre></div><p>结果分析：<br>
+获取<code>Population</code>：进入<code>macro</code>文件夹，使用<code>divide.py</code>脚本提取<code>sh_pop_ex1</code>的数据，x轴为第二列，y轴为第6列。注意：divide脚本time对应<code>sh_pop_ex1</code>文件的行数,c = C[x]代表提取第x-1列，然后python divide.py &gt; x.dat 表示将第x-1列作为x轴的数据。后续使用divide脚本同上。</p>
+<p>获取Dephasing和Spectral_density：先在step3建一个FFT文件夹，然后进去out文件夹，cp icond0pair0_1Dephasing_function.txt(1列x轴数据，3列为y轴数据)和icond0pair0_1Spectral_density.txt（4列为x轴数据，8列为y轴数据）文件到FFT文件夹，使用divide脚本提取数据。</p>
+<h2 id="附录">附录
+</h2><p><a class="link" href="https://github.com/Quantum-Dynamics-Hub/pyxaid2/tree/master/PYXAID2"  target="_blank" rel="noopener"
+    >pyxaid2/PYXAID2 at master · Quantum-Dynamics-Hub/pyxaid2</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </p>
+<p><a class="link" href="https://quantum-dynamics-hub.github.io/pyxaid/"  target="_blank" rel="noopener"
+    >PYXAID</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </p>
+<p><a class="link" href="http://staff.ustc.edu.cn/~zhaojin/"  target="_blank" rel="noopener"
+    >Prof. Jin Zhao&rsquo;s research group</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </p>
+<p><a class="link" href="http://staff.ustc.edu.cn/~zhaojin/teaching/"  target="_blank" rel="noopener"
+    >Teaching | Prof. Jin Zhao&rsquo;s research group(Solid State Phyics Course)</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </p>
+<p><a class="link" href="https://nbviewer.org/github/QijingZheng/Hefei-NAMD/blob/master/doc/training_2020/Hefei-NAMD_Training.ipynb"  target="_blank" rel="noopener"
+    >Jupyter Notebook Viewer（Hefei - NAMD）</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </p>
+<p><a class="link" href="http://staff.ustc.edu.cn/~zqj/"  target="_blank" rel="noopener"
+    >Qijing Zheng</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0 转载请留言告知</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Dec 24, 2024 13:46 UTC
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/vasp_compile/">
+        
+        
+            <div class="article-image">
+                <img src="/p/vasp_compile/vasp.87ba60609fbdb23831d5cfc126b6a153_hu4761836933568047117.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 广州超算编译安装Vasp.5.4.4"
+                        data-key="Vasp_compile" 
+                        data-hash="md5-h7pgYJ&#43;9sjgx1c/BJrahUw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">广州超算编译安装Vasp.5.4.4</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="allergicrosen/myblog"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    let utterancesLoaded = false;
+
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+
+        
+        utterancesLoaded = true;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (!utterancesLoaded) return;
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 allergicrosen
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+
+
+
+<div id="particles-js"></div>
+
+<script src=https://allergicrosen.fun/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://allergicrosen.fun/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
+
+<script>
+  let s1 = '2024-9-09'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<script>
+
+const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+
+const cssPath = "https://allergicrosen.fun/waifu/waifu.css"
+const waifutipsjsonPath = "https://allergicrosen.fun/waifu/waifu-tips.json"
+
+function loadExternalResource(url, type) {
+	return new Promise((resolve, reject) => {
+		let tag;
+
+		if (type === "css") {
+			tag = document.createElement("link");
+			tag.rel = "stylesheet";
+			tag.href = url;
+		}
+		else if (type === "js") {
+			tag = document.createElement("script");
+			tag.src = url;
+		}
+		if (tag) {
+			tag.onload = () => resolve(url);
+			tag.onerror = () => reject(url);
+			document.head.appendChild(tag);
+		}
+	});
+}
+
+
+if (screen.width >= 768) {
+	Promise.all([
+		loadExternalResource(cssPath, "css"),
+		loadExternalResource(live2d_path + "live2d.min.js", "js"),
+		loadExternalResource(live2d_path + "waifu-tips.js", "js")
+	]).then(() => {
+		
+		initWidget({
+			waifuPath: waifutipsjsonPath,
+			
+			cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+		});
+	});
+}
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<meting-js
+	server="netease"
+    fixed="true"
+	type="playlist"
+	id="2566074903">
+</meting-js>
+
+<script
+    src="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/js/nprogress.min.js"
+    integrity="sha384-bHDlAEUFxsRI7JfULv3DTpL2IXbbgn4JHQJibgo5iiXSK6Iu8muwqHANhun74Cqg"
+    crossorigin="anonymous"
+></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/css/nprogress.css"
+    integrity="sha384-KJyhr2syt5+4M9Pz5dipCvTrtvOmLk/olWVdfhAp858UCa64Ia5GFpTN7+G4BWpE"
+    crossorigin="anonymous"
+/>
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+
+
+    </body>
+</html>
