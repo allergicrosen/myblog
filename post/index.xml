@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 24 Dec 2024 13:46:21 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Dec 2024 13:50:21 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NAC计算</title>
         <link>https://allergicrosen.fun/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
@@ -31,9 +31,9 @@
 &lt;li&gt;计算寿命，退相干&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;其中&lt;code&gt;NA_couplings&lt;/code&gt;包含计算所需脚本及可执行文件&lt;/p&gt;
-&lt;h1 id=&#34;step1进行vasp的md计算&#34;&gt;Step1，进行vasp的MD计算
-&lt;/h1&gt;&lt;h2 id=&#34;heating&#34;&gt;heating
-&lt;/h2&gt;&lt;p&gt;step1下包含heating和MD&lt;/p&gt;
+&lt;h2 id=&#34;step1进行vasp的md计算&#34;&gt;Step1，进行vasp的MD计算
+&lt;/h2&gt;&lt;h3 id=&#34;heating&#34;&gt;heating
+&lt;/h3&gt;&lt;p&gt;step1下包含heating和MD&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; $ ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;heating  MD
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;MD过程包含heating和MD两个部分&lt;br&gt;
@@ -71,8 +71,8 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入&l
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;IVDW&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NWRUTE&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;根据自己需求可以适当修改，使用&lt;code&gt;vasp_gam&lt;/code&gt;进行计算&lt;/p&gt;
-&lt;h2 id=&#34;md&#34;&gt;MD
-&lt;/h2&gt;&lt;p&gt;MD过程的POSCAR为计算完heating的CONTCAR，且需要读取heating的WAVECAR
+&lt;h3 id=&#34;md&#34;&gt;MD
+&lt;/h3&gt;&lt;p&gt;MD过程的POSCAR为计算完heating的CONTCAR，且需要读取heating的WAVECAR
 &lt;code&gt;ICNAR&lt;/code&gt;设置如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SYSTEM&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; crystal
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ISYM = 0&lt;/span&gt;
@@ -110,8 +110,8 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入&l
 轨迹文件在MD目录下生成的&lt;code&gt;XDATCAR&lt;/code&gt;，脚本位于&lt;code&gt;NA_couplings&lt;/code&gt;文件夹下的&lt;code&gt;gxdatpos&lt;/code&gt;&lt;br&gt;
 需要将脚本和轨迹文件放入&lt;code&gt;/step2/pfile/&lt;/code&gt;, 然后执行脚本拆分轨迹，获得所需的5020个结构&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;接下来计算NAC&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&#34;step2进行nac计算&#34;&gt;Step2，进行NAC计算
-&lt;/h1&gt;&lt;p&gt;step2目录下，有如下文件:&lt;/p&gt;
+&lt;h2 id=&#34;step2进行nac计算&#34;&gt;Step2，进行NAC计算
+&lt;/h2&gt;&lt;p&gt;step2目录下，有如下文件:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; $ ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;combine_complex.py  NAC      pfile                 readme            real
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;energy              name.py  read-en-diff-vasp.pl  read-nac-vasp.pl  res
@@ -273,8 +273,8 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;p&gt;确保&lt;code&gt;step2&lt;/code&gt;目录下含:&lt;code&gt; combine_complex.py&lt;/code&gt;和&lt;code&gt;name.py&lt;/code&gt;，如果没有&lt;code&gt;res&lt;/code&gt;文件夹则&lt;code&gt;mkdir res&lt;/code&gt;&lt;br&gt;
 使用&lt;code&gt;combine_complex.py&lt;/code&gt;脚本在&lt;code&gt;real&lt;/code&gt;文件夹中生成哈密顿量的实部和虚部，然后&lt;code&gt;cp real&lt;/code&gt;文件夹的实部和虚部到&lt;code&gt;res&lt;/code&gt;文件夹&lt;/p&gt;
 &lt;p&gt;获取带隙波动和&lt;code&gt;NAC&lt;/code&gt;：可以将&lt;code&gt;read-en-diff-vasp.pl&lt;/code&gt;和&lt;code&gt;read-nac-vasp.pl&lt;/code&gt;脚本放到&lt;code&gt;step2&lt;/code&gt;最终的&lt;code&gt;res&lt;/code&gt;文件，执行这两个脚本得到en-diff.dat和nac.dat。(注意：nac.dat的数值需要取绝对值并算平均值。)&lt;/p&gt;
-&lt;h1 id=&#34;step3-获取populationdephasing和spectral_density基于pyxaid&#34;&gt;step3 获取Population，Dephasing和Spectral_density（基于&lt;strong&gt;Pyxaid&lt;/strong&gt;）
-&lt;/h1&gt;&lt;p&gt;step3包含如下文件：&lt;/p&gt;
+&lt;h2 id=&#34;step3-获取populationdephasing和spectral_density基于pyxaid&#34;&gt;step3 获取Population，Dephasing和Spectral_density（基于&lt;strong&gt;Pyxaid&lt;/strong&gt;）
+&lt;/h2&gt;&lt;p&gt;step3包含如下文件：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total &lt;span class=&#34;m&#34;&gt;329&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 17:02 err.273230
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;11776&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;23&lt;/span&gt; 16:41 FFT
