@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://allergicrosen.fun/p/namd/'>
 
-<link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="NAC计算">
+<link rel="stylesheet" href="/scss/style.min.0ba17e45457b2648d434f5954ab706b4cb46b9f172f3f325d8fd14baa378046a.css"><meta property='og:title' content="NAC计算">
 <meta property='og:description' content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2024-12-24T14:43:15&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-06T13:25:27&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
 <meta name="twitter:description" content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
@@ -449,7 +449,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Dec 24, 2024 14:43 UTC
+                    Jan 06, 2025 13:25 UTC
                 </time>
             </div>
             <div>|</div>
@@ -622,8 +622,9 @@ NAC目录下，有如下文件：</p>
 </span></span></code></pre></div><p><code>nac.sh</code>脚本需要设置好路径，包括<code>NA_couplings</code>路径 <code>pfile</code>路径（有两处）<br>
 <code>MINB</code>:电子可以激发的最低能量轨道
 <code>MAXB</code>:电子可以激发的最高能量轨道
-一般<code>MINB</code>设置为VBM占据轨道减去4,<code>MAXB</code>设置为CBM占据轨道加上4(可以在本征值文件EIGENVAL查到)<br>
-<code>MINT</code>和<code>MAXT</code>:起始步和结束步。（若要分段算最好第二段往前多算几步，比如1-2505；2500-5005）</p>
+一般<code>MINB</code>设置为VBM占据轨道减去4,<code>MAXB</code>设置为CBM占据轨道加上4(可以在本征值文件EIGENVAL查到) （<strong>换了体系或者加了SOC后，一定一定一定记得修改这儿！！！</strong>）
+<code>MINT</code>和<code>MAXT</code>:起始步和结束步。（若要分段算最好第二段往前多算几步，比如1-2505；2500-5005）<br>
+<strong>注意自己是用的<code>vasp_gam</code>还是<code>vasp_std</code></strong></p>
 <p><strong>计算结束后检查energy文件行数和real文件夹中的real文件数是否是对的</strong>(多次计算生成的energy内容并不会被覆盖，而是会在末尾继续写入，一定要检查好)<br>
 然后cp energy和real文件到<code>/step2/energy</code>文件和<code>real</code>文件夹</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ cat nac.sh
@@ -653,7 +654,7 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/GLOBALFS/caep_lts_qrhzh_1/liaojinbo/soft/NA_couplings  <span class="c1"># puts perl scripts in path</span>
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">$PATH</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 参数设置</span>
-</span></span><span class="line"><span class="cl"><span class="nv">MINB</span><span class="o">=</span><span class="m">168</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MINB</span><span class="o">=</span><span class="m">168</span>   <span class="c1">#一定要记得修改！！！</span>
 </span></span><span class="line"><span class="cl"><span class="nv">MAXB</span><span class="o">=</span><span class="m">177</span>
 </span></span><span class="line"><span class="cl"><span class="nv">MINT</span><span class="o">=</span><span class="m">1</span>
 </span></span><span class="line"><span class="cl"><span class="nv">MAXT</span><span class="o">=</span><span class="m">5000</span>
@@ -670,7 +671,7 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># 获取初始 POSCAR 文件</span>
 </span></span><span class="line"><span class="cl"><span class="nv">SUFX</span><span class="o">=</span><span class="k">$(</span> <span class="nb">printf</span> <span class="s2">&#34;%04d&#34;</span> <span class="s2">&#34;</span><span class="nv">$MINT</span><span class="s2">&#34;</span> <span class="k">)</span>
 </span></span><span class="line"><span class="cl"><span class="nv">POSFILE</span><span class="o">=</span><span class="s2">&#34;p</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">cp /GLOBALFS/caep_lts_qrhzh_1/liaojinbo/pvk/nac/strain-free/step2/pfile/<span class="nv">$POSFILE</span> POSCAR
+</span></span><span class="line"><span class="cl">cp ../pfile/<span class="nv">$POSFILE</span> POSCAR  <span class="c1">#可以更改为相对路径，就不需要每次计算都改这里了</span>
 </span></span><span class="line"><span class="cl">cp FIRSTCAR INCAR
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 执行 VASP 初始化计算</span>
@@ -690,7 +691,7 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl">    <span class="nv">SUFX</span><span class="o">=</span><span class="k">$(</span> <span class="nb">printf</span> <span class="s2">&#34;%04d&#34;</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="k">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nv">POSFILE</span><span class="o">=</span><span class="s2">&#34;p</span><span class="si">${</span><span class="nv">SUFX</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    cp /GLOBALFS/caep_lts_qrhzh_1/liaojinbo/pvk/nac/strain-free/step2/pfile/<span class="nv">$POSFILE</span> POSCAR
+</span></span><span class="line"><span class="cl">    cp ../pfile/<span class="nv">$POSFILE</span> POSCAR
 </span></span><span class="line"><span class="cl">    cp STARTCAR INCAR
 </span></span><span class="line"><span class="cl">    <span class="nb">printf</span> <span class="s2">&#34;Running VASP at t = </span><span class="nv">$i</span><span class="s2"> fs\n&#34;</span>
 </span></span><span class="line"><span class="cl">    yhrun -N <span class="m">1</span> -n <span class="m">64</span> vasp_std &gt; vasp.out 2&gt; err
@@ -738,7 +739,7 @@ NAC目录下，有如下文件：</p>
 计算完成，会在当前目录下创建<code>REALDIR=&quot;REAL_${MINT}_${MAXT}&quot;</code>目录，并将计算得到的real文件移动到此。</p>
 <p>确保<code>step2</code>目录下含:<code> combine_complex.py</code>和<code>name.py</code>，如果没有<code>res</code>文件夹则<code>mkdir res</code><br>
 使用<code>combine_complex.py</code>脚本在<code>real</code>文件夹中生成哈密顿量的实部和虚部，然后<code>cp real</code>文件夹的实部和虚部到<code>res</code>文件夹</p>
-<p>获取带隙波动和<code>NAC</code>：可以将<code>read-en-diff-vasp.pl</code>和<code>read-nac-vasp.pl</code>脚本放到<code>step2</code>最终的<code>res</code>文件，执行这两个脚本得到en-diff.dat和nac.dat。(注意：nac.dat的数值需要取绝对值并算平均值。)</p>
+<p>获取带隙波动和<code>NAC</code>：可以将<code>read-en-diff-vasp.pl</code>和<code>read-nac-vasp.pl</code>脚本放到<code>step2</code>最终的<code>res</code>文件，执行这两个脚本得到en-diff.dat和nac.dat。(<strong>注意：nac.dat的数值需要取绝对值并算平均值。</strong>)</p>
 <h2 id="step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）
 </h2><p>step3包含如下文件：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">total <span class="m">329</span>
@@ -1012,6 +1013,8 @@ NAC目录下，有如下文件：</p>
         
             <a href="/tags/vasp/">Vasp</a>
         
+            <a href="/tags/namd/">NAMD</a>
+        
     </section>
 
 
@@ -1037,7 +1040,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Dec 24, 2024 14:43 UTC
+            最后更新于 Jan 06, 2025 13:25 UTC
         </span>
     </section></footer>
 
@@ -1161,7 +1164,9 @@ NAC目录下，有如下文件：</p>
     <section class="copyright">
         &copy; 
         
-        2024 allergicrosen
+            2024 - 
+        
+        2025 allergicrosen
     </section>
     
     <section class="powerby">

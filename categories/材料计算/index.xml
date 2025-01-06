@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 24 Dec 2024 14:43:15 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Jan 2025 13:25:27 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NAC计算</title>
         <link>https://allergicrosen.fun/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
@@ -156,8 +156,9 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;nac.sh&lt;/code&gt;脚本需要设置好路径，包括&lt;code&gt;NA_couplings&lt;/code&gt;路径 &lt;code&gt;pfile&lt;/code&gt;路径（有两处）&lt;br&gt;
 &lt;code&gt;MINB&lt;/code&gt;:电子可以激发的最低能量轨道
 &lt;code&gt;MAXB&lt;/code&gt;:电子可以激发的最高能量轨道
-一般&lt;code&gt;MINB&lt;/code&gt;设置为VBM占据轨道减去4,&lt;code&gt;MAXB&lt;/code&gt;设置为CBM占据轨道加上4(可以在本征值文件EIGENVAL查到)&lt;br&gt;
-&lt;code&gt;MINT&lt;/code&gt;和&lt;code&gt;MAXT&lt;/code&gt;:起始步和结束步。（若要分段算最好第二段往前多算几步，比如1-2505；2500-5005）&lt;/p&gt;
+一般&lt;code&gt;MINB&lt;/code&gt;设置为VBM占据轨道减去4,&lt;code&gt;MAXB&lt;/code&gt;设置为CBM占据轨道加上4(可以在本征值文件EIGENVAL查到) （&lt;strong&gt;换了体系或者加了SOC后，一定一定一定记得修改这儿！！！&lt;/strong&gt;）
+&lt;code&gt;MINT&lt;/code&gt;和&lt;code&gt;MAXT&lt;/code&gt;:起始步和结束步。（若要分段算最好第二段往前多算几步，比如1-2505；2500-5005）&lt;br&gt;
+&lt;strong&gt;注意自己是用的&lt;code&gt;vasp_gam&lt;/code&gt;还是&lt;code&gt;vasp_std&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;计算结束后检查energy文件行数和real文件夹中的real文件数是否是对的&lt;/strong&gt;(多次计算生成的energy内容并不会被覆盖，而是会在末尾继续写入，一定要检查好)&lt;br&gt;
 然后cp energy和real文件到&lt;code&gt;/step2/energy&lt;/code&gt;文件和&lt;code&gt;real&lt;/code&gt;文件夹&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; $ cat nac.sh
@@ -187,7 +188,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/GLOBALFS/caep_lts_qrhzh_1/liaojinbo/soft/NA_couplings  &lt;span class=&#34;c1&#34;&gt;# puts perl scripts in path&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 参数设置&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;168&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;168&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#一定要记得修改！！！&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MAXB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;177&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MAXT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5000&lt;/span&gt;
@@ -204,7 +205,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 获取初始 POSCAR 文件&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SUFX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;%04d&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$MINT&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;POSFILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;p&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SUFX&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /GLOBALFS/caep_lts_qrhzh_1/liaojinbo/pvk/nac/strain-free/step2/pfile/&lt;span class=&#34;nv&#34;&gt;$POSFILE&lt;/span&gt; POSCAR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp ../pfile/&lt;span class=&#34;nv&#34;&gt;$POSFILE&lt;/span&gt; POSCAR  &lt;span class=&#34;c1&#34;&gt;#可以更改为相对路径，就不需要每次计算都改这里了&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp FIRSTCAR INCAR
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 执行 VASP 初始化计算&lt;/span&gt;
@@ -224,7 +225,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;SUFX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;%04d&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;POSFILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;p&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;SUFX&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cp /GLOBALFS/caep_lts_qrhzh_1/liaojinbo/pvk/nac/strain-free/step2/pfile/&lt;span class=&#34;nv&#34;&gt;$POSFILE&lt;/span&gt; POSCAR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cp ../pfile/&lt;span class=&#34;nv&#34;&gt;$POSFILE&lt;/span&gt; POSCAR
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cp STARTCAR INCAR
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Running VASP at t = &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; fs\n&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    yhrun -N &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -n &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; vasp_std &amp;gt; vasp.out 2&amp;gt; err
@@ -272,7 +273,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 计算完成，会在当前目录下创建&lt;code&gt;REALDIR=&amp;quot;REAL_${MINT}_${MAXT}&amp;quot;&lt;/code&gt;目录，并将计算得到的real文件移动到此。&lt;/p&gt;
 &lt;p&gt;确保&lt;code&gt;step2&lt;/code&gt;目录下含:&lt;code&gt; combine_complex.py&lt;/code&gt;和&lt;code&gt;name.py&lt;/code&gt;，如果没有&lt;code&gt;res&lt;/code&gt;文件夹则&lt;code&gt;mkdir res&lt;/code&gt;&lt;br&gt;
 使用&lt;code&gt;combine_complex.py&lt;/code&gt;脚本在&lt;code&gt;real&lt;/code&gt;文件夹中生成哈密顿量的实部和虚部，然后&lt;code&gt;cp real&lt;/code&gt;文件夹的实部和虚部到&lt;code&gt;res&lt;/code&gt;文件夹&lt;/p&gt;
-&lt;p&gt;获取带隙波动和&lt;code&gt;NAC&lt;/code&gt;：可以将&lt;code&gt;read-en-diff-vasp.pl&lt;/code&gt;和&lt;code&gt;read-nac-vasp.pl&lt;/code&gt;脚本放到&lt;code&gt;step2&lt;/code&gt;最终的&lt;code&gt;res&lt;/code&gt;文件，执行这两个脚本得到en-diff.dat和nac.dat。(注意：nac.dat的数值需要取绝对值并算平均值。)&lt;/p&gt;
+&lt;p&gt;获取带隙波动和&lt;code&gt;NAC&lt;/code&gt;：可以将&lt;code&gt;read-en-diff-vasp.pl&lt;/code&gt;和&lt;code&gt;read-nac-vasp.pl&lt;/code&gt;脚本放到&lt;code&gt;step2&lt;/code&gt;最终的&lt;code&gt;res&lt;/code&gt;文件，执行这两个脚本得到en-diff.dat和nac.dat。(&lt;strong&gt;注意：nac.dat的数值需要取绝对值并算平均值。&lt;/strong&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;step3-获取populationdephasing和spectral_density基于pyxaid&#34;&gt;step3 获取Population，Dephasing和Spectral_density（基于&lt;strong&gt;Pyxaid&lt;/strong&gt;）
 &lt;/h2&gt;&lt;p&gt;step3包含如下文件：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total &lt;span class=&#34;m&#34;&gt;329&lt;/span&gt;
