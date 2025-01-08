@@ -7,20 +7,28 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Mon, 06 Jan 2025 13:25:27 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>NAMD</title>
-        <link>https://allergicrosen.fun/tags/namd/</link>
-        <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
+        <lastBuildDate>Wed, 08 Jan 2025 13:28:22 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Elastic Constants</title>
+        <link>https://allergicrosen.fun/tags/elastic-constants/</link>
+        <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/tags/namd/</guid>
+        <guid>https://allergicrosen.fun/tags/elastic-constants/</guid>
         <description></description>
         </item>
         <item>
         <title>Vasp</title>
         <link>https://allergicrosen.fun/tags/vasp/</link>
-        <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
+        <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
         <guid>https://allergicrosen.fun/tags/vasp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>NAMD</title>
+        <link>https://allergicrosen.fun/tags/namd/</link>
+        <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/tags/namd/</guid>
         <description></description>
         </item>
         <item>
