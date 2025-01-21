@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 21 Jan 2025 13:04:13 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Jan 2025 13:08:02 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>shell command</title>
         <link>https://allergicrosen.fun/p/shell-command/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
@@ -514,15 +514,16 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;13824&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 16:59 res2
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;13824&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 16:59 res3
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;旧脚本&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;旧脚本&lt;/strong&gt;
-&lt;code&gt;name_new.py&lt;/code&gt;作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个&lt;code&gt;res1，res2，res3&lt;/code&gt;。如，设初始&lt;code&gt;res&lt;/code&gt;顺序为ABC,则经过脚本处理后&lt;code&gt;res1&lt;/code&gt;为ABCBA,&lt;code&gt;res2&lt;/code&gt;为ABCBC,&lt;code&gt;res3&lt;/code&gt;为ABCAB,将&lt;code&gt;res1、2、3&lt;/code&gt;中所有文件&lt;code&gt;cp&lt;/code&gt;到新的&lt;code&gt;res&lt;/code&gt;文件，会去掉相同的部分，最终得到ABCBABCBA。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;name_new.py&lt;/code&gt;作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个&lt;code&gt;res1，res2，res3&lt;/code&gt;。如，设初始&lt;code&gt;res&lt;/code&gt;顺序为ABC,则经过脚本处理后&lt;code&gt;res1&lt;/code&gt;为ABCBA,&lt;code&gt;res2&lt;/code&gt;为ABCBC,&lt;code&gt;res3&lt;/code&gt;为ABCAB,将&lt;code&gt;res1、2、3&lt;/code&gt;中所有文件&lt;code&gt;cp&lt;/code&gt;到新的&lt;code&gt;res&lt;/code&gt;文件，会去掉相同的部分，最终得到ABCBABCBA。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用&lt;code&gt;name_new.py&lt;/code&gt;需要&lt;code&gt;python2.7&lt;/code&gt;版本，&lt;code&gt;python3&lt;/code&gt;会报错不兼容。&lt;br&gt;
 &lt;code&gt;py-scr3.py&lt;/code&gt;脚本（&lt;strong&gt;需要修改部分：i,  i+namdtime要小于&lt;code&gt;res&lt;/code&gt;文件的实部或虚部数量&lt;/strong&gt;）
 &lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;旧脚本&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;根据自己需求修改&lt;code&gt;py-scr3.py&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;其中&lt;code&gt;py-scr3.py&lt;/code&gt;内容为:&lt;/p&gt;

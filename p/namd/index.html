@@ -10,7 +10,7 @@
 <meta property='og:description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-21T13:04:13&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-21T13:08:02&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
 <meta name="twitter:description" content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
@@ -449,7 +449,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Jan 21, 2025 13:04 UTC
+                    Jan 21, 2025 13:08 UTC
                 </time>
             </div>
             <div>|</div>
@@ -770,15 +770,16 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl"><span class="m">13824</span> Dec <span class="m">24</span> 16:59 res2
 </span></span><span class="line"><span class="cl"><span class="m">13824</span> Dec <span class="m">24</span> 16:59 res3
 </span></span></code></pre></div><hr>
+<p><strong>旧脚本</strong></p>
 <hr>
-<p><strong>旧脚本</strong>
-<code>name_new.py</code>作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个<code>res1，res2，res3</code>。如，设初始<code>res</code>顺序为ABC,则经过脚本处理后<code>res1</code>为ABCBA,<code>res2</code>为ABCBC,<code>res3</code>为ABCAB,将<code>res1、2、3</code>中所有文件<code>cp</code>到新的<code>res</code>文件，会去掉相同的部分，最终得到ABCBABCBA。</p>
+<p><code>name_new.py</code>作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个<code>res1，res2，res3</code>。如，设初始<code>res</code>顺序为ABC,则经过脚本处理后<code>res1</code>为ABCBA,<code>res2</code>为ABCBC,<code>res3</code>为ABCAB,将<code>res1、2、3</code>中所有文件<code>cp</code>到新的<code>res</code>文件，会去掉相同的部分，最终得到ABCBABCBA。</p>
 <blockquote>
 <p>使用<code>name_new.py</code>需要<code>python2.7</code>版本，<code>python3</code>会报错不兼容。<br>
 <code>py-scr3.py</code>脚本（<strong>需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量</strong>）
 <code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p>
 </blockquote>
 <hr>
+<p><strong>旧脚本</strong></p>
 <hr>
 <p>根据自己需求修改<code>py-scr3.py</code></p>
 <p>其中<code>py-scr3.py</code>内容为:</p>
@@ -1059,7 +1060,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Jan 21, 2025 13:04 UTC
+            最后更新于 Jan 21, 2025 13:08 UTC
         </span>
     </section></footer>
 
