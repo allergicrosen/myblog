@@ -10,7 +10,7 @@
 <meta property='og:description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-21T12:46:09&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-21T13:04:13&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
 <meta name="twitter:description" content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
@@ -449,7 +449,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Jan 21, 2025 12:46 UTC
+                    Jan 21, 2025 13:04 UTC
                 </time>
             </div>
             <div>|</div>
@@ -769,12 +769,18 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl"><span class="m">12800</span> Dec <span class="m">24</span> 16:59 res1
 </span></span><span class="line"><span class="cl"><span class="m">13824</span> Dec <span class="m">24</span> 16:59 res2
 </span></span><span class="line"><span class="cl"><span class="m">13824</span> Dec <span class="m">24</span> 16:59 res3
-</span></span></code></pre></div><p><code>name_new.py</code>作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个<code>res1，res2，res3</code>。如，设初始<code>res</code>顺序为ABC,则经过脚本处理后<code>res1</code>为ABCBA,<code>res2</code>为ABCBC,<code>res3</code>为ABCAB,将<code>res1、2、3</code>中所有文件<code>cp</code>到新的<code>res</code>文件，会去掉相同的部分，最终得到ABCBABCBA。</p>
+</span></span></code></pre></div><hr>
+<hr>
+<p><strong>旧脚本</strong>
+<code>name_new.py</code>作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个<code>res1，res2，res3</code>。如，设初始<code>res</code>顺序为ABC,则经过脚本处理后<code>res1</code>为ABCBA,<code>res2</code>为ABCBC,<code>res3</code>为ABCAB,将<code>res1、2、3</code>中所有文件<code>cp</code>到新的<code>res</code>文件，会去掉相同的部分，最终得到ABCBABCBA。</p>
 <blockquote>
 <p>使用<code>name_new.py</code>需要<code>python2.7</code>版本，<code>python3</code>会报错不兼容。<br>
 <code>py-scr3.py</code>脚本（<strong>需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量</strong>）
 <code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p>
 </blockquote>
+<hr>
+<hr>
+<p>根据自己需求修改<code>py-scr3.py</code></p>
 <p>其中<code>py-scr3.py</code>内容为:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$  cat py-scr3.py
 </span></span><span class="line"><span class="cl">from PYXAID import *
@@ -945,8 +951,10 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># Finally, run the averaging</span>
 </span></span><span class="line"><span class="cl">average.average<span class="o">(</span>params<span class="o">[</span><span class="s2">&#34;namdtime&#34;</span><span class="o">]</span>,Nstates,params<span class="o">[</span><span class="s2">&#34;iconds&#34;</span><span class="o">]</span>,opt,MS,inp_dir,res_dir<span class="o">)</span>
 </span></span></code></pre></div><p>结果分析：<br>
-获取<code>Population</code>：进入<code>macro</code>文件夹，使用<code>divide.py</code>脚本提取<code>sh_pop_ex1</code>的数据，x轴为第二列，y轴为第6列。注意：divide脚本time对应<code>sh_pop_ex1</code>文件的行数,c = C[x]代表提取第x-1列，然后python divide.py &gt; x.dat 表示将第x-1列作为x轴的数据。后续使用divide脚本同上。</p>
-<p>获取Dephasing和Spectral_density：先在step3建一个FFT文件夹，然后进去out文件夹，cp icond0pair0_1Dephasing_function.txt(1列x轴数据，3列为y轴数据)和icond0pair0_1Spectral_density.txt（4列为x轴数据，8列为y轴数据）文件到FFT文件夹，使用divide脚本提取数据。</p>
+<strong>获取<code>Population</code>：</strong><br>
+进入<code>macro</code>文件夹，数据位于<code>sh_pop_ex1</code>中，x轴为<strong>第二列</strong>，y轴为<strong>第6列</strong>。</p>
+<p><strong>获取<code>Dephasing</code>和<code>Spectral_density</code>：</strong><br>
+先在step3建一个FFT文件夹，然后进去out文件夹，<code>cp icond0pair0_1Dephasing_function.txt</code>(1列x轴数据，3列为y轴数据)和<code>icond0pair0_1Spectral_density.txt</code>（4列为x轴数据，8列为y轴数据）文件到FFT文件夹</p>
 <h2 id="附录">附录
 </h2><p><a class="link" href="https://github.com/Quantum-Dynamics-Hub/pyxaid2/tree/master/PYXAID2"  target="_blank" rel="noopener"
     >pyxaid2/PYXAID2 at master · Quantum-Dynamics-Hub/pyxaid2</a>
@@ -1051,7 +1059,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Jan 21, 2025 12:46 UTC
+            最后更新于 Jan 21, 2025 13:04 UTC
         </span>
     </section></footer>
 

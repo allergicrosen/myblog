@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 21 Jan 2025 12:46:09 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Jan 2025 13:04:13 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>shell command</title>
         <link>https://allergicrosen.fun/p/shell-command/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
@@ -42,18 +42,18 @@
 &lt;p&gt;如果源和目标位于不同机器，可以通过 SSH 使用 rsync：&lt;br&gt;
 &lt;code&gt;rsync -avz --progress -e ssh user@remote:/source/ /destination/&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;awk&#34;&gt;awk
-&lt;/h2&gt;&lt;p&gt;处理大型数据该命令非常高效，且无需其它环境
-&lt;code&gt;awk &#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&#39; data.txt&lt;/code&gt;&lt;br&gt;
-例如计算data.txt第二列数据绝对值和的平均值，秒出结果！！！&lt;/p&gt;
-&lt;p&gt;awk 是一种强大的文本处理工具，专门用于逐行处理和分析结构化文本数据（如 CSV、日志文件等）。它的名字来源于其三位创始人 Alfred Aho、Peter Weinberger 和 Brian Kernighan 的姓氏首字母。&lt;/p&gt;
-&lt;p&gt;awk 的基本工作原理是：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;处理大型数据该命令非常高效，且无需其它环境&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk &#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&#39; data.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如计算data.txt第二列数据绝对值和的平均值，秒出结果！！！&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk&lt;/code&gt; 是一种强大的文本处理工具，专门用于逐行处理和分析结构化文本数据（如 CSV、日志文件等）。它的名字来源于其三位创始人 Alfred Aho、Peter Weinberger 和 Brian Kernighan 的姓氏首字母。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk&lt;/code&gt; 的基本工作原理是：&lt;/p&gt;
 &lt;p&gt;逐行读取输入文件。&lt;/p&gt;
 &lt;p&gt;根据指定的规则（模式）匹配行。&lt;/p&gt;
 &lt;p&gt;对匹配的行执行相应的操作（动作）。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;awk &#39;pattern { action }&#39; input_file&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;pattern：匹配行的条件（可选）。如果省略，则对所有行执行 action。&lt;/p&gt;
-&lt;p&gt;action：对匹配行执行的操作（可选）。如果省略，则默认打印匹配的行。&lt;/p&gt;
-&lt;p&gt;input_file：输入文件。如果省略，则从标准输入读取数据。&lt;/p&gt;
+&lt;p&gt;**pattern：**匹配行的条件（可选）。如果省略，则对所有行执行 action。&lt;/p&gt;
+&lt;p&gt;**action：**对匹配行执行的操作（可选）。如果省略，则默认打印匹配的行。&lt;/p&gt;
+&lt;p&gt;**input_file：**输入文件。如果省略，则从标准输入读取数据。&lt;/p&gt;
 &lt;p&gt;常用变量
 $0：整行内容。&lt;/p&gt;
 &lt;p&gt;$1, $2, &amp;hellip;, $N：第 1、2、&amp;hellip;、N 列的内容（默认以空格或制表符分隔）。&lt;/p&gt;

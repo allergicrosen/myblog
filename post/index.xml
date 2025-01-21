@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 21 Jan 2025 12:46:09 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Jan 2025 13:04:13 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>shell command</title>
         <link>https://allergicrosen.fun/p/shell-command/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
@@ -42,18 +42,18 @@
 &lt;p&gt;如果源和目标位于不同机器，可以通过 SSH 使用 rsync：&lt;br&gt;
 &lt;code&gt;rsync -avz --progress -e ssh user@remote:/source/ /destination/&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;awk&#34;&gt;awk
-&lt;/h2&gt;&lt;p&gt;处理大型数据该命令非常高效，且无需其它环境
-&lt;code&gt;awk &#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&#39; data.txt&lt;/code&gt;&lt;br&gt;
-例如计算data.txt第二列数据绝对值和的平均值，秒出结果！！！&lt;/p&gt;
-&lt;p&gt;awk 是一种强大的文本处理工具，专门用于逐行处理和分析结构化文本数据（如 CSV、日志文件等）。它的名字来源于其三位创始人 Alfred Aho、Peter Weinberger 和 Brian Kernighan 的姓氏首字母。&lt;/p&gt;
-&lt;p&gt;awk 的基本工作原理是：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;处理大型数据该命令非常高效，且无需其它环境&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk &#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&#39; data.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例如计算data.txt第二列数据绝对值和的平均值，秒出结果！！！&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk&lt;/code&gt; 是一种强大的文本处理工具，专门用于逐行处理和分析结构化文本数据（如 CSV、日志文件等）。它的名字来源于其三位创始人 Alfred Aho、Peter Weinberger 和 Brian Kernighan 的姓氏首字母。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk&lt;/code&gt; 的基本工作原理是：&lt;/p&gt;
 &lt;p&gt;逐行读取输入文件。&lt;/p&gt;
 &lt;p&gt;根据指定的规则（模式）匹配行。&lt;/p&gt;
 &lt;p&gt;对匹配的行执行相应的操作（动作）。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;awk &#39;pattern { action }&#39; input_file&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;pattern：匹配行的条件（可选）。如果省略，则对所有行执行 action。&lt;/p&gt;
-&lt;p&gt;action：对匹配行执行的操作（可选）。如果省略，则默认打印匹配的行。&lt;/p&gt;
-&lt;p&gt;input_file：输入文件。如果省略，则从标准输入读取数据。&lt;/p&gt;
+&lt;p&gt;**pattern：**匹配行的条件（可选）。如果省略，则对所有行执行 action。&lt;/p&gt;
+&lt;p&gt;**action：**对匹配行执行的操作（可选）。如果省略，则默认打印匹配的行。&lt;/p&gt;
+&lt;p&gt;**input_file：**输入文件。如果省略，则从标准输入读取数据。&lt;/p&gt;
 &lt;p&gt;常用变量
 $0：整行内容。&lt;/p&gt;
 &lt;p&gt;$1, $2, &amp;hellip;, $N：第 1、2、&amp;hellip;、N 列的内容（默认以空格或制表符分隔）。&lt;/p&gt;
@@ -513,12 +513,18 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;12800&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 16:59 res1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;13824&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 16:59 res2
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;13824&lt;/span&gt; Dec &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 16:59 res3
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;name_new.py&lt;/code&gt;作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个&lt;code&gt;res1，res2，res3&lt;/code&gt;。如，设初始&lt;code&gt;res&lt;/code&gt;顺序为ABC,则经过脚本处理后&lt;code&gt;res1&lt;/code&gt;为ABCBA,&lt;code&gt;res2&lt;/code&gt;为ABCBC,&lt;code&gt;res3&lt;/code&gt;为ABCAB,将&lt;code&gt;res1、2、3&lt;/code&gt;中所有文件&lt;code&gt;cp&lt;/code&gt;到新的&lt;code&gt;res&lt;/code&gt;文件，会去掉相同的部分，最终得到ABCBABCBA。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;旧脚本&lt;/strong&gt;
+&lt;code&gt;name_new.py&lt;/code&gt;作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个&lt;code&gt;res1，res2，res3&lt;/code&gt;。如，设初始&lt;code&gt;res&lt;/code&gt;顺序为ABC,则经过脚本处理后&lt;code&gt;res1&lt;/code&gt;为ABCBA,&lt;code&gt;res2&lt;/code&gt;为ABCBC,&lt;code&gt;res3&lt;/code&gt;为ABCAB,将&lt;code&gt;res1、2、3&lt;/code&gt;中所有文件&lt;code&gt;cp&lt;/code&gt;到新的&lt;code&gt;res&lt;/code&gt;文件，会去掉相同的部分，最终得到ABCBABCBA。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用&lt;code&gt;name_new.py&lt;/code&gt;需要&lt;code&gt;python2.7&lt;/code&gt;版本，&lt;code&gt;python3&lt;/code&gt;会报错不兼容。&lt;br&gt;
 &lt;code&gt;py-scr3.py&lt;/code&gt;脚本（&lt;strong&gt;需要修改部分：i,  i+namdtime要小于&lt;code&gt;res&lt;/code&gt;文件的实部或虚部数量&lt;/strong&gt;）
 &lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;根据自己需求修改&lt;code&gt;py-scr3.py&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;其中&lt;code&gt;py-scr3.py&lt;/code&gt;内容为:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$  cat py-scr3.py
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;from PYXAID import *
@@ -689,8 +695,10 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Finally, run the averaging&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;average.average&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;params&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;namdtime&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,Nstates,params&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;iconds&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,opt,MS,inp_dir,res_dir&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;结果分析：&lt;br&gt;
-获取&lt;code&gt;Population&lt;/code&gt;：进入&lt;code&gt;macro&lt;/code&gt;文件夹，使用&lt;code&gt;divide.py&lt;/code&gt;脚本提取&lt;code&gt;sh_pop_ex1&lt;/code&gt;的数据，x轴为第二列，y轴为第6列。注意：divide脚本time对应&lt;code&gt;sh_pop_ex1&lt;/code&gt;文件的行数,c = C[x]代表提取第x-1列，然后python divide.py &amp;gt; x.dat 表示将第x-1列作为x轴的数据。后续使用divide脚本同上。&lt;/p&gt;
-&lt;p&gt;获取Dephasing和Spectral_density：先在step3建一个FFT文件夹，然后进去out文件夹，cp icond0pair0_1Dephasing_function.txt(1列x轴数据，3列为y轴数据)和icond0pair0_1Spectral_density.txt（4列为x轴数据，8列为y轴数据）文件到FFT文件夹，使用divide脚本提取数据。&lt;/p&gt;
+&lt;strong&gt;获取&lt;code&gt;Population&lt;/code&gt;：&lt;/strong&gt;&lt;br&gt;
+进入&lt;code&gt;macro&lt;/code&gt;文件夹，数据位于&lt;code&gt;sh_pop_ex1&lt;/code&gt;中，x轴为&lt;strong&gt;第二列&lt;/strong&gt;，y轴为&lt;strong&gt;第6列&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;获取&lt;code&gt;Dephasing&lt;/code&gt;和&lt;code&gt;Spectral_density&lt;/code&gt;：&lt;/strong&gt;&lt;br&gt;
+先在step3建一个FFT文件夹，然后进去out文件夹，&lt;code&gt;cp icond0pair0_1Dephasing_function.txt&lt;/code&gt;(1列x轴数据，3列为y轴数据)和&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;（4列为x轴数据，8列为y轴数据）文件到FFT文件夹&lt;/p&gt;
 &lt;h2 id=&#34;附录&#34;&gt;附录
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Quantum-Dynamics-Hub/pyxaid2/tree/master/PYXAID2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;pyxaid2/PYXAID2 at master · Quantum-Dynamics-Hub/pyxaid2&lt;/a&gt;
