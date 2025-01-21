@@ -7,6 +7,93 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>shell command</title>
+        <link>https://allergicrosen.fun/p/shell-command/</link>
+        <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/p/shell-command/</guid>
+        <description>&lt;h1 id=&#34;记录些有用的命令&#34;&gt;&lt;strong&gt;记录些有用的命令&lt;/strong&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;rsync&#34;&gt;&lt;strong&gt;rsync&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;rsync -av --progress source/ destination/&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cp&lt;/code&gt;命令复制太慢也不显示进度，此命令较快且可以知道进度&lt;br&gt;
+参数说明：
+&lt;code&gt;-a：&lt;/code&gt;归档模式，保留文件属性（如权限、时间戳等），并递归复制目录。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-v：&lt;/code&gt;显示详细输出，便于跟踪进度。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--progress：&lt;/code&gt;显示复制进度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么 rsync 更快？&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;增量传输：&lt;/code&gt;rsync 只复制源和目标之间不同的部分，而不是整个文件。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;压缩传输：&lt;/code&gt;可以通过 -z 参数启用压缩，减少传输数据量。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;高效算法：&lt;/code&gt;rsync 使用高效的算法来比较文件差异，减少不必要的复制。&lt;/p&gt;
+&lt;p&gt;加速复制的额外选项&lt;br&gt;
+**⚪ 启用压缩：**如果复制大量小文件或网络传输，可以启用压缩：&lt;br&gt;
+&lt;code&gt;rsync -avz --progress source/ destination/&lt;/code&gt;&lt;br&gt;
+**⚪ 并行复制：**对于大量小文件，可以使用 &amp;ndash;progress 和 &amp;ndash;partial 来加速：&lt;br&gt;
+&lt;code&gt;rsync -av --progress --partial source/ destination/&lt;/code&gt;&lt;br&gt;
+**⚪ 多线程复制：**如果需要更快速度，可以使用 rsync 的多线程功能（需要较新版本的 rsync）：&lt;br&gt;
+&lt;code&gt;rsync -av --progress --partial --inplace --rsh=&amp;quot;ssh -T -c aes128-ctr -o Compression=no -x&amp;quot; source/ destination/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;**注意事项 **
+源路径的斜杠：&lt;/p&gt;
+&lt;p&gt;如果源路径以斜杠结尾（如 source/），rsync 会复制目录内容到目标路径。&lt;/p&gt;
+&lt;p&gt;如果源路径不以斜杠结尾（如 source），rsync 会复制整个目录到目标路径。&lt;/p&gt;
+&lt;p&gt;目标路径：&lt;/p&gt;
+&lt;p&gt;如果目标路径不存在，rsync 会自动创建。&lt;/p&gt;
+&lt;p&gt;网络传输：&lt;/p&gt;
+&lt;p&gt;如果源和目标位于不同机器，可以通过 SSH 使用 rsync：&lt;br&gt;
+&lt;code&gt;rsync -avz --progress -e ssh user@remote:/source/ /destination/&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;awk&#34;&gt;awk
+&lt;/h2&gt;&lt;p&gt;处理大型数据该命令非常高效，且无需其它环境
+&lt;code&gt;awk &#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&#39; data.txt&lt;/code&gt;&lt;br&gt;
+例如计算data.txt第二列数据绝对值和的平均值，秒出结果！！！&lt;/p&gt;
+&lt;p&gt;awk 是一种强大的文本处理工具，专门用于逐行处理和分析结构化文本数据（如 CSV、日志文件等）。它的名字来源于其三位创始人 Alfred Aho、Peter Weinberger 和 Brian Kernighan 的姓氏首字母。&lt;/p&gt;
+&lt;p&gt;awk 的基本工作原理是：&lt;/p&gt;
+&lt;p&gt;逐行读取输入文件。&lt;/p&gt;
+&lt;p&gt;根据指定的规则（模式）匹配行。&lt;/p&gt;
+&lt;p&gt;对匹配的行执行相应的操作（动作）。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk &#39;pattern { action }&#39; input_file&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;pattern：匹配行的条件（可选）。如果省略，则对所有行执行 action。&lt;/p&gt;
+&lt;p&gt;action：对匹配行执行的操作（可选）。如果省略，则默认打印匹配的行。&lt;/p&gt;
+&lt;p&gt;input_file：输入文件。如果省略，则从标准输入读取数据。&lt;/p&gt;
+&lt;p&gt;常用变量
+$0：整行内容。&lt;/p&gt;
+&lt;p&gt;$1, $2, &amp;hellip;, $N：第 1、2、&amp;hellip;、N 列的内容（默认以空格或制表符分隔）。&lt;/p&gt;
+&lt;p&gt;NF：当前行的列数。&lt;/p&gt;
+&lt;p&gt;NR：当前行的行号。&lt;/p&gt;
+&lt;p&gt;FS：输入字段分隔符（默认是空格或制表符）。&lt;/p&gt;
+&lt;p&gt;OFS：输出字段分隔符（默认是空格）。&lt;/p&gt;
+&lt;p&gt;示例文件
+假设有一个文件 data.txt，内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;   10.5   A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;  -3.2    B
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;   7.8    C
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  -1.1    D 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打印整行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打印指定列&lt;br&gt;
+打印第二列：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;条件过滤&lt;br&gt;
+打印第二列大于 0 的行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;$2 &amp;gt; 0 {print $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;计算列的平均值&lt;br&gt;
+计算第二列的平均值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{sum += $2; count++} END {print sum/count}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改字段分隔符&lt;br&gt;
+如果文件是以逗号分隔的 CSV 文件，可以修改 FS：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk -F, &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; data.csv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;取绝对值并计算平均值&lt;br&gt;
+对第二列取绝对值并计算平均值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加行号&lt;br&gt;
+打印每行内容并添加行号：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print NR, $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多条件匹配&lt;br&gt;
+打印第二列大于 0 且第三列是 &amp;ldquo;A&amp;rdquo; 或 &amp;ldquo;B&amp;rdquo; 的行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;$2 &amp;gt; 0 &amp;amp;&amp;amp; ($3 == &amp;#34;A&amp;#34; || $3 == &amp;#34;B&amp;#34;) {print $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        <item>
         <title>弹性常数计算</title>
         <link>https://allergicrosen.fun/p/elastic-constants/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
@@ -135,7 +222,8 @@ matlab命令行输入：&lt;code&gt;mechanics_3d_plot_matlab&lt;/code&gt;,输入
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
         
         <guid>https://allergicrosen.fun/p/namd/</guid>
-        <description>&lt;img src="https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png" alt="Featured image of post NAC计算" /&gt;&lt;p&gt;记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)&lt;br&gt;
+        <description>&lt;img src="https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png" alt="Featured image of post NAC计算" /&gt;&lt;h1 id=&#34;namd计算&#34;&gt;NAMD计算
+&lt;/h1&gt;&lt;p&gt;记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)&lt;br&gt;
 &lt;strong&gt;基于凯峰给的NAMD-example&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAMD_example
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Mode                 LastWriteTime         Length Name
@@ -149,7 +237,7 @@ matlab命令行输入：&lt;code&gt;mechanics_3d_plot_matlab&lt;/code&gt;,输入
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NAC计算大致分为三步&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;跑MD（包括heating部分和MD部分）&lt;/li&gt;
-&lt;li&gt;将MD获得的轨迹分割成5000个POSCAR，并对每个POSCAR进行一遍scf&lt;/li&gt;
+&lt;li&gt;将MD获得的轨迹分割成5000个POSCAR，并对每个POSCAR进行一遍scf（&lt;strong&gt;pyxaid一定要单k点跑&lt;/strong&gt;）&lt;/li&gt;
 &lt;li&gt;计算寿命，退相干&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;其中&lt;code&gt;NA_couplings&lt;/code&gt;包含计算所需脚本及可执行文件&lt;/p&gt;
@@ -231,9 +319,18 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入&l
 &lt;p&gt;计算完成后，需要将MD的轨迹拆分为一个一个POSCAR，可以使用脚本实现。&lt;br&gt;
 轨迹文件在MD目录下生成的&lt;code&gt;XDATCAR&lt;/code&gt;，脚本位于&lt;code&gt;NA_couplings&lt;/code&gt;文件夹下的&lt;code&gt;gxdatpos&lt;/code&gt;&lt;br&gt;
 需要将脚本和轨迹文件放入&lt;code&gt;/step2/pfile/&lt;/code&gt;, 然后执行脚本拆分轨迹，获得所需的5020个结构&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;**需要注意：**MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;接下来计算NAC&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;step2进行nac计算&#34;&gt;Step2，进行NAC计算
-&lt;/h2&gt;&lt;p&gt;step2目录下，有如下文件:&lt;/p&gt;
+&lt;h2 id=&#34;step2进行nac计算单k点&#34;&gt;Step2，进行NAC计算(&lt;strong&gt;单K点!!!&lt;/strong&gt;)
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;168&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#一定要记得修改！！！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MAXB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;177&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一定要和&lt;code&gt;EIGENVAL&lt;/code&gt;里面保持一致，在&lt;strong&gt;SOC&lt;/strong&gt;或者&lt;strong&gt;扩胞&lt;/strong&gt;后会有变化。&lt;/p&gt;
+&lt;p&gt;step2目录下，有如下文件:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; $ ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;combine_complex.py  NAC      pfile                 readme            real
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;energy              name.py  read-en-diff-vasp.pl  read-nac-vasp.pl  res
@@ -393,8 +490,9 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Finish&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; Debug.log
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到，NAC计算过程还是比较复杂的，在nac.sh脚本帮助下可以大大提高效率。&lt;br&gt;
 计算完成，会在当前目录下创建&lt;code&gt;REALDIR=&amp;quot;REAL_${MINT}_${MAXT}&amp;quot;&lt;/code&gt;目录，并将计算得到的real文件移动到此。&lt;/p&gt;
-&lt;p&gt;确保&lt;code&gt;step2&lt;/code&gt;目录下含:&lt;code&gt; combine_complex.py&lt;/code&gt;和&lt;code&gt;name.py&lt;/code&gt;，如果没有&lt;code&gt;res&lt;/code&gt;文件夹则&lt;code&gt;mkdir res&lt;/code&gt;&lt;br&gt;
-使用&lt;code&gt;combine_complex.py&lt;/code&gt;脚本在&lt;code&gt;real&lt;/code&gt;文件夹中生成哈密顿量的实部和虚部，然后&lt;code&gt;cp real&lt;/code&gt;文件夹的实部和虚部到&lt;code&gt;res&lt;/code&gt;文件夹&lt;/p&gt;
+&lt;p&gt;确保&lt;code&gt;step2&lt;/code&gt;目录下含:&lt;code&gt; combine_complex.py&lt;/code&gt;和&lt;code&gt;name.py&lt;/code&gt;，如果没有&lt;code&gt;res&lt;/code&gt;文件夹则&lt;code&gt;mkdir res&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;combine_complex.py&lt;/code&gt;脚本在&lt;code&gt;real&lt;/code&gt;文件夹中生成哈密顿量的实部和虚部，然后&lt;code&gt;cp real&lt;/code&gt;文件夹的实部和虚部到&lt;code&gt;res&lt;/code&gt;文件夹&lt;br&gt;
+接着运行&lt;code&gt;name.py&lt;/code&gt;,将顺序&lt;strong&gt;减2&lt;/strong&gt;，运行&lt;code&gt;cp.py&lt;/code&gt;(&lt;strong&gt;记得修改复制循环次数&lt;/strong&gt;),当然也可以一键运行&lt;code&gt;gennaccopy.sh&lt;/code&gt;，省的自己动手。&lt;/p&gt;
 &lt;p&gt;获取带隙波动和&lt;code&gt;NAC&lt;/code&gt;：可以将&lt;code&gt;read-en-diff-vasp.pl&lt;/code&gt;和&lt;code&gt;read-nac-vasp.pl&lt;/code&gt;脚本放到&lt;code&gt;step2&lt;/code&gt;最终的&lt;code&gt;res&lt;/code&gt;文件，执行这两个脚本得到en-diff.dat和nac.dat。(&lt;strong&gt;注意：nac.dat的数值需要取绝对值并算平均值。&lt;/strong&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;step3-获取populationdephasing和spectral_density基于pyxaid&#34;&gt;step3 获取Population，Dephasing和Spectral_density（基于&lt;strong&gt;Pyxaid&lt;/strong&gt;）
 &lt;/h2&gt;&lt;p&gt;step3包含如下文件：&lt;/p&gt;
@@ -417,7 +515,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;name_new.py&lt;/code&gt;作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个&lt;code&gt;res1，res2，res3&lt;/code&gt;。如，设初始&lt;code&gt;res&lt;/code&gt;顺序为ABC,则经过脚本处理后&lt;code&gt;res1&lt;/code&gt;为ABCBA,&lt;code&gt;res2&lt;/code&gt;为ABCBC,&lt;code&gt;res3&lt;/code&gt;为ABCAB,将&lt;code&gt;res1、2、3&lt;/code&gt;中所有文件&lt;code&gt;cp&lt;/code&gt;到新的&lt;code&gt;res&lt;/code&gt;文件，会去掉相同的部分，最终得到ABCBABCBA。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用&lt;code&gt;name_new.py&lt;/code&gt;需要&lt;code&gt;python2.7&lt;/code&gt;版本，&lt;code&gt;python3&lt;/code&gt;会报错不兼容。&lt;br&gt;
-&lt;code&gt;py-scr3.py&lt;/code&gt;脚本（需要修改部分：i,  i+namdtime要小于&lt;code&gt;res&lt;/code&gt;文件的实部或虚部数量）
+&lt;code&gt;py-scr3.py&lt;/code&gt;脚本（&lt;strong&gt;需要修改部分：i,  i+namdtime要小于&lt;code&gt;res&lt;/code&gt;文件的实部或虚部数量&lt;/strong&gt;）
 &lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;其中&lt;code&gt;py-scr3.py&lt;/code&gt;内容为:&lt;/p&gt;

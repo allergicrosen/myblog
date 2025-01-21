@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Shell on allergicrosen</title>
+        <link>https://allergicrosen.fun/categories/shell/</link>
+        <description>Recent content in Shell on allergicrosen</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>allergicrosen</copyright>
+        <lastBuildDate>Tue, 21 Jan 2025 12:35:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/categories/shell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>shell command</title>
+        <link>https://allergicrosen.fun/p/shell-command/</link>
+        <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/p/shell-command/</guid>
+        <description>&lt;h1 id=&#34;记录些有用的命令&#34;&gt;&lt;strong&gt;记录些有用的命令&lt;/strong&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;rsync&#34;&gt;&lt;strong&gt;rsync&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;rsync -av --progress source/ destination/&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cp&lt;/code&gt;命令复制太慢也不显示进度，此命令较快且可以知道进度&lt;br&gt;
+参数说明：
+&lt;code&gt;-a：&lt;/code&gt;归档模式，保留文件属性（如权限、时间戳等），并递归复制目录。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-v：&lt;/code&gt;显示详细输出，便于跟踪进度。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--progress：&lt;/code&gt;显示复制进度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么 rsync 更快？&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;增量传输：&lt;/code&gt;rsync 只复制源和目标之间不同的部分，而不是整个文件。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;压缩传输：&lt;/code&gt;可以通过 -z 参数启用压缩，减少传输数据量。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;高效算法：&lt;/code&gt;rsync 使用高效的算法来比较文件差异，减少不必要的复制。&lt;/p&gt;
+&lt;p&gt;加速复制的额外选项&lt;br&gt;
+**⚪ 启用压缩：**如果复制大量小文件或网络传输，可以启用压缩：&lt;br&gt;
+&lt;code&gt;rsync -avz --progress source/ destination/&lt;/code&gt;&lt;br&gt;
+**⚪ 并行复制：**对于大量小文件，可以使用 &amp;ndash;progress 和 &amp;ndash;partial 来加速：&lt;br&gt;
+&lt;code&gt;rsync -av --progress --partial source/ destination/&lt;/code&gt;&lt;br&gt;
+**⚪ 多线程复制：**如果需要更快速度，可以使用 rsync 的多线程功能（需要较新版本的 rsync）：&lt;br&gt;
+&lt;code&gt;rsync -av --progress --partial --inplace --rsh=&amp;quot;ssh -T -c aes128-ctr -o Compression=no -x&amp;quot; source/ destination/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;**注意事项 **
+源路径的斜杠：&lt;/p&gt;
+&lt;p&gt;如果源路径以斜杠结尾（如 source/），rsync 会复制目录内容到目标路径。&lt;/p&gt;
+&lt;p&gt;如果源路径不以斜杠结尾（如 source），rsync 会复制整个目录到目标路径。&lt;/p&gt;
+&lt;p&gt;目标路径：&lt;/p&gt;
+&lt;p&gt;如果目标路径不存在，rsync 会自动创建。&lt;/p&gt;
+&lt;p&gt;网络传输：&lt;/p&gt;
+&lt;p&gt;如果源和目标位于不同机器，可以通过 SSH 使用 rsync：&lt;br&gt;
+&lt;code&gt;rsync -avz --progress -e ssh user@remote:/source/ /destination/&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;awk&#34;&gt;awk
+&lt;/h2&gt;&lt;p&gt;处理大型数据该命令非常高效，且无需其它环境
+&lt;code&gt;awk &#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&#39; data.txt&lt;/code&gt;&lt;br&gt;
+例如计算data.txt第二列数据绝对值和的平均值，秒出结果！！！&lt;/p&gt;
+&lt;p&gt;awk 是一种强大的文本处理工具，专门用于逐行处理和分析结构化文本数据（如 CSV、日志文件等）。它的名字来源于其三位创始人 Alfred Aho、Peter Weinberger 和 Brian Kernighan 的姓氏首字母。&lt;/p&gt;
+&lt;p&gt;awk 的基本工作原理是：&lt;/p&gt;
+&lt;p&gt;逐行读取输入文件。&lt;/p&gt;
+&lt;p&gt;根据指定的规则（模式）匹配行。&lt;/p&gt;
+&lt;p&gt;对匹配的行执行相应的操作（动作）。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;awk &#39;pattern { action }&#39; input_file&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;pattern：匹配行的条件（可选）。如果省略，则对所有行执行 action。&lt;/p&gt;
+&lt;p&gt;action：对匹配行执行的操作（可选）。如果省略，则默认打印匹配的行。&lt;/p&gt;
+&lt;p&gt;input_file：输入文件。如果省略，则从标准输入读取数据。&lt;/p&gt;
+&lt;p&gt;常用变量
+$0：整行内容。&lt;/p&gt;
+&lt;p&gt;$1, $2, &amp;hellip;, $N：第 1、2、&amp;hellip;、N 列的内容（默认以空格或制表符分隔）。&lt;/p&gt;
+&lt;p&gt;NF：当前行的列数。&lt;/p&gt;
+&lt;p&gt;NR：当前行的行号。&lt;/p&gt;
+&lt;p&gt;FS：输入字段分隔符（默认是空格或制表符）。&lt;/p&gt;
+&lt;p&gt;OFS：输出字段分隔符（默认是空格）。&lt;/p&gt;
+&lt;p&gt;示例文件
+假设有一个文件 data.txt，内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;   10.5   A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;  -3.2    B
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;   7.8    C
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  -1.1    D 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打印整行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打印指定列&lt;br&gt;
+打印第二列：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;条件过滤&lt;br&gt;
+打印第二列大于 0 的行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;$2 &amp;gt; 0 {print $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;计算列的平均值&lt;br&gt;
+计算第二列的平均值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{sum += $2; count++} END {print sum/count}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改字段分隔符&lt;br&gt;
+如果文件是以逗号分隔的 CSV 文件，可以修改 FS：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk -F, &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; data.csv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;取绝对值并计算平均值&lt;br&gt;
+对第二列取绝对值并计算平均值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{sum += ($2 &amp;lt; 0 ? -$2 : $2); count++} END {print sum/count}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加行号&lt;br&gt;
+打印每行内容并添加行号：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print NR, $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多条件匹配&lt;br&gt;
+打印第二列大于 0 且第三列是 &amp;ldquo;A&amp;rdquo; 或 &amp;ldquo;B&amp;rdquo; 的行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;$2 &amp;gt; 0 &amp;amp;&amp;amp; ($3 == &amp;#34;A&amp;#34; || $3 == &amp;#34;B&amp;#34;) {print $0}&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

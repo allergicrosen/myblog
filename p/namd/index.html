@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <title>NAC计算</title>
 
 <link rel='canonical' href='https://allergicrosen.fun/p/namd/'>
 
 <link rel="stylesheet" href="/scss/style.min.0ba17e45457b2648d434f5954ab706b4cb46b9f172f3f325d8fd14baa378046a.css"><meta property='og:title' content="NAC计算">
-<meta property='og:description' content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
+<meta property='og:description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-08T13:28:22&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-21T12:35:00&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
-<meta name="twitter:description" content="记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -356,7 +356,7 @@ fill="#000000" stroke="none">
         <li><a href="#md">MD</a></li>
       </ol>
     </li>
-    <li><a href="#step2进行nac计算">Step2，进行NAC计算</a></li>
+    <li><a href="#step2进行nac计算单k点">Step2，进行NAC计算(<strong>单K点!!!</strong>)</a></li>
     <li><a href="#step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）</a></li>
     <li><a href="#附录">附录</a></li>
   </ol>
@@ -449,7 +449,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Jan 08, 2025 13:28 UTC
+                    Jan 21, 2025 12:35 UTC
                 </time>
             </div>
             <div>|</div>
@@ -479,7 +479,8 @@ fill="#000000" stroke="none">
     <section class="article-content">
     
     
-    <p>记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)<br>
+    <h1 id="namd计算">NAMD计算
+</h1><p>记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)<br>
 <strong>基于凯峰给的NAMD-example</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">NAMD_example
 </span></span><span class="line"><span class="cl">    Mode                 LastWriteTime         Length Name
@@ -493,7 +494,7 @@ fill="#000000" stroke="none">
 </span></span></code></pre></div><p>NAC计算大致分为三步</p>
 <ol>
 <li>跑MD（包括heating部分和MD部分）</li>
-<li>将MD获得的轨迹分割成5000个POSCAR，并对每个POSCAR进行一遍scf</li>
+<li>将MD获得的轨迹分割成5000个POSCAR，并对每个POSCAR进行一遍scf（<strong>pyxaid一定要单k点跑</strong>）</li>
 <li>计算寿命，退相干</li>
 </ol>
 <p>其中<code>NA_couplings</code>包含计算所需脚本及可执行文件</p>
@@ -575,9 +576,18 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入<c
 <p>计算完成后，需要将MD的轨迹拆分为一个一个POSCAR，可以使用脚本实现。<br>
 轨迹文件在MD目录下生成的<code>XDATCAR</code>，脚本位于<code>NA_couplings</code>文件夹下的<code>gxdatpos</code><br>
 需要将脚本和轨迹文件放入<code>/step2/pfile/</code>, 然后执行脚本拆分轨迹，获得所需的5020个结构</p>
+<blockquote>
+<p>**需要注意：**MD跑完后一定要检查轨迹(导入至<code>VMD</code>中)，<strong>看看结构是否正常</strong>，否则后续跑NAMD没啥意义</p>
+</blockquote>
 <p><strong>接下来计算NAC</strong></p>
-<h2 id="step2进行nac计算">Step2，进行NAC计算
-</h2><p>step2目录下，有如下文件:</p>
+<h2 id="step2进行nac计算单k点">Step2，进行NAC计算(<strong>单K点!!!</strong>)
+</h2><blockquote>
+<p>NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">MINB</span><span class="o">=</span><span class="m">168</span>   <span class="c1">#一定要记得修改！！！</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MAXB</span><span class="o">=</span><span class="m">177</span>
+</span></span></code></pre></div><p>一定要和<code>EIGENVAL</code>里面保持一致，在<strong>SOC</strong>或者<strong>扩胞</strong>后会有变化。</p>
+<p>step2目录下，有如下文件:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ ls
 </span></span><span class="line"><span class="cl">combine_complex.py  NAC      pfile                 readme            real
 </span></span><span class="line"><span class="cl">energy              name.py  read-en-diff-vasp.pl  read-nac-vasp.pl  res
@@ -737,8 +747,9 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Finish&#34;</span> &gt;&gt; Debug.log
 </span></span></code></pre></div><p>可以看到，NAC计算过程还是比较复杂的，在nac.sh脚本帮助下可以大大提高效率。<br>
 计算完成，会在当前目录下创建<code>REALDIR=&quot;REAL_${MINT}_${MAXT}&quot;</code>目录，并将计算得到的real文件移动到此。</p>
-<p>确保<code>step2</code>目录下含:<code> combine_complex.py</code>和<code>name.py</code>，如果没有<code>res</code>文件夹则<code>mkdir res</code><br>
-使用<code>combine_complex.py</code>脚本在<code>real</code>文件夹中生成哈密顿量的实部和虚部，然后<code>cp real</code>文件夹的实部和虚部到<code>res</code>文件夹</p>
+<p>确保<code>step2</code>目录下含:<code> combine_complex.py</code>和<code>name.py</code>，如果没有<code>res</code>文件夹则<code>mkdir res</code></p>
+<p>使用<code>combine_complex.py</code>脚本在<code>real</code>文件夹中生成哈密顿量的实部和虚部，然后<code>cp real</code>文件夹的实部和虚部到<code>res</code>文件夹<br>
+接着运行<code>name.py</code>,将顺序<strong>减2</strong>，运行<code>cp.py</code>(<strong>记得修改复制循环次数</strong>),当然也可以一键运行<code>gennaccopy.sh</code>，省的自己动手。</p>
 <p>获取带隙波动和<code>NAC</code>：可以将<code>read-en-diff-vasp.pl</code>和<code>read-nac-vasp.pl</code>脚本放到<code>step2</code>最终的<code>res</code>文件，执行这两个脚本得到en-diff.dat和nac.dat。(<strong>注意：nac.dat的数值需要取绝对值并算平均值。</strong>)</p>
 <h2 id="step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）
 </h2><p>step3包含如下文件：</p>
@@ -761,7 +772,7 @@ NAC目录下，有如下文件：</p>
 </span></span></code></pre></div><p><code>name_new.py</code>作用为复制哈密顿文件并重命名，以5000为例，需要复制3次，得到3个<code>res1，res2，res3</code>。如，设初始<code>res</code>顺序为ABC,则经过脚本处理后<code>res1</code>为ABCBA,<code>res2</code>为ABCBC,<code>res3</code>为ABCAB,将<code>res1、2、3</code>中所有文件<code>cp</code>到新的<code>res</code>文件，会去掉相同的部分，最终得到ABCBABCBA。</p>
 <blockquote>
 <p>使用<code>name_new.py</code>需要<code>python2.7</code>版本，<code>python3</code>会报错不兼容。<br>
-<code>py-scr3.py</code>脚本（需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量）
+<code>py-scr3.py</code>脚本（<strong>需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量</strong>）
 <code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p>
 </blockquote>
 <p>其中<code>py-scr3.py</code>内容为:</p>
@@ -1040,7 +1051,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Jan 08, 2025 13:28 UTC
+            最后更新于 Jan 21, 2025 12:35 UTC
         </span>
     </section></footer>
 
