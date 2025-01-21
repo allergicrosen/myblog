@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 21 Jan 2025 12:35:00 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Jan 2025 12:38:59 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NAC计算</title>
         <link>https://allergicrosen.fun/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
@@ -111,7 +111,7 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入&l
 轨迹文件在MD目录下生成的&lt;code&gt;XDATCAR&lt;/code&gt;，脚本位于&lt;code&gt;NA_couplings&lt;/code&gt;文件夹下的&lt;code&gt;gxdatpos&lt;/code&gt;&lt;br&gt;
 需要将脚本和轨迹文件放入&lt;code&gt;/step2/pfile/&lt;/code&gt;, 然后执行脚本拆分轨迹，获得所需的5020个结构&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;**需要注意：**MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;
+&lt;p&gt;需要注意：MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;接下来计算NAC&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;step2进行nac计算单k点&#34;&gt;Step2，进行NAC计算(&lt;strong&gt;单K点!!!&lt;/strong&gt;)
