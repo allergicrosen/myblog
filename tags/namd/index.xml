@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 22 Jan 2025 02:13:12 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Jan 2025 02:17:01 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NAC计算</title>
         <link>https://allergicrosen.fun/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
@@ -508,7 +508,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 		data-flex-grow=&#34;132&#34;
 		data-flex-basis=&#34;318px&#34;
 	
-&gt;
+&gt;&lt;br&gt;
 &lt;em&gt;pop.dat&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;绘制后应该是从1下降，&lt;strong&gt;斜率为&lt;em&gt;K&lt;/em&gt;, -1/&lt;em&gt;K&lt;/em&gt;为寿命（单位为 &lt;em&gt;fs&lt;/em&gt;）&lt;/strong&gt; &lt;br&gt;
 &lt;img src=&#34;https://allergicrosen.fun/p/namd/image-1.png&#34;
@@ -524,7 +524,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 		data-flex-grow=&#34;129&#34;
 		data-flex-basis=&#34;310px&#34;
 	
-&gt;
+&gt;&lt;br&gt;
 &lt;em&gt;pop.img&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;要得到&lt;em&gt;K&lt;/em&gt;,需要使用origin拟合斜率，&lt;em&gt;y&lt;/em&gt;轴截距设置为&lt;strong&gt;1&lt;/strong&gt;。&lt;br&gt;
 &lt;img src=&#34;https://allergicrosen.fun/p/namd/image-2.png&#34;
@@ -573,7 +573,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 		data-flex-basis=&#34;273px&#34;
 	
 &gt;
-&lt;em&gt;dephasing.img&lt;/em&gt;
+&lt;em&gt;dephasing.img&lt;/em&gt;&lt;br&gt;
 认为下降到&lt;strong&gt;0.6&lt;/strong&gt;就是&lt;code&gt;Dephasing time&lt;/code&gt;（单位 &lt;em&gt;fs&lt;/em&gt;）&lt;/p&gt;
 &lt;h4 id=&#34;spectral_density&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;振动谱：&lt;br&gt;
