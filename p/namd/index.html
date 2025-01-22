@@ -10,7 +10,7 @@
 <meta property='og:description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-21T13:08:02&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-22T02:13:12&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
 <meta name="twitter:description" content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
@@ -357,7 +357,18 @@ fill="#000000" stroke="none">
       </ol>
     </li>
     <li><a href="#step2进行nac计算单k点">Step2，进行NAC计算(<strong>单K点!!!</strong>)</a></li>
-    <li><a href="#step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）</a></li>
+    <li><a href="#step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）</a>
+      <ol>
+        <li><a href="#结果分析">结果分析：</a></li>
+        <li><a href="#绘制图">绘制图</a>
+          <ol>
+            <li><a href="#pop"><strong>Pop：</strong></a></li>
+            <li><a href="#dephasing"><strong>Dephasing:</strong></a></li>
+            <li><a href="#spectral_density"><strong>Spectral_density:</strong></a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
     <li><a href="#附录">附录</a></li>
   </ol>
 </nav>
@@ -449,7 +460,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Jan 21, 2025 13:08 UTC
+                    Jan 22, 2025 02:13 UTC
                 </time>
             </div>
             <div>|</div>
@@ -464,7 +475,7 @@ fill="#000000" stroke="none">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 9 分钟
+                    阅读时长: 10 分钟
                 </time>
             </div>
         
@@ -748,8 +759,8 @@ NAC目录下，有如下文件：</p>
 </span></span></code></pre></div><p>可以看到，NAC计算过程还是比较复杂的，在nac.sh脚本帮助下可以大大提高效率。<br>
 计算完成，会在当前目录下创建<code>REALDIR=&quot;REAL_${MINT}_${MAXT}&quot;</code>目录，并将计算得到的real文件移动到此。</p>
 <p>确保<code>step2</code>目录下含:<code> combine_complex.py</code>和<code>name.py</code>，如果没有<code>res</code>文件夹则<code>mkdir res</code></p>
-<p>使用<code>combine_complex.py</code>脚本在<code>real</code>文件夹中生成哈密顿量的实部和虚部，然后<code>cp real</code>文件夹的实部和虚部到<code>res</code>文件夹<br>
-接着运行<code>name.py</code>,将顺序<strong>减2</strong>，运行<code>cp.py</code>(<strong>记得修改复制循环次数</strong>),当然也可以一键运行<code>gennaccopy.sh</code>，省的自己动手。</p>
+<p>使用<code>combine_complex.py</code>脚本在<code>real</code>文件夹中生成哈密顿量的实部和虚部，然后<code>cp real</code>文件夹的实部和虚部到<code>res</code>文件夹</p>
+<p>接着运行<code>name.py</code>,将<code>res</code>文件夹中的文件顺序<strong>减2</strong>，运行<code>cp.py</code>(<strong>记得修改复制循环次数</strong>),当然也可以一键运行<code>gennaccopy.sh</code>，省的自己动手。<strong>(别忘了这一步，否则namd计算会报错)</strong></p>
 <p>获取带隙波动和<code>NAC</code>：可以将<code>read-en-diff-vasp.pl</code>和<code>read-nac-vasp.pl</code>脚本放到<code>step2</code>最终的<code>res</code>文件，执行这两个脚本得到en-diff.dat和nac.dat。(<strong>注意：nac.dat的数值需要取绝对值并算平均值。</strong>)</p>
 <h2 id="step3-获取populationdephasing和spectral_density基于pyxaid">step3 获取Population，Dephasing和Spectral_density（基于<strong>Pyxaid</strong>）
 </h2><p>step3包含如下文件：</p>
@@ -951,11 +962,113 @@ NAC目录下，有如下文件：</p>
 </span></span><span class="line"><span class="cl">print<span class="o">(</span><span class="s1">&#39;&#39;</span><span class="o">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Finally, run the averaging</span>
 </span></span><span class="line"><span class="cl">average.average<span class="o">(</span>params<span class="o">[</span><span class="s2">&#34;namdtime&#34;</span><span class="o">]</span>,Nstates,params<span class="o">[</span><span class="s2">&#34;iconds&#34;</span><span class="o">]</span>,opt,MS,inp_dir,res_dir<span class="o">)</span>
-</span></span></code></pre></div><p>结果分析：<br>
-<strong>获取<code>Population</code>：</strong><br>
+</span></span></code></pre></div><h3 id="结果分析">结果分析：
+</h3><p><strong>获取<code>Population</code>：</strong><br>
 进入<code>macro</code>文件夹，数据位于<code>sh_pop_ex1</code>中，x轴为<strong>第二列</strong>，y轴为<strong>第6列</strong>。</p>
 <p><strong>获取<code>Dephasing</code>和<code>Spectral_density</code>：</strong><br>
 先在step3建一个FFT文件夹，然后进去out文件夹，<code>cp icond0pair0_1Dephasing_function.txt</code>(1列x轴数据，3列为y轴数据)和<code>icond0pair0_1Spectral_density.txt</code>（4列为x轴数据，8列为y轴数据）文件到FFT文件夹</p>
+<h3 id="绘制图">绘制图
+</h3><p>源数据导入到origin中</p>
+<h4 id="pop"><strong>Pop：</strong>
+</h4><p>载流子寿命：<br>
+圈起来的那两列为所需数据<br>
+<img src="/p/namd/image.png"
+	width="878"
+	height="661"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="132"
+		data-flex-basis="318px"
+	
+>
+<em>pop.dat</em></p>
+<p>绘制后应该是从1下降，<strong>斜率为<em>K</em>, -1/<em>K</em>为寿命（单位为 <em>fs</em>）</strong> <br>
+<img src="/p/namd/image-1.png"
+	width="480"
+	height="371"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="129"
+		data-flex-basis="310px"
+	
+>
+<em>pop.img</em></p>
+<p>要得到<em>K</em>,需要使用origin拟合斜率，<em>y</em>轴截距设置为<strong>1</strong>。<br>
+<img src="/p/namd/image-2.png"
+	width="554"
+	height="445"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="124"
+		data-flex-basis="298px"
+	
+></p>
+<p><img src="/p/namd/image-3.png"
+	width="477"
+	height="384"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="124"
+		data-flex-basis="298px"
+	
+>
+<em>fit</em></p>
+<h4 id="dephasing"><strong>Dephasing:</strong>
+</h4><p>退相干：<br>
+将<code>icond0pair0_1Dephasing_function.txt</code>的第一和第三列作为<code>x</code>和<code>y</code>导入origin，绘制图。</p>
+<p><img src="/p/namd/image-4.png"
+	width="917"
+	height="804"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="114"
+		data-flex-basis="273px"
+	
+>
+<em>dephasing.img</em>
+认为下降到<strong>0.6</strong>就是<code>Dephasing time</code>（单位 <em>fs</em>）</p>
+<h4 id="spectral_density"><strong>Spectral_density:</strong>
+</h4><p>振动谱：<br>
+将<code>icond0pair0_1Spectral_density.txt</code>的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围<br>
+<img src="/p/namd/image-5.png"
+	width="624"
+	height="476"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="131"
+		data-flex-basis="314px"
+	
+></p>
 <h2 id="附录">附录
 </h2><p><a class="link" href="https://github.com/Quantum-Dynamics-Hub/pyxaid2/tree/master/PYXAID2"  target="_blank" rel="noopener"
     >pyxaid2/PYXAID2 at master · Quantum-Dynamics-Hub/pyxaid2</a>
@@ -1060,7 +1173,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Jan 21, 2025 13:08 UTC
+            最后更新于 Jan 22, 2025 02:13 UTC
         </span>
     </section></footer>
 

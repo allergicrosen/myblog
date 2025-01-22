@@ -491,8 +491,8 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到，NAC计算过程还是比较复杂的，在nac.sh脚本帮助下可以大大提高效率。&lt;br&gt;
 计算完成，会在当前目录下创建&lt;code&gt;REALDIR=&amp;quot;REAL_${MINT}_${MAXT}&amp;quot;&lt;/code&gt;目录，并将计算得到的real文件移动到此。&lt;/p&gt;
 &lt;p&gt;确保&lt;code&gt;step2&lt;/code&gt;目录下含:&lt;code&gt; combine_complex.py&lt;/code&gt;和&lt;code&gt;name.py&lt;/code&gt;，如果没有&lt;code&gt;res&lt;/code&gt;文件夹则&lt;code&gt;mkdir res&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;使用&lt;code&gt;combine_complex.py&lt;/code&gt;脚本在&lt;code&gt;real&lt;/code&gt;文件夹中生成哈密顿量的实部和虚部，然后&lt;code&gt;cp real&lt;/code&gt;文件夹的实部和虚部到&lt;code&gt;res&lt;/code&gt;文件夹&lt;br&gt;
-接着运行&lt;code&gt;name.py&lt;/code&gt;,将顺序&lt;strong&gt;减2&lt;/strong&gt;，运行&lt;code&gt;cp.py&lt;/code&gt;(&lt;strong&gt;记得修改复制循环次数&lt;/strong&gt;),当然也可以一键运行&lt;code&gt;gennaccopy.sh&lt;/code&gt;，省的自己动手。&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;combine_complex.py&lt;/code&gt;脚本在&lt;code&gt;real&lt;/code&gt;文件夹中生成哈密顿量的实部和虚部，然后&lt;code&gt;cp real&lt;/code&gt;文件夹的实部和虚部到&lt;code&gt;res&lt;/code&gt;文件夹&lt;/p&gt;
+&lt;p&gt;接着运行&lt;code&gt;name.py&lt;/code&gt;,将&lt;code&gt;res&lt;/code&gt;文件夹中的文件顺序&lt;strong&gt;减2&lt;/strong&gt;，运行&lt;code&gt;cp.py&lt;/code&gt;(&lt;strong&gt;记得修改复制循环次数&lt;/strong&gt;),当然也可以一键运行&lt;code&gt;gennaccopy.sh&lt;/code&gt;，省的自己动手。&lt;strong&gt;(别忘了这一步，否则namd计算会报错)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;获取带隙波动和&lt;code&gt;NAC&lt;/code&gt;：可以将&lt;code&gt;read-en-diff-vasp.pl&lt;/code&gt;和&lt;code&gt;read-nac-vasp.pl&lt;/code&gt;脚本放到&lt;code&gt;step2&lt;/code&gt;最终的&lt;code&gt;res&lt;/code&gt;文件，执行这两个脚本得到en-diff.dat和nac.dat。(&lt;strong&gt;注意：nac.dat的数值需要取绝对值并算平均值。&lt;/strong&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;step3-获取populationdephasing和spectral_density基于pyxaid&#34;&gt;step3 获取Population，Dephasing和Spectral_density（基于&lt;strong&gt;Pyxaid&lt;/strong&gt;）
 &lt;/h2&gt;&lt;p&gt;step3包含如下文件：&lt;/p&gt;
@@ -694,11 +694,113 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;print&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Finally, run the averaging&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;average.average&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;params&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;namdtime&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,Nstates,params&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;iconds&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,opt,MS,inp_dir,res_dir&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;结果分析：&lt;br&gt;
-&lt;strong&gt;获取&lt;code&gt;Population&lt;/code&gt;：&lt;/strong&gt;&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;结果分析&#34;&gt;结果分析：
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;获取&lt;code&gt;Population&lt;/code&gt;：&lt;/strong&gt;&lt;br&gt;
 进入&lt;code&gt;macro&lt;/code&gt;文件夹，数据位于&lt;code&gt;sh_pop_ex1&lt;/code&gt;中，x轴为&lt;strong&gt;第二列&lt;/strong&gt;，y轴为&lt;strong&gt;第6列&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;获取&lt;code&gt;Dephasing&lt;/code&gt;和&lt;code&gt;Spectral_density&lt;/code&gt;：&lt;/strong&gt;&lt;br&gt;
 先在step3建一个FFT文件夹，然后进去out文件夹，&lt;code&gt;cp icond0pair0_1Dephasing_function.txt&lt;/code&gt;(1列x轴数据，3列为y轴数据)和&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;（4列为x轴数据，8列为y轴数据）文件到FFT文件夹&lt;/p&gt;
+&lt;h3 id=&#34;绘制图&#34;&gt;绘制图
+&lt;/h3&gt;&lt;p&gt;源数据导入到origin中&lt;/p&gt;
+&lt;h4 id=&#34;pop&#34;&gt;&lt;strong&gt;Pop：&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;载流子寿命：&lt;br&gt;
+圈起来的那两列为所需数据&lt;br&gt;
+&lt;img src=&#34;https://allergicrosen.fun/p/namd/image.png&#34;
+	width=&#34;878&#34;
+	height=&#34;661&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;
+&lt;em&gt;pop.dat&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;绘制后应该是从1下降，&lt;strong&gt;斜率为&lt;em&gt;K&lt;/em&gt;, -1/&lt;em&gt;K&lt;/em&gt;为寿命（单位为 &lt;em&gt;fs&lt;/em&gt;）&lt;/strong&gt; &lt;br&gt;
+&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-1.png&#34;
+	width=&#34;480&#34;
+	height=&#34;371&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;129&#34;
+		data-flex-basis=&#34;310px&#34;
+	
+&gt;
+&lt;em&gt;pop.img&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;要得到&lt;em&gt;K&lt;/em&gt;,需要使用origin拟合斜率，&lt;em&gt;y&lt;/em&gt;轴截距设置为&lt;strong&gt;1&lt;/strong&gt;。&lt;br&gt;
+&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-2.png&#34;
+	width=&#34;554&#34;
+	height=&#34;445&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;298px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-3.png&#34;
+	width=&#34;477&#34;
+	height=&#34;384&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;298px&#34;
+	
+&gt;
+&lt;em&gt;fit&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;dephasing&#34;&gt;&lt;strong&gt;Dephasing:&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;退相干：&lt;br&gt;
+将&lt;code&gt;icond0pair0_1Dephasing_function.txt&lt;/code&gt;的第一和第三列作为&lt;code&gt;x&lt;/code&gt;和&lt;code&gt;y&lt;/code&gt;导入origin，绘制图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-4.png&#34;
+	width=&#34;917&#34;
+	height=&#34;804&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;
+&lt;em&gt;dephasing.img&lt;/em&gt;
+认为下降到&lt;strong&gt;0.6&lt;/strong&gt;就是&lt;code&gt;Dephasing time&lt;/code&gt;（单位 &lt;em&gt;fs&lt;/em&gt;）&lt;/p&gt;
+&lt;h4 id=&#34;spectral_density&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;振动谱：&lt;br&gt;
+将&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围&lt;br&gt;
+&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-5.png&#34;
+	width=&#34;624&#34;
+	height=&#34;476&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;314px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;附录&#34;&gt;附录
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Quantum-Dynamics-Hub/pyxaid2/tree/master/PYXAID2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;pyxaid2/PYXAID2 at master · Quantum-Dynamics-Hub/pyxaid2&lt;/a&gt;
