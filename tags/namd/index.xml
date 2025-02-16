@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 22 Jan 2025 02:17:01 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Feb 2025 06:51:22 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NAC计算</title>
         <link>https://allergicrosen.fun/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
@@ -111,13 +111,11 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入&l
 轨迹文件在MD目录下生成的&lt;code&gt;XDATCAR&lt;/code&gt;，脚本位于&lt;code&gt;NA_couplings&lt;/code&gt;文件夹下的&lt;code&gt;gxdatpos&lt;/code&gt;&lt;br&gt;
 需要将脚本和轨迹文件放入&lt;code&gt;/step2/pfile/&lt;/code&gt;, 然后执行脚本拆分轨迹，获得所需的5020个结构&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需要注意：MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;需要注意：MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;接下来计算NAC&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;step2进行nac计算单k点&#34;&gt;Step2，进行NAC计算(&lt;strong&gt;单K点!!!&lt;/strong&gt;)
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;168&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#一定要记得修改！！！&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MAXB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;177&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一定要和&lt;code&gt;EIGENVAL&lt;/code&gt;里面保持一致，在&lt;strong&gt;SOC&lt;/strong&gt;或者&lt;strong&gt;扩胞&lt;/strong&gt;后会有变化。&lt;/p&gt;
@@ -310,8 +308,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用&lt;code&gt;name_new.py&lt;/code&gt;需要&lt;code&gt;python2.7&lt;/code&gt;版本，&lt;code&gt;python3&lt;/code&gt;会报错不兼容。&lt;br&gt;
 &lt;code&gt;py-scr3.py&lt;/code&gt;脚本（&lt;strong&gt;需要修改部分：i,  i+namdtime要小于&lt;code&gt;res&lt;/code&gt;文件的实部或虚部数量&lt;/strong&gt;）
-&lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;旧脚本&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;

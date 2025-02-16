@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 22 Jan 2025 02:17:01 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Feb 2025 06:51:22 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo增加utterances功能</title>
         <link>https://allergicrosen.fun/p/hugo/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
@@ -183,13 +183,11 @@
    
     &lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;这是原本的主页及其它页面见以上链接&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;修改的主要是主页，增加了一个轮转的图册，优化了样式，增加开盲盒功能等等。。。&lt;br&gt;
-好的废话不多说，继续。&lt;/p&gt;
-&lt;/blockquote&gt;
+好的废话不多说，继续。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;微信开发者工具导入源码&#34;&gt;微信开发者工具导入源码
 &lt;/h2&gt;&lt;p&gt;打开微信开发者工具，导入解压目录&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/15     17:26                cloudfunctions
@@ -227,8 +225,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意到这里需要运行&lt;code&gt;cloudfunctions/Install-WX-Server-SDK.bat&lt;/code&gt;，然后一个一个将函数上传。（请注意其它所需操作我并未列出，因为UxxHan大佬源码主页有明确过程）&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;其实到这一步基本全部完成了，按作者要求填写好自己和对方&lt;code&gt;_openid&lt;/code&gt;就行了&lt;br&gt;
-这里主要讲下订阅微信通知需要怎么做&lt;/p&gt;
-&lt;/blockquote&gt;
+这里主要讲下订阅微信通知需要怎么做&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;订阅通知&#34;&gt;订阅通知
 &lt;/h2&gt;&lt;p&gt;来到微信小程序平台&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;微信小程序平台&lt;/a&gt;
@@ -297,8 +294,7 @@
            fill=&#34;currentColor&#34;&gt;
    &lt;/svg&gt;&lt;/span&gt;
    
-    &lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         

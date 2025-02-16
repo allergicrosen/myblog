@@ -7,6 +7,205 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Wave_function_overlap_integral_CP2K</title>
+        <link>https://allergicrosen.fun/p/wave_function_overlap_integral_cp2k/</link>
+        <pubDate>Sun, 16 Feb 2025 14:45:25 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/p/wave_function_overlap_integral_cp2k/</guid>
+        <description>&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>Latex_thesis_writing</title>
+        <link>https://allergicrosen.fun/p/latex_thesis_writing/</link>
+        <pubDate>Fri, 14 Feb 2025 15:37:24 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/p/latex_thesis_writing/</guid>
+        <description>&lt;p&gt;说明：本文只是操作教程，具体原理请查看&lt;a class=&#34;link&#34; href=&#34;https://github.com/Jin-bao/NCU-thesis&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;手册&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;p&gt;推荐环境：VSCODE+LaTeX Workshop（扩展）&lt;/p&gt;
+&lt;h2 id=&#34;参考文献插入与引用&#34;&gt;参考文献插入与引用
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;模板默认指定〈bib=bibtex〉，模板将调用 gbt7714 宏包&lt;/li&gt;
+&lt;li&gt;确保tex同目录下存在bib文件，且文内正确调用了
+&lt;code&gt;\bibliography{references.bib}&lt;/code&gt;
+bibtex规则见下面&lt;/li&gt;
+&lt;li&gt;文中需要正确引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bibtex规则&#34;&gt;bibtex规则：
+&lt;/h3&gt;&lt;p&gt;references.bib 文件是 BibTeX 或 biblatex 的参考文献数据库文件，用于存储参考文献的元数据（如作者、标题、年份等）。每条参考文献条目都遵循一定的规则和格式。以下是详细的规则和说明：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基本结构
+每个参考文献条目由以下部分组成：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;条目类型 ：指定文献的类型，例如 @article（期刊文章）、@book（书籍）、@online（在线资源）等。
+唯一标识符（Key） ：为每条参考文献分配一个唯一的标识符，用于在正文中引用（如 \cite{key}）。
+字段列表 ：包含描述文献的键值对，键是字段名称（如 author、title），值是对应的元数据。
+示例条目&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@article&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;einstein1905,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author  = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Albert Einstein&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title   = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;On the Electrodynamics of Moving Bodies&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  journal = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Annalen der Physik&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year    = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1905&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  volume  = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;322&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  pages   = &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;891--921&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;条目类型
+不同的文献类型对应不同的条目类型。以下是一些常见的条目类型及其用途：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;@article&lt;/code&gt;
+学术期刊文章
+&lt;code&gt;@book&lt;/code&gt;
+书籍
+&lt;code&gt;@inproceedings&lt;/code&gt;
+会议论文集中的文章
+&lt;code&gt;@incollection&lt;/code&gt;
+书籍中的一章或一节
+&lt;code&gt;@phdthesis&lt;/code&gt;
+博士学位论文
+&lt;code&gt;@mastersthesis&lt;/code&gt;
+硕士学位论文
+&lt;code&gt;@techreport&lt;/code&gt;
+技术报告
+&lt;code&gt;@misc&lt;/code&gt;
+其他未分类的文献（如网页、博客等）
+&lt;code&gt;@online&lt;/code&gt;
+在线资源（仅适用于
+&lt;code&gt;biblatex&lt;/code&gt;（BibTeX 不支持此类型）
+3. 字段规则
+每个条目类型的字段可能有所不同，但以下是一些通用的字段及其含义：&lt;/p&gt;
+&lt;p&gt;author
+作者姓名，多个作者用
+and
+分隔，例如：
+John Doe and Jane Smith
+title
+文献标题
+journal
+期刊名称（适用于
+@article
+类型）
+year
+出版年份
+volume
+期刊卷号（适用于
+@article
+类型）
+number
+期刊期号（适用于
+@article
+类型）
+pages
+页码范围，例如：
+123&amp;ndash;145
+publisher
+出版商名称（适用于
+@book
+和
+@techreport
+类型）
+address
+出版地点（适用于
+@book
+和
+@techreport
+类型）
+url
+在线资源的 URL 地址（适用于
+@online
+和
+@misc
+类型）
+doi
+数字对象标识符（DOI）
+edition
+版本号（适用于
+@book
+类型）
+translator
+翻译者（适用于翻译作品）
+note
+备注信息（可选）
+4. 示例条目
+以下是一些常见文献类型的示例：&lt;/p&gt;
+&lt;p&gt;(1) 期刊文章 (@article)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;einstein1905&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Albert Einstein}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{On the Electrodynamics of Moving Bodies}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Annalen der Physik}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{1905}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;volume&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{322}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;number&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{10}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;pages&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{891--921}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;doi&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{10.1002/andp.19053221004}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(2) 书籍 (@book)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@book&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;knuth1984&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Donald E. Knuth}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{The \TeX book}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;publisher&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Addison-Wesley}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{1984}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;address&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Reading, Massachusetts}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;edition&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{1}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(3) 会议论文 (@inproceedings)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@inproceedings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;smith2020&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{John Smith and Jane Doe}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{A Study on Machine Learning Techniques}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;booktitle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Proceedings of the International Conference on AI}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2020}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;pages&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{123--130}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;address&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{New York, USA}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;publisher&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{ACM}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(4) 在线资源 (@online)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author     = {Tobias Oetiker and Hubert Partl and Irene Hyna and Elisabeth Schlegl},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  translator = {\CTeX\ 开发小组},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title      = {一份 (不太) 简短的 \LaTeXe\ 介绍},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  edition    = {6.03},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year       = {2021},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  url        = {https://ctan.org/pkg/lshort-cn},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  urldate    = {2023-10-01} % 访问日期
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;特殊规则
+(1) 多作者处理
+多个作者之间用 and 分隔，而不是逗号或其他符号。例如：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;author = {John Doe and Jane Smith and Alice Johnson}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(2) 特殊字符
+如果字段中包含特殊字符（如 LaTeX 命令），需要使用大括号 {} 包裹以保护它们。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;title = {The \LaTeX\ Book: A Guide to Typesetting with {\TeX}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(3) 非英文字符
+对于非英文字符（如中文），建议使用 UTF-8 编码保存 .bib 文件，并确保编译器支持 UTF-8。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;author = {廖金波},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;title  = {有机无机杂化钙钛矿光电性质研究及调控},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(4) 日期字段
+biblatex 支持更灵活的日期字段（如 date 和 urldate），可以使用 ISO 格式（YYYY-MM-DD）。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;urldate = {2023-10-01}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;注意事项
+唯一标识符（Key） ：每个条目的 key 必须唯一，通常使用作者名和年份的组合（如 einstein1905）。
+字段完整性 ：尽量填写所有必要的字段，以确保生成的参考文献完整且规范。
+避免拼写错误 ：检查字段名称和内容是否正确，避免因拼写错误导致编译失败或引用错误。
+清理辅助文件 ：如果修改了 .bib 文件后出现错误，可以删除 .aux、.bbl 等辅助文件后重新编译。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        <item>
         <title>shell command</title>
         <link>https://allergicrosen.fun/p/shell-command/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
@@ -320,13 +519,11 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入&l
 轨迹文件在MD目录下生成的&lt;code&gt;XDATCAR&lt;/code&gt;，脚本位于&lt;code&gt;NA_couplings&lt;/code&gt;文件夹下的&lt;code&gt;gxdatpos&lt;/code&gt;&lt;br&gt;
 需要将脚本和轨迹文件放入&lt;code&gt;/step2/pfile/&lt;/code&gt;, 然后执行脚本拆分轨迹，获得所需的5020个结构&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;需要注意：MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;需要注意：MD跑完后一定要检查轨迹(导入至&lt;code&gt;VMD&lt;/code&gt;中)，&lt;strong&gt;看看结构是否正常&lt;/strong&gt;，否则后续跑NAMD没啥意义&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;接下来计算NAC&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;step2进行nac计算单k点&#34;&gt;Step2，进行NAC计算(&lt;strong&gt;单K点!!!&lt;/strong&gt;)
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;168&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#一定要记得修改！！！&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MAXB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;177&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一定要和&lt;code&gt;EIGENVAL&lt;/code&gt;里面保持一致，在&lt;strong&gt;SOC&lt;/strong&gt;或者&lt;strong&gt;扩胞&lt;/strong&gt;后会有变化。&lt;/p&gt;
@@ -519,8 +716,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;使用&lt;code&gt;name_new.py&lt;/code&gt;需要&lt;code&gt;python2.7&lt;/code&gt;版本，&lt;code&gt;python3&lt;/code&gt;会报错不兼容。&lt;br&gt;
 &lt;code&gt;py-scr3.py&lt;/code&gt;脚本（&lt;strong&gt;需要修改部分：i,  i+namdtime要小于&lt;code&gt;res&lt;/code&gt;文件的实部或虚部数量&lt;/strong&gt;）
-&lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;code&gt;res1,res2,res3&lt;/code&gt;，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;旧脚本&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -980,18 +1176,15 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;查看官方手册&#34;&gt;查看官方手册
 &lt;/h4&gt;&lt;p&gt;最简单的就是查看官方的手册，以广州超算来说，打开&lt;code&gt;HPC1系统用户手册&lt;/code&gt;可以找到脚本的编写规则&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;目前 HPC1 系统部署的资源管理系统包括多种作业提交方式，包括&lt;code&gt;批处理作业提交方式 yhbatch 和交互作业提交方式 yhrun&lt;/code&gt;。作业终止方式为 yhcancel 命令，需要获取作业的 jobid，可以通过 yhq 命令查看获得。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;目前 HPC1 系统部署的资源管理系统包括多种作业提交方式，包括&lt;code&gt;批处理作业提交方式 yhbatch 和交互作业提交方式 yhrun&lt;/code&gt;。作业终止方式为 yhcancel 命令，需要获取作业的 jobid，可以通过 yhq 命令查看获得。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;如果没有交互需求，请使用 yhbatch 提交任务&lt;/strong&gt;。yhbatch 提交的作业终端关闭
 时不会受到影响，登陆结点 down 机时也不会受到影响，强烈推荐使用 yhbatch 提
-交任务。&lt;/p&gt;
-&lt;/blockquote&gt;
+交任务。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;yhbatch 运行的主要格式如下：&lt;br&gt;
 &lt;code&gt;yhbatch [options] program &lt;/code&gt;&lt;br&gt;
-yhbatch 包括多个选项，用户最常使用的选项如下：&lt;br&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+yhbatch 包括多个选项，用户最常使用的选项如下：&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;  
 &lt;p&gt;&lt;code&gt;-n, --ntasks=ntasks &lt;/code&gt; &lt;br&gt;
 指定要运行的进程数。请求 yhrun 分配/加载 ntasks 个进程。省缺的情况是每
@@ -1273,13 +1466,11 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
    
     &lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;其实按照他的教程基本上就可以自己部署好了，不过我自己修改增加了一些功能&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;这是原本的主页及其它页面见以上链接&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;修改的主要是主页，增加了一个轮转的图册，优化了样式，增加开盲盒功能等等。。。&lt;br&gt;
-好的废话不多说，继续。&lt;/p&gt;
-&lt;/blockquote&gt;
+好的废话不多说，继续。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;微信开发者工具导入源码&#34;&gt;微信开发者工具导入源码
 &lt;/h2&gt;&lt;p&gt;打开微信开发者工具，导入解压目录&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/15     17:26                cloudfunctions
@@ -1317,8 +1508,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意到这里需要运行&lt;code&gt;cloudfunctions/Install-WX-Server-SDK.bat&lt;/code&gt;，然后一个一个将函数上传。（请注意其它所需操作我并未列出，因为UxxHan大佬源码主页有明确过程）&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;其实到这一步基本全部完成了，按作者要求填写好自己和对方&lt;code&gt;_openid&lt;/code&gt;就行了&lt;br&gt;
-这里主要讲下订阅微信通知需要怎么做&lt;/p&gt;
-&lt;/blockquote&gt;
+这里主要讲下订阅微信通知需要怎么做&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;订阅通知&#34;&gt;订阅通知
 &lt;/h2&gt;&lt;p&gt;来到微信小程序平台&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;微信小程序平台&lt;/a&gt;
@@ -1387,8 +1577,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
            fill=&#34;currentColor&#34;&gt;
    &lt;/svg&gt;&lt;/span&gt;
    
-    &lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>
@@ -1455,8 +1644,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
            fill=&#34;currentColor&#34;&gt;
    &lt;/svg&gt;&lt;/span&gt;
    
-    &lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         <item>

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="utterances评论区">
-<title>hugo增加utterances功能</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="说明：本文只是操作教程，具体原理请查看手册 推荐环境：VSCODE+LaTeX Workshop（扩展）\n">
+<title>Latex_thesis_writing</title>
 
-<link rel='canonical' href='https://allergicrosen.fun/p/hugo/'>
+<link rel='canonical' href='https://allergicrosen.fun/p/latex_thesis_writing/'>
 
-<link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="hugo增加utterances功能">
-<meta property='og:description' content="utterances评论区">
-<meta property='og:url' content='https://allergicrosen.fun/p/hugo/'>
+<link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="Latex_thesis_writing">
+<meta property='og:description' content="说明：本文只是操作教程，具体原理请查看手册 推荐环境：VSCODE+LaTeX Workshop（扩展）\n">
+<meta property='og:url' content='https://allergicrosen.fun/p/latex_thesis_writing/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='utterances' /><meta property='article:published_time' content='2024-10-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-02-16T06:51:22&#43;00:00'/><meta property='og:image' content='https://allergicrosen.fun/p/hugo/cover.png' />
-<meta name="twitter:title" content="hugo增加utterances功能">
-<meta name="twitter:description" content="utterances评论区"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://allergicrosen.fun/p/hugo/cover.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2025-02-14T15:37:24&#43;08:00'/><meta property='article:modified_time' content='2025-02-16T06:51:22&#43;00:00'/>
+<meta name="twitter:title" content="Latex_thesis_writing">
+<meta name="twitter:description" content="说明：本文只是操作教程，具体原理请查看手册 推荐环境：VSCODE+LaTeX Workshop（扩展）\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -350,10 +349,16 @@ fill="#000000" stroke="none">
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#step1-打开hugo主目录前提已经部署好">Step1 :打开hugo主目录（前提已经部署好）</a></li>
-    <li><a href="#step2-打开hugoyaml配置文件移到comments">Step2 :打开hugo.yaml配置文件，移到comments:</a></li>
-    <li><a href="#step3-为你所需要的仓库配置utterances">Step3 :为你所需要的仓库配置utterances</a></li>
-    <li><a href="#step4-重新生成publichugoexe在主目录">Step4 :重新生成public(hugo.exe在主目录)</a></li>
+    <li><a href="#参考文献插入与引用">参考文献插入与引用</a>
+      <ol>
+        <li><a href="#bibtex规则">bibtex规则：</a></li>
+      </ol>
+    </li>
+    <li><a href="#附录">附录</a>
+      <ol>
+        <li><a href="#参考文章">参考文章</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -365,41 +370,21 @@ fill="#000000" stroke="none">
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/hugo/">
-                <img src="/p/hugo/cover_hu_15b04331365f0679.png"
-                        srcset="/p/hugo/cover_hu_15b04331365f0679.png 800w, /p/hugo/cover_hu_4bc2ad6cfba84da8.png 1600w"
-                        width="800" 
-                        height="556" 
-                        loading="lazy"
-                        alt="Featured image of post hugo增加utterances功能" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
     <header class="article-category">
-        
-            <a href="/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/" >
-                网页开发
-            </a>
         
     </header>
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/hugo/">hugo增加utterances功能</a>
+            <a href="/p/latex_thesis_writing/">Latex_thesis_writing</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            utterances评论区
-        </h3>
         
     </div>
 
@@ -419,7 +404,7 @@ fill="#000000" stroke="none">
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-10-17</time>
+                <time class="article-time--published">2025-02-14</time>
             </div>
             <div>|</div>
         
@@ -467,7 +452,7 @@ fill="#000000" stroke="none">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -482,67 +467,8 @@ fill="#000000" stroke="none">
     <section class="article-content">
     
     
-    <h1 id="hugo在个人网站增加评论区的功能">Hugo在个人网站增加评论区的功能
-</h1><h2 id="step1-打开hugo主目录前提已经部署好">Step1 :打开hugo主目录（前提已经部署好）
-</h2><p><img src="/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png"
-	width="651"
-	height="692"
-	
-	loading="lazy"
-	
-		alt="主目录.png"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="94"
-		data-flex-basis="225px"
-	
-></p>
-<h2 id="step2-打开hugoyaml配置文件移到comments">Step2 :打开hugo.yaml配置文件，移到comments:
-</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    comments:
-</span></span><span class="line"><span class="cl">        enabled: <span class="nb">true</span>
-</span></span><span class="line"><span class="cl">        provider:   utterances
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        disqusjs:
-</span></span><span class="line"><span class="cl">            shortname:
-</span></span><span class="line"><span class="cl">            apiUrl:
-</span></span><span class="line"><span class="cl">            apiKey:
-</span></span><span class="line"><span class="cl">            admin:
-</span></span><span class="line"><span class="cl">            adminLabel:
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        utterances:
-</span></span><span class="line"><span class="cl">            repo: allergicrosen/myblog
-</span></span><span class="line"><span class="cl">            issueTerm: pathname
-</span></span><span class="line"><span class="cl">            label:
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        beaudar:
-</span></span><span class="line"><span class="cl">            repo:
-</span></span><span class="line"><span class="cl">            issueTerm: pathname
-</span></span><span class="line"><span class="cl">            label:
-</span></span><span class="line"><span class="cl">            theme:
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        remark42:
-</span></span><span class="line"><span class="cl">            host:
-</span></span><span class="line"><span class="cl">            site:
-</span></span><span class="line"><span class="cl">            locale:
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        vssue:
-</span></span><span class="line"><span class="cl">            platform:
-</span></span><span class="line"><span class="cl">            owner:
-</span></span><span class="line"><span class="cl">            repo:
-</span></span><span class="line"><span class="cl">            clientId:
-</span></span><span class="line"><span class="cl">            clientSecret:
-</span></span><span class="line"><span class="cl">            autoCreateIssue: <span class="nb">false</span>
-</span></span></code></pre></div><p>确保</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    enabled: true
-</span></span><span class="line"><span class="cl">    provider:   utterances
-</span></span></code></pre></div><p>其它的不用可以删掉，保留</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    utterances:
-</span></span><span class="line"><span class="cl">        repo: GitHub名字/静态网页仓库名字（一定注意仓库名字后面什么都不要加）
-</span></span><span class="line"><span class="cl">        issueTerm: pathname
-</span></span></code></pre></div><h2 id="step3-为你所需要的仓库配置utterances">Step3 :为你所需要的仓库配置utterances
-</h2><p>打开链接<a class="link" href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fapps%2Futterances"  target="_blank" rel="noopener"
-    >https://github.com/apps/utterances</a>
+    <p>说明：本文只是操作教程，具体原理请查看<a class="link" href="https://github.com/Jin-bao/NCU-thesis"  target="_blank" rel="noopener"
+    >手册</a>
 
    <span style="white-space: nowrap;"><svg width=".7em"
        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
@@ -552,63 +478,183 @@ fill="#000000" stroke="none">
    </svg></span>
    
     </p>
-<p><img src="/p/hugo/1.png"
-	width="1019"
-	height="402"
-	
-	loading="lazy"
-	
-		alt="1"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="253"
-		data-flex-basis="608px"
-	
-></p>
-<p>登录验证，按照提示操作，选择所需仓库进行安装<img src="/p/hugo/2.png"
-	width="733"
-	height="892"
-	
-	loading="lazy"
-	
-		alt="2"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="82"
-		data-flex-basis="197px"
-	
-></p>
-<p>完毕后检查是否安装：所需仓库-&gt;Settings-&gt;Integrations-&gt;Github Apps里可以看到utterances。</p>
-<p><img src="/p/hugo/3.png"
-	width="792"
-	height="193"
-	
-	loading="lazy"
-	
-		alt="3"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="410"
-		data-flex-basis="984px"
-	
-></p>
-<h2 id="step4-重新生成publichugoexe在主目录">Step4 :重新生成public(hugo.exe在主目录)
-</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./hugo.exe server-D
-</span></span></code></pre></div><p>此时应该已经成功了。</p>
-
+<p>推荐环境：VSCODE+LaTeX Workshop（扩展）</p>
+<h2 id="参考文献插入与引用">参考文献插入与引用
+</h2><ul>
+<li>模板默认指定〈bib=bibtex〉，模板将调用 gbt7714 宏包</li>
+<li>确保tex同目录下存在bib文件，且文内正确调用了
+<code>\bibliography{references.bib}</code>
+bibtex规则见下面</li>
+<li>文中需要正确引用</li>
+</ul>
+<h3 id="bibtex规则">bibtex规则：
+</h3><p>references.bib 文件是 BibTeX 或 biblatex 的参考文献数据库文件，用于存储参考文献的元数据（如作者、标题、年份等）。每条参考文献条目都遵循一定的规则和格式。以下是详细的规则和说明：</p>
+<ol>
+<li>基本结构
+每个参考文献条目由以下部分组成：</li>
+</ol>
+<p>条目类型 ：指定文献的类型，例如 @article（期刊文章）、@book（书籍）、@online（在线资源）等。
+唯一标识符（Key） ：为每条参考文献分配一个唯一的标识符，用于在正文中引用（如 \cite{key}）。
+字段列表 ：包含描述文献的键值对，键是字段名称（如 author、title），值是对应的元数据。
+示例条目</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">@article<span class="nb">{</span>einstein1905,
+</span></span><span class="line"><span class="cl">  author  = <span class="nb">{</span>Albert Einstein<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">  title   = <span class="nb">{</span>On the Electrodynamics of Moving Bodies<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">  journal = <span class="nb">{</span>Annalen der Physik<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">  year    = <span class="nb">{</span>1905<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">  volume  = <span class="nb">{</span>322<span class="nb">}</span>,
+</span></span><span class="line"><span class="cl">  pages   = <span class="nb">{</span>891--921<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span></code></pre></div><ol start="2">
+<li>条目类型
+不同的文献类型对应不同的条目类型。以下是一些常见的条目类型及其用途：</li>
+</ol>
+<p><code>@article</code>
+学术期刊文章
+<code>@book</code>
+书籍
+<code>@inproceedings</code>
+会议论文集中的文章
+<code>@incollection</code>
+书籍中的一章或一节
+<code>@phdthesis</code>
+博士学位论文
+<code>@mastersthesis</code>
+硕士学位论文
+<code>@techreport</code>
+技术报告
+<code>@misc</code>
+其他未分类的文献（如网页、博客等）
+<code>@online</code>
+在线资源（仅适用于
+<code>biblatex</code>（BibTeX 不支持此类型）
+3. 字段规则
+每个条目类型的字段可能有所不同，但以下是一些通用的字段及其含义：</p>
+<p>author
+作者姓名，多个作者用
+and
+分隔，例如：
+John Doe and Jane Smith
+title
+文献标题
+journal
+期刊名称（适用于
+@article
+类型）
+year
+出版年份
+volume
+期刊卷号（适用于
+@article
+类型）
+number
+期刊期号（适用于
+@article
+类型）
+pages
+页码范围，例如：
+123&ndash;145
+publisher
+出版商名称（适用于
+@book
+和
+@techreport
+类型）
+address
+出版地点（适用于
+@book
+和
+@techreport
+类型）
+url
+在线资源的 URL 地址（适用于
+@online
+和
+@misc
+类型）
+doi
+数字对象标识符（DOI）
+edition
+版本号（适用于
+@book
+类型）
+translator
+翻译者（适用于翻译作品）
+note
+备注信息（可选）
+4. 示例条目
+以下是一些常见文献类型的示例：</p>
+<p>(1) 期刊文章 (@article)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@article</span><span class="p">{</span><span class="nl">einstein1905</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span>  <span class="p">=</span> <span class="s">{Albert Einstein}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span>   <span class="p">=</span> <span class="s">{On the Electrodynamics of Moving Bodies}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Annalen der Physik}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span>    <span class="p">=</span> <span class="s">{1905}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">volume</span>  <span class="p">=</span> <span class="s">{322}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">number</span>  <span class="p">=</span> <span class="s">{10}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">pages</span>   <span class="p">=</span> <span class="s">{891--921}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">doi</span>     <span class="p">=</span> <span class="s">{10.1002/andp.19053221004}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>(2) 书籍 (@book)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@book</span><span class="p">{</span><span class="nl">knuth1984</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span>    <span class="p">=</span> <span class="s">{Donald E. Knuth}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span>     <span class="p">=</span> <span class="s">{The \TeX book}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Addison-Wesley}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span>      <span class="p">=</span> <span class="s">{1984}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">address</span>   <span class="p">=</span> <span class="s">{Reading, Massachusetts}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">edition</span>   <span class="p">=</span> <span class="s">{1}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>(3) 会议论文 (@inproceedings)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">smith2020</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">author</span>    <span class="p">=</span> <span class="s">{John Smith and Jane Doe}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span>     <span class="p">=</span> <span class="s">{A Study on Machine Learning Techniques}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the International Conference on AI}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">year</span>      <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">pages</span>     <span class="p">=</span> <span class="s">{123--130}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">address</span>   <span class="p">=</span> <span class="s">{New York, USA}</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{ACM}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>(4) 在线资源 (@online)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  author     = {Tobias Oetiker and Hubert Partl and Irene Hyna and Elisabeth Schlegl},
+</span></span><span class="line"><span class="cl">  translator = {\CTeX\ 开发小组},
+</span></span><span class="line"><span class="cl">  title      = {一份 (不太) 简短的 \LaTeXe\ 介绍},
+</span></span><span class="line"><span class="cl">  edition    = {6.03},
+</span></span><span class="line"><span class="cl">  year       = {2021},
+</span></span><span class="line"><span class="cl">  url        = {https://ctan.org/pkg/lshort-cn},
+</span></span><span class="line"><span class="cl">  urldate    = {2023-10-01} % 访问日期
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><ol start="5">
+<li>特殊规则
+(1) 多作者处理
+多个作者之间用 and 分隔，而不是逗号或其他符号。例如：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="c">author = {John Doe and Jane Smith and Alice Johnson}</span>
+</span></span></code></pre></div><p>(2) 特殊字符
+如果字段中包含特殊字符（如 LaTeX 命令），需要使用大括号 {} 包裹以保护它们。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="c">title = {The \LaTeX\ Book: A Guide to Typesetting with {\TeX}}</span>
+</span></span></code></pre></div><p>(3) 非英文字符
+对于非英文字符（如中文），建议使用 UTF-8 编码保存 .bib 文件，并确保编译器支持 UTF-8。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="c">author = {廖金波},</span>
+</span></span><span class="line"><span class="cl"><span class="c">title  = {有机无机杂化钙钛矿光电性质研究及调控},</span>
+</span></span></code></pre></div><p>(4) 日期字段
+biblatex 支持更灵活的日期字段（如 date 和 urldate），可以使用 ISO 格式（YYYY-MM-DD）。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bibtex" data-lang="bibtex"><span class="line"><span class="cl"><span class="c">urldate = {2023-10-01}</span>
+</span></span></code></pre></div><ol start="6">
+<li>注意事项
+唯一标识符（Key） ：每个条目的 key 必须唯一，通常使用作者名和年份的组合（如 einstein1905）。
+字段完整性 ：尽量填写所有必要的字段，以确保生成的参考文献完整且规范。
+避免拼写错误 ：检查字段名称和内容是否正确，避免因拼写错误导致编译失败或引用错误。
+清理辅助文件 ：如果修改了 .bib 文件后出现错误，可以删除 .aux、.bbl 等辅助文件后重新编译。</li>
+</ol>
+<h2 id="附录">附录
+</h2><h3 id="参考文章">参考文章
+</h3>
 </section>
 
 
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/hugo/">Hugo</a>
-        
-            <a href="/tags/utterances/">Utterances</a>
         
     </section>
 
@@ -677,24 +723,26 @@ fill="#000000" stroke="none">
         <div class="flex article-list--tile">
             
                 
-<article class="has-image">
-    <a href="/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+<article class="">
+    <a href="/p/wave_function_overlap_integral_cp2k/">
         
-        
-            <div class="article-image">
-                <img src="/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/WeChatminiprogram.eb2c5a7fb7a36f9eeb215a2ab72a2497_hu_3c61e8c9566c0678.webp" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 动手做一个和女朋友互动的微信小程序"
-                        
-                        data-hash="md5-6yxaf7ejb57rIVoqtyoklw==">
-                
-            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">动手做一个和女朋友互动的微信小程序</h2>
+            <h2 class="article-title">Wave_function_overlap_integral_CP2K</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/shell-command/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">shell command</h2>
         </div>
     </a>
 </article>

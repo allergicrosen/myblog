@@ -10,7 +10,7 @@
 <meta property='og:description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-01-22T02:17:01&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-02-16T06:51:22&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
 <meta name="twitter:description" content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
@@ -59,7 +59,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu16395594842853161405.png" width="300"
+                        <img src="/img/avatar_hu_937d2c1ad8e47311.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -460,7 +460,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Jan 22, 2025 02:17 UTC
+                    Feb 16, 2025 06:51 UTC
                 </time>
             </div>
             <div>|</div>
@@ -588,13 +588,11 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入<c
 轨迹文件在MD目录下生成的<code>XDATCAR</code>，脚本位于<code>NA_couplings</code>文件夹下的<code>gxdatpos</code><br>
 需要将脚本和轨迹文件放入<code>/step2/pfile/</code>, 然后执行脚本拆分轨迹，获得所需的5020个结构</p>
 <blockquote>
-<p>需要注意：MD跑完后一定要检查轨迹(导入至<code>VMD</code>中)，<strong>看看结构是否正常</strong>，否则后续跑NAMD没啥意义</p>
-</blockquote>
+<p>需要注意：MD跑完后一定要检查轨迹(导入至<code>VMD</code>中)，<strong>看看结构是否正常</strong>，否则后续跑NAMD没啥意义</p></blockquote>
 <p><strong>接下来计算NAC</strong></p>
 <h2 id="step2进行nac计算单k点">Step2，进行NAC计算(<strong>单K点!!!</strong>)
 </h2><blockquote>
-<p>NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:</p>
-</blockquote>
+<p>NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:</p></blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">MINB</span><span class="o">=</span><span class="m">168</span>   <span class="c1">#一定要记得修改！！！</span>
 </span></span><span class="line"><span class="cl"><span class="nv">MAXB</span><span class="o">=</span><span class="m">177</span>
 </span></span></code></pre></div><p>一定要和<code>EIGENVAL</code>里面保持一致，在<strong>SOC</strong>或者<strong>扩胞</strong>后会有变化。</p>
@@ -787,8 +785,7 @@ NAC目录下，有如下文件：</p>
 <blockquote>
 <p>使用<code>name_new.py</code>需要<code>python2.7</code>版本，<code>python3</code>会报错不兼容。<br>
 <code>py-scr3.py</code>脚本（<strong>需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量</strong>）
-<code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p>
-</blockquote>
+<code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p></blockquote>
 <hr>
 <p><strong>旧脚本</strong></p>
 <hr>
@@ -1173,7 +1170,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Jan 22, 2025 02:17 UTC
+            最后更新于 Feb 16, 2025 06:51 UTC
         </span>
     </section></footer>
 
@@ -1233,7 +1230,7 @@ NAC目录下，有如下文件：</p>
         
         
             <div class="article-image">
-                <img src="/p/vasp_compile/vasp.87ba60609fbdb23831d5cfc126b6a153_hu4761836933568047117.webp" 
+                <img src="/p/vasp_compile/vasp.87ba60609fbdb23831d5cfc126b6a153_hu_357a657e21658103.webp" 
                         width="250" 
                         height="150" 
                         loading="lazy"
