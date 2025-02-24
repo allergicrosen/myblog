@@ -7,46 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Sun, 16 Feb 2025 07:00:29 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Wave_function_overlap_integral_CP2K</title>
-        <link>https://allergicrosen.fun/p/wave_function_overlap_integral_cp2k/</link>
-        <pubDate>Sun, 16 Feb 2025 14:45:25 +0800</pubDate>
-        
-        <guid>https://allergicrosen.fun/p/wave_function_overlap_integral_cp2k/</guid>
-        <description>&lt;p&gt;具体过程：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;结构优化&lt;/li&gt;
-&lt;li&gt;静态计算&lt;/li&gt;
-&lt;li&gt;计算&lt;code&gt;partial charge&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;执行&lt;code&gt;op&lt;/code&gt;（给权限，&lt;code&gt;chmod 777 op&lt;/code&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/allergicrosen/my_scripts/blob/main/input.inp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;code&gt;partial charge input&lt;/code&gt;&lt;/a&gt;
-
-   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
-       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
-       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
-           fill=&#34;currentColor&#34;&gt;
-   &lt;/svg&gt;&lt;/span&gt;
-   
-    &lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/allergicrosen/my_scripts/blob/main/op&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;重叠积分计算可执行文件&lt;/a&gt;
-
-   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
-       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
-       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
-       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
-           fill=&#34;currentColor&#34;&gt;
-   &lt;/svg&gt;&lt;/span&gt;
-   
-    &lt;/p&gt;
-&lt;h2 id=&#34;附录&#34;&gt;附录
-&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
-&lt;/h3&gt;</description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 24 Feb 2025 14:59:11 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>shell command</title>
         <link>https://allergicrosen.fun/p/shell-command/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
@@ -821,7 +782,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;
 &lt;em&gt;dephasing.img&lt;/em&gt;&lt;br&gt;
 认为下降到&lt;strong&gt;0.6&lt;/strong&gt;就是&lt;code&gt;Dephasing time&lt;/code&gt;（单位 &lt;em&gt;fs&lt;/em&gt;）&lt;/p&gt;
-&lt;h4 id=&#34;spectral_density&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
+&lt;h4 id=&#34;spectral_&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;振动谱：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围&lt;br&gt;
 &lt;img src=&#34;https://allergicrosen.fun/p/namd/image-5.png&#34;

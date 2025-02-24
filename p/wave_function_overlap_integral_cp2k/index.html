@@ -1,19 +1,261 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="具体过程：\n结构优化 静态计算 计算partial charge 执行op（给权限，chmod 777 op） partial charge input 重叠积分计算可执行文件 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="利用CP2K计算重叠积分 具体过程：\n结构优化 计算partial charge 执行op（给权限，chmod 777 op） partial charge input ">
 <title>Wave_function_overlap_integral_CP2K</title>
 
 <link rel='canonical' href='https://allergicrosen.fun/p/wave_function_overlap_integral_cp2k/'>
 
 <link rel="stylesheet" href="/scss/style.min.212b530080331a1773429236cba8c9684bdc8d3d78be0deaf2988ba113583ae7.css"><meta property='og:title' content="Wave_function_overlap_integral_CP2K">
-<meta property='og:description' content="具体过程：\n结构优化 静态计算 计算partial charge 执行op（给权限，chmod 777 op） partial charge input 重叠积分计算可执行文件 ">
+<meta property='og:description' content="利用CP2K计算重叠积分 具体过程：\n结构优化 计算partial charge 执行op（给权限，chmod 777 op） partial charge input ">
 <meta property='og:url' content='https://allergicrosen.fun/p/wave_function_overlap_integral_cp2k/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2025-02-16T14:45:25&#43;08:00'/><meta property='article:modified_time' content='2025-02-16T07:00:29&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2025-02-16T14:45:25&#43;08:00'/><meta property='article:modified_time' content='2025-02-24T14:59:11&#43;00:00'/>
 <meta name="twitter:title" content="Wave_function_overlap_integral_CP2K">
-<meta name="twitter:description" content="具体过程：\n结构优化 静态计算 计算partial charge 执行op（给权限，chmod 777 op） partial charge input 重叠积分计算可执行文件 ">
+<meta name="twitter:description" content="利用CP2K计算重叠积分 具体过程：\n结构优化 计算partial charge 执行op（给权限，chmod 777 op） partial charge input ">
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+     
+<svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+	<circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+</svg>
+</div>
+
+<style>
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: #f5f5fa;
+    }
+	
+      
+.pl {
+  width: 6em;
+  height: 6em;
+}
+
+.pl__ring {
+  animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+  stroke: #f42f25;
+}
+
+.pl__ring--b {
+  animation-name: ringB;
+  stroke: #f49725;
+}
+
+.pl__ring--c {
+  animation-name: ringC;
+  stroke: #255ff4;
+}
+
+.pl__ring--d {
+  animation-name: ringD;
+  stroke: #f42582;
+}
+
+ 
+@keyframes ringA {
+  from, 4% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+
+  12% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -335;
+  }
+
+  32% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -595;
+  }
+
+  40%, 54% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -660;
+  }
+
+  62% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -665;
+  }
+
+  82% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -925;
+  }
+
+  90%, to {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -990;
+  }
+}
+
+@keyframes ringB {
+  from, 12% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -110;
+  }
+
+  20% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -115;
+  }
+
+  40% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -195;
+  }
+
+  48%, 62% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  70% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  90% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -305;
+  }
+
+  98%, to {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+}
+
+@keyframes ringC {
+  from {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  8% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  28% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  36%, 58% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  66% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  86% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  94%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+@keyframes ringD {
+  from, 8% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  16% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  36% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  44%, 50% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  58% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  78% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  86%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+</style>
+
+<script>	
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            loading.style.display = "none";
+        });
+    }
+
+    initLoading();
+</script>
 
     </head>
     <body class="
@@ -349,6 +591,10 @@ fill="#000000" stroke="none">
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
+    <li></li>
+    <li><a href="#结构优化部分可以自己用vasp计算">结构优化部分可以自己用vasp计算</a></li>
+    <li><a href="#自洽计算cp2k">自洽计算（CP2K）</a></li>
+    <li><a href="#重叠积分计算">重叠积分计算</a></li>
     <li><a href="#附录">附录</a>
       <ol>
         <li><a href="#参考文章">参考文章</a></li>
@@ -432,7 +678,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Feb 16, 2025 07:00 UTC
+                    Feb 24, 2025 14:59 UTC
                 </time>
             </div>
             <div>|</div>
@@ -447,7 +693,7 @@ fill="#000000" stroke="none">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -462,10 +708,10 @@ fill="#000000" stroke="none">
     <section class="article-content">
     
     
-    <p>具体过程：</p>
+    <p>利用<code>CP2K</code>计算重叠积分
+<strong>具体过程：</strong></p>
 <ul>
 <li>结构优化</li>
-<li>静态计算</li>
 <li>计算<code>partial charge</code></li>
 <li>执行<code>op</code>（给权限，<code>chmod 777 op</code>）</li>
 </ul>
@@ -491,7 +737,150 @@ fill="#000000" stroke="none">
    </svg></span>
    
     </p>
-<h2 id="附录">附录
+<h2 id="">
+</h2><h2 id="结构优化部分可以自己用vasp计算">结构优化部分可以自己用vasp计算
+</h2><p>不赘述</p>
+<h2 id="自洽计算cp2k">自洽计算（CP2K）
+</h2><p>这一部分需要用<code>CP2K</code>计算，准备好<code>input.inp</code>
+我的<code>input.inp</code>如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#&amp;EXT_RESTART</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#RESTART_FILE_NAME PROJECT-1.restart </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&amp;END EXT_RESTART</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>GLOBAL
+</span></span><span class="line"><span class="cl"><span class="c1"># PROJECT ov-4h2o-v</span>
+</span></span><span class="line"><span class="cl"> RUN_TYPE ENERGY 
+</span></span><span class="line"><span class="cl"> PRINT_LEVEL MEDIUM
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>END GLOBAL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>MOTION
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>GEO_OPT
+</span></span><span class="line"><span class="cl">  MAX_ITER  <span class="m">200</span>
+</span></span><span class="line"><span class="cl">  MAX_DR    1.E-3
+</span></span><span class="line"><span class="cl">  RMS_DR    3.E-4
+</span></span><span class="line"><span class="cl">  MAX_FORCE 1.E-4
+</span></span><span class="line"><span class="cl">  RMS_FORCE 3.E-5
+</span></span><span class="line"><span class="cl">  OPTIMIZER BFGS
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>END GEO_OPT
+</span></span><span class="line"><span class="cl"><span class="c1">#&amp;CONSTRANT</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &amp;FIXED_ATOMS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  COMPONENTS_TO_FIX  XYZ</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  LIST 1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &amp;END FIXED_ATOMS</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#&amp;END CONSTRANT</span>
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>END MOTION
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>FORCE_EVAL
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>DFT
+</span></span><span class="line"><span class="cl">   BASIS_SET_FILE_NAME    /GLOBALFS/caep_lts_qrhzh_1/mwy/basic/BASIS_SET
+</span></span><span class="line"><span class="cl">   POTENTIAL_FILE_NAME    /GLOBALFS/caep_lts_qrhzh_1/mwy/basic/GTH_POTENTIALS
+</span></span><span class="line"><span class="cl">  LSD
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>PRINT
+</span></span><span class="line"><span class="cl"><span class="c1"># 计算partial charge</span>
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>MO_CUBES
+</span></span><span class="line"><span class="cl">NLUMO <span class="m">2</span>
+</span></span><span class="line"><span class="cl">NHOMO <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 指定输出LUMO和HOMO数量</span>
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>END
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>END
+</span></span><span class="line"><span class="cl">  PLUS_U_METHOD LOWDIN
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>MGRID
+</span></span><span class="line"><span class="cl">   CUTOFF <span class="m">500</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   REL_CUTOFF 60</span>
+</span></span><span class="line"><span class="cl"> COMMENSURATE
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END MGRID
+</span></span><span class="line"><span class="cl">  <span class="c1"># quickstep</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>QS
+</span></span><span class="line"><span class="cl">   EXTRAPOLATION ASPC
+</span></span><span class="line"><span class="cl">   EXTRAPOLATION_ORDER <span class="m">3</span>
+</span></span><span class="line"><span class="cl">   EPS_DEFAULT 1.0E-12
+</span></span><span class="line"><span class="cl">   EPS_PGF_ORB 1.0E-16
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END QS
+</span></span><span class="line"><span class="cl">  <span class="c1"># 自洽参数设置</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>SCF
+</span></span><span class="line"><span class="cl">   EPS_SCF 5E-7 
+</span></span><span class="line"><span class="cl">   MAX_SCF <span class="m">80</span>
+</span></span><span class="line"><span class="cl">   SCF_GUESS RESTART <span class="c1"># 读取已经存在的波函数文件。如果文件不存在则用ATOMIC</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&amp;</span>OUTER_SCF
+</span></span><span class="line"><span class="cl">    MAX_SCF <span class="m">5</span> <span class="c1"># 控制SCF迭代最大次数，超过5步不收敛继续下一个离子步</span>
+</span></span><span class="line"><span class="cl">    OPTIMIZER DIIS
+</span></span><span class="line"><span class="cl">    STEP_SIZE 0.15
+</span></span><span class="line"><span class="cl">    EPS_SCF 1.0E-6  <span class="c1"># SCF能量收敛标准</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&amp;</span>END OUTER_SCF
+</span></span><span class="line"><span class="cl">   <span class="p">&amp;</span>OT T 
+</span></span><span class="line"><span class="cl">    MINIMIZER DIIS
+</span></span><span class="line"><span class="cl">    PRECONDITIONER FULL_ALL  <span class="c1">#易收敛用FULL_SINGLE_INVERSE</span>
+</span></span><span class="line"><span class="cl">    ENERGY_GAP 0.01
+</span></span><span class="line"><span class="cl">   <span class="p">&amp;</span>END OT
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END SCF
+</span></span><span class="line"><span class="cl">      <span class="c1"># 交换相关泛函设置</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&amp;</span>XC
+</span></span><span class="line"><span class="cl">        <span class="p">&amp;</span>XC_FUNCTIONAL PBE
+</span></span><span class="line"><span class="cl">        <span class="p">&amp;</span>END XC_FUNCTIONAL
+</span></span><span class="line"><span class="cl">        <span class="c1"># 范德华修正</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&amp;</span>VDW_POTENTIAL
+</span></span><span class="line"><span class="cl">        POTENTIAL_TYPE PAIR_POTENTIAL
+</span></span><span class="line"><span class="cl">        <span class="p">&amp;</span>PAIR_POTENTIAL
+</span></span><span class="line"><span class="cl">          TYPE DFTD3
+</span></span><span class="line"><span class="cl">          PARAMETER_FILE_NAME /GLOBALFS/caep_lts_qrhzh_1/mwy/basic/dftd3.dat
+</span></span><span class="line"><span class="cl">          REFERENCE_FUNCTIONAL PBE
+</span></span><span class="line"><span class="cl">        <span class="p">&amp;</span>END PAIR_POTENTIAL
+</span></span><span class="line"><span class="cl">      <span class="p">&amp;</span>END VDW_POTENTIAL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">&amp;</span>XC_GRID
+</span></span><span class="line"><span class="cl">         XC_DERIV SPLINE2_smooth
+</span></span><span class="line"><span class="cl">        <span class="p">&amp;</span>END XC_GRID
+</span></span><span class="line"><span class="cl">      <span class="p">&amp;</span>END XC
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>END DFT
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>SUBSYS
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>CELL
+</span></span><span class="line"><span class="cl">ABC   9.2833995819   17.0879993439    19.9836997986
+</span></span><span class="line"><span class="cl"><span class="c1"># 晶格参数，根据结构设置</span>
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>END CELL
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>TOPOLOGY
+</span></span><span class="line"><span class="cl">   COORD_FILE_FORMAT CIF
+</span></span><span class="line"><span class="cl">   COORD_FILE_NAME 0%.cif
+</span></span><span class="line"><span class="cl"> <span class="c1"># 指定格式为CIF，不支持POSCAR格式，MS导出CIF</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>END TOPOLOGY
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>KIND C
+</span></span><span class="line"><span class="cl">   BASIS_SET DZVP-MOLOPT-SR-GTH
+</span></span><span class="line"><span class="cl">   POTENTIAL GTH-PBE-q4
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END KIND
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>KIND N
+</span></span><span class="line"><span class="cl">   BASIS_SET DZVP-MOLOPT-SR-GTH
+</span></span><span class="line"><span class="cl">   POTENTIAL GTH-PBE-q5
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END KIND
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>KIND H
+</span></span><span class="line"><span class="cl">   BASIS_SET DZVP-MOLOPT-SR-GTH
+</span></span><span class="line"><span class="cl">   POTENTIAL GTH-PBE-q1
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END KIND
+</span></span><span class="line"><span class="cl"> <span class="p">&amp;</span>KIND Pb
+</span></span><span class="line"><span class="cl">   BASIS_SET DZVP-MOLOPT-SR-GTH
+</span></span><span class="line"><span class="cl">   POTENTIAL GTH-PBE-q4
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END KIND
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>KIND I
+</span></span><span class="line"><span class="cl">   BASIS_SET DZVP-MOLOPT-SR-GTH
+</span></span><span class="line"><span class="cl">   POTENTIAL GTH-PBE-q7
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END KIND
+</span></span><span class="line"><span class="cl">  <span class="c1"># 基组和赝势设置</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&amp;</span>END SUBSYS
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span>END FORCE_EVAL
+</span></span></code></pre></div><p>记得修改好参数，特别是基组<code>BASIS_SET</code>和赝势<code>POTENTIAL</code>文件路径。<br>
+常用的是BASIS_MOLOPT基组，<code>BASIS_MOLOPT</code>基组是高斯形式的基组，尽量减小<code>BSSE</code>误差，针对完全的分子体系进行优化的，和针对凝聚态周期性体系优化的基组都有。<code>J. Chem. Phys. 127, 114105 (2007)</code></p>
+<p><code>GTH</code>赝势是Goedecker, Teter and Hutter (GTH)三个人在1996年发展的在赝势文件的开头可以看到引用信息和发展历程。<code>Phys. Rev. B 54, 1703 (1996)</code><br>
+注意<strong>赝势</strong>和<strong>基组</strong>的价<strong>电子数</strong>一定要统一。</p>
+<p>注意我们用<code>cif</code>格式，<code>cif</code>请用<strong>MS</strong>导出，<code>vaspkit</code>导出内容不太一样会导致<code>CP2K</code>计算有问题，但是不会报错。</p>
+<h2 id="重叠积分计算">重叠积分计算
+</h2><p>找到LUMO和HOMO的cube文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> $ ls *cube
+</span></span><span class="line"><span class="cl">PROJECT-WFN_00303_1-1_0.cube  PROJECT-WFN_00304_1-1_0.cube  PROJECT-WFN_00305_1-1_0.cube  PROJECT-WFN_00306_1-1_0.cube
+</span></span><span class="line"><span class="cl">PROJECT-WFN_00303_2-1_0.cube  PROJECT-WFN_00304_2-1_0.cube  PROJECT-WFN_00305_2-1_0.cube  PROJECT-WFN_00306_2-1_0.cube
+</span></span></code></pre></div><p>例如我的<code>LUMO</code>是<code>PROJECT-WFN_00305_1-1_0.cube</code>（00305后面的_1或者_2表示不同spin，不区分自选，所以是一样的），将其命名为<code>lumo.cube</code>，<code>PROJECT-WFN_00304_1-1_0.cube</code>，是<code>HOMO</code>，命名为<code>homo.cube</code>。</p>
+<p>接着执行<code>op</code>，</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ./op 
+</span></span><span class="line"><span class="cl"> 0.0029450319
+</span></span></code></pre></div><h2 id="附录">附录
 </h2><h3 id="参考文章">参考文章
 </h3>
 </section>
@@ -526,7 +915,7 @@ fill="#000000" stroke="none">
 
 
         <span>
-            最后更新于 Feb 16, 2025 07:00 UTC
+            最后更新于 Feb 24, 2025 14:59 UTC
         </span>
     </section></footer>
 

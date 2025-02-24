@@ -10,11 +10,253 @@
 <meta property='og:description' content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/namd/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-02-16T07:00:29&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='vasp' /><meta property='article:tag' content='NAMD' /><meta property='article:published_time' content='2024-12-10T01:20:09&#43;08:00'/><meta property='article:modified_time' content='2025-02-24T14:59:11&#43;00:00'/><meta property='og:image' content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
 <meta name="twitter:title" content="NAC计算">
 <meta name="twitter:description" content="NAMD计算 记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)\n基于凯峰给的NAMD-example\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+     
+<svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+	<circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+</svg>
+</div>
+
+<style>
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: #f5f5fa;
+    }
+	
+      
+.pl {
+  width: 6em;
+  height: 6em;
+}
+
+.pl__ring {
+  animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+  stroke: #f42f25;
+}
+
+.pl__ring--b {
+  animation-name: ringB;
+  stroke: #f49725;
+}
+
+.pl__ring--c {
+  animation-name: ringC;
+  stroke: #255ff4;
+}
+
+.pl__ring--d {
+  animation-name: ringD;
+  stroke: #f42582;
+}
+
+ 
+@keyframes ringA {
+  from, 4% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+
+  12% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -335;
+  }
+
+  32% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -595;
+  }
+
+  40%, 54% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -660;
+  }
+
+  62% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -665;
+  }
+
+  82% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -925;
+  }
+
+  90%, to {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -990;
+  }
+}
+
+@keyframes ringB {
+  from, 12% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -110;
+  }
+
+  20% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -115;
+  }
+
+  40% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -195;
+  }
+
+  48%, 62% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  70% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  90% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -305;
+  }
+
+  98%, to {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+}
+
+@keyframes ringC {
+  from {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  8% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  28% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  36%, 58% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  66% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  86% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  94%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+@keyframes ringD {
+  from, 8% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  16% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  36% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  44%, 50% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  58% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  78% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  86%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+</style>
+
+<script>	
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            loading.style.display = "none";
+        });
+    }
+
+    initLoading();
+</script>
 
     </head>
     <body class="
@@ -364,7 +606,7 @@ fill="#000000" stroke="none">
           <ol>
             <li><a href="#pop"><strong>Pop：</strong></a></li>
             <li><a href="#dephasing"><strong>Dephasing:</strong></a></li>
-            <li><a href="#spectral_density"><strong>Spectral_density:</strong></a></li>
+            <li><a href="#spectral_"><strong>Spectral_density:</strong></a></li>
           </ol>
         </li>
       </ol>
@@ -460,7 +702,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Feb 16, 2025 07:00 UTC
+                    Feb 24, 2025 14:59 UTC
                 </time>
             </div>
             <div>|</div>
@@ -1049,7 +1291,7 @@ NAC目录下，有如下文件：</p>
 >
 <em>dephasing.img</em><br>
 认为下降到<strong>0.6</strong>就是<code>Dephasing time</code>（单位 <em>fs</em>）</p>
-<h4 id="spectral_density"><strong>Spectral_density:</strong>
+<h4 id="spectral_"><strong>Spectral_density:</strong>
 </h4><p>振动谱：<br>
 将<code>icond0pair0_1Spectral_density.txt</code>的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围<br>
 <img src="/p/namd/image-5.png"
@@ -1170,7 +1412,7 @@ NAC目录下，有如下文件：</p>
 
 
         <span>
-            最后更新于 Feb 16, 2025 07:00 UTC
+            最后更新于 Feb 24, 2025 14:59 UTC
         </span>
     </section></footer>
 
