@@ -10,7 +10,7 @@
 <meta property='og:description' content="content └── gallery └─hugo增加utterances功能 ├── index.md ├── 主目录.png ├── 1.png ├── 2.png └── 3.png ">
 <meta property='og:url' content='https://allergicrosen.fun/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Gallery' /><meta property='article:modified_time' content='2025-03-11T07:33:09&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Gallery' /><meta property='article:modified_time' content='2025-03-11T08:14:44&#43;00:00'/>
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="content └── gallery └─hugo增加utterances功能 ├── index.md ├── 主目录.png ├── 1.png ├── 2.png └── 3.png ">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -621,7 +621,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    Mar 11, 2025 07:33 UTC
+                    Mar 11, 2025 08:14 UTC
                 </time>
             </div>
             <div>|</div>
@@ -699,7 +699,7 @@ fill="#000000" stroke="none">
 
 
         <span>
-            最后更新于 Mar 11, 2025 07:33 UTC
+            最后更新于 Mar 11, 2025 08:14 UTC
         </span>
     </section></footer>
 
@@ -738,51 +738,55 @@ fill="#000000" stroke="none">
      
     
         
-    <script src="https://utteranc.es/client.js" 
-        repo="allergicrosen/myblog"
-        issue-term="pathname"
-        
-        crossorigin="anonymous"
-        async
-        >
-</script>
-
-<style>
-    .utterances {
-        max-width: unset;
-    }
-</style>
-
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="allergicrosen/myblog"
+    data-repo-id="R_kgDOM21aPQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOM21aPc4Cn0lU"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
 <script>
-    let utterancesLoaded = false;
-
-    function setUtterancesTheme(theme) {
-        let utterances = document.querySelector('.utterances iframe');
-        if (utterances) {
-            utterances.contentWindow.postMessage(
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
                 {
-                    type: 'set-theme',
-                    theme: `github-${theme}`
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
                 },
-                'https://utteranc.es'
+                "https://giscus.app"
             );
         }
     }
 
-    addEventListener('message', event => {
-        if (event.origin !== 'https://utteranc.es') return;
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
 
-        
-        utterancesLoaded = true;
-        setUtterancesTheme(document.documentElement.dataset.scheme)
-    });
-
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (!utterancesLoaded) return;
-        setUtterancesTheme(e.detail)
-    })
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
 </script>
-
 
     
 
