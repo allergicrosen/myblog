@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>贪吃蛇小游戏</title>
+    <style>
+        #game-board {
+            border: 1px solid #000;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #game-over-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #game-over-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #score-speed {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        #score-speed div {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex flex-col justify-center items-center h-screen">
+    <canvas id="game-board" width="400" height="400"></canvas>
+    <div id="score-speed">
+        <div>分数: <span id="score">0</span></div>
+        <div>速度: <span id="current-speed">5</span></div>
+    </div>
+    <div id="controls">
+        <button id="speed-up" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">加速</button>
+        <button id="speed-down" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">减速</button>
+        <button id="pause" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">暂停</button>
+        <button id="new-game" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">新游戏</button>
+    </div>
+    <div id="game-over-modal">
+        <div id="game-over-content">
+            <h2>游戏结束！</h2>
+            <button id="restart" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">重新开始</button>
+            <button id="exit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">退出</button>
+        </div>
+    </div>
+    <script>
+        const canvas = document.getElementById('game-board');
+        const ctx = canvas.getContext('2d');
+
+        const box = 20;
+        let snake = [];
+        snake[0] = {
+            x: 9 * box,
+            y: 10 * box
+        };
+
+        let food = {
+            x: Math.floor(Math.random() * 19) * box,
+            y: Math.floor(Math.random() * 19) * box
+        };
+
+        let d;
+        document.addEventListener('keydown', direction);
+
+        function direction(event) {
+            if (event.keyCode === 37 && d!== 'RIGHT') {
+                d = 'LEFT';
+            } else if (event.keyCode === 38 && d!== 'DOWN') {
+                d = 'UP';
+            } else if (event.keyCode === 39 && d!== 'LEFT') {
+                d = 'RIGHT';
+            } else if (event.keyCode === 40 && d!== 'UP') {
+                d = 'DOWN';
+            }
+        }
+
+        // 初始速度，数值越大速度越快
+        let speed = 5;
+        let game;
+        let isPaused = false;
+        let score = 0;
+        const scoreElement = document.getElementById('score');
+        const speedElement = document.getElementById('current-speed');
+
+        // 计算时间间隔的函数
+        function calculateInterval() {
+            return 200 - speed * 20; // 根据速度计算时间间隔
+        }
+
+        function draw() {
+            if (isPaused) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < snake.length; i++) {
+                ctx.fillStyle = (i === 0)? 'green' : 'lightgreen';
+                ctx.fillRect(snake[i].x, snake[i].y, box, box);
+                ctx.strokeStyle = 'darkgreen';
+                ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+            }
+
+            ctx.fillStyle = 'red';
+            ctx.fillRect(food.x, food.y, box, box);
+
+            let snakeX = snake[0].x;
+            let snakeY = snake[0].y;
+
+            if (d === 'LEFT') snakeX -= box;
+            if (d === 'UP') snakeY -= box;
+            if (d === 'RIGHT') snakeX += box;
+            if (d === 'DOWN') snakeY += box;
+
+            if (snakeX === food.x && snakeY === food.y) {
+                food = {
+                    x: Math.floor(Math.random() * 19) * box,
+                    y: Math.floor(Math.random() * 19) * box
+                };
+                score++;
+                scoreElement.textContent = score;
+            } else {
+                snake.pop();
+            }
+
+            let newHead = {
+                x: snakeX,
+                y: snakeY
+            };
+
+            if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
+                clearInterval(game);
+                document.getElementById('game-over-modal').style.display = 'flex';
+            }
+
+            snake.unshift(newHead);
+        }
+
+        function collision(head, array) {
+            for (let i = 0; i < array.length; i++) {
+                if (head.x === array[i].x && head.y === array[i].y) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function startGame() {
+            snake = [];
+            snake[0] = {
+                x: 9 * box,
+                y: 10 * box
+            };
+            food = {
+                x: Math.floor(Math.random() * 19) * box,
+                y: Math.floor(Math.random() * 19) * box
+            };
+            d = null;
+            speed = 5; // 重置速度
+            score = 0;
+            scoreElement.textContent = score;
+            speedElement.textContent = speed;
+            isPaused = false;
+            clearInterval(game);
+            game = setInterval(draw, calculateInterval());
+            document.getElementById('game-over-modal').style.display = 'none';
+        }
+
+        document.getElementById('speed-up').addEventListener('click', () => {
+            if (speed < 9) {
+                speed++;
+                speedElement.textContent = speed;
+                clearInterval(game);
+                game = setInterval(draw, calculateInterval());
+            }
+        });
+
+        document.getElementById('speed-down').addEventListener('click', () => {
+            if (speed > 1) {
+                speed--;
+                speedElement.textContent = speed;
+                clearInterval(game);
+                game = setInterval(draw, calculateInterval());
+            }
+        });
+
+        document.getElementById('pause').addEventListener('click', () => {
+            isPaused =!isPaused;
+        });
+
+        document.getElementById('new-game').addEventListener('click', startGame);
+
+        document.getElementById('restart').addEventListener('click', startGame);
+
+        document.getElementById('exit').addEventListener('click', () => {
+            window.close();
+        });
+
+        startGame();
+    </script>
+</body>
+
+</html>    
