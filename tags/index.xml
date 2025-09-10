@@ -7,10 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Fri, 13 Jun 2025 13:16:49 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Sep 2025 15:33:13 +0000</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GUI</title>
+        <link>https://allergicrosen.fun/tags/gui/</link>
+        <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/tags/gui/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PowerShell</title>
+        <link>https://allergicrosen.fun/tags/powershell/</link>
+        <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/tags/powershell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>脚本开发</title>
+        <link>https://allergicrosen.fun/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</link>
+        <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Windows</title>
         <link>https://allergicrosen.fun/tags/windows/</link>
-        <pubDate>Tue, 11 Mar 2025 17:36:14 +0800</pubDate>
+        <pubDate>Wed, 10 Sep 2025 22:18:05 +0800</pubDate>
         
         <guid>https://allergicrosen.fun/tags/windows/</guid>
         <description></description>

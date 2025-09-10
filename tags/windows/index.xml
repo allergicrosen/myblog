@@ -7,7 +7,140 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 11 Mar 2025 17:39:39 +0800</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Sep 2025 23:31:43 +0800</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows powershell module install</title>
+        <link>https://allergicrosen.fun/p/windows_powershell_module/</link>
+        <pubDate>Wed, 10 Sep 2025 22:18:05 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/p/windows_powershell_module/</guid>
+        <description>&lt;img src="https://allergicrosen.fun/p/windows_powershell_module/cover.png" alt="Featured image of post Windows powershell module install" /&gt;&lt;p&gt;本笔记记录公司限制连接外网，且无法获取管理员权限的情况下安装&lt;code&gt;PowerShell&lt;/code&gt;模块的教程。
+有网络直接命令行输入：&lt;code&gt;Install-Module -Name 模块名称&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心思路&lt;/strong&gt;
+由于无法通过Install-Module自动解决依赖，我们需要手动确保模块的所有依赖项都完整存在，并且放置在&lt;code&gt;PowerShell&lt;/code&gt;能够识别的个人模块目录中。&lt;/p&gt;
+&lt;h2 id=&#34;获取powershell的模块压缩包&#34;&gt;获取&lt;code&gt;PowerShell&lt;/code&gt;的模块压缩包
+&lt;/h2&gt;&lt;p&gt;从&lt;a class=&#34;link&#34; href=&#34;https://www.powershellgallery.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PowerShellGallery&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    获取所需module
+&lt;img src=&#34;https://allergicrosen.fun/p/windows_powershell_module/image.png&#34;
+	width=&#34;1628&#34;
+	height=&#34;1053&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PowerShellGallery&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;371px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;确认正确的模块目录结构以importexcel为例&#34;&gt;确认正确的模块目录结构(以&lt;code&gt;ImportExcel&lt;/code&gt;为例)
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;PowerShell&lt;/code&gt;对模块的目录结构有严格的要求。仅仅将解压的文件放到一个文件夹并添加到PSModulePath是不够的。正确的结构必须是：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你的模块根目录/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── ImportExcel/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ImportExcel.psd1          &amp;lt;-- 模块清单文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ImportExcel.psm1          &amp;lt;-- 主脚本模块文件 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;通常存在&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── Microsoft.PowerShell.Utility.psm1  &amp;lt;-- 可能需要的依赖模块
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── Microsoft.PowerShell.Commands.Utility.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ... &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;其他dll依赖文件&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── lib/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        └── ... &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;更多的.NET程序集依赖&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;网上下载的.nupkg文件实际上是一个zip压缩包，解压后里面可能还有一个lib文件夹，包含对应.NET版本的文件夹（如net472, netstandard2.0等）。需要的是这个子文件夹里的内容。&lt;/p&gt;
+&lt;p&gt;检查解压后的文件夹结构是否与上述类似。如果只是一个散乱的文件堆，那很可能是解压的层级不对。&lt;/p&gt;
+&lt;h2 id=&#34;手动安装到个人模块目录&#34;&gt;手动安装到个人模块目录
+&lt;/h2&gt;&lt;p&gt;这是最关键的一步，因为没有管理员权限，无法安装到系统级的Program Files目录。PowerShell允许用户在自己的文档目录下安装模块。&lt;/p&gt;
+&lt;p&gt;创建个人模块目录（如果不存在）：
+在PowerShell中运行以下命令，它会自动创建正确的目录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;New-Item&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-ItemType&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Directory&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Documents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PowerShell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Modules&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Force&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个路径（&lt;code&gt;C:\Users\&amp;lt;你的用户名&amp;gt;\Documents\PowerShell\Modules&lt;/code&gt;）会自动被PowerShell识别，无需手动修改系统环境变量。&lt;/p&gt;
+&lt;p&gt;放置模块文件：
+将整理好的 整个 &lt;code&gt;ImportExcel&lt;/code&gt; 文件夹（确保其结构正确），复制或移动到上一步创建的Modules目录下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\&amp;lt;&lt;/span&gt;你的用户名&amp;gt;&lt;span class=&#34;se&#34;&gt;\D&lt;/span&gt;ocuments&lt;span class=&#34;se&#34;&gt;\P&lt;/span&gt;owerShell&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;odules&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;└── ImportExcel/          &amp;lt;-- 整个文件夹放在这里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ImportExcel.psd1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ImportExcel.psm1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └── lib/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;解决依赖问题错误的主要原因&#34;&gt;解决依赖问题（错误的主要原因）
+&lt;/h2&gt;&lt;p&gt;ImportExcel模块依赖于多个.NET程序集（如EPPlus、DocumentFormat.OpenXml等）。离线安装时，这些依赖项必须随主模块一起提供。&lt;/p&gt;
+&lt;p&gt;验证依赖项：
+用文本编辑器（如VSCode、Notepad++）打开 ImportExcel.psd1 文件。
+查找 &lt;code&gt;RequiredModules&lt;/code&gt; 和 &lt;code&gt;NestedModules&lt;/code&gt; 字段。这里会声明它需要哪些其他模块和程序集。&lt;/p&gt;
+&lt;p&gt;确保所有文件齐全：
+根据&lt;code&gt;ImportExcel.psd1&lt;/code&gt;中的声明，检查ImportExcel文件夹下是否包含了所有必需的&lt;code&gt;.dll&lt;/code&gt;文件和.psm1文件。常见的依赖包括：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;EPPlus.dll&lt;/code&gt; (最重要的依赖)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DocumentFormat.OpenXml.dll&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;System.IO.Packaging.dll&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其他在lib文件夹下的dll文件。&lt;/p&gt;
+&lt;p&gt;如果这些文件缺失，需要从原始下载的nupkg包中或从另一台有网络的电脑上通过Save-Module命令重新获取完整模块。&lt;/p&gt;
+&lt;h2 id=&#34;重新导入并测试&#34;&gt;重新导入并测试
+&lt;/h2&gt;&lt;p&gt;关闭当前所有的PowerShell窗口。&lt;/p&gt;
+&lt;p&gt;重新打开一个新的 PowerShell窗口。这是为了确保它重新读取模块路径。&lt;/p&gt;
+&lt;p&gt;尝试导入模块：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Import-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Verbose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加 -Verbose 参数可以看到详细的加载信息，帮助定位是哪个具体的依赖项加载失败。&lt;/p&gt;
+&lt;p&gt;如果导入成功，运行一个简单命令测试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-Command&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这会列出所有ImportExcel模块的命令，如果能看到一长串以Export-、Import-开头的命令，说明安装成功。&lt;/p&gt;
+&lt;p&gt;如果经过以上步骤仍然报错，可以尝试&lt;strong&gt;手动加载&lt;/strong&gt;依赖：
+在导入ImportExcel之前，先尝试手动加载其依赖的DLL。首先进入的模块目录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 首先CD到你的ImportExcel模块目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Documents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PowerShell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Modules&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 尝试手动加载关键依赖，例如EPPlus（根据你实际有的dll文件名来加载）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Add-Type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;.\EPPlus.dll&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 加载其他可能需要的dll...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Add-Type -Path &amp;#34;.\DocumentFormat.OpenXml.dll&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;再导入模块&#34;&gt;再导入模块
+&lt;/h2&gt;&lt;p&gt;Import-Module .\ImportExcel.psd1 -Verbose
+观察哪一条Add-Type命令报错，那就是缺失的文件。&lt;/p&gt;
+&lt;p&gt;检查PowerShell版本：
+确保的电脑PowerShell版本不是太老（如PS 2.0）。ImportExcel可能需要PS 3.0或更高版本。运行$PSVersionTable.PSVersion查看。&lt;/p&gt;
+&lt;h2 id=&#34;终极方法重新获取完整模块&#34;&gt;终极方法：重新获取完整模块
+&lt;/h2&gt;&lt;p&gt;这是最可能解决问题的办法。找一台有互联网连接的电脑，以管理员身份运行PowerShell，执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Save-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Name&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Temp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OfflineModules&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;这会将ImportExcel模块及其所有依赖项完整地下载到C&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Temp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OfflineModules目录&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;然后将这个目录下的ImportExcel文件夹完整地复制到公司电脑的个人模块目录&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;（&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Documents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PowerShell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Modules&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;）&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;中&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;这能100&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;确保依赖项的完整性&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;成功验证&#34;&gt;成功验证
+&lt;/h2&gt;&lt;p&gt;导入模块后，请运行以下命令来验证是否安装成功：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-Command&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Select-Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-First&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Format-List&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果这些命令能返回模块的版本信息和命令列表，那就安装成功了！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;PS &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Users&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Administrator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Get-Command&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Select-Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-First&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;CommandType&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;Name&lt;/span&gt;                                               &lt;span class=&#34;n&#34;&gt;Version&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;Source&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;-----------&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;----&lt;/span&gt;                                               &lt;span class=&#34;p&#34;&gt;-------&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;------&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Alias&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;Convert-XlRangeToImage&lt;/span&gt;                             &lt;span class=&#34;mf&#34;&gt;7.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;10&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Alias&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;Export-ExcelSheet&lt;/span&gt;                                  &lt;span class=&#34;mf&#34;&gt;7.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;10&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Alias&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;New-ExcelChart&lt;/span&gt;                                     &lt;span class=&#34;mf&#34;&gt;7.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;10&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Alias&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;Set-Column&lt;/span&gt;                                         &lt;span class=&#34;mf&#34;&gt;7.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;10&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Alias&lt;/span&gt;           &lt;span class=&#34;nb&#34;&gt;Set-Format&lt;/span&gt;                                         &lt;span class=&#34;mf&#34;&gt;7.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;10&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;ImportExcel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;无法一键安装直接尝试手动import依赖和模块&lt;/p&gt;
+&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.powershellgallery.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PowerShellGallery&lt;/a&gt;
+
+   &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+       height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+       &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+       &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+           fill=&#34;currentColor&#34;&gt;
+   &lt;/svg&gt;&lt;/span&gt;
+   
+    &lt;/p&gt;
+&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        <item>
         <title>Windows 特殊字符快捷键（Alt 代码）</title>
         <link>https://allergicrosen.fun/p/windows_charmap/</link>
         <pubDate>Tue, 11 Mar 2025 17:36:14 +0800</pubDate>
