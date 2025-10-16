@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="VBA入门教程 一、VBA基础概述 1.1 什么是VBA？ VBA（Visual Basic for Applications）是微软开发的编程语言，嵌入在Office套件中（如Excel、Word、Outlook），用于自动化重复任务、扩展软件功能。通过编写VBA代码，用户可以实现数据处理、报表生成、界面交互等复杂操作。\n">
+<title>VBA_learning</title>
+
+<link rel='canonical' href='https://allergicrosen.fun/p/vba_learning/'>
+
+<link rel="stylesheet" href="/scss/style.min.24f2752e4eee339566d5faaf8a2441bdd05965b02398daaa153a02ccd4cbf58d.css"><meta property='og:title' content="VBA_learning">
+<meta property='og:description' content="VBA入门教程 一、VBA基础概述 1.1 什么是VBA？ VBA（Visual Basic for Applications）是微软开发的编程语言，嵌入在Office套件中（如Excel、Word、Outlook），用于自动化重复任务、扩展软件功能。通过编写VBA代码，用户可以实现数据处理、报表生成、界面交互等复杂操作。\n">
+<meta property='og:url' content='https://allergicrosen.fun/p/vba_learning/'>
+<meta property='og:site_name' content='allergicrosen'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VBA' /><meta property='article:tag' content='编程' /><meta property='article:published_time' content='2025-10-16T21:56:27&#43;08:00'/><meta property='article:modified_time' content='2025-10-16T22:06:41&#43;08:00'/>
+<meta name="twitter:title" content="VBA_learning">
+<meta name="twitter:description" content="VBA入门教程 一、VBA基础概述 1.1 什么是VBA？ VBA（Visual Basic for Applications）是微软开发的编程语言，嵌入在Office套件中（如Excel、Word、Outlook），用于自动化重复任务、扩展软件功能。通过编写VBA代码，用户可以实现数据处理、报表生成、界面交互等复杂操作。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<div class="loading">
+     
+<svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+	<circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+	<circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+</svg>
+</div>
+
+<style>
+    .loading {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: #f5f5fa;
+    }
+	
+      
+.pl {
+  width: 6em;
+  height: 6em;
+}
+
+.pl__ring {
+  animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+  stroke: #f42f25;
+}
+
+.pl__ring--b {
+  animation-name: ringB;
+  stroke: #f49725;
+}
+
+.pl__ring--c {
+  animation-name: ringC;
+  stroke: #255ff4;
+}
+
+.pl__ring--d {
+  animation-name: ringD;
+  stroke: #f42582;
+}
+
+ 
+@keyframes ringA {
+  from, 4% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+
+  12% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -335;
+  }
+
+  32% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -595;
+  }
+
+  40%, 54% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -660;
+  }
+
+  62% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -665;
+  }
+
+  82% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -925;
+  }
+
+  90%, to {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -990;
+  }
+}
+
+@keyframes ringB {
+  from, 12% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -110;
+  }
+
+  20% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -115;
+  }
+
+  40% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -195;
+  }
+
+  48%, 62% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  70% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  90% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -305;
+  }
+
+  98%, to {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+}
+
+@keyframes ringC {
+  from {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  8% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  28% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  36%, 58% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  66% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  86% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  94%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+@keyframes ringD {
+  from, 8% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  16% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  36% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  44%, 50% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  58% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  78% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  86%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+</style>
+
+<script>	
+    function initLoading() {
+        let loading = document.querySelector(".loading");
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            loading.style.display = "none";
+        });
+    }
+
+    initLoading();
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_937d2c1ad8e47311.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">allergicrosen</a></h1>
+            <h2 class="site-description">个人博客，aaaallllergicrooosen。。。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/386854280'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="872" height="834" viewBox="0 0 872 834">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<image id="图层_1" data-name="图层 1" width="872" height="834" xlink:href="data:img/png;base64,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"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/allergicrosen'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://main.allergicrosen.dynv6.net/'
+                        target="_blank"
+                        title="Personal Page"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="35.000000pt" height="18.000000pt" viewBox="0 0 35.000000 18.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,18.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M147 148 c76 -129 75 -128 59 -128 -9 0 -29 21 -44 46 -15 25 -35 59
+-45 76 l-19 31 -44 -79 c-24 -43 -44 -82 -44 -86 0 -5 15 -8 33 -8 27 0 36 6
+51 34 10 19 16 40 14 46 -2 7 -12 -4 -23 -24 -12 -21 -27 -36 -38 -36 -17 0
+-17 2 4 38 13 20 28 45 33 55 15 24 20 22 39 -19 16 -32 16 -37 2 -57 -17 -25
+-19 -37 -6 -37 5 0 13 9 16 20 3 11 10 20 15 20 5 0 12 -9 15 -20 5 -15 15
+-20 41 -20 19 0 34 3 34 8 0 4 -13 30 -29 59 -16 28 -25 57 -21 63 5 8 22 -14
+45 -59 35 -67 40 -71 71 -71 19 0 34 3 34 6 0 15 -93 174 -102 174 -9 0 8 -35
+64 -127 19 -32 19 -33 1 -33 -12 0 -31 24 -58 75 -22 41 -42 75 -44 75 -2 0
+-9 -8 -16 -17 -11 -15 -13 -15 -24 5 -6 12 -16 22 -22 22 -6 0 -2 -15 8 -32z"/>
+</g>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://allergicrosen.fun/en/" >English</option>
+                                
+                                    <option value="https://allergicrosen.fun/" selected>简体中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一vba基础概述">一、VBA基础概述</a>
+      <ol>
+        <li><a href="#11-什么是vba">1.1 什么是VBA？</a></li>
+        <li><a href="#12-开发环境设置">1.2 开发环境设置</a></li>
+      </ol>
+    </li>
+    <li><a href="#二vba语法基础">二、VBA语法基础</a>
+      <ol>
+        <li><a href="#21-变量与数据类型">2.1 变量与数据类型</a></li>
+        <li><a href="#22-运算符与表达式">2.2 运算符与表达式</a></li>
+        <li><a href="#23-流程控制">2.3 流程控制</a>
+          <ol>
+            <li><a href="#231-条件判断">2.3.1 条件判断</a></li>
+            <li><a href="#232-循环结构">2.3.2 循环结构</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#三excel对象模型操作">三、Excel对象模型操作</a>
+      <ol>
+        <li><a href="#31-单元格与范围操作">3.1 单元格与范围操作</a></li>
+        <li><a href="#32-工作表与工作簿">3.2 工作表与工作簿</a></li>
+      </ol>
+    </li>
+    <li><a href="#四实用脚本示例">四、实用脚本示例</a>
+      <ol>
+        <li><a href="#41-数据清洗与格式化">4.1 数据清洗与格式化</a>
+          <ol>
+            <li><a href="#411-删除重复值">4.1.1 删除重复值</a></li>
+            <li><a href="#412-批量添加前缀">4.1.2 批量添加前缀</a></li>
+          </ol>
+        </li>
+        <li><a href="#42-自动化报表生成">4.2 自动化报表生成</a>
+          <ol>
+            <li><a href="#421-生成数据透视表">4.2.1 生成数据透视表</a></li>
+          </ol>
+        </li>
+        <li><a href="#43-邮件自动化">4.3 邮件自动化</a>
+          <ol>
+            <li><a href="#431-发送带附件的邮件">4.3.1 发送带附件的邮件</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#五高级技巧与最佳实践">五、高级技巧与最佳实践</a>
+      <ol>
+        <li><a href="#51-错误处理">5.1 错误处理</a></li>
+        <li><a href="#52-自定义函数">5.2 自定义函数</a></li>
+        <li><a href="#53-事件编程">5.3 事件编程</a></li>
+      </ol>
+    </li>
+    <li><a href="#六图表绘制操作">六、图表绘制操作</a>
+      <ol>
+        <li><a href="#61-基本图表创建">6.1 基本图表创建</a></li>
+        <li><a href="#62-不同类型图表示例">6.2 不同类型图表示例</a></li>
+        <li><a href="#63-图表样式美化">6.3 图表样式美化</a></li>
+      </ol>
+    </li>
+    <li><a href="#七自动筛选功能">七、自动筛选功能</a>
+      <ol>
+        <li><a href="#71-基本自动筛选">7.1 基本自动筛选</a></li>
+        <li><a href="#72-多条件筛选">7.2 多条件筛选</a></li>
+        <li><a href="#73-高级筛选使用条件区域">7.3 高级筛选（使用条件区域）</a></li>
+        <li><a href="#74-取消筛选与恢复数据">7.4 取消筛选与恢复数据</a></li>
+      </ol>
+    </li>
+    <li><a href="#八with语句的使用">八、With语句的使用</a>
+      <ol>
+        <li><a href="#81-with语句基础用法">8.1 With语句基础用法</a></li>
+        <li><a href="#82-with语句在对象操作中的应用">8.2 With语句在对象操作中的应用</a></li>
+        <li><a href="#83-嵌套with语句">8.3 嵌套With语句</a></li>
+        <li><a href="#84-with语句的优势总结">8.4 With语句的优势总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#九userform用户窗体">九、UserForm（用户窗体）</a>
+      <ol>
+        <li><a href="#91-创建userform的步骤">9.1 创建UserForm的步骤</a></li>
+        <li><a href="#92-基本userform示例数据录入表单">9.2 基本UserForm示例：数据录入表单</a></li>
+        <li><a href="#93-显示userform的代码">9.3 显示UserForm的代码</a></li>
+        <li><a href="#94-常用控件及属性">9.4 常用控件及属性</a></li>
+        <li><a href="#95-完整userform示例查询工具">9.5 完整UserForm示例：查询工具</a></li>
+      </ol>
+    </li>
+    <li><a href="#十综合案例销售数据处理系统">十、综合案例：销售数据处理系统</a></li>
+    <li><a href="#十一总结与进阶学习建议">十一、总结与进阶学习建议</a>
+      <ol>
+        <li><a href="#进阶学习建议">进阶学习建议：</a></li>
+      </ol>
+    </li>
+    <li><a href="#十二总结">十二、总结</a></li>
+    <li><a href="#附录">附录</a>
+      <ol>
+        <li><a href="#参考文章">参考文章</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/vba/" >
+                VBA
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/vba_learning/">VBA_learning</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-10-16</time>
+            </div>
+            <div>|</div>
+        
+        <div class="article-lastmod">
+                <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="59px" height="64px"
+	 viewBox="0 0 59 64" enable-background="new 0 0 59 64" xml:space="preserve">
+<title>Document-edit</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Document-edit" transform="translate(1.000000, 1.000000)" sketch:type="MSLayerGroup">
+		<path id="Shape_1_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M47,45v15c0,1.1-0.9,2-2,2H2
+			c-1.1,0-2-0.9-2-2V2c0-1.1,0.9-2,2-2h25.9L47,18.1V33"/>
+		<path id="Shape" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M47,18.9H30c-1.1,0-2-0.9-2-2V1"/>
+		<path id="Shape_2_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,17h13"/>
+		<path id="Shape_3_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,27h31"/>
+		<path id="Shape_4_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,34h31"/>
+		<path id="Shape_5_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,43h24"/>
+		<path id="Shape_6_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M9,49h17"/>
+		<g id="Group" transform="translate(27.000000, 29.000000)" sketch:type="MSShapeGroup">
+			<path id="Shape_8_" fill="none" stroke="#6B6C6E" stroke-width="2" stroke-linejoin="round" d="M0,30l3.9-9.4L24.2,0.3
+				c0.4-0.4,1.1-0.4,1.6,0l3.9,3.9c0.4,0.4,0.4,1.1,0,1.6L9.4,26.1L0,30z"/>
+			<path id="Shape_9_" fill="none" stroke="#6B6C6E" stroke-width="2" d="M21.9,2.7l5.4,5.4"/>
+		</g>
+	</g>
+</g>
+</svg>
+
+                <time>
+                    2025-10-16 22:06
+                </time>
+            </div>
+            <div>|</div>
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 13 分钟
+                </time>
+            </div>
+            
+            <div id="viewCount">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+                <time class="article-time--reading">
+                    
+                    <span id="vercount_value_page_pv">loading... </span>次
+                </time>
+            </div>
+        
+
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="vba入门教程">VBA入门教程
+</h1><h2 id="一vba基础概述">一、VBA基础概述
+</h2><h3 id="11-什么是vba">1.1 什么是VBA？
+</h3><p>VBA（Visual Basic for Applications）是微软开发的编程语言，嵌入在Office套件中（如Excel、Word、Outlook），用于自动化重复任务、扩展软件功能。通过编写VBA代码，用户可以实现数据处理、报表生成、界面交互等复杂操作。</p>
+<h3 id="12-开发环境设置">1.2 开发环境设置
+</h3><ol>
+<li><strong>启用开发者选项卡</strong>：
+<ul>
+<li>Excel/Word：<code>文件 &gt; 选项 &gt; 自定义功能区 &gt; 勾选开发者</code></li>
+</ul>
+</li>
+<li><strong>打开VBA编辑器</strong>：
+<ul>
+<li>快捷键：<code>Alt + F11</code></li>
+</ul>
+</li>
+<li><strong>创建模块</strong>：
+<ul>
+<li>在VBA编辑器中，<code>插入 &gt; 模块</code>，开始编写代码。</li>
+</ul>
+</li>
+</ol>
+<h2 id="二vba语法基础">二、VBA语法基础
+</h2><h3 id="21-变量与数据类型">2.1 变量与数据类型
+</h3><p>变量用于存储数据，VBA支持多种数据类型：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="s1">&#39; 声明变量</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">num</span> <span class="n">As</span> <span class="n">Integer</span>       <span class="s1">&#39; 整数</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">name</span> <span class="n">As</span> <span class="ne">String</span>      <span class="s1">&#39; 字符串</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">price</span> <span class="n">As</span> <span class="n">Double</span>     <span class="s1">&#39; 双精度浮点数</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">isReady</span> <span class="n">As</span> <span class="n">Boolean</span>  <span class="s1">&#39; 布尔值</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">dateValue</span> <span class="n">As</span> <span class="n">Date</span>   <span class="s1">&#39; 日期</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39; 变体类型（万能类型）</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="k">var</span> <span class="n">As</span> <span class="n">Variant</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="o">=</span> <span class="mi">123</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="o">=</span> <span class="c1">#2023-10-01#</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39; 数组声明</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">arr</span><span class="p">(</span><span class="mi">1</span> <span class="n">To</span> <span class="mi">5</span><span class="p">)</span> <span class="n">As</span> <span class="n">Integer</span>  <span class="s1">&#39; 固定大小数组</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dim</span> <span class="n">dynamicArr</span><span class="p">()</span> <span class="n">As</span> <span class="ne">String</span>  <span class="s1">&#39; 动态数组</span>
+</span></span><span class="line"><span class="cl"><span class="n">ReDim</span> <span class="n">dynamicArr</span><span class="p">(</span><span class="mi">1</span> <span class="n">To</span> <span class="mi">3</span><span class="p">)</span>    <span class="s1">&#39; 调整动态数组大小</span>
+</span></span></code></pre></div><h3 id="22-运算符与表达式">2.2 运算符与表达式
+</h3><p>VBA支持算术、比较、逻辑运算符：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 算术运算
+</span></span><span class="line"><span class="cl">result = 10 + 5 * 2       &#39; 结果：20
+</span></span><span class="line"><span class="cl">result = (10 + 5) * 2     &#39; 结果：30
+</span></span><span class="line"><span class="cl">result = 10 / 3           &#39; 结果：3.333...
+</span></span><span class="line"><span class="cl">result = 10 \ 3           &#39; 整除：3
+</span></span><span class="line"><span class="cl">result = 10 Mod 3         &#39; 取余：1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 比较运算
+</span></span><span class="line"><span class="cl">If 5 &gt; 3 Then MsgBox &#34;True&#34;
+</span></span><span class="line"><span class="cl">If &#34;A&#34; = &#34;a&#34; Then MsgBox &#34;Equal&#34; &#39; 区分大小写，输出False
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 逻辑运算
+</span></span><span class="line"><span class="cl">If (5 &gt; 3) And (2 &lt; 4) Then MsgBox &#34;Both True&#34;
+</span></span><span class="line"><span class="cl">If (5 &gt; 3) Or (2 &gt; 4) Then MsgBox &#34;At least one True&#34;
+</span></span></code></pre></div><h3 id="23-流程控制">2.3 流程控制
+</h3><h4 id="231-条件判断">2.3.1 条件判断
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; If...Then...Else
+</span></span><span class="line"><span class="cl">If score &gt;= 90 Then
+</span></span><span class="line"><span class="cl">    MsgBox &#34;优秀&#34;
+</span></span><span class="line"><span class="cl">ElseIf score &gt;= 80 Then
+</span></span><span class="line"><span class="cl">    MsgBox &#34;良好&#34;
+</span></span><span class="line"><span class="cl">Else
+</span></span><span class="line"><span class="cl">    MsgBox &#34;不及格&#34;
+</span></span><span class="line"><span class="cl">End If
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; Select Case
+</span></span><span class="line"><span class="cl">Select Case dayOfWeek
+</span></span><span class="line"><span class="cl">    Case 1: MsgBox &#34;星期日&#34;
+</span></span><span class="line"><span class="cl">    Case 2: MsgBox &#34;星期一&#34;
+</span></span><span class="line"><span class="cl">    &#39; 其他情况...
+</span></span><span class="line"><span class="cl">    Case Else: MsgBox &#34;无效&#34;
+</span></span><span class="line"><span class="cl">End Select
+</span></span></code></pre></div><h4 id="232-循环结构">2.3.2 循环结构
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; For...Next循环
+</span></span><span class="line"><span class="cl">For i = 1 To 10
+</span></span><span class="line"><span class="cl">    Cells(i, 1).Value = i  &#39; 向A列写入1-10
+</span></span><span class="line"><span class="cl">Next i
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; For Each...Next遍历对象
+</span></span><span class="line"><span class="cl">For Each cell In Range(&#34;A1:A10&#34;)
+</span></span><span class="line"><span class="cl">    If cell.Value &gt; 5 Then cell.Interior.Color = RGB(255, 0, 0)
+</span></span><span class="line"><span class="cl">Next cell
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; Do...Loop循环
+</span></span><span class="line"><span class="cl">Do While i &lt;= 10
+</span></span><span class="line"><span class="cl">    i = i + 1
+</span></span><span class="line"><span class="cl">Loop
+</span></span></code></pre></div><h2 id="三excel对象模型操作">三、Excel对象模型操作
+</h2><h3 id="31-单元格与范围操作">3.1 单元格与范围操作
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 读取单元格值
+</span></span><span class="line"><span class="cl">value = Range(&#34;A1&#34;).Value
+</span></span><span class="line"><span class="cl">value = Cells(1, 1).Value &#39; 行号1，列号1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 写入单元格值
+</span></span><span class="line"><span class="cl">Range(&#34;B1&#34;).Value = &#34;Hello&#34;
+</span></span><span class="line"><span class="cl">Cells(2, 2).Value = 100
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 选择范围
+</span></span><span class="line"><span class="cl">Range(&#34;A1:C10&#34;).Select
+</span></span><span class="line"><span class="cl">Range(&#34;A1&#34;).Resize(5, 3).Select &#39; 选择A1到C5
+</span></span></code></pre></div><h3 id="32-工作表与工作簿">3.2 工作表与工作簿
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 添加新工作表
+</span></span><span class="line"><span class="cl">Sheets.Add.Name = &#34;数据汇总&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 删除工作表
+</span></span><span class="line"><span class="cl">Application.DisplayAlerts = False &#39; 关闭提示
+</span></span><span class="line"><span class="cl">Sheets(&#34;Sheet1&#34;).Delete
+</span></span><span class="line"><span class="cl">Application.DisplayAlerts = True
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 保存工作簿
+</span></span><span class="line"><span class="cl">ActiveWorkbook.Save
+</span></span><span class="line"><span class="cl">ActiveWorkbook.SaveAs &#34;C:\路径\文件名.xlsx&#34;
+</span></span></code></pre></div><h2 id="四实用脚本示例">四、实用脚本示例
+</h2><h3 id="41-数据清洗与格式化">4.1 数据清洗与格式化
+</h3><h4 id="411-删除重复值">4.1.1 删除重复值
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub RemoveDuplicates()
+</span></span><span class="line"><span class="cl">    Dim lastRow As Long
+</span></span><span class="line"><span class="cl">    lastRow = Cells(Rows.Count, 1).End(xlUp).Row &#39; 获取A列最后一行
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Range(&#34;A1:A&#34; &amp; lastRow).RemoveDuplicates Columns:=1, Header:=xlYes
+</span></span><span class="line"><span class="cl">    MsgBox &#34;重复值已删除！&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="412-批量添加前缀">4.1.2 批量添加前缀
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub AddPrefix()
+</span></span><span class="line"><span class="cl">    Dim cell As Range
+</span></span><span class="line"><span class="cl">    For Each cell In Range(&#34;A1:A100&#34;)
+</span></span><span class="line"><span class="cl">        If cell.Value &lt;&gt; &#34;&#34; Then
+</span></span><span class="line"><span class="cl">            cell.Value = &#34;ID-&#34; &amp; cell.Value
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    Next cell
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="42-自动化报表生成">4.2 自动化报表生成
+</h3><h4 id="421-生成数据透视表">4.2.1 生成数据透视表
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub CreatePivotTable()
+</span></span><span class="line"><span class="cl">    Dim wsData As Worksheet
+</span></span><span class="line"><span class="cl">    Dim wsPivot As Worksheet
+</span></span><span class="line"><span class="cl">    Dim lastRow As Long
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set wsData = ThisWorkbook.Sheets(&#34;数据源&#34;)
+</span></span><span class="line"><span class="cl">    Set wsPivot = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    lastRow = wsData.Cells(wsData.Rows.Count, 1).End(xlUp).Row
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建数据透视表
+</span></span><span class="line"><span class="cl">    wsData.Range(&#34;A1:C&#34; &amp; lastRow).PivotTable _
+</span></span><span class="line"><span class="cl">        TableDestination:=wsPivot.Range(&#34;A1&#34;), _
+</span></span><span class="line"><span class="cl">        TableName:=&#34;销售数据透视表&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 添加字段
+</span></span><span class="line"><span class="cl">    With wsPivot.PivotTables(&#34;销售数据透视表&#34;)
+</span></span><span class="line"><span class="cl">        .AddDataField .PivotFields(&#34;销售额&#34;), &#34;汇总销售额&#34;, xlSum
+</span></span><span class="line"><span class="cl">        .PivotFields(&#34;产品名称&#34;).Orientation = xlRowField
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="43-邮件自动化">4.3 邮件自动化
+</h3><h4 id="431-发送带附件的邮件">4.3.1 发送带附件的邮件
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub SendEmailWithAttachment()
+</span></span><span class="line"><span class="cl">    Dim olApp As Object
+</span></span><span class="line"><span class="cl">    Dim olMail As Object
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set olApp = CreateObject(&#34;Outlook.Application&#34;)
+</span></span><span class="line"><span class="cl">    Set olMail = olApp.CreateItem(0) &#39; 0代表邮件
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With olMail
+</span></span><span class="line"><span class="cl">        .To = &#34;recipient@example.com&#34;
+</span></span><span class="line"><span class="cl">        .CC = &#34;cc@example.com&#34;
+</span></span><span class="line"><span class="cl">        .Subject = &#34;月度报告&#34;
+</span></span><span class="line"><span class="cl">        .Body = &#34;附件为最新月度报告，请查收。&#34;
+</span></span><span class="line"><span class="cl">        .Attachments.Add ThisWorkbook.FullName &#39; 添加当前工作簿作为附件
+</span></span><span class="line"><span class="cl">        .Send &#39; 发送邮件（或使用.Display显示）
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set olMail = Nothing
+</span></span><span class="line"><span class="cl">    Set olApp = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="五高级技巧与最佳实践">五、高级技巧与最佳实践
+</h2><h3 id="51-错误处理">5.1 错误处理
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub ErrorHandlingDemo()
+</span></span><span class="line"><span class="cl">    On Error GoTo ErrorHandler
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    filePath = &#34;C:\不存在的文件.txt&#34;
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #1
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">ErrorHandler:
+</span></span><span class="line"><span class="cl">    MsgBox &#34;错误：&#34; &amp; Err.Number &amp; &#34; - &#34; &amp; Err.Description
+</span></span><span class="line"><span class="cl">    Resume Next &#39; 继续执行后续代码
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="52-自定义函数">5.2 自定义函数
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 计算BMI指数
+</span></span><span class="line"><span class="cl">Function CalculateBMI(weight As Double, height As Double) As Double
+</span></span><span class="line"><span class="cl">    CalculateBMI = weight / (height ^ 2)
+</span></span><span class="line"><span class="cl">End Function
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 在Excel单元格中使用：=CalculateBMI(B1, C1)
+</span></span></code></pre></div><h3 id="53-事件编程">5.3 事件编程
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 当单元格内容变化时触发
+</span></span><span class="line"><span class="cl">Private Sub Worksheet_Change(ByVal Target As Range)
+</span></span><span class="line"><span class="cl">    If Not Intersect(Target, Range(&#34;A1&#34;)) Is Nothing Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;A1单元格内容已更新！&#34;
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="六图表绘制操作">六、图表绘制操作
+</h2><p>在Excel VBA中，我们可以通过代码创建和修改各种图表，实现数据可视化的自动化。</p>
+<h3 id="61-基本图表创建">6.1 基本图表创建
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub CreateBasicChart()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Dim chartObj As ChartObject
+</span></span><span class="line"><span class="cl">    Dim dataRange As Range
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置工作表
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets(&#34;数据&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 定义数据范围
+</span></span><span class="line"><span class="cl">    Set dataRange = ws.Range(&#34;A1:C10&#34;) &#39; 假设A列为类别，B、C列为数据
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建图表
+</span></span><span class="line"><span class="cl">    Set chartObj = ws.ChartObjects.Add( _
+</span></span><span class="line"><span class="cl">        Left:=100, Top:=50, Width:=500, Height:=300)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置图表数据和类型
+</span></span><span class="line"><span class="cl">    With chartObj.Chart
+</span></span><span class="line"><span class="cl">        .SetSourceData Source:=dataRange
+</span></span><span class="line"><span class="cl">        .ChartType = xlColumnClustered &#39; 柱状图
+</span></span><span class="line"><span class="cl">        .HasTitle = True
+</span></span><span class="line"><span class="cl">        .ChartTitle.Text = &#34;销售数据对比&#34;
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;图表创建完成！&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="62-不同类型图表示例">6.2 不同类型图表示例
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub CreateVariousCharts()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Dim lastRow As Long
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.ActiveSheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取数据最后一行
+</span></span><span class="line"><span class="cl">    lastRow = ws.Cells(ws.Rows.Count, &#34;A&#34;).End(xlUp).Row
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建折线图
+</span></span><span class="line"><span class="cl">    ws.ChartObjects.Add(Left:=10, Top:=10, Width:=300, Height:=200).Chart _
+</span></span><span class="line"><span class="cl">        .SetSourceData Source:=ws.Range(&#34;A1:B&#34; &amp; lastRow)
+</span></span><span class="line"><span class="cl">    ws.ChartObjects(1).Chart.ChartType = xlLine
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建饼图
+</span></span><span class="line"><span class="cl">    ws.ChartObjects.Add(Left:=320, Top:=10, Width:=300, Height:=200).Chart _
+</span></span><span class="line"><span class="cl">        .SetSourceData Source:=ws.Range(&#34;A1:C&#34; &amp; lastRow)
+</span></span><span class="line"><span class="cl">    ws.ChartObjects(2).Chart.ChartType = xlPie
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建散点图
+</span></span><span class="line"><span class="cl">    ws.ChartObjects.Add(Left:=10, Top:=220, Width:=300, Height:=200).Chart _
+</span></span><span class="line"><span class="cl">        .SetSourceData Source:=ws.Range(&#34;A1:D&#34; &amp; lastRow)
+</span></span><span class="line"><span class="cl">    ws.ChartObjects(3).Chart.ChartType = xlXYScatter
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="63-图表样式美化">6.3 图表样式美化
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub FormatChart()
+</span></span><span class="line"><span class="cl">    Dim cht As Chart
+</span></span><span class="line"><span class="cl">    Set cht = ThisWorkbook.Sheets(&#34;数据&#34;).ChartObjects(1).Chart
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置图表标题
+</span></span><span class="line"><span class="cl">    With cht.ChartTitle
+</span></span><span class="line"><span class="cl">        .Text = &#34;2023年月度销售趋势&#34;
+</span></span><span class="line"><span class="cl">        .Font.Size = 14
+</span></span><span class="line"><span class="cl">        .Font.Bold = True
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置坐标轴
+</span></span><span class="line"><span class="cl">    With cht.Axes(xlCategory) &#39; X轴
+</span></span><span class="line"><span class="cl">        .HasTitle = True
+</span></span><span class="line"><span class="cl">        .AxisTitle.Text = &#34;月份&#34;
+</span></span><span class="line"><span class="cl">        .AxisTitle.Font.Italic = True
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With cht.Axes(xlValue) &#39; Y轴
+</span></span><span class="line"><span class="cl">        .HasTitle = True
+</span></span><span class="line"><span class="cl">        .AxisTitle.Text = &#34;销售额(元)&#34;
+</span></span><span class="line"><span class="cl">        .MinimumScale = 0 &#39; 设置最小值为0
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置图例
+</span></span><span class="line"><span class="cl">    With cht.Legend
+</span></span><span class="line"><span class="cl">        .Position = xlBottom &#39; 图例在底部
+</span></span><span class="line"><span class="cl">        .Font.Size = 10
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置数据系列格式
+</span></span><span class="line"><span class="cl">    With cht.SeriesCollection(1)
+</span></span><span class="line"><span class="cl">        .Name = &#34;实际销售额&#34;
+</span></span><span class="line"><span class="cl">        .Format.Fill.ForeColor.RGB = RGB(50, 120, 200) &#39; 蓝色
+</span></span><span class="line"><span class="cl">        .MarkerStyle = xlMarkerStyleCircle &#39; 数据点样式
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="七自动筛选功能">七、自动筛选功能
+</h2><p>VBA提供了强大的筛选功能，可以快速处理大量数据。</p>
+<h3 id="71-基本自动筛选">7.1 基本自动筛选
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub BasicAutoFilter()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets(&#34;客户数据&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 确保筛选被关闭
+</span></span><span class="line"><span class="cl">    If ws.AutoFilterMode Then ws.AutoFilterMode = False
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 应用筛选
+</span></span><span class="line"><span class="cl">    ws.Range(&#34;A1:D1&#34;).AutoFilter &#39; A1:D1为标题行
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 筛选出&#34;华东地区&#34;的客户
+</span></span><span class="line"><span class="cl">    ws.Range(&#34;A1:D1&#34;).AutoFilter Field:=3, Criteria1:=&#34;华东地区&#34; &#39; 第3列是地区
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 筛选出销售额大于10000的记录
+</span></span><span class="line"><span class="cl">    &#39; ws.Range(&#34;A1:D1&#34;).AutoFilter Field:=4, Criteria1:=&#34;&gt;10000&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="72-多条件筛选">7.2 多条件筛选
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub AdvancedFilter()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets(&#34;销售数据&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 关闭现有筛选
+</span></span><span class="line"><span class="cl">    If ws.AutoFilterMode Then ws.AutoFilterMode = False
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 多条件筛选：地区为&#34;华南&#34;且销售额&gt;5000
+</span></span><span class="line"><span class="cl">    With ws.Range(&#34;A1:D1000&#34;)
+</span></span><span class="line"><span class="cl">        .AutoFilter
+</span></span><span class="line"><span class="cl">        .AutoFilter Field:=3, Criteria1:=&#34;华南&#34; &#39; 第3列：地区
+</span></span><span class="line"><span class="cl">        .AutoFilter Field:=4, Criteria1:=&#34;&gt;5000&#34; &#39; 第4列：销售额
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 统计筛选结果数量
+</span></span><span class="line"><span class="cl">    Dim visibleCount As Long
+</span></span><span class="line"><span class="cl">    visibleCount = ws.Range(&#34;A2:A1000&#34;).SpecialCells(xlCellTypeVisible).Count
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;符合条件的记录有 &#34; &amp; visibleCount &amp; &#34; 条&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="73-高级筛选使用条件区域">7.3 高级筛选（使用条件区域）
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub AdvancedFilterWithCriteria()
+</span></span><span class="line"><span class="cl">    Dim wsData As Worksheet
+</span></span><span class="line"><span class="cl">    Dim wsCriteria As Worksheet
+</span></span><span class="line"><span class="cl">    Dim wsResult As Worksheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置工作表
+</span></span><span class="line"><span class="cl">    Set wsData = ThisWorkbook.Sheets(&#34;数据&#34;)
+</span></span><span class="line"><span class="cl">    Set wsCriteria = ThisWorkbook.Sheets(&#34;条件&#34;)
+</span></span><span class="line"><span class="cl">    Set wsResult = ThisWorkbook.Sheets(&#34;结果&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 清除之前的结果
+</span></span><span class="line"><span class="cl">    wsResult.Range(&#34;A2:D1000&#34;).ClearContents
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 应用高级筛选
+</span></span><span class="line"><span class="cl">    wsData.Range(&#34;A1:D1000&#34;).AdvancedFilter _
+</span></span><span class="line"><span class="cl">        Action:=xlFilterCopy, _
+</span></span><span class="line"><span class="cl">        CriteriaRange:=wsCriteria.Range(&#34;A1:D2&#34;), _
+</span></span><span class="line"><span class="cl">        CopyToRange:=wsResult.Range(&#34;A1:D1&#34;), _
+</span></span><span class="line"><span class="cl">        Unique:=False
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    MsgBox &#34;高级筛选完成，结果已复制到结果表&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="74-取消筛选与恢复数据">7.4 取消筛选与恢复数据
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub RemoveFilter()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.ActiveSheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查是否有筛选
+</span></span><span class="line"><span class="cl">    If ws.AutoFilterMode Then
+</span></span><span class="line"><span class="cl">        &#39; 关闭筛选
+</span></span><span class="line"><span class="cl">        ws.AutoFilterMode = False
+</span></span><span class="line"><span class="cl">        MsgBox &#34;筛选已取消&#34;
+</span></span><span class="line"><span class="cl">    Else
+</span></span><span class="line"><span class="cl">        MsgBox &#34;当前没有应用筛选&#34;
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 选中数据区域第一行
+</span></span><span class="line"><span class="cl">    ws.Range(&#34;A1&#34;).Select
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="八with语句的使用">八、With语句的使用
+</h2><p>With语句是VBA中提高代码效率和可读性的重要工具，特别适合对同一对象进行多项操作。</p>
+<h3 id="81-with语句基础用法">8.1 With语句基础用法
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub WithStatementBasic()
+</span></span><span class="line"><span class="cl">    &#39; 不使用With语句
+</span></span><span class="line"><span class="cl">    Range(&#34;A1&#34;).Value = &#34;姓名&#34;
+</span></span><span class="line"><span class="cl">    Range(&#34;A1&#34;).Font.Bold = True
+</span></span><span class="line"><span class="cl">    Range(&#34;A1&#34;).Font.Size = 12
+</span></span><span class="line"><span class="cl">    Range(&#34;A1&#34;).Interior.Color = RGB(200, 200, 200)
+</span></span><span class="line"><span class="cl">    Range(&#34;A1&#34;).HorizontalAlignment = xlCenter
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 使用With语句，更简洁高效
+</span></span><span class="line"><span class="cl">    With Range(&#34;B1&#34;)
+</span></span><span class="line"><span class="cl">        .Value = &#34;年龄&#34;
+</span></span><span class="line"><span class="cl">        .Font.Bold = True
+</span></span><span class="line"><span class="cl">        .Font.Size = 12
+</span></span><span class="line"><span class="cl">        .Interior.Color = RGB(200, 200, 200)
+</span></span><span class="line"><span class="cl">        .HorizontalAlignment = xlCenter
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="82-with语句在对象操作中的应用">8.2 With语句在对象操作中的应用
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub WithStatementForObjects()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">    ws.Name = &#34;With示例&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 使用With配置工作表
+</span></span><span class="line"><span class="cl">    With ws
+</span></span><span class="line"><span class="cl">        &#39; 设置标题
+</span></span><span class="line"><span class="cl">        With .Range(&#34;A1:C1&#34;)
+</span></span><span class="line"><span class="cl">            .Value = Array(&#34;ID&#34;, &#34;名称&#34;, &#34;数量&#34;)
+</span></span><span class="line"><span class="cl">            .Font.Bold = True
+</span></span><span class="line"><span class="cl">            .Interior.Color = RGB(180, 200, 255)
+</span></span><span class="line"><span class="cl">            .EntireColumn.AutoFit
+</span></span><span class="line"><span class="cl">        End With
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 填充示例数据
+</span></span><span class="line"><span class="cl">        .Range(&#34;A2&#34;).Value = 1
+</span></span><span class="line"><span class="cl">        .Range(&#34;B2&#34;).Value = &#34;产品A&#34;
+</span></span><span class="line"><span class="cl">        .Range(&#34;C2&#34;).Value = 100
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        .Range(&#34;A3&#34;).Value = 2
+</span></span><span class="line"><span class="cl">        .Range(&#34;B3&#34;).Value = &#34;产品B&#34;
+</span></span><span class="line"><span class="cl">        .Range(&#34;C3&#34;).Value = 200
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 添加边框
+</span></span><span class="line"><span class="cl">        .Range(&#34;A1:C3&#34;).Borders.LineStyle = xlContinuous
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;工作表创建完成&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="83-嵌套with语句">8.3 嵌套With语句
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub NestedWithStatements()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.ActiveSheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 嵌套With语句示例
+</span></span><span class="line"><span class="cl">    With ws.ChartObjects.Add(Left:=100, Top:=50, Width:=500, Height:=300).Chart
+</span></span><span class="line"><span class="cl">        .ChartType = xlColumnClustered
+</span></span><span class="line"><span class="cl">        .SetSourceData Source:=ws.Range(&#34;A1:C6&#34;)
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 嵌套With设置标题
+</span></span><span class="line"><span class="cl">        With .ChartTitle
+</span></span><span class="line"><span class="cl">            .Text = &#34;季度销售报表&#34;
+</span></span><span class="line"><span class="cl">            .Font.Size = 16
+</span></span><span class="line"><span class="cl">            .Font.Bold = True
+</span></span><span class="line"><span class="cl">        End With
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 嵌套With设置X轴
+</span></span><span class="line"><span class="cl">        With .Axes(xlCategory)
+</span></span><span class="line"><span class="cl">            .HasTitle = True
+</span></span><span class="line"><span class="cl">            .AxisTitle.Text = &#34;季度&#34;
+</span></span><span class="line"><span class="cl">        End With
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 嵌套With设置Y轴
+</span></span><span class="line"><span class="cl">        With .Axes(xlValue)
+</span></span><span class="line"><span class="cl">            .HasTitle = True
+</span></span><span class="line"><span class="cl">            .AxisTitle.Text = &#34;销售额&#34;
+</span></span><span class="line"><span class="cl">            .MinimumScale = 0
+</span></span><span class="line"><span class="cl">        End With
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="84-with语句的优势总结">8.4 With语句的优势总结
+</h3><ol>
+<li>减少代码量，使代码更简洁</li>
+<li>提高执行效率，对象只需引用一次</li>
+<li>增强代码可读性，明确操作对象</li>
+<li>减少输入错误，特别是长对象名称</li>
+</ol>
+<h2 id="九userform用户窗体">九、UserForm（用户窗体）
+</h2><p>UserForm是VBA中创建自定义界面的强大工具，可用于数据录入、参数设置等交互操作。</p>
+<h3 id="91-创建userform的步骤">9.1 创建UserForm的步骤
+</h3><ol>
+<li>打开VBA编辑器（Alt+F11）</li>
+<li>插入UserForm：插入 &gt; 用户窗体</li>
+<li>在工具箱中选择控件添加到窗体</li>
+<li>设置控件属性</li>
+<li>编写事件代码</li>
+</ol>
+<h3 id="92-基本userform示例数据录入表单">9.2 基本UserForm示例：数据录入表单
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="s1">&#39; 以下代码需要在UserForm的代码窗口中编写</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39; UserForm初始化事件</span>
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 初始化下拉列表</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">cboDepartment</span><span class="o">.</span><span class="n">List</span> <span class="o">=</span> <span class="ne">Array</span><span class="p">(</span><span class="s2">&#34;销售部&#34;</span><span class="p">,</span> <span class="s2">&#34;市场部&#34;</span><span class="p">,</span> <span class="s2">&#34;技术部&#34;</span><span class="p">,</span> <span class="s2">&#34;行政部&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 设置默认日期为今天</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">txtDate</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Date</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 设置标题</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="s2">&#34;员工信息录入&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39; 确定按钮点击事件</span>
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdOK_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">ws</span> <span class="n">As</span> <span class="n">Worksheet</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">lastRow</span> <span class="n">As</span> <span class="n">Long</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 数据验证</span>
+</span></span><span class="line"><span class="cl">    <span class="n">If</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtName</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MsgBox</span> <span class="s2">&#34;请输入姓名&#34;</span><span class="p">,</span> <span class="n">vbExclamation</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Me</span><span class="o">.</span><span class="n">txtName</span><span class="o">.</span><span class="n">SetFocus</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Exit</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">    <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">If</span> <span class="n">Me</span><span class="o">.</span><span class="n">cboDepartment</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MsgBox</span> <span class="s2">&#34;请选择部门&#34;</span><span class="p">,</span> <span class="n">vbExclamation</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Me</span><span class="o">.</span><span class="n">cboDepartment</span><span class="o">.</span><span class="n">SetFocus</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Exit</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">    <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 写入数据</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Set</span> <span class="n">ws</span> <span class="o">=</span> <span class="n">ThisWorkbook</span><span class="o">.</span><span class="n">Sheets</span><span class="p">(</span><span class="s2">&#34;员工信息&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lastRow</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="s2">&#34;A&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlUp</span><span class="p">)</span><span class="o">.</span><span class="n">Row</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">lastRow</span><span class="p">,</span> <span class="s2">&#34;A&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtID</span><span class="o">.</span><span class="n">Value</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">lastRow</span><span class="p">,</span> <span class="s2">&#34;B&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtName</span><span class="o">.</span><span class="n">Value</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">lastRow</span><span class="p">,</span> <span class="s2">&#34;C&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Me</span><span class="o">.</span><span class="n">cboDepartment</span><span class="o">.</span><span class="n">Value</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">lastRow</span><span class="p">,</span> <span class="s2">&#34;D&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtDate</span><span class="o">.</span><span class="n">Value</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">lastRow</span><span class="p">,</span> <span class="s2">&#34;E&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtSalary</span><span class="o">.</span><span class="n">Value</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 提示成功</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MsgBox</span> <span class="s2">&#34;数据已成功保存！&#34;</span><span class="p">,</span> <span class="n">vbInformation</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 清空表单</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">txtID</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">txtName</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">txtSalary</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">txtID</span><span class="o">.</span><span class="n">SetFocus</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39; 取消按钮点击事件</span>
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdCancel_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 关闭表单</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Unload</span> <span class="n">Me</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span></code></pre></div><h3 id="93-显示userform的代码">9.3 显示UserForm的代码
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 标准模块中的代码，用于显示用户窗体
+</span></span><span class="line"><span class="cl">Sub ShowEmployeeForm()
+</span></span><span class="line"><span class="cl">    &#39; 显示用户窗体
+</span></span><span class="line"><span class="cl">    EmployeeForm.Show &#39; EmployeeForm是你的UserForm名称
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="94-常用控件及属性">9.4 常用控件及属性
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub ControlPropertiesDemo()
+</span></span><span class="line"><span class="cl">    &#39; 以下是常用控件及其重要属性的说明
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; TextBox（文本框）
+</span></span><span class="line"><span class="cl">    &#39; .Value: 文本框中的内容
+</span></span><span class="line"><span class="cl">    &#39; .Text: 当前显示的文本
+</span></span><span class="line"><span class="cl">    &#39; .Enabled: 是否可用
+</span></span><span class="line"><span class="cl">    &#39; .Visible: 是否可见
+</span></span><span class="line"><span class="cl">    &#39; 示例:
+</span></span><span class="line"><span class="cl">    &#39; Me.txtName.Value = &#34;张三&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; ComboBox（组合框）
+</span></span><span class="line"><span class="cl">    &#39; .List: 下拉列表内容
+</span></span><span class="line"><span class="cl">    &#39; .Value: 当前选中的值
+</span></span><span class="line"><span class="cl">    &#39; .Style: 样式（0=下拉组合框，2=下拉列表）
+</span></span><span class="line"><span class="cl">    &#39; 示例:
+</span></span><span class="line"><span class="cl">    &#39; Me.cboStatus.List = Array(&#34;在职&#34;, &#34;离职&#34;, &#34;休假&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; CheckBox（复选框）
+</span></span><span class="line"><span class="cl">    &#39; .Value: 选中状态（True/False）
+</span></span><span class="line"><span class="cl">    &#39; .Caption: 显示文本
+</span></span><span class="line"><span class="cl">    &#39; 示例:
+</span></span><span class="line"><span class="cl">    &#39; If Me.chkAgree.Value = True Then ...
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; OptionButton（选项按钮）
+</span></span><span class="line"><span class="cl">    &#39; .Value: 是否选中（True/False）
+</span></span><span class="line"><span class="cl">    &#39; .GroupName: 分组名称（同组中只能选一个）
+</span></span><span class="line"><span class="cl">    &#39; 示例:
+</span></span><span class="line"><span class="cl">    &#39; If Me.optMale.Value = True Then ...
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; CommandButton（命令按钮）
+</span></span><span class="line"><span class="cl">    &#39; .Caption: 按钮文本
+</span></span><span class="line"><span class="cl">    &#39; .OnClick: 点击事件
+</span></span><span class="line"><span class="cl">    &#39; 示例:
+</span></span><span class="line"><span class="cl">    &#39; Me.cmdSubmit.Caption = &#34;提交&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; Label（标签）
+</span></span><span class="line"><span class="cl">    &#39; .Caption: 显示文本
+</span></span><span class="line"><span class="cl">    &#39; .Font: 字体设置
+</span></span><span class="line"><span class="cl">    &#39; 示例:
+</span></span><span class="line"><span class="cl">    &#39; Me.lblTitle.Caption = &#34;用户信息&#34;
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="95-完整userform示例查询工具">9.5 完整UserForm示例：查询工具
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="s1">&#39; UserForm代码</span>
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdSearch_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">ws</span> <span class="n">As</span> <span class="n">Worksheet</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">lastRow</span> <span class="n">As</span> <span class="n">Long</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Long</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">searchTerm</span> <span class="n">As</span> <span class="ne">String</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">Set</span> <span class="n">ws</span> <span class="o">=</span> <span class="n">ThisWorkbook</span><span class="o">.</span><span class="n">Sheets</span><span class="p">(</span><span class="s2">&#34;产品数据&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lastRow</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="s2">&#34;A&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlUp</span><span class="p">)</span><span class="o">.</span><span class="n">Row</span>
+</span></span><span class="line"><span class="cl">    <span class="n">searchTerm</span> <span class="o">=</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtSearch</span><span class="o">.</span><span class="n">Value</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 清除之前的结果</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">Clear</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 搜索数据</span>
+</span></span><span class="line"><span class="cl">    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">To</span> <span class="n">lastRow</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39; 检查是否匹配（名称或编号）</span>
+</span></span><span class="line"><span class="cl">        <span class="n">If</span> <span class="n">InStr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">searchTerm</span><span class="p">,</span> <span class="n">vbTextCompare</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">Or</span> <span class="n">_</span>
+</span></span><span class="line"><span class="cl">           <span class="n">InStr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">searchTerm</span><span class="p">,</span> <span class="n">vbTextCompare</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">           
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39; 添加到列表框</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">AddItem</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListCount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="s1">&#39; 产品编号</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListCount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="s1">&#39; 产品名称</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListCount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="s1">&#39; 价格</span>
+</span></span><span class="line"><span class="cl">        <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Next</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 显示结果数量</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Me</span><span class="o">.</span><span class="n">lblCount</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="s2">&#34;找到 &#34;</span> <span class="o">&amp;</span> <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListCount</span> <span class="o">&amp;</span> <span class="s2">&#34; 个结果&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">lstResults_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 双击列表项时显示详细信息</span>
+</span></span><span class="line"><span class="cl">    <span class="n">If</span> <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListIndex</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MsgBox</span> <span class="s2">&#34;产品编号: &#34;</span> <span class="o">&amp;</span> <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListIndex</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">vbCrLf</span> <span class="o">&amp;</span> <span class="n">_</span>
+</span></span><span class="line"><span class="cl">               <span class="s2">&#34;产品名称: &#34;</span> <span class="o">&amp;</span> <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListIndex</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">vbCrLf</span> <span class="o">&amp;</span> <span class="n">_</span>
+</span></span><span class="line"><span class="cl">               <span class="s2">&#34;价格: &#34;</span> <span class="o">&amp;</span> <span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">lstResults</span><span class="o">.</span><span class="n">ListIndex</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">_</span>
+</span></span><span class="line"><span class="cl">               <span class="n">vbInformation</span><span class="p">,</span> <span class="s2">&#34;产品详情&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdClose_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Unload</span> <span class="n">Me</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span></code></pre></div><h2 id="十综合案例销售数据处理系统">十、综合案例：销售数据处理系统
+</h2><p>下面是一个综合运用前面所学知识的完整案例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 模块1：主程序
+</span></span><span class="line"><span class="cl">Sub SalesDataSystem()
+</span></span><span class="line"><span class="cl">    &#39; 显示系统菜单
+</span></span><span class="line"><span class="cl">    Dim choice As Integer
+</span></span><span class="line"><span class="cl">    choice = MsgBox(&#34;1. 数据录入&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                   &#34;2. 数据筛选&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                   &#34;3. 生成报表&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                   &#34;4. 图表分析&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                   &#34;5. 退出&#34;, _
+</span></span><span class="line"><span class="cl">                   vbYesNoCancel + vbQuestion, &#34;销售数据处理系统&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Select Case choice
+</span></span><span class="line"><span class="cl">        Case vbYes: DataEntryForm.Show &#39; 数据录入
+</span></span><span class="line"><span class="cl">        Case vbNo: RunFilter &#39; 数据筛选
+</span></span><span class="line"><span class="cl">        Case vbCancel: GenerateReport &#39; 生成报表
+</span></span><span class="line"><span class="cl">        &#39; 其他选项可以在这里添加
+</span></span><span class="line"><span class="cl">    End Select
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 模块2：数据处理
+</span></span><span class="line"><span class="cl">Sub RunFilter()
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Dim filterMonth As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets(&#34;销售记录&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 关闭现有筛选
+</span></span><span class="line"><span class="cl">    If ws.AutoFilterMode Then ws.AutoFilterMode = False
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取筛选条件
+</span></span><span class="line"><span class="cl">    filterMonth = InputBox(&#34;请输入要筛选的月份(1-12):&#34;, &#34;筛选条件&#34;)
+</span></span><span class="line"><span class="cl">    If filterMonth = &#34;&#34; Then Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 应用筛选
+</span></span><span class="line"><span class="cl">    With ws.Range(&#34;A1:E1&#34;)
+</span></span><span class="line"><span class="cl">        .AutoFilter
+</span></span><span class="line"><span class="cl">        .AutoFilter Field:=2, Criteria1:=&#34;*&#34; &amp; filterMonth &amp; &#34;月*&#34; &#39; 第2列是日期
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 检查是否有符合条件的数据
+</span></span><span class="line"><span class="cl">        On Error Resume Next
+</span></span><span class="line"><span class="cl">        Dim filteredCount As Long
+</span></span><span class="line"><span class="cl">        filteredCount = ws.Range(&#34;A2:A1000&#34;).SpecialCells(xlCellTypeVisible).Count
+</span></span><span class="line"><span class="cl">        On Error GoTo 0
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        If filteredCount = 0 Then
+</span></span><span class="line"><span class="cl">            MsgBox &#34;没有找到符合条件的数据&#34;, vbInformation
+</span></span><span class="line"><span class="cl">            ws.AutoFilterMode = False
+</span></span><span class="line"><span class="cl">        Else
+</span></span><span class="line"><span class="cl">            MsgBox &#34;已筛选出 &#34; &amp; filteredCount &amp; &#34; 条记录&#34;, vbInformation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 模块3：报表生成
+</span></span><span class="line"><span class="cl">Sub GenerateReport()
+</span></span><span class="line"><span class="cl">    Dim wsData As Worksheet
+</span></span><span class="line"><span class="cl">    Dim wsReport As Worksheet
+</span></span><span class="line"><span class="cl">    Dim lastRow As Long
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set wsData = ThisWorkbook.Sheets(&#34;销售记录&#34;)
+</span></span><span class="line"><span class="cl">    Set wsReport = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">    wsReport.Name = &#34;销售报表_&#34; &amp; Format(Date, &#34;yyyymmdd&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 复制标题
+</span></span><span class="line"><span class="cl">    wsData.Range(&#34;A1:E1&#34;).Copy wsReport.Range(&#34;A1&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 复制筛选后的数据
+</span></span><span class="line"><span class="cl">    wsData.Range(&#34;A1:E1000&#34;).SpecialCells(xlCellTypeVisible).Copy _
+</span></span><span class="line"><span class="cl">        wsReport.Range(&#34;A1&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 格式化报表
+</span></span><span class="line"><span class="cl">    With wsReport
+</span></span><span class="line"><span class="cl">        &#39; 调整列宽
+</span></span><span class="line"><span class="cl">        .Columns(&#34;A:E&#34;).AutoFit
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 设置标题格式
+</span></span><span class="line"><span class="cl">        With .Range(&#34;A1:E1&#34;)
+</span></span><span class="line"><span class="cl">            .Font.Bold = True
+</span></span><span class="line"><span class="cl">            .Interior.Color = RGB(200, 220, 255)
+</span></span><span class="line"><span class="cl">        End With
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 添加总计行
+</span></span><span class="line"><span class="cl">        lastRow = .Cells(.Rows.Count, &#34;A&#34;).End(xlUp).Row + 1
+</span></span><span class="line"><span class="cl">        .Cells(lastRow, &#34;A&#34;).Value = &#34;总计&#34;
+</span></span><span class="line"><span class="cl">        .Cells(lastRow, &#34;E&#34;).Formula = &#34;=SUM(E2:E&#34; &amp; lastRow - 1 &amp; &#34;)&#34;
+</span></span><span class="line"><span class="cl">        .Cells(lastRow, &#34;E&#34;).Font.Bold = True
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 创建图表
+</span></span><span class="line"><span class="cl">        With .ChartObjects.Add(Left:=300, Top:=50, Width:=400, Height:=250).Chart
+</span></span><span class="line"><span class="cl">            .ChartType = xlColumnClustered
+</span></span><span class="line"><span class="cl">            .SetSourceData Source:=.Parent.Parent.Range(&#34;B2:E&#34; &amp; lastRow - 1)
+</span></span><span class="line"><span class="cl">            .HasTitle = True
+</span></span><span class="line"><span class="cl">            .ChartTitle.Text = &#34;销售数据汇总&#34;
+</span></span><span class="line"><span class="cl">        End With
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;报表已生成：&#34; &amp; wsReport.Name, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="十一总结与进阶学习建议">十一、总结与进阶学习建议
+</h2><p>通过本教程的学习，你已经掌握了VBA的核心知识点，包括：</p>
+<ol>
+<li>VBA基础语法与数据类型</li>
+<li>流程控制与循环结构</li>
+<li>Excel对象模型操作</li>
+<li>图表绘制与数据可视化</li>
+<li>数据筛选与处理</li>
+<li>With语句的高效使用</li>
+<li>UserForm用户界面设计</li>
+</ol>
+<h3 id="进阶学习建议">进阶学习建议：
+</h3><ol>
+<li>
+<p><strong>深入学习对象模型</strong>：</p>
+<ul>
+<li>研究Excel对象模型的层次结构</li>
+<li>掌握Workbook、Worksheet、Range等核心对象的属性和方法</li>
+</ul>
+</li>
+<li>
+<p><strong>学习正则表达式</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 引用Microsoft VBScript Regular Expressions 5.5
+</span></span><span class="line"><span class="cl">Sub RegexDemo()
+</span></span><span class="line"><span class="cl">    Dim regEx As New RegExp
+</span></span><span class="line"><span class="cl">    regEx.Pattern = &#34;\d{11}&#34; &#39; 匹配11位数字（手机号）
+</span></span><span class="line"><span class="cl">    MsgBox regEx.Test(&#34;13800138000&#34;) &#39; 输出True
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div></li>
+<li>
+<p><strong>学习字典对象</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 引用Microsoft Scripting Runtime
+</span></span><span class="line"><span class="cl">Sub DictionaryDemo()
+</span></span><span class="line"><span class="cl">    Dim dict As New Dictionary
+</span></span><span class="line"><span class="cl">    dict.Add &#34;Name&#34;, &#34;张三&#34;
+</span></span><span class="line"><span class="cl">    dict.Add &#34;Age&#34;, 30
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    MsgBox dict(&#34;Name&#34;) &#39; 输出：张三
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div></li>
+<li>
+<p><strong>学习类模块</strong>：创建自定义对象，提高代码复用性</p>
+</li>
+<li>
+<p><strong>探索其他Office应用</strong>：将VBA知识应用到Word、PowerPoint、Outlook等</p>
+</li>
+</ol>
+<p>学习VBA的关键在于实践，建议从日常工作中遇到的重复任务入手，尝试用VBA解决，逐步积累经验。随着实践的深入，你会发现VBA能极大地提高工作效率，成为数据处理和办公自动化的强大工具。</p>
+<p>祝你在VBA的学习道路上取得进步！如有疑问，可以参考微软官方文档或加入VBA社区寻求帮助。</p>
+<h2 id="十二总结">十二、总结
+</h2><p>通过本教程为VBA的核心语法、Excel对象模型操作及实用脚本编写。建议从录制宏开始，逐步分析生成的代码，并尝试修改以满足实际需求。</p>
+<blockquote>
+<p>注意：在运行任何VBA代码前，请备份重要数据。对于复杂操作，建议先在测试环境中验证。</p></blockquote>
+<h2 id="附录">附录
+</h2><ol>
+<li><strong>官方文档</strong>：
+<ul>
+<li><a class="link" href="https://learn.microsoft.com/zh-cn/office/vba/library-reference/concepts/getting-started-with-vba-in-office"  target="_blank" rel="noopener"
+    >Microsoft Learn VBA教程</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </li>
+</ul>
+</li>
+<li><strong>书籍</strong>：
+<ul>
+<li>《Excel VBA从入门到精通》</li>
+<li>《VBA经典应用69例》</li>
+</ul>
+</li>
+<li><strong>社区与论坛</strong>：
+<ul>
+<li><a class="link" href="https://club.excelhome.net/"  target="_blank" rel="noopener"
+    >ExcelHome技术论坛</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </li>
+<li><a class="link" href="https://stackoverflow.com/questions/tagged/vba"  target="_blank" rel="noopener"
+    >Stack Overflow VBA专区</a>
+
+   <span style="white-space: nowrap;"><svg width=".7em"
+       height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+       <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+       <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+           fill="currentColor">
+   </svg></span>
+   
+    </li>
+</ul>
+</li>
+</ol>
+<h3 id="参考文章">参考文章
+</h3>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vba/">VBA</a>
+        
+            <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0 转载请留言告知</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2025-10-16 22:06
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="allergicrosen/myblog"
+    data-repo-id="R_kgDOM21aPQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOM21aPc4Cn0lU"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 allergicrosen
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+    
+    <section class="running-time">
+    本博客已稳定运行
+    <span id="runningdays" class="running-days"></span>
+    </section>
+
+
+        
+    <section class="game-link">
+        <div class="game-divider">
+            <span class="divider-text">玩个小游戏吧</span>
+        </div>
+        <a href="/games/2048_game.html" target="_blank" class="game-button">
+            <i class="fas fa-gamepad"></i> 2048
+        </a>
+
+    
+
+        <a href="/games/Gsnake_game.html" target="_blank" class="game-button">
+            <i class="fas fa-gamepad"></i> 贪吃蛇
+        </a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+
+
+
+<div id="particles-js"></div>
+
+<script src=https://allergicrosen.fun/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://allergicrosen.fun/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+
+
+<script>
+  let s1 = '2024-9-09'; 
+  s1 = new Date(s1.replace(/-/g, "/"));
+  let s2 = new Date();
+  let timeDifference = s2.getTime() - s1.getTime();
+
+  let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+  let result = days + "天" + hours + "小时" + minutes + "分钟";
+  document.getElementById('runningdays').innerHTML = result;
+</script>
+
+<script>
+
+const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+
+const cssPath = "https://allergicrosen.fun/waifu/waifu.css"
+const waifutipsjsonPath = "https://allergicrosen.fun/waifu/waifu-tips.json"
+
+function loadExternalResource(url, type) {
+	return new Promise((resolve, reject) => {
+		let tag;
+
+		if (type === "css") {
+			tag = document.createElement("link");
+			tag.rel = "stylesheet";
+			tag.href = url;
+		}
+		else if (type === "js") {
+			tag = document.createElement("script");
+			tag.src = url;
+		}
+		if (tag) {
+			tag.onload = () => resolve(url);
+			tag.onerror = () => reject(url);
+			document.head.appendChild(tag);
+		}
+	});
+}
+
+
+if (screen.width >= 768) {
+	Promise.all([
+		loadExternalResource(cssPath, "css"),
+		loadExternalResource(live2d_path + "live2d.min.js", "js"),
+		loadExternalResource(live2d_path + "waifu-tips.js", "js")
+	]).then(() => {
+		
+		initWidget({
+			waifuPath: waifutipsjsonPath,
+			
+			cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+		});
+	});
+}
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<meting-js
+	server="netease"
+    fixed="true"
+	type="playlist"
+	id="2566074903">
+</meting-js>
+
+<script
+    src="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/js/nprogress.min.js"
+    integrity="sha384-bHDlAEUFxsRI7JfULv3DTpL2IXbbgn4JHQJibgo5iiXSK6Iu8muwqHANhun74Cqg"
+    crossorigin="anonymous"
+></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/css/nprogress.css"
+    integrity="sha384-KJyhr2syt5+4M9Pz5dipCvTrtvOmLk/olWVdfhAp858UCa64Ia5GFpTN7+G4BWpE"
+    crossorigin="anonymous"
+/>
+<script>
+    NProgress.start();
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "interactive") NProgress.inc(0.8);
+        if (document.readyState === "complete") NProgress.done();
+    });
+</script>
+
+
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+  function showHideView() {
+      
+      let viewCounts = document.querySelectorAll("#viewCount");
+      if (viewCounts) {
+          
+          let article =  document.querySelector(".article-page");
+          if (!article) {
+              viewCounts.forEach(ele => {
+                  ele.style.display = 'none';
+              });
+          }
+      }
+  }
+  
+  showHideView();
+</script>
+
+<style>
+  .highlight {
+       
+      max-height: 400px;
+      overflow: hidden;
+  }
+
+  .code-show {
+      max-height: none !important;
+  }
+
+  .code-more-box {
+      width: 100%;
+      padding-top: 78px;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+  }
+
+  .code-more-btn {
+      display: block;
+      margin: auto;
+      width: 44px;
+      height: 22px;
+      background: #f0f0f5;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      padding-top: 6px;
+      cursor: pointer;
+  }
+
+  .code-more-img {
+      cursor: pointer !important;
+      display: block;
+      margin: auto;
+      width: 22px;
+      height: 16px;
+  }
+</style>
+
+<script>
+function initCodeMoreBox() {
+  let codeBlocks = document.querySelectorAll(".highlight");
+  if (!codeBlocks) {
+    return;
+  }
+  codeBlocks.forEach(codeBlock => {
+    
+    if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+      return;
+    }
+    
+    
+    let codeMoreBox = document.createElement('div');
+    codeMoreBox.classList.add('code-more-box');
+    
+    let codeMoreBtn = document.createElement('span');
+    codeMoreBtn.classList.add('code-more-btn');
+    codeMoreBtn.addEventListener('click', () => {
+      codeBlock.classList.add('code-show');
+      codeMoreBox.style.display = 'none';
+      
+      window.dispatchEvent(new Event('resize'))
+    })
+    
+    let img = document.createElement('img');
+    img.classList.add('code-more-img');
+    img.src = "https://allergicrosen.fun/icons/codeMore.png"
+    
+    codeMoreBtn.appendChild(img);
+    codeMoreBox.appendChild(codeMoreBtn);
+    codeBlock.appendChild(codeMoreBox)
+  })
+}
+
+initCodeMoreBox();
+</script>
+
+
+<style>
+  #backTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      z-index: 99;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      background-image: url(https://allergicrosen.fun/icons/backTop.svg);
+  }
+</style>
+
+<script>
+  
+
+  function initScrollTop() {
+      let rightSideBar = document.querySelector(".right-sidebar");
+      if (!rightSideBar) {
+          return;
+      }
+      
+      let btn = document.createElement("div");
+      btn.id = "backTopBtn";
+      btn.onclick = backToTop
+      rightSideBar.appendChild(btn)
+      
+      window.onscroll = function() {
+          
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              btn.style.display = "block";
+          } else {
+              btn.style.display = "none";
+          }
+      };
+  }
+
+  
+
+  function backToTop(){
+      window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  initScrollTop();
+</script>
+
+
+
+
+    </body>
+</html>
