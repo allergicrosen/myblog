@@ -10,7 +10,7 @@
 <meta property='og:description' content="VBA入门教程 一、VBA基础概述 1.1 什么是VBA？ VBA（Visual Basic for Applications）是微软开发的编程语言，嵌入在Office套件中（如Excel、Word、Outlook），用于自动化重复任务、扩展软件功能。通过编写VBA代码，用户可以实现数据处理、报表生成、界面交互等复杂操作。\n">
 <meta property='og:url' content='https://allergicrosen.fun/p/vba_learning/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VBA' /><meta property='article:tag' content='编程' /><meta property='article:published_time' content='2025-10-16T21:56:27&#43;08:00'/><meta property='article:modified_time' content='2025-10-16T22:06:41&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VBA' /><meta property='article:tag' content='编程' /><meta property='article:published_time' content='2025-10-16T21:56:27&#43;08:00'/><meta property='article:modified_time' content='2025-10-20T22:21:06&#43;08:00'/>
 <meta name="twitter:title" content="VBA_learning">
 <meta name="twitter:description" content="VBA入门教程 一、VBA基础概述 1.1 什么是VBA？ VBA（Visual Basic for Applications）是微软开发的编程语言，嵌入在Office套件中（如Excel、Word、Outlook），用于自动化重复任务、扩展软件功能。通过编写VBA代码，用户可以实现数据处理、报表生成、界面交互等复杂操作。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -675,12 +675,47 @@ fill="#000000" stroke="none">
       </ol>
     </li>
     <li><a href="#十综合案例销售数据处理系统">十、综合案例：销售数据处理系统</a></li>
-    <li><a href="#十一总结与进阶学习建议">十一、总结与进阶学习建议</a>
+  </ol>
+
+  <ol>
+    <li><a href="#十一文件操作">十一、文件操作</a>
       <ol>
-        <li><a href="#进阶学习建议">进阶学习建议：</a></li>
+        <li><a href="#111-文件操作基础概念">11.1 文件操作基础概念</a></li>
+        <li><a href="#112-读取文本文件">11.2 读取文本文件</a></li>
+        <li><a href="#113-写入文本文件">11.3 写入文本文件</a></li>
+        <li><a href="#114-追加内容到文件">11.4 追加内容到文件</a></li>
+        <li><a href="#115-读取整个文件内容">11.5 读取整个文件内容</a></li>
+        <li><a href="#116-批量处理多个文件">11.6 批量处理多个文件</a></li>
+        <li><a href="#117-文件操作的错误处理">11.7 文件操作的错误处理</a></li>
+        <li><a href="#118-filedialog基础">11.8 FileDialog基础</a>
+          <ol>
+            <li><a href="#1181-filedialog的四种类型">11.81 FileDialog的四种类型</a></li>
+            <li><a href="#1182-基本使用方法">11.8.2 基本使用方法</a></li>
+            <li><a href="#1183-单文件选择对话框打开文件">11.8.3 单文件选择对话框（打开文件）</a></li>
+            <li><a href="#1184-多文件选择对话框">11.8.4 多文件选择对话框</a></li>
+            <li><a href="#1185-保存文件对话框">11.8.5 保存文件对话框</a></li>
+            <li><a href="#1186-文件夹选择对话框">11.8.6 文件夹选择对话框</a></li>
+            <li><a href="#1187-带预览功能的文件选择器">11.8.7 带预览功能的文件选择器</a></li>
+            <li><a href="#1188-结合userform的文件选择器">11.8.8 结合UserForm的文件选择器</a></li>
+            <li><a href="#1189-批量文件处理工具">11.8.9 批量文件处理工具</a></li>
+            <li><a href="#filedialog与传统文件操作对比">FileDialog与传统文件操作对比</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#十二总结">十二、总结</a></li>
+    <li><a href="#十二inputbox函数">十二、InputBox函数</a>
+      <ol>
+        <li><a href="#121-inputbox基础用法">12.1 InputBox基础用法</a></li>
+        <li><a href="#122-inputbox的完整参数">12.2 InputBox的完整参数</a></li>
+        <li><a href="#123-带帮助功能的inputbox">12.3 带帮助功能的InputBox</a></li>
+        <li><a href="#124-输入验证与循环">12.4 输入验证与循环</a></li>
+        <li><a href="#125-结合文件操作的inputbox应用">12.5 结合文件操作的InputBox应用</a></li>
+        <li><a href="#126-多步骤输入流程">12.6 多步骤输入流程</a></li>
+      </ol>
+    </li>
+    <li><a href="#十三综合案例文件管理工具">十三、综合案例：文件管理工具</a></li>
+    <li><a href="#进阶学习建议">进阶学习建议</a></li>
+    <li><a href="#总结">总结</a></li>
     <li><a href="#附录">附录</a>
       <ol>
         <li><a href="#参考文章">参考文章</a></li>
@@ -768,7 +803,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    2025-10-16 22:06
+                    2025-10-20 22:21
                 </time>
             </div>
             <div>|</div>
@@ -783,7 +818,7 @@ fill="#000000" stroke="none">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 13 分钟
+                    阅读时长: 29 分钟
                 </time>
             </div>
             
@@ -1018,8 +1053,7 @@ fill="#000000" stroke="none">
 </span></span><span class="line"><span class="cl">    End If
 </span></span><span class="line"><span class="cl">End Sub
 </span></span></code></pre></div><h2 id="六图表绘制操作">六、图表绘制操作
-</h2><p>在Excel VBA中，我们可以通过代码创建和修改各种图表，实现数据可视化的自动化。</p>
-<h3 id="61-基本图表创建">6.1 基本图表创建
+</h2><h3 id="61-基本图表创建">6.1 基本图表创建
 </h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub CreateBasicChart()
 </span></span><span class="line"><span class="cl">    Dim ws As Worksheet
 </span></span><span class="line"><span class="cl">    Dim chartObj As ChartObject
@@ -1108,8 +1142,7 @@ fill="#000000" stroke="none">
 </span></span><span class="line"><span class="cl">    End With
 </span></span><span class="line"><span class="cl">End Sub
 </span></span></code></pre></div><h2 id="七自动筛选功能">七、自动筛选功能
-</h2><p>VBA提供了强大的筛选功能，可以快速处理大量数据。</p>
-<h3 id="71-基本自动筛选">7.1 基本自动筛选
+</h2><h3 id="71-基本自动筛选">7.1 基本自动筛选
 </h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub BasicAutoFilter()
 </span></span><span class="line"><span class="cl">    Dim ws As Worksheet
 </span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets(&#34;客户数据&#34;)
@@ -1440,8 +1473,7 @@ fill="#000000" stroke="none">
 </span></span><span class="line"><span class="cl">    <span class="n">Unload</span> <span class="n">Me</span>
 </span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
 </span></span></code></pre></div><h2 id="十综合案例销售数据处理系统">十、综合案例：销售数据处理系统
-</h2><p>下面是一个综合运用前面所学知识的完整案例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 模块1：主程序
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39; 模块1：主程序
 </span></span><span class="line"><span class="cl">Sub SalesDataSystem()
 </span></span><span class="line"><span class="cl">    &#39; 显示系统菜单
 </span></span><span class="line"><span class="cl">    Dim choice As Integer
@@ -1539,19 +1571,1197 @@ fill="#000000" stroke="none">
 </span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    MsgBox &#34;报表已生成：&#34; &amp; wsReport.Name, vbInformation
 </span></span><span class="line"><span class="cl">End Sub
-</span></span></code></pre></div><h2 id="十一总结与进阶学习建议">十一、总结与进阶学习建议
-</h2><p>通过本教程的学习，你已经掌握了VBA的核心知识点，包括：</p>
-<ol>
-<li>VBA基础语法与数据类型</li>
-<li>流程控制与循环结构</li>
-<li>Excel对象模型操作</li>
-<li>图表绘制与数据可视化</li>
-<li>数据筛选与处理</li>
-<li>With语句的高效使用</li>
-<li>UserForm用户界面设计</li>
-</ol>
-<h3 id="进阶学习建议">进阶学习建议：
-</h3><ol>
+</span></span></code></pre></div><h1 id="vba文件操作与inputbox详解">VBA文件操作与InputBox详解
+</h1><h2 id="十一文件操作">十一、文件操作
+</h2><p>文件操作是能够实现文本文件的读取、写入和修改。</p>
+<h3 id="111-文件操作基础概念">11.1 文件操作基础概念
+</h3><p>VBA中文件操作的核心函数和语句：</p>
+<ul>
+<li><code>Open</code>：打开文件</li>
+<li><code>Close</code>：关闭文件</li>
+<li><code>Input</code>/<code>Line Input</code>：读取文件内容</li>
+<li><code>Print</code>/<code>Write</code>：写入文件内容</li>
+<li><code>FreeFile</code>：获取可用的文件号</li>
+<li><code>EOF</code>：判断是否到达文件末尾</li>
+</ul>
+<p>文件打开模式：</p>
+<ul>
+<li><code>For Input</code>：只读模式，用于读取文件</li>
+<li><code>For Output</code>：只写模式，用于创建新文件或覆盖已有文件</li>
+<li><code>For Append</code>：追加模式，在已有文件末尾添加内容</li>
+<li><code>For Binary</code>：二进制模式，用于读写二进制文件</li>
+</ul>
+<h3 id="112-读取文本文件">11.2 读取文本文件
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub ReadTextFile()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim lineContent As String
+</span></span><span class="line"><span class="cl">    Dim rowNum As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取文件路径
+</span></span><span class="line"><span class="cl">    filePath = &#34;C:\data\example.txt&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查文件是否存在
+</span></span><span class="line"><span class="cl">    If Dir(filePath) = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;文件不存在: &#34; &amp; filePath, vbExclamation
+</span></span><span class="line"><span class="cl">        Exit Sub
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取可用文件号
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 打开文件用于读取
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 初始化行号
+</span></span><span class="line"><span class="cl">    rowNum = 1
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 读取文件内容并输出到工作表
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;数据&#34;).Range(&#34;A:A&#34;).ClearContents &#39; 清空A列
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Do While Not EOF(fileNumber)
+</span></span><span class="line"><span class="cl">        &#39; 读取一行内容
+</span></span><span class="line"><span class="cl">        Line Input #fileNumber, lineContent
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 写入到工作表
+</span></span><span class="line"><span class="cl">        Worksheets(&#34;数据&#34;).Cells(rowNum, 1).Value = lineContent
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        rowNum = rowNum + 1
+</span></span><span class="line"><span class="cl">    Loop
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 关闭文件
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;文件读取完成，共 &#34; &amp; rowNum - 1 &amp; &#34; 行&#34;, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="113-写入文本文件">11.3 写入文本文件
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub WriteToTextFile()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置文件路径
+</span></span><span class="line"><span class="cl">    filePath = &#34;C:\data\output.txt&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取可用文件号
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 打开文件用于写入（会覆盖已有文件）
+</span></span><span class="line"><span class="cl">    Open filePath For Output As #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 写入内容
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;这是一个示例文件&#34;
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;生成时间: &#34; &amp; Now()
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;-------------------------&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 写入一些数据
+</span></span><span class="line"><span class="cl">    For i = 1 To 5
+</span></span><span class="line"><span class="cl">        Print #fileNumber, &#34;数据行 &#34; &amp; i &amp; &#34;: &#34; &amp; i * 100
+</span></span><span class="line"><span class="cl">    Next i
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 关闭文件
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;文件写入完成: &#34; &amp; filePath, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="114-追加内容到文件">11.4 追加内容到文件
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub AppendToFile()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim newData As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置文件路径
+</span></span><span class="line"><span class="cl">    filePath = &#34;C:\data\log.txt&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取要追加的数据
+</span></span><span class="line"><span class="cl">    newData = InputBox(&#34;请输入要追加的日志内容:&#34;, &#34;追加日志&#34;)
+</span></span><span class="line"><span class="cl">    If newData = &#34;&#34; Then Exit Sub &#39; 用户取消
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取可用文件号
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 打开文件用于追加
+</span></span><span class="line"><span class="cl">    Open filePath For Append As #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 写入带时间戳的内容
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;[&#34; &amp; Format(Now(), &#34;yyyy-mm-dd hh:nn:ss&#34;) &amp; &#34;] &#34; &amp; newData
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 关闭文件
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;内容已追加到文件&#34;, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="115-读取整个文件内容">11.5 读取整个文件内容
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub ReadEntireFile()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim fileContent As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置文件路径
+</span></span><span class="line"><span class="cl">    filePath = &#34;C:\data\notes.txt&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查文件是否存在
+</span></span><span class="line"><span class="cl">    If Dir(filePath) = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;文件不存在&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">        Exit Sub
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取可用文件号
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 打开文件
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 读取整个文件内容
+</span></span><span class="line"><span class="cl">    fileContent = Input(LOF(fileNumber), fileNumber)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 关闭文件
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 显示文件内容（长内容会自动截断）
+</span></span><span class="line"><span class="cl">    MsgBox &#34;文件内容: &#34; &amp; vbCrLf &amp; fileContent, vbInformation, &#34;文件内容&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 也可以将内容写入单元格
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;数据&#34;).Range(&#34;A1&#34;).Value = fileContent
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="116-批量处理多个文件">11.6 批量处理多个文件
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub ProcessMultipleFiles()
+</span></span><span class="line"><span class="cl">    Dim folderPath As String
+</span></span><span class="line"><span class="cl">    Dim fileName As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim content As String
+</span></span><span class="line"><span class="cl">    Dim resultRow As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置文件夹路径
+</span></span><span class="line"><span class="cl">    folderPath = &#34;C:\data\reports\&#34;
+</span></span><span class="line"><span class="cl">    resultRow = 1
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 清空结果区域
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;汇总&#34;).Range(&#34;A:B&#34;).ClearContents
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;汇总&#34;).Cells(1, 1).Value = &#34;文件名&#34;
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;汇总&#34;).Cells(1, 2).Value = &#34;第一行内容&#34;
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;汇总&#34;).Rows(1).Font.Bold = True
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取第一个文本文件
+</span></span><span class="line"><span class="cl">    fileName = Dir(folderPath &amp; &#34;*.txt&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 循环处理所有文本文件
+</span></span><span class="line"><span class="cl">    Do While fileName &lt;&gt; &#34;&#34;
+</span></span><span class="line"><span class="cl">        resultRow = resultRow + 1
+</span></span><span class="line"><span class="cl">        Worksheets(&#34;汇总&#34;).Cells(resultRow, 1).Value = fileName
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 读取文件第一行
+</span></span><span class="line"><span class="cl">        fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">        Open folderPath &amp; fileName For Input As #fileNumber
+</span></span><span class="line"><span class="cl">        Line Input #fileNumber, content
+</span></span><span class="line"><span class="cl">        Close #fileNumber
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 写入结果
+</span></span><span class="line"><span class="cl">        Worksheets(&#34;汇总&#34;).Cells(resultRow, 2).Value = content
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 获取下一个文件
+</span></span><span class="line"><span class="cl">        fileName = Dir()
+</span></span><span class="line"><span class="cl">    Loop
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 调整列宽
+</span></span><span class="line"><span class="cl">    Worksheets(&#34;汇总&#34;).Columns(&#34;A:B&#34;).AutoFit
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;处理完成，共 &#34; &amp; resultRow - 1 &amp; &#34; 个文件&#34;, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="117-文件操作的错误处理">11.7 文件操作的错误处理
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub FileOperationWithErrorHandling()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    filePath = &#34;C:\data\sensitive.txt&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    On Error GoTo ErrorHandler
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 这里添加文件处理代码
+</span></span><span class="line"><span class="cl">    MsgBox &#34;文件打开成功，可以进行读写操作&#34;, vbInformation
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">ErrorHandler:
+</span></span><span class="line"><span class="cl">    &#39; 处理不同类型的错误
+</span></span><span class="line"><span class="cl">    Select Case Err.Number
+</span></span><span class="line"><span class="cl">        Case 53 &#39; 文件未找到
+</span></span><span class="line"><span class="cl">            MsgBox &#34;错误: 找不到文件 &#34; &amp; filePath, vbCritical
+</span></span><span class="line"><span class="cl">        Case 70 &#39; 权限被拒绝
+</span></span><span class="line"><span class="cl">            MsgBox &#34;错误: 没有权限访问文件 &#34; &amp; filePath, vbCritical
+</span></span><span class="line"><span class="cl">        Case Else
+</span></span><span class="line"><span class="cl">            MsgBox &#34;发生错误 &#34; &amp; Err.Number &amp; &#34;: &#34; &amp; Err.Description, vbCritical
+</span></span><span class="line"><span class="cl">    End Select
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 确保文件被关闭
+</span></span><span class="line"><span class="cl">    On Error Resume Next
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="118-filedialog基础">11.8 FileDialog基础
+</h3><p><code>FileDialog</code>是Office应用程序提供的文件对话框对象，支持多种操作类型，包括打开文件、保存文件和选择文件夹。在Excel VBA中，我们通过<code>Application.FileDialog</code>来使用这一功能。</p>
+<h4 id="1181-filedialog的四种类型">11.81 FileDialog的四种类型
+</h4><p>VBA提供四种文件对话框类型：</p>
+<ul>
+<li><code>msoFileDialogOpen</code>：打开文件对话框（可选择一个或多个文件）</li>
+<li><code>msoFileDialogSaveAs</code>：保存文件对话框</li>
+<li><code>msoFileDialogFilePicker</code>：文件选择对话框（类似打开，但更通用）</li>
+<li><code>msoFileDialogFolderPicker</code>：文件夹选择对话框</li>
+</ul>
+<h4 id="1182-基本使用方法">11.8.2 基本使用方法
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub BasicFileDialog()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim selectedFile As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建文件对话框实例（打开文件类型）
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogOpen)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置对话框标题
+</span></span><span class="line"><span class="cl">    fd.Title = &#34;请选择要打开的文本文件&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置允许选择的文件类型
+</span></span><span class="line"><span class="cl">    fd.Filters.Clear &#39; 清除默认筛选器
+</span></span><span class="line"><span class="cl">    fd.Filters.Add &#34;文本文件&#34;, &#34;*.txt&#34; &#39; 添加文本文件筛选
+</span></span><span class="line"><span class="cl">    fd.Filters.Add &#34;Excel文件&#34;, &#34;*.xlsx;*.xls&#34; &#39; 添加Excel文件筛选
+</span></span><span class="line"><span class="cl">    fd.Filters.Add &#34;所有文件&#34;, &#34;*.*&#34; &#39; 添加所有文件筛选
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 允许选择多个文件（默认是False）
+</span></span><span class="line"><span class="cl">    fd.AllowMultiSelect = False
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 显示对话框，如果用户点击了&#34;确定&#34;按钮
+</span></span><span class="line"><span class="cl">    If fd.Show = -1 Then
+</span></span><span class="line"><span class="cl">        &#39; 获取选中的文件路径
+</span></span><span class="line"><span class="cl">        selectedFile = fd.SelectedItems(1)
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 显示选中的文件
+</span></span><span class="line"><span class="cl">        MsgBox &#34;您选择的文件是: &#34; &amp; vbCrLf &amp; selectedFile, vbInformation
+</span></span><span class="line"><span class="cl">    Else
+</span></span><span class="line"><span class="cl">        &#39; 用户取消了操作
+</span></span><span class="line"><span class="cl">        MsgBox &#34;您取消了文件选择&#34;, vbInformation
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 释放对象
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="1183-单文件选择对话框打开文件">11.8.3 单文件选择对话框（打开文件）
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub SelectSingleFile()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建文件选择对话框
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogFilePicker)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;选择要导入的数据文件&#34;
+</span></span><span class="line"><span class="cl">        .Filters.Clear
+</span></span><span class="line"><span class="cl">        .Filters.Add &#34;CSV文件&#34;, &#34;*.csv&#34;
+</span></span><span class="line"><span class="cl">        .Filters.Add &#34;文本文件&#34;, &#34;*.txt&#34;
+</span></span><span class="line"><span class="cl">        .AllowMultiSelect = False &#39; 只允许选择一个文件
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 显示对话框
+</span></span><span class="line"><span class="cl">        If .Show = -1 Then
+</span></span><span class="line"><span class="cl">            filePath = .SelectedItems(1)
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 这里可以添加处理文件的代码
+</span></span><span class="line"><span class="cl">            Set ws = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">            ws.Name = &#34;导入数据&#34;
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            MsgBox &#34;已选择文件: &#34; &amp; filePath &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                   &#34;数据将导入到 &#34;&#34;&#34; &amp; ws.Name &amp; &#34;&#34;&#34; 工作表&#34;, vbInformation
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 调用文件读取函数（使用之前学过的文件读取方法）
+</span></span><span class="line"><span class="cl">            ReadDataToWorksheet filePath, ws
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 辅助函数：将文件内容读取到工作表
+</span></span><span class="line"><span class="cl">Sub ReadDataToWorksheet(filePath As String, ws As Worksheet)
+</span></span><span class="line"><span class="cl">    Dim fileNum As Integer
+</span></span><span class="line"><span class="cl">    Dim lineContent As String
+</span></span><span class="line"><span class="cl">    Dim rowNum As Long
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    rowNum = 1
+</span></span><span class="line"><span class="cl">    fileNum = FreeFile
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNum
+</span></span><span class="line"><span class="cl">        Do While Not EOF(fileNum)
+</span></span><span class="line"><span class="cl">            Line Input #fileNum, lineContent
+</span></span><span class="line"><span class="cl">            ws.Cells(rowNum, 1).Value = lineContent
+</span></span><span class="line"><span class="cl">            rowNum = rowNum + 1
+</span></span><span class="line"><span class="cl">        Loop
+</span></span><span class="line"><span class="cl">    Close #fileNum
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    ws.Columns(&#34;A:A&#34;).AutoFit
+</span></span><span class="line"><span class="cl">    MsgBox &#34;数据导入完成，共 &#34; &amp; rowNum - 1 &amp; &#34; 行&#34;, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="1184-多文件选择对话框">11.8.4 多文件选择对话框
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub SelectMultipleFiles()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建文件选择对话框
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogFilePicker)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;选择多个要处理的文件&#34;
+</span></span><span class="line"><span class="cl">        .Filters.Clear
+</span></span><span class="line"><span class="cl">        .Filters.Add &#34;文本文件&#34;, &#34;*.txt&#34;
+</span></span><span class="line"><span class="cl">        .AllowMultiSelect = True &#39; 允许选择多个文件
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 显示对话框
+</span></span><span class="line"><span class="cl">        If .Show = -1 Then
+</span></span><span class="line"><span class="cl">            &#39; 创建结果工作表
+</span></span><span class="line"><span class="cl">            Set ws = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">            ws.Name = &#34;多文件处理结果&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 1).Value = &#34;文件名&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 2).Value = &#34;路径&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 3).Value = &#34;行数&#34;
+</span></span><span class="line"><span class="cl">            ws.Rows(1).Font.Bold = True
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 处理每个选中的文件
+</span></span><span class="line"><span class="cl">            For i = 1 To .SelectedItems.Count
+</span></span><span class="line"><span class="cl">                ProcessFile .SelectedItems(i), ws, i + 1
+</span></span><span class="line"><span class="cl">            Next i
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            ws.Columns(&#34;A:C&#34;).AutoFit
+</span></span><span class="line"><span class="cl">            MsgBox &#34;已处理 &#34; &amp; .SelectedItems.Count &amp; &#34; 个文件&#34;, vbInformation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 辅助函数：处理单个文件并记录信息
+</span></span><span class="line"><span class="cl">Sub ProcessFile(filePath As String, ws As Worksheet, rowNum As Long)
+</span></span><span class="line"><span class="cl">    Dim fileNum As Integer
+</span></span><span class="line"><span class="cl">    Dim lineCount As Long
+</span></span><span class="line"><span class="cl">    Dim dummy As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取文件名（不包含路径）
+</span></span><span class="line"><span class="cl">    Dim fileName As String
+</span></span><span class="line"><span class="cl">    fileName = Mid(filePath, InStrRev(filePath, &#34;\&#34;) + 1)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 计算文件行数
+</span></span><span class="line"><span class="cl">    lineCount = 0
+</span></span><span class="line"><span class="cl">    fileNum = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNum
+</span></span><span class="line"><span class="cl">        Do While Not EOF(fileNum)
+</span></span><span class="line"><span class="cl">            Line Input #fileNum, dummy
+</span></span><span class="line"><span class="cl">            lineCount = lineCount + 1
+</span></span><span class="line"><span class="cl">        Loop
+</span></span><span class="line"><span class="cl">    Close #fileNum
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 记录信息到工作表
+</span></span><span class="line"><span class="cl">    ws.Cells(rowNum, 1).Value = fileName
+</span></span><span class="line"><span class="cl">    ws.Cells(rowNum, 2).Value = filePath
+</span></span><span class="line"><span class="cl">    ws.Cells(rowNum, 3).Value = lineCount
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="1185-保存文件对话框">11.8.5 保存文件对话框
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub SaveFileDialogDemo()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim savePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNum As Integer
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建保存文件对话框
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogSaveAs)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;保存导出数据&#34;
+</span></span><span class="line"><span class="cl">        .InitialFileName = &#34;导出数据_&#34; &amp; Format(Date, &#34;yyyymmdd&#34;) &amp; &#34;.txt&#34; &#39; 默认文件名
+</span></span><span class="line"><span class="cl">        .InitialView = msoFileDialogViewDetails &#39; 详细视图
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 显示对话框
+</span></span><span class="line"><span class="cl">        If .Show = -1 Then
+</span></span><span class="line"><span class="cl">            savePath = .SelectedItems(1)
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 检查文件是否已存在
+</span></span><span class="line"><span class="cl">            If Dir(savePath) &lt;&gt; &#34;&#34; Then
+</span></span><span class="line"><span class="cl">                If MsgBox(&#34;文件已存在，是否覆盖?&#34;, vbYesNo + vbQuestion) = vbNo Then
+</span></span><span class="line"><span class="cl">                    MsgBox &#34;保存操作已取消&#34;, vbInformation
+</span></span><span class="line"><span class="cl">                    Exit Sub
+</span></span><span class="line"><span class="cl">                End If
+</span></span><span class="line"><span class="cl">            End If
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 写入示例数据
+</span></span><span class="line"><span class="cl">            fileNum = FreeFile
+</span></span><span class="line"><span class="cl">            Open savePath For Output As #fileNum
+</span></span><span class="line"><span class="cl">                Print #fileNum, &#34;数据导出时间: &#34; &amp; Now()
+</span></span><span class="line"><span class="cl">                Print #fileNum, &#34;====================&#34;
+</span></span><span class="line"><span class="cl">                For i = 1 To 10
+</span></span><span class="line"><span class="cl">                    Print #fileNum, &#34;示例数据行 &#34; &amp; i &amp; &#34;: &#34; &amp; i * Rnd() * 1000
+</span></span><span class="line"><span class="cl">                Next i
+</span></span><span class="line"><span class="cl">            Close #fileNum
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            MsgBox &#34;数据已成功保存到: &#34; &amp; vbCrLf &amp; savePath, vbInformation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="1186-文件夹选择对话框">11.8.6 文件夹选择对话框
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub SelectFolderDialog()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim folderPath As String
+</span></span><span class="line"><span class="cl">    Dim fileName As String
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    Dim rowNum As Long
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建文件夹选择对话框
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogFolderPicker)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;选择要扫描的文件夹&#34;
+</span></span><span class="line"><span class="cl">        .InitialFileName = ThisWorkbook.Path &#39; 初始路径为当前工作簿所在文件夹
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 显示对话框
+</span></span><span class="line"><span class="cl">        If .Show = -1 Then
+</span></span><span class="line"><span class="cl">            folderPath = .SelectedItems(1)
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 创建结果工作表
+</span></span><span class="line"><span class="cl">            Set ws = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">            ws.Name = &#34;文件夹扫描结果&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 1).Value = &#34;文件名&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 2).Value = &#34;路径&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 3).Value = &#34;大小(字节)&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(1, 4).Value = &#34;修改日期&#34;
+</span></span><span class="line"><span class="cl">            ws.Rows(1).Font.Bold = True
+</span></span><span class="line"><span class="cl">            rowNum = 2
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 获取文件夹中的所有文件
+</span></span><span class="line"><span class="cl">            fileName = Dir(folderPath &amp; &#34;\*.*&#34;)
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            &#39; 循环处理所有文件
+</span></span><span class="line"><span class="cl">            Do While fileName &lt;&gt; &#34;&#34;
+</span></span><span class="line"><span class="cl">                ws.Cells(rowNum, 1).Value = fileName
+</span></span><span class="line"><span class="cl">                ws.Cells(rowNum, 2).Value = folderPath &amp; &#34;\&#34; &amp; fileName
+</span></span><span class="line"><span class="cl">                ws.Cells(rowNum, 3).Value = FileLen(folderPath &amp; &#34;\&#34; &amp; fileName)
+</span></span><span class="line"><span class="cl">                ws.Cells(rowNum, 4).Value = FileDateTime(folderPath &amp; &#34;\&#34; &amp; fileName)
+</span></span><span class="line"><span class="cl">                rowNum = rowNum + 1
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                &#39; 获取下一个文件
+</span></span><span class="line"><span class="cl">                fileName = Dir()
+</span></span><span class="line"><span class="cl">            Loop
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            ws.Columns(&#34;A:D&#34;).AutoFit
+</span></span><span class="line"><span class="cl">            MsgBox &#34;文件夹扫描完成，共发现 &#34; &amp; rowNum - 2 &amp; &#34; 个文件&#34;, vbInformation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="1187-带预览功能的文件选择器">11.8.7 带预览功能的文件选择器
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub FileDialogWithPreview()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim selectedFile As String
+</span></span><span class="line"><span class="cl">    Dim wsPreview As Worksheet
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建文件对话框
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogOpen)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;选择文本文件（带预览）&#34;
+</span></span><span class="line"><span class="cl">        .Filters.Clear
+</span></span><span class="line"><span class="cl">        .Filters.Add &#34;文本文件&#34;, &#34;*.txt&#34;
+</span></span><span class="line"><span class="cl">        .AllowMultiSelect = False
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 创建预览工作表
+</span></span><span class="line"><span class="cl">        On Error Resume Next
+</span></span><span class="line"><span class="cl">        Set wsPreview = ThisWorkbook.Sheets(&#34;文件预览&#34;)
+</span></span><span class="line"><span class="cl">        On Error GoTo 0
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        If wsPreview Is Nothing Then
+</span></span><span class="line"><span class="cl">            Set wsPreview = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">            wsPreview.Name = &#34;文件预览&#34;
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 循环显示对话框，直到用户取消或选择文件
+</span></span><span class="line"><span class="cl">        Do
+</span></span><span class="line"><span class="cl">            If .Show = -1 Then
+</span></span><span class="line"><span class="cl">                selectedFile = .SelectedItems(1)
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                &#39; 预览文件内容
+</span></span><span class="line"><span class="cl">                wsPreview.Cells.Clear
+</span></span><span class="line"><span class="cl">                wsPreview.Cells(1, 1).Value = &#34;文件预览: &#34; &amp; selectedFile
+</span></span><span class="line"><span class="cl">                wsPreview.Cells(1, 1).Font.Bold = True
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                PreviewTextFile selectedFile, wsPreview
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                &#39; 询问用户是否确认选择
+</span></span><span class="line"><span class="cl">                If MsgBox(&#34;是否确认选择此文件?&#34;, vbYesNo + vbQuestion) = vbYes Then
+</span></span><span class="line"><span class="cl">                    MsgBox &#34;您选择了: &#34; &amp; selectedFile, vbInformation
+</span></span><span class="line"><span class="cl">                    Exit Do
+</span></span><span class="line"><span class="cl">                End If
+</span></span><span class="line"><span class="cl">            Else
+</span></span><span class="line"><span class="cl">                &#39; 用户取消
+</span></span><span class="line"><span class="cl">                MsgBox &#34;已取消文件选择&#34;, vbInformation
+</span></span><span class="line"><span class="cl">                Exit Do
+</span></span><span class="line"><span class="cl">            End If
+</span></span><span class="line"><span class="cl">        Loop
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 辅助函数：预览文本文件内容
+</span></span><span class="line"><span class="cl">Sub PreviewTextFile(filePath As String, ws As Worksheet)
+</span></span><span class="line"><span class="cl">    Dim fileNum As Integer
+</span></span><span class="line"><span class="cl">    Dim lineContent As String
+</span></span><span class="line"><span class="cl">    Dim rowNum As Long
+</span></span><span class="line"><span class="cl">    Dim maxLines As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    maxLines = 50 &#39; 最多预览50行
+</span></span><span class="line"><span class="cl">    rowNum = 3
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    fileNum = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNum
+</span></span><span class="line"><span class="cl">        Do While Not EOF(fileNum) And rowNum &lt;= maxLines + 2
+</span></span><span class="line"><span class="cl">            Line Input #fileNum, lineContent
+</span></span><span class="line"><span class="cl">            ws.Cells(rowNum, 1).Value = lineContent
+</span></span><span class="line"><span class="cl">            rowNum = rowNum + 1
+</span></span><span class="line"><span class="cl">        Loop
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 如果文件超过最大预览行数
+</span></span><span class="line"><span class="cl">        If Not EOF(fileNum) Then
+</span></span><span class="line"><span class="cl">            ws.Cells(rowNum, 1).Value = &#34;...&#34;
+</span></span><span class="line"><span class="cl">            ws.Cells(rowNum, 1).Font.Italic = True
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    Close #fileNum
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    ws.Columns(&#34;A:A&#34;).ColumnWidth = 80
+</span></span><span class="line"><span class="cl">    ws.Range(&#34;A2&#34;).Value = &#34;（最多显示&#34; &amp; maxLines &amp; &#34;行）&#34;
+</span></span><span class="line"><span class="cl">    ws.Range(&#34;A2&#34;).Font.Italic = True
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="1188-结合userform的文件选择器">11.8.8 结合UserForm的文件选择器
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="s1">&#39; 以下代码应放在UserForm的代码窗口中</span>
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdBrowse_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">fd</span> <span class="n">As</span> <span class="ne">FileDialog</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Dim</span> <span class="n">selectedFile</span> <span class="n">As</span> <span class="ne">String</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 创建文件对话框</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Set</span> <span class="n">fd</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">FileDialog</span><span class="p">(</span><span class="n">msoFileDialogOpen</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">With</span> <span class="n">fd</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="n">Title</span> <span class="o">=</span> <span class="s2">&#34;选择数据文件&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="n">Filters</span><span class="o">.</span><span class="n">Clear</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="n">Filters</span><span class="o">.</span><span class="n">Add</span> <span class="s2">&#34;Excel文件&#34;</span><span class="p">,</span> <span class="s2">&#34;*.xlsx;*.xls&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="n">Filters</span><span class="o">.</span><span class="n">Add</span> <span class="s2">&#34;CSV文件&#34;</span><span class="p">,</span> <span class="s2">&#34;*.csv&#34;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">If</span> <span class="o">.</span><span class="n">Show</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">            <span class="n">selectedFile</span> <span class="o">=</span> <span class="o">.</span><span class="n">SelectedItems</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Me</span><span class="o">.</span><span class="n">txtFilePath</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">selectedFile</span> <span class="s1">&#39; 在文本框中显示路径</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39; 提取文件名显示在标签中</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Me</span><span class="o">.</span><span class="n">lblFileName</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="s2">&#34;文件名: &#34;</span> <span class="o">&amp;</span> <span class="n">Mid</span><span class="p">(</span><span class="n">selectedFile</span><span class="p">,</span> <span class="n">InStrRev</span><span class="p">(</span><span class="n">selectedFile</span><span class="p">,</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">) + 1)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl">    <span class="n">End</span> <span class="n">With</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">Set</span> <span class="n">fd</span> <span class="o">=</span> <span class="n">Nothing</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdImport_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 检查是否选择了文件</span>
+</span></span><span class="line"><span class="cl">    <span class="n">If</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtFilePath</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MsgBox</span> <span class="s2">&#34;请先选择文件&#34;</span><span class="p">,</span> <span class="n">vbExclamation</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Exit</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">    <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 检查文件是否存在</span>
+</span></span><span class="line"><span class="cl">    <span class="n">If</span> <span class="n">Dir</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">txtFilePath</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="n">Then</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MsgBox</span> <span class="s2">&#34;所选文件不存在&#34;</span><span class="p">,</span> <span class="n">vbExclamation</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Exit</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">    <span class="n">End</span> <span class="n">If</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 执行导入操作（这里只是示例）</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MsgBox</span> <span class="s2">&#34;开始导入文件: &#34;</span> <span class="o">&amp;</span> <span class="n">Me</span><span class="o">.</span><span class="n">txtFilePath</span><span class="o">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">vbInformation</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39; 关闭窗体</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Unload</span> <span class="n">Me</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Sub</span> <span class="n">cmdCancel_Click</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Unload</span> <span class="n">Me</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39; 标准模块中的代码，用于显示UserForm</span>
+</span></span><span class="line"><span class="cl"><span class="n">Sub</span> <span class="n">ShowFileImportForm</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FileImportForm</span><span class="o">.</span><span class="n">Show</span> <span class="s1">&#39; 假设UserForm名称为FileImportForm</span>
+</span></span><span class="line"><span class="cl"><span class="n">End</span> <span class="n">Sub</span>
+</span></span></code></pre></div><h4 id="1189-批量文件处理工具">11.8.9 批量文件处理工具
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub BatchFileProcessor()
+</span></span><span class="line"><span class="cl">    Dim fd As FileDialog
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    Dim filePaths As Variant
+</span></span><span class="line"><span class="cl">    Dim outputPath As String
+</span></span><span class="line"><span class="cl">    Dim wsReport As Worksheet
+</span></span><span class="line"><span class="cl">    Dim rowNum As Long
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 选择要处理的多个文件
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogFilePicker)
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;选择要处理的文本文件&#34;
+</span></span><span class="line"><span class="cl">        .Filters.Clear
+</span></span><span class="line"><span class="cl">        .Filters.Add &#34;文本文件&#34;, &#34;*.txt&#34;
+</span></span><span class="line"><span class="cl">        .AllowMultiSelect = True
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        If .Show &lt;&gt; -1 Then
+</span></span><span class="line"><span class="cl">            MsgBox &#34;未选择任何文件，操作已取消&#34;, vbInformation
+</span></span><span class="line"><span class="cl">            Exit Sub
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        filePaths = .SelectedItems
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 选择保存结果的文件夹
+</span></span><span class="line"><span class="cl">    Set fd = Application.FileDialog(msoFileDialogFolderPicker)
+</span></span><span class="line"><span class="cl">    With fd
+</span></span><span class="line"><span class="cl">        .Title = &#34;选择结果保存文件夹&#34;
+</span></span><span class="line"><span class="cl">        .InitialFileName = ThisWorkbook.Path
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        If .Show &lt;&gt; -1 Then
+</span></span><span class="line"><span class="cl">            MsgBox &#34;未选择保存文件夹，操作已取消&#34;, vbInformation
+</span></span><span class="line"><span class="cl">            Exit Sub
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        outputPath = .SelectedItems(1)
+</span></span><span class="line"><span class="cl">    End With
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建报告工作表
+</span></span><span class="line"><span class="cl">    Set wsReport = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">    wsReport.Name = &#34;批量处理报告&#34;
+</span></span><span class="line"><span class="cl">    wsReport.Cells(1, 1).Value = &#34;原始文件&#34;
+</span></span><span class="line"><span class="cl">    wsReport.Cells(1, 2).Value = &#34;处理后文件&#34;
+</span></span><span class="line"><span class="cl">    wsReport.Cells(1, 3).Value = &#34;状态&#34;
+</span></span><span class="line"><span class="cl">    wsReport.Cells(1, 4).Value = &#34;处理时间&#34;
+</span></span><span class="line"><span class="cl">    wsReport.Rows(1).Font.Bold = True
+</span></span><span class="line"><span class="cl">    rowNum = 2
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 处理每个选中的文件
+</span></span><span class="line"><span class="cl">    For i = LBound(filePaths) To UBound(filePaths)
+</span></span><span class="line"><span class="cl">        wsReport.Cells(rowNum, 1).Value = filePaths(i)
+</span></span><span class="line"><span class="cl">        wsReport.Cells(rowNum, 4).Value = Now()
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        On Error Resume Next
+</span></span><span class="line"><span class="cl">        &#39; 处理文件（这里只是示例：复制并添加处理标记）
+</span></span><span class="line"><span class="cl">        Dim sourceNum As Integer, destNum As Integer
+</span></span><span class="line"><span class="cl">        Dim content As String
+</span></span><span class="line"><span class="cl">        Dim fileName As String
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 获取文件名
+</span></span><span class="line"><span class="cl">        fileName = Mid(filePaths(i), InStrRev(filePaths(i), &#34;\&#34;) + 1)
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 读取源文件
+</span></span><span class="line"><span class="cl">        sourceNum = FreeFile
+</span></span><span class="line"><span class="cl">        Open filePaths(i) For Input As #sourceNum
+</span></span><span class="line"><span class="cl">            content = Input(LOF(sourceNum), sourceNum)
+</span></span><span class="line"><span class="cl">        Close #sourceNum
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 写入处理后的文件
+</span></span><span class="line"><span class="cl">        destNum = FreeFile
+</span></span><span class="line"><span class="cl">        Open outputPath &amp; &#34;\&#34; &amp; Replace(fileName, &#34;.txt&#34;, &#34;_processed.txt&#34;) For Output As #destNum
+</span></span><span class="line"><span class="cl">            Print #destNum, &#34;=== 处理于 &#34; &amp; Now() &amp; &#34; ===&#34; &amp; vbCrLf
+</span></span><span class="line"><span class="cl">            Print #destNum, content
+</span></span><span class="line"><span class="cl">        Close #destNum
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 记录结果
+</span></span><span class="line"><span class="cl">        If Err.Number = 0 Then
+</span></span><span class="line"><span class="cl">            wsReport.Cells(rowNum, 2).Value = outputPath &amp; &#34;\&#34; &amp; Replace(fileName, &#34;.txt&#34;, &#34;_processed.txt&#34;)
+</span></span><span class="line"><span class="cl">            wsReport.Cells(rowNum, 3).Value = &#34;成功&#34;
+</span></span><span class="line"><span class="cl">        Else
+</span></span><span class="line"><span class="cl">            wsReport.Cells(rowNum, 3).Value = &#34;失败: &#34; &amp; Err.Description
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">        On Error GoTo 0
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        rowNum = rowNum + 1
+</span></span><span class="line"><span class="cl">    Next i
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    wsReport.Columns(&#34;A:D&#34;).AutoFit
+</span></span><span class="line"><span class="cl">    MsgBox &#34;批量处理完成，共处理 &#34; &amp; UBound(filePaths) - LBound(filePaths) + 1 &amp; &#34; 个文件&#34;, vbInformation
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    Set fd = Nothing
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h4 id="filedialog与传统文件操作对比">FileDialog与传统文件操作对比
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>传统文件操作（Open语句）</th>
+          <th>FileDialog</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>用户交互</td>
+          <td>需要手动输入路径，不直观</td>
+          <td>图形界面选择，直观友好</td>
+      </tr>
+      <tr>
+          <td>路径准确性</td>
+          <td>容易输入错误路径</td>
+          <td>避免手动输入错误</td>
+      </tr>
+      <tr>
+          <td>文件筛选</td>
+          <td>需要手动验证文件类型</td>
+          <td>内置筛选功能</td>
+      </tr>
+      <tr>
+          <td>多文件处理</td>
+          <td>需要手动输入多个路径</td>
+          <td>支持一次性选择多个文件</td>
+      </tr>
+      <tr>
+          <td>文件夹选择</td>
+          <td>需要手动输入文件夹路径</td>
+          <td>直观的文件夹浏览选择</td>
+      </tr>
+      <tr>
+          <td>使用复杂度</td>
+          <td>简单，适合固定路径</td>
+          <td>稍复杂，但更灵活</td>
+      </tr>
+      <tr>
+          <td>适用场景</td>
+          <td>路径固定的自动化任务</td>
+          <td>需要用户交互的场景</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="十二inputbox函数">十二、InputBox函数
+</h2><p>InputBox函数可以创建一个简单的对话框，输入文本或数值。</p>
+<h3 id="121-inputbox基础用法">12.1 InputBox基础用法
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub BasicInputBox()
+</span></span><span class="line"><span class="cl">    Dim userName As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 基本用法
+</span></span><span class="line"><span class="cl">    userName = InputBox(&#34;请输入您的姓名:&#34;, &#34;输入姓名&#34;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查用户输入
+</span></span><span class="line"><span class="cl">    If userName = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;您没有输入姓名&#34;, vbInformation
+</span></span><span class="line"><span class="cl">    Else
+</span></span><span class="line"><span class="cl">        MsgBox &#34;您好，&#34; &amp; userName &amp; &#34;！&#34;, vbWelcomeMsg
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="122-inputbox的完整参数">12.2 InputBox的完整参数
+</h3><p>InputBox函数的完整语法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">InputBox(prompt, [title], [default], [xpos], [ypos], [helpfile], [context])
+</span></span></code></pre></div><p>参数说明：</p>
+<ul>
+<li><code>prompt</code>：必需，显示在对话框中的提示信息</li>
+<li><code>title</code>：可选，对话框的标题</li>
+<li><code>default</code>：可选，输入框中的默认值</li>
+<li><code>xpos</code>：可选，对话框的水平位置</li>
+<li><code>ypos</code>：可选，对话框的垂直位置</li>
+<li><code>helpfile</code>：可选，帮助文件的路径</li>
+<li><code>context</code>：可选，帮助主题的上下文编号</li>
+</ul>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub InputBoxWithParameters()
+</span></span><span class="line"><span class="cl">    Dim ageStr As String
+</span></span><span class="line"><span class="cl">    Dim age As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 使用完整参数的InputBox
+</span></span><span class="line"><span class="cl">    ageStr = InputBox( _
+</span></span><span class="line"><span class="cl">        prompt:=&#34;请输入您的年龄:&#34;, _
+</span></span><span class="line"><span class="cl">        title:=&#34;年龄输入&#34;, _
+</span></span><span class="line"><span class="cl">        default:=&#34;30&#34;, _
+</span></span><span class="line"><span class="cl">        xpos:=Application.Left + 100, _
+</span></span><span class="line"><span class="cl">        ypos:=Application.Top + 100 _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 验证输入
+</span></span><span class="line"><span class="cl">    If ageStr = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;您取消了输入&#34;, vbInformation
+</span></span><span class="line"><span class="cl">    ElseIf IsNumeric(ageStr) Then
+</span></span><span class="line"><span class="cl">        age = CInt(ageStr)
+</span></span><span class="line"><span class="cl">        If age &gt; 0 And age &lt; 150 Then
+</span></span><span class="line"><span class="cl">            MsgBox &#34;您的年龄是: &#34; &amp; age, vbInformation
+</span></span><span class="line"><span class="cl">        Else
+</span></span><span class="line"><span class="cl">            MsgBox &#34;请输入有效的年龄&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    Else
+</span></span><span class="line"><span class="cl">        MsgBox &#34;请输入数字&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="123-带帮助功能的inputbox">12.3 带帮助功能的InputBox
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub InputBoxWithHelp()
+</span></span><span class="line"><span class="cl">    Dim scoreStr As String
+</span></span><span class="line"><span class="cl">    Dim helpFile As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 设置帮助文件路径（实际使用时替换为你的帮助文件）
+</span></span><span class="line"><span class="cl">    helpFile = &#34;C:\help\score_help.chm&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 带帮助按钮的InputBox
+</span></span><span class="line"><span class="cl">    scoreStr = InputBox( _
+</span></span><span class="line"><span class="cl">        prompt:=&#34;请输入考试分数(0-100):&#34;, _
+</span></span><span class="line"><span class="cl">        title:=&#34;分数输入&#34;, _
+</span></span><span class="line"><span class="cl">        default:=&#34;80&#34;, _
+</span></span><span class="line"><span class="cl">        helpfile:=helpFile, _
+</span></span><span class="line"><span class="cl">        context:=100 _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 处理输入
+</span></span><span class="line"><span class="cl">    If scoreStr = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;输入已取消&#34;, vbInformation
+</span></span><span class="line"><span class="cl">    ElseIf IsNumeric(scoreStr) Then
+</span></span><span class="line"><span class="cl">        If CDbl(scoreStr) &gt;= 0 And CDbl(scoreStr) &lt;= 100 Then
+</span></span><span class="line"><span class="cl">            MsgBox &#34;您输入的分数是: &#34; &amp; scoreStr, vbInformation
+</span></span><span class="line"><span class="cl">        Else
+</span></span><span class="line"><span class="cl">            MsgBox &#34;分数必须在0-100之间&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    Else
+</span></span><span class="line"><span class="cl">        MsgBox &#34;请输入有效的数字&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="124-输入验证与循环">12.4 输入验证与循环
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub InputBoxWithValidation()
+</span></span><span class="line"><span class="cl">    Dim quantityStr As String
+</span></span><span class="line"><span class="cl">    Dim quantity As Integer
+</span></span><span class="line"><span class="cl">    Dim isValid As Boolean
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    isValid = False
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 循环直到获得有效输入
+</span></span><span class="line"><span class="cl">    Do While Not isValid
+</span></span><span class="line"><span class="cl">        quantityStr = InputBox( _
+</span></span><span class="line"><span class="cl">            prompt:=&#34;请输入订购数量(1-100):&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                    &#34;必须是1到100之间的整数&#34;, _
+</span></span><span class="line"><span class="cl">            title:=&#34;数量输入&#34;, _
+</span></span><span class="line"><span class="cl">            default:=&#34;10&#34; _
+</span></span><span class="line"><span class="cl">        )
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 检查是否取消
+</span></span><span class="line"><span class="cl">        If quantityStr = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">            MsgBox &#34;已取消操作&#34;, vbInformation
+</span></span><span class="line"><span class="cl">            Exit Sub
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 验证输入
+</span></span><span class="line"><span class="cl">        If IsNumeric(quantityStr) Then
+</span></span><span class="line"><span class="cl">            quantity = CInt(quantityStr)
+</span></span><span class="line"><span class="cl">            If quantity &gt;= 1 And quantity &lt;= 100 Then
+</span></span><span class="line"><span class="cl">                isValid = True &#39; 有效输入，退出循环
+</span></span><span class="line"><span class="cl">            Else
+</span></span><span class="line"><span class="cl">                MsgBox &#34;数量必须在1到100之间&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">            End If
+</span></span><span class="line"><span class="cl">        Else
+</span></span><span class="line"><span class="cl">            MsgBox &#34;请输入有效的数字&#34;, vbExclamation
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    Loop
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 处理有效输入
+</span></span><span class="line"><span class="cl">    MsgBox &#34;您已订购 &#34; &amp; quantity &amp; &#34; 件商品&#34;, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="125-结合文件操作的inputbox应用">12.5 结合文件操作的InputBox应用
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub InputBoxAndFileOperation()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim userInput As String
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 使用InputBox获取文件路径
+</span></span><span class="line"><span class="cl">    filePath = InputBox( _
+</span></span><span class="line"><span class="cl">        prompt:=&#34;请输入要保存的文件路径和名称:&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">                &#34;例如: C:\data\mynotes.txt&#34;, _
+</span></span><span class="line"><span class="cl">        title:=&#34;保存文件&#34;, _
+</span></span><span class="line"><span class="cl">        default:=&#34;C:\data\notes.txt&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查用户是否取消
+</span></span><span class="line"><span class="cl">    If filePath = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;操作已取消&#34;, vbInformation
+</span></span><span class="line"><span class="cl">        Exit Sub
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 使用InputBox获取要保存的内容
+</span></span><span class="line"><span class="cl">    userInput = InputBox( _
+</span></span><span class="line"><span class="cl">        prompt:=&#34;请输入要保存的内容:&#34;, _
+</span></span><span class="line"><span class="cl">        title:=&#34;输入内容&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If userInput = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;没有输入内容，文件未保存&#34;, vbInformation
+</span></span><span class="line"><span class="cl">        Exit Sub
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 保存到文件
+</span></span><span class="line"><span class="cl">    On Error GoTo ErrorHandler
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Output As #fileNumber
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;内容保存时间: &#34; &amp; Now()
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;-------------------------&#34;
+</span></span><span class="line"><span class="cl">    Print #fileNumber, userInput
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;内容已成功保存到:&#34; &amp; vbCrLf &amp; filePath, vbInformation
+</span></span><span class="line"><span class="cl">    Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">ErrorHandler:
+</span></span><span class="line"><span class="cl">    MsgBox &#34;保存文件时出错: &#34; &amp; Err.Description, vbCritical
+</span></span><span class="line"><span class="cl">    On Error Resume Next
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h3 id="126-多步骤输入流程">12.6 多步骤输入流程
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub MultiStepInput()
+</span></span><span class="line"><span class="cl">    Dim customerInfo(1 To 4) As String
+</span></span><span class="line"><span class="cl">    Dim fields(1 To 4) As String
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 定义要收集的字段
+</span></span><span class="line"><span class="cl">    fields(1) = &#34;客户姓名&#34;
+</span></span><span class="line"><span class="cl">    fields(2) = &#34;联系电话&#34;
+</span></span><span class="line"><span class="cl">    fields(3) = &#34;地址&#34;
+</span></span><span class="line"><span class="cl">    fields(4) = &#34;订单金额&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 分步收集信息
+</span></span><span class="line"><span class="cl">    For i = 1 To 4
+</span></span><span class="line"><span class="cl">        customerInfo(i) = InputBox( _
+</span></span><span class="line"><span class="cl">            prompt:=&#34;请输入&#34; &amp; fields(i) &amp; &#34;:&#34;, _
+</span></span><span class="line"><span class="cl">            title:=&#34;输入客户信息 (&#34; &amp; i &amp; &#34;/4)&#34;, _
+</span></span><span class="line"><span class="cl">            default:=&#34;&#34; _
+</span></span><span class="line"><span class="cl">        )
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 检查是否取消
+</span></span><span class="line"><span class="cl">        If customerInfo(i) = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">            If MsgBox(&#34;确定要取消输入吗?&#34;, vbYesNo + vbQuestion) = vbYes Then
+</span></span><span class="line"><span class="cl">                MsgBox &#34;已取消客户信息输入&#34;, vbInformation
+</span></span><span class="line"><span class="cl">                Exit Sub
+</span></span><span class="line"><span class="cl">            Else
+</span></span><span class="line"><span class="cl">                &#39; 重新获取当前字段
+</span></span><span class="line"><span class="cl">                i = i - 1 &#39; 因为循环会自动+1，所以这里-1
+</span></span><span class="line"><span class="cl">            End If
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    Next i
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 显示收集的信息
+</span></span><span class="line"><span class="cl">    Dim summary As String
+</span></span><span class="line"><span class="cl">    summary = &#34;收集的客户信息如下:&#34; &amp; vbCrLf
+</span></span><span class="line"><span class="cl">    For i = 1 To 4
+</span></span><span class="line"><span class="cl">        summary = summary &amp; fields(i) &amp; &#34;: &#34; &amp; customerInfo(i) &amp; vbCrLf
+</span></span><span class="line"><span class="cl">    Next i
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 询问是否保存
+</span></span><span class="line"><span class="cl">    If MsgBox(summary &amp; vbCrLf &amp; &#34;是否保存这些信息?&#34;, vbYesNo + vbQuestion) = vbYes Then
+</span></span><span class="line"><span class="cl">        filePath = &#34;C:\data\customers\&#34; &amp; Format(Now(), &#34;yyyymmdd_hhnnss&#34;) &amp; &#34;.txt&#34;
+</span></span><span class="line"><span class="cl">        fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">        Open filePath For Output As #fileNumber
+</span></span><span class="line"><span class="cl">        Print #fileNumber, summary
+</span></span><span class="line"><span class="cl">        Close #fileNumber
+</span></span><span class="line"><span class="cl">        MsgBox &#34;信息已保存到: &#34; &amp; filePath, vbInformation
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="十三综合案例文件管理工具">十三、综合案例：文件管理工具
+</h2><p>下面是一个结合文件操作和InputBox的综合案例，实现一个简单的文件管理工具：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Sub FileManagerTool()
+</span></span><span class="line"><span class="cl">    Dim choice As Integer
+</span></span><span class="line"><span class="cl">    Dim running As Boolean
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    running = True
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 主循环
+</span></span><span class="line"><span class="cl">    Do While running
+</span></span><span class="line"><span class="cl">        &#39; 显示菜单
+</span></span><span class="line"><span class="cl">        choice = MsgBox( _
+</span></span><span class="line"><span class="cl">            &#34;文件管理工具&#34; &amp; vbCrLf &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">            &#34;1. 读取文本文件&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">            &#34;2. 创建新文件&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">            &#34;3. 追加到文件&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">            &#34;4. 批量重命名文件&#34; &amp; vbCrLf &amp; _
+</span></span><span class="line"><span class="cl">            &#34;5. 退出&#34;, _
+</span></span><span class="line"><span class="cl">            vbYesNoCancel + vbQuestion + vbSystemModal, _
+</span></span><span class="line"><span class="cl">            &#34;文件管理工具&#34; _
+</span></span><span class="line"><span class="cl">        )
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        &#39; 根据用户选择执行相应功能
+</span></span><span class="line"><span class="cl">        Select Case choice
+</span></span><span class="line"><span class="cl">            Case vbYes: ReadTextFileTool &#39; 读取文本文件
+</span></span><span class="line"><span class="cl">            Case vbNo: CreateNewFileTool &#39; 创建新文件
+</span></span><span class="line"><span class="cl">            Case vbCancel: AppendToFileTool &#39; 追加到文件
+</span></span><span class="line"><span class="cl">            &#39; 可以在这里添加其他功能的调用
+</span></span><span class="line"><span class="cl">            Case Else: running = False &#39; 退出
+</span></span><span class="line"><span class="cl">        End Select
+</span></span><span class="line"><span class="cl">    Loop
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 读取文本文件工具
+</span></span><span class="line"><span class="cl">Sub ReadTextFileTool()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取文件路径
+</span></span><span class="line"><span class="cl">    filePath = InputBox( _
+</span></span><span class="line"><span class="cl">        &#34;请输入要读取的文本文件路径:&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;读取文件&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;C:\data\example.txt&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If filePath = &#34;&#34; Then Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查文件是否存在
+</span></span><span class="line"><span class="cl">    If Dir(filePath) = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;文件不存在: &#34; &amp; filePath, vbExclamation
+</span></span><span class="line"><span class="cl">        Exit Sub
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 读取并显示文件内容
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    Dim content As String
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Input As #fileNumber
+</span></span><span class="line"><span class="cl">    content = Input(LOF(fileNumber), fileNumber)
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建显示内容的工作表
+</span></span><span class="line"><span class="cl">    Dim ws As Worksheet
+</span></span><span class="line"><span class="cl">    On Error Resume Next
+</span></span><span class="line"><span class="cl">    Set ws = ThisWorkbook.Sheets(&#34;文件内容&#34;)
+</span></span><span class="line"><span class="cl">    On Error GoTo 0
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If ws Is Nothing Then
+</span></span><span class="line"><span class="cl">        Set ws = ThisWorkbook.Sheets.Add
+</span></span><span class="line"><span class="cl">        ws.Name = &#34;文件内容&#34;
+</span></span><span class="line"><span class="cl">    Else
+</span></span><span class="line"><span class="cl">        ws.Cells.Clear
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 显示文件信息和内容
+</span></span><span class="line"><span class="cl">    ws.Cells(1, 1).Value = &#34;文件路径:&#34;
+</span></span><span class="line"><span class="cl">    ws.Cells(1, 2).Value = filePath
+</span></span><span class="line"><span class="cl">    ws.Cells(2, 1).Value = &#34;文件大小:&#34;
+</span></span><span class="line"><span class="cl">    ws.Cells(2, 2).Value = FileLen(filePath) &amp; &#34; 字节&#34;
+</span></span><span class="line"><span class="cl">    ws.Cells(3, 1).Value = &#34;修改时间:&#34;
+</span></span><span class="line"><span class="cl">    ws.Cells(3, 2).Value = FileDateTime(filePath)
+</span></span><span class="line"><span class="cl">    ws.Cells(5, 1).Value = &#34;文件内容:&#34;
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 将内容按行拆分
+</span></span><span class="line"><span class="cl">    Dim lines() As String
+</span></span><span class="line"><span class="cl">    lines = Split(content, vbCrLf)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 写入内容到工作表
+</span></span><span class="line"><span class="cl">    Dim i As Integer
+</span></span><span class="line"><span class="cl">    For i = 0 To UBound(lines)
+</span></span><span class="line"><span class="cl">        ws.Cells(6 + i, 1).Value = lines(i)
+</span></span><span class="line"><span class="cl">    Next i
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 格式化工作表
+</span></span><span class="line"><span class="cl">    ws.Columns(&#34;A:A&#34;).ColumnWidth = 50
+</span></span><span class="line"><span class="cl">    ws.Rows(&#34;1:3&#34;).Font.Bold = True
+</span></span><span class="line"><span class="cl">    ws.Range(&#34;A5&#34;).Font.Bold = True
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;文件内容已显示在 &#34;&#34;文件内容&#34;&#34; 工作表中&#34;, vbInformation
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 创建新文件工具
+</span></span><span class="line"><span class="cl">Sub CreateNewFileTool()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim content As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取文件路径
+</span></span><span class="line"><span class="cl">    filePath = InputBox( _
+</span></span><span class="line"><span class="cl">        &#34;请输入要创建的文件路径和名称:&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;创建新文件&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;C:\data\newfile.txt&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If filePath = &#34;&#34; Then Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查文件是否已存在
+</span></span><span class="line"><span class="cl">    If Dir(filePath) &lt;&gt; &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        If MsgBox(&#34;文件已存在，是否覆盖?&#34;, vbYesNo + vbQuestion) = vbNo Then
+</span></span><span class="line"><span class="cl">            Exit Sub
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取文件内容
+</span></span><span class="line"><span class="cl">    content = InputBox( _
+</span></span><span class="line"><span class="cl">        &#34;请输入文件内容:&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;输入内容&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If content = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        If MsgBox(&#34;内容为空，仍要创建文件吗?&#34;, vbYesNo + vbQuestion) = vbNo Then
+</span></span><span class="line"><span class="cl">            Exit Sub
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 创建文件并写入内容
+</span></span><span class="line"><span class="cl">    On Error GoTo ErrorHandler
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Output As #fileNumber
+</span></span><span class="line"><span class="cl">    Print #fileNumber, content
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;文件已创建: &#34; &amp; filePath, vbInformation
+</span></span><span class="line"><span class="cl">    Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">ErrorHandler:
+</span></span><span class="line"><span class="cl">    MsgBox &#34;创建文件失败: &#34; &amp; Err.Description, vbCritical
+</span></span><span class="line"><span class="cl">    On Error Resume Next
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">End Sub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39; 追加到文件工具
+</span></span><span class="line"><span class="cl">Sub AppendToFileTool()
+</span></span><span class="line"><span class="cl">    Dim filePath As String
+</span></span><span class="line"><span class="cl">    Dim content As String
+</span></span><span class="line"><span class="cl">    Dim fileNumber As Integer
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取文件路径
+</span></span><span class="line"><span class="cl">    filePath = InputBox( _
+</span></span><span class="line"><span class="cl">        &#34;请输入要追加内容的文件路径:&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;追加到文件&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;C:\data\log.txt&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If filePath = &#34;&#34; Then Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 检查文件是否存在
+</span></span><span class="line"><span class="cl">    If Dir(filePath) = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        If MsgBox(&#34;文件不存在，是否创建新文件?&#34;, vbYesNo + vbQuestion) = vbNo Then
+</span></span><span class="line"><span class="cl">            Exit Sub
+</span></span><span class="line"><span class="cl">        End If
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 获取要追加的内容
+</span></span><span class="line"><span class="cl">    content = InputBox( _
+</span></span><span class="line"><span class="cl">        &#34;请输入要追加的内容:&#34;, _
+</span></span><span class="line"><span class="cl">        &#34;输入内容&#34; _
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    If content = &#34;&#34; Then
+</span></span><span class="line"><span class="cl">        MsgBox &#34;内容为空，未进行任何操作&#34;, vbInformation
+</span></span><span class="line"><span class="cl">        Exit Sub
+</span></span><span class="line"><span class="cl">    End If
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#39; 追加内容
+</span></span><span class="line"><span class="cl">    On Error GoTo ErrorHandler
+</span></span><span class="line"><span class="cl">    fileNumber = FreeFile
+</span></span><span class="line"><span class="cl">    Open filePath For Append As #fileNumber
+</span></span><span class="line"><span class="cl">    Print #fileNumber, &#34;[&#34; &amp; Format(Now(), &#34;yyyy-mm-dd hh:nn:ss&#34;) &amp; &#34;] &#34; &amp; content
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    MsgBox &#34;内容已追加到文件: &#34; &amp; filePath, vbInformation
+</span></span><span class="line"><span class="cl">    Exit Sub
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">ErrorHandler:
+</span></span><span class="line"><span class="cl">    MsgBox &#34;操作失败: &#34; &amp; Err.Description, vbCritical
+</span></span><span class="line"><span class="cl">    On Error Resume Next
+</span></span><span class="line"><span class="cl">    Close #fileNumber
+</span></span><span class="line"><span class="cl">End Sub
+</span></span></code></pre></div><h2 id="进阶学习建议">进阶学习建议
+</h2><ol>
 <li>
 <p><strong>深入学习对象模型</strong>：</p>
 <ul>
@@ -1586,12 +2796,11 @@ fill="#000000" stroke="none">
 <p><strong>探索其他Office应用</strong>：将VBA知识应用到Word、PowerPoint、Outlook等</p>
 </li>
 </ol>
-<p>学习VBA的关键在于实践，建议从日常工作中遇到的重复任务入手，尝试用VBA解决，逐步积累经验。随着实践的深入，你会发现VBA能极大地提高工作效率，成为数据处理和办公自动化的强大工具。</p>
-<p>祝你在VBA的学习道路上取得进步！如有疑问，可以参考微软官方文档或加入VBA社区寻求帮助。</p>
-<h2 id="十二总结">十二、总结
+<h2 id="总结">总结
 </h2><p>通过本教程为VBA的核心语法、Excel对象模型操作及实用脚本编写。建议从录制宏开始，逐步分析生成的代码，并尝试修改以满足实际需求。</p>
 <blockquote>
-<p>注意：在运行任何VBA代码前，请备份重要数据。对于复杂操作，建议先在测试环境中验证。</p></blockquote>
+<p>注意：在运行任何VBA代码前，请备份重要数据。对于复杂操作，建议先在测试环境中验证。</p>
+</blockquote>
 <h2 id="附录">附录
 </h2><ol>
 <li><strong>官方文档</strong>：
@@ -1680,7 +2889,7 @@ fill="#000000" stroke="none">
 
 
         <span>
-            最后更新于 2025-10-16 22:06
+            最后更新于 2025-10-20 22:21
         </span>
     </section></footer>
 

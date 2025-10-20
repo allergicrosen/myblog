@@ -851,15 +851,18 @@ fill="#000000" stroke="none">
 <h4 id="查看官方手册">查看官方手册
 </h4><p>最简单的就是查看官方的手册，以广州超算来说，打开<code>HPC1系统用户手册</code>可以找到脚本的编写规则</p>
 <blockquote>
-<p>目前 HPC1 系统部署的资源管理系统包括多种作业提交方式，包括<code>批处理作业提交方式 yhbatch 和交互作业提交方式 yhrun</code>。作业终止方式为 yhcancel 命令，需要获取作业的 jobid，可以通过 yhq 命令查看获得。</p></blockquote>
+<p>目前 HPC1 系统部署的资源管理系统包括多种作业提交方式，包括<code>批处理作业提交方式 yhbatch 和交互作业提交方式 yhrun</code>。作业终止方式为 yhcancel 命令，需要获取作业的 jobid，可以通过 yhq 命令查看获得。</p>
+</blockquote>
 <blockquote>
 <p><strong>如果没有交互需求，请使用 yhbatch 提交任务</strong>。yhbatch 提交的作业终端关闭
 时不会受到影响，登陆结点 down 机时也不会受到影响，强烈推荐使用 yhbatch 提
-交任务。</p></blockquote>
+交任务。</p>
+</blockquote>
 <blockquote>
 <p>yhbatch 运行的主要格式如下：<br>
 <code>yhbatch [options] program </code><br>
-yhbatch 包括多个选项，用户最常使用的选项如下：<br></p></blockquote>
+yhbatch 包括多个选项，用户最常使用的选项如下：<br></p>
+</blockquote>
 <hr>  
 <p><code>-n, --ntasks=ntasks </code> <br>
 指定要运行的进程数。请求 yhrun 分配/加载 ntasks 个进程。省缺的情况是每

@@ -841,11 +841,13 @@ heating过程主要使结构在300K下跑1000步（或者500步），并写入<c
 轨迹文件在MD目录下生成的<code>XDATCAR</code>，脚本位于<code>NA_couplings</code>文件夹下的<code>gxdatpos</code><br>
 需要将脚本和轨迹文件放入<code>/step2/pfile/</code>, 然后执行脚本拆分轨迹，获得所需的5020个结构</p>
 <blockquote>
-<p>需要注意：MD跑完后一定要检查轨迹(导入至<code>VMD</code>中)，<strong>看看结构是否正常</strong>，否则后续跑NAMD没啥意义</p></blockquote>
+<p>需要注意：MD跑完后一定要检查轨迹(导入至<code>VMD</code>中)，<strong>看看结构是否正常</strong>，否则后续跑NAMD没啥意义</p>
+</blockquote>
 <p><strong>接下来计算NAC</strong></p>
 <h2 id="step2进行nac计算单k点">Step2，进行NAC计算(<strong>单K点!!!</strong>)
 </h2><blockquote>
-<p>NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:</p></blockquote>
+<p>NAC计算非常耗时，成本高，一定要时刻注意是否计算正确，提交任务前一定要检查好参数，尤其是:</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">MINB</span><span class="o">=</span><span class="m">168</span>   <span class="c1">#一定要记得修改！！！</span>
 </span></span><span class="line"><span class="cl"><span class="nv">MAXB</span><span class="o">=</span><span class="m">177</span>
 </span></span></code></pre></div><p>一定要和<code>EIGENVAL</code>里面保持一致，在<strong>SOC</strong>或者<strong>扩胞</strong>后会有变化。</p>
@@ -1038,7 +1040,8 @@ NAC目录下，有如下文件：</p>
 <blockquote>
 <p>使用<code>name_new.py</code>需要<code>python2.7</code>版本，<code>python3</code>会报错不兼容。<br>
 <code>py-scr3.py</code>脚本（<strong>需要修改部分：i,  i+namdtime要小于<code>res</code>文件的实部或虚部数量</strong>）
-<code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p></blockquote>
+<code>res1,res2,res3</code>，（为step2的res cp 的，对应与name_new（1，2，3）.py脚本）</p>
+</blockquote>
 <hr>
 <p><strong>旧脚本</strong></p>
 <hr>
