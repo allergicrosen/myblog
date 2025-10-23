@@ -7,7 +7,258 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Mon, 20 Oct 2025 22:30:44 +0800</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Oct 2025 21:33:49 +0800</lastBuildDate><atom:link href="https://allergicrosen.fun/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VBA数组与变量</title>
+        <link>https://allergicrosen.fun/p/vba_array-and-variable/</link>
+        <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
+        
+        <guid>https://allergicrosen.fun/p/vba_array-and-variable/</guid>
+        <description>&lt;p&gt;VBA中，&lt;strong&gt;数组（Array）&lt;/strong&gt; 和&lt;strong&gt;集合（Collection）&lt;/strong&gt; 是用于批量存储数据的容器。&lt;/p&gt;
+&lt;h3 id=&#34;数组array相同类型数据的有序集合&#34;&gt;数组（Array）：相同类型数据的有序集合
+&lt;/h3&gt;&lt;p&gt;数组是&lt;strong&gt;相同数据类型&lt;/strong&gt;的元素组成的有序列表，每个元素通过「索引」（位置编号）访问。&lt;br&gt;
+特点：大小可固定（静态）或动态调整，访问速度快，适合存储同类型数据（如多个数字、多个字符串）。&lt;/p&gt;
+&lt;h4 id=&#34;静态数组大小固定&#34;&gt;静态数组（大小固定）
+&lt;/h4&gt;&lt;p&gt;声明时直接指定大小，一旦创建不能改变长度。&lt;br&gt;
+&lt;strong&gt;语法&lt;/strong&gt;：&lt;br&gt;
+&lt;code&gt;Dim 数组名(起始索引 To 结束索引) As 数据类型&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;VBA默认索引从0开始，但建议显式写&lt;code&gt;1 To n&lt;/code&gt;（更符合日常习惯，比如对应Excel的行号）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;示例：用静态数组存储5个学生的成绩并计算平均分&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sub 静态数组示例()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 声明一个存储整数的静态数组，包含5个元素（索引1到5）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 成绩(1 To 5) As Integer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 总和 As Integer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 平均分 As Single
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim i As Integer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 给数组赋值（模拟5个学生的成绩）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    成绩(1) = 85
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    成绩(2) = 92
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    成绩(3) = 78
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    成绩(4) = 90
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    成绩(5) = 88
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 循环计算总和
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    总和 = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    For i = 1 To 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        总和 = 总和 + 成绩(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Next i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 计算平均分
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    平均分 = 总和 / 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    MsgBox &amp;#34;5个学生的平均分是：&amp;#34; &amp;amp; 平均分  &amp;#39; 输出：86.6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;End Sub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-动态数组大小可变&#34;&gt;2. 动态数组（大小可变）
+&lt;/h4&gt;&lt;p&gt;声明时不指定大小，后续根据需要用&lt;code&gt;ReDim&lt;/code&gt;调整长度（可多次调整）。&lt;br&gt;
+&lt;strong&gt;语法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先声明：&lt;code&gt;Dim 数组名() As 数据类型&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;再定义大小：&lt;code&gt;ReDim 数组名(起始索引 To 结束索引)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;示例：动态数组存储不确定数量的姓名&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sub 动态数组示例()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 声明动态数组（不指定大小）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 姓名() As String
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 人数 As Integer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim i As Integer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 让用户输入人数（动态确定数组大小）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    人数 = InputBox(&amp;#34;请输入人数：&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 定义数组大小（1到输入的人数）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ReDim 姓名(1 To 人数)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 循环输入每个人的姓名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    For i = 1 To 人数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        姓名(i) = InputBox(&amp;#34;请输入第&amp;#34; &amp;amp; i &amp;amp; &amp;#34;个人的姓名：&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Next i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 循环输出所有姓名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    For i = 1 To 人数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        MsgBox &amp;#34;第&amp;#34; &amp;amp; i &amp;amp; &amp;#34;个人的姓名是：&amp;#34; &amp;amp; 姓名(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Next i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;End Sub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;数组的关键要点&#34;&gt;数组的关键要点：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;元素类型必须一致（如全是&lt;code&gt;Integer&lt;/code&gt;或全是&lt;code&gt;String&lt;/code&gt;）；&lt;/li&gt;
+&lt;li&gt;索引是“位置编号”，必须在声明的范围内（否则会报错“下标越界”）；&lt;/li&gt;
+&lt;li&gt;适合存储数量固定或可预测的数据（如Excel表格的某一列数据）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;集合collection灵活的多类型数据容器&#34;&gt;集合（Collection）：灵活的多类型数据容器
+&lt;/h3&gt;&lt;p&gt;集合是一种更灵活的容器，可存储&lt;strong&gt;不同类型&lt;/strong&gt;的数据（如同时存数字、字符串、对象），大小自动调整，支持用“键”（类似名字）快速访问元素。&lt;br&gt;
+特点：无需预先定义大小，支持键值对，适合存储类型复杂、数量不确定的数据。&lt;/p&gt;
+&lt;h4 id=&#34;集合的基本操作&#34;&gt;集合的基本操作
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;声明集合&lt;/strong&gt;：&lt;code&gt;Dim 集合名 As New Collection&lt;/code&gt;（&lt;code&gt;New&lt;/code&gt;表示创建集合对象）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;添加元素&lt;/strong&gt;：&lt;code&gt;集合名.Add 元素值, 键&lt;/code&gt;（键是可选的，相当于给元素起个唯一的名字）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;访问元素&lt;/strong&gt;：&lt;code&gt;集合名.Item(索引或键)&lt;/code&gt;（索引从1开始，键必须唯一）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;删除元素&lt;/strong&gt;：&lt;code&gt;集合名.Remove(索引或键)&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;获取元素数量&lt;/strong&gt;：&lt;code&gt;集合名.Count&lt;/code&gt;（返回集合中元素的总数）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;示例：用集合管理学生信息（姓名+年龄，支持按姓名访问）&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sub 集合示例()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 声明一个集合（用于存储学生信息）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 学生集合 As New Collection
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim 学生信息 As String  &amp;#39; 临时存储单个学生的信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Dim i As Integer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 1. 向集合添加3个学生（元素是“姓名-年龄”字符串，键是姓名）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    学生集合.Add &amp;#34;张三-18&amp;#34;, &amp;#34;张三&amp;#34;  &amp;#39; 键为“张三”，方便后续直接用姓名访问
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    学生集合.Add &amp;#34;李四-19&amp;#34;, &amp;#34;李四&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    学生集合.Add &amp;#34;王五-20&amp;#34;, &amp;#34;王五&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 2. 用“键”访问指定学生（比如访问“李四”）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    MsgBox &amp;#34;李四的信息：&amp;#34; &amp;amp; 学生集合.Item(&amp;#34;李四&amp;#34;)  &amp;#39; 输出：李四-19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 3. 用“索引”遍历所有学生（索引从1开始）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    For i = 1 To 学生集合.Count
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        MsgBox &amp;#34;第&amp;#34; &amp;amp; i &amp;amp; &amp;#34;个学生：&amp;#34; &amp;amp; 学生集合.Item(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Next i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39; 4. 删除“王五”（用键删除）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    学生集合.Remove (&amp;#34;王五&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    MsgBox &amp;#34;删除王五后，剩余人数：&amp;#34; &amp;amp; 学生集合.Count  &amp;#39; 输出：2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;End Sub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;集合的关键要点&#34;&gt;集合的关键要点：
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;元素类型可以不同（比如同时存&lt;code&gt;Integer&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;、&lt;code&gt;Range&lt;/code&gt;对象）；&lt;/li&gt;
+&lt;li&gt;键必须唯一（重复键会报错），索引从1开始；&lt;/li&gt;
+&lt;li&gt;适合存储类型复杂、数量动态变化的数据（如临时管理多个不同类型的对象）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数组-vs-集合怎么选&#34;&gt;数组 vs 集合：怎么选？
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;场景&lt;/th&gt;
+          &lt;th&gt;选数组&lt;/th&gt;
+          &lt;th&gt;选集合&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;数据类型&lt;/td&gt;
+          &lt;td&gt;所有元素类型相同&lt;/td&gt;
+          &lt;td&gt;元素类型可不同&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;大小是否固定&lt;/td&gt;
+          &lt;td&gt;静态数组固定，动态数组可调整&lt;/td&gt;
+          &lt;td&gt;自动调整，无需预先定义&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;访问方式&lt;/td&gt;
+          &lt;td&gt;只能用索引&lt;/td&gt;
+          &lt;td&gt;可用索引或键（更灵活）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;效率&lt;/td&gt;
+          &lt;td&gt;访问速度快（适合大量数据）&lt;/td&gt;
+          &lt;td&gt;效率稍低（适合少量/复杂数据）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;建议&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若数据是同类型（如全是成绩、全是姓名），优先用数组；&lt;/li&gt;
+&lt;li&gt;若数据类型复杂（如混合数字、字符串、对象），或需要用“名字”快速访问，优先用集合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;变量类型&#34;&gt;变量类型
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;变量类型&lt;/th&gt;
+          &lt;th&gt;内存占用（字节）&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+          &lt;th&gt;优化建议&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Byte&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;无符号整数，范围 0~255&lt;/td&gt;
+          &lt;td&gt;处理二进制数据或小范围整数时优先使用，减少内存占用&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Boolean&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;布尔值，True（-1）或 False（0）&lt;/td&gt;
+          &lt;td&gt;避免用Variant存储布尔值，直接声明为Boolean，节省内存&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Integer&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;有符号整数，范围 -32,768~32,767&lt;/td&gt;
+          &lt;td&gt;仅当确定数值在此范围内时使用；现代系统中优先考虑Long（减少溢出风险）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Long&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;有符号整数，范围 -2,147,483,648~2,147,483,647&lt;/td&gt;
+          &lt;td&gt;大多数整数计算优先使用，平衡内存和溢出风险，效率优于Integer&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Single&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;单精度浮点数，精度约6-7位，范围 ±1.401298E-45~±3.402823E38&lt;/td&gt;
+          &lt;td&gt;不需要高精度时使用（如科学计算），避免用于财务等需精确值的场景&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Double&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;双精度浮点数，精度约15-17位，范围 ±4.94065645841247E-324~±1.79769313486232E308&lt;/td&gt;
+          &lt;td&gt;需较高精度的浮点数计算使用，比Single精度高但内存增加&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Currency&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;货币类型，精度到小数点后4位，范围 -922,337,203,685,477.5808~922,337,203,685,477.5807&lt;/td&gt;
+          &lt;td&gt;财务/货币计算优先使用，避免浮点数误差（如Single/Double的精度问题）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Decimal&lt;/td&gt;
+          &lt;td&gt;14&lt;/td&gt;
+          &lt;td&gt;高精度小数，精度28-29位，需通过Variant声明（如 &lt;code&gt;Dim x As Variant: x = CDec(0)&lt;/code&gt;）&lt;/td&gt;
+          &lt;td&gt;仅在需要极高精度时使用（如精密测量），因内存占用高，避免常规场景&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;String（定长）&lt;/td&gt;
+          &lt;td&gt;等于指定长度（每个字符1字节，ANSI编码）&lt;/td&gt;
+          &lt;td&gt;固定长度字符串，声明方式 &lt;code&gt;Dim s As String * n&lt;/code&gt;（n为长度）&lt;/td&gt;
+          &lt;td&gt;已知字符串长度固定时使用，比变长String更节省内存（无指针开销）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;String（变长）&lt;/td&gt;
+          &lt;td&gt;4（指针） + 字符数（每个字符1字节，ANSI）&lt;/td&gt;
+          &lt;td&gt;长度可变的字符串，默认声明方式 &lt;code&gt;Dim s As String&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;字符串长度不固定时使用；避免用字符串存储日期/数值（改用Date/数值类型）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Date&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;日期时间类型，范围 100-1-1~9999-12-31，内部存储为双精度浮点数&lt;/td&gt;
+          &lt;td&gt;存储日期时间必须用Date类型，比字符串存储更高效（节省内存且便于计算）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Object&lt;/td&gt;
+          &lt;td&gt;4（32位系统）/ 8（64位系统）&lt;/td&gt;
+          &lt;td&gt;对象引用，指向具体对象（如Worksheet、Range）&lt;/td&gt;
+          &lt;td&gt;及时用 &lt;code&gt;Set obj = Nothing&lt;/code&gt; 释放未使用的对象，减少内存泄漏；避免未初始化对象&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Variant&lt;/td&gt;
+          &lt;td&gt;16（空/数值）；更多（字符串/对象等）&lt;/td&gt;
+          &lt;td&gt;可变类型，可存储任何数据，默认未声明变量的类型&lt;/td&gt;
+          &lt;td&gt;尽量避免使用，必须用时明确存储类型；优先用具体类型代替（大幅减少内存）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        <item>
         <title>VBA_learning</title>
         <link>https://allergicrosen.fun/p/vba_learning/</link>
         <pubDate>Thu, 16 Oct 2025 21:56:27 +0800</pubDate>
