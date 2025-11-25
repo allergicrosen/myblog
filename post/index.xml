@@ -7,17 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 25 Nov 2025 16:26:38 +0000</lastBuildDate><atom:link href="https://allergicrosen.xyz/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://allergicrosen.xyz/p/test/</link>
-        <pubDate>Wed, 26 Nov 2025 00:06:23 +0800</pubDate>
-        
-        <guid>https://allergicrosen.xyz/p/test/</guid>
-        <description>&lt;h2 id=&#34;附录&#34;&gt;附录
-&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
-&lt;/h3&gt;</description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 25 Nov 2025 16:31:52 +0000</lastBuildDate><atom:link href="https://allergicrosen.xyz/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VBA数组与变量</title>
         <link>https://allergicrosen.xyz/p/vba_array-and-variable/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
