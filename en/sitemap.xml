@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://allergicrosen.github.io/myblog/en/categories/</loc>
+    <loc>allergicrosen.xyz/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/categories/"
+                href="allergicrosen.xyz/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/categories/"
+                href="allergicrosen.xyz/en/categories/"
                 />
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/en/</loc>
+    <loc>allergicrosen.xyz/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/"
+                href="allergicrosen.xyz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/"
+                href="allergicrosen.xyz/en/"
                 />
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/en/tags/</loc>
+    <loc>allergicrosen.xyz/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/tags/"
+                href="allergicrosen.xyz/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/tags/"
+                href="allergicrosen.xyz/en/tags/"
                 />
   </url>
 </urlset>

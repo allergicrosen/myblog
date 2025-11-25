@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Utterances on allergicrosen</title>
-        <link>https://allergicrosen.github.io/myblog/tags/utterances/</link>
+        <link>allergicrosen.xyz/tags/utterances/</link>
         <description>Recent content in Utterances on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 25 Nov 2025 15:29:33 +0000</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/tags/utterances/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Nov 2025 15:33:21 +0000</lastBuildDate><atom:link href="allergicrosen.xyz/tags/utterances/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo增加utterances功能</title>
-        <link>https://allergicrosen.github.io/myblog/p/hugo/</link>
+        <link>allergicrosen.xyz/p/hugo/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/hugo/</guid>
-        <description>&lt;img src="https://allergicrosen.github.io/myblog/p/hugo/cover.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
+        <guid>allergicrosen.xyz/p/hugo/</guid>
+        <description>&lt;img src="allergicrosen.xyz/allergicrosen.xyz/p/hugo/cover.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
 &lt;/h1&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
 	width=&#34;651&#34;
 	height=&#34;692&#34;
 	
@@ -83,7 +83,7 @@
    &lt;/svg&gt;&lt;/span&gt;
    
     &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/p/hugo/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/hugo/1.png&#34;
 	width=&#34;1019&#34;
 	height=&#34;402&#34;
 	
@@ -97,7 +97,7 @@
 		data-flex-basis=&#34;608px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://allergicrosen.github.io/myblog/p/hugo/2.png&#34;
+&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;allergicrosen.xyz/p/hugo/2.png&#34;
 	width=&#34;733&#34;
 	height=&#34;892&#34;
 	
@@ -112,7 +112,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;完毕后检查是否安装：所需仓库-&amp;gt;Settings-&amp;gt;Integrations-&amp;gt;Github Apps里可以看到utterances。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.github.io/myblog/p/hugo/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/hugo/3.png&#34;
 	width=&#34;792&#34;
 	height=&#34;193&#34;
 	

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数组 on allergicrosen</title>
-        <link>https://allergicrosen.github.io/myblog/tags/%E6%95%B0%E7%BB%84/</link>
+        <link>allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</link>
         <description>Recent content in 数组 on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Thu, 23 Oct 2025 21:33:49 +0800</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Oct 2025 21:33:49 +0800</lastBuildDate><atom:link href="allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VBA数组与变量</title>
-        <link>https://allergicrosen.github.io/myblog/p/vba_array-and-variable/</link>
+        <link>allergicrosen.xyz/p/vba_array-and-variable/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>https://allergicrosen.github.io/myblog/p/vba_array-and-variable/</guid>
+        <guid>allergicrosen.xyz/p/vba_array-and-variable/</guid>
         <description>&lt;p&gt;VBA中，&lt;strong&gt;数组（Array）&lt;/strong&gt; 和&lt;strong&gt;集合（Collection）&lt;/strong&gt; 是用于批量存储数据的容器。&lt;/p&gt;
 &lt;h3 id=&#34;数组array相同类型数据的有序集合&#34;&gt;数组（Array）：相同类型数据的有序集合
 &lt;/h3&gt;&lt;p&gt;数组是&lt;strong&gt;相同数据类型&lt;/strong&gt;的元素组成的有序列表，每个元素通过「索引」（位置编号）访问。&lt;br&gt;

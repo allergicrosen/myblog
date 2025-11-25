@@ -2,226 +2,226 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://allergicrosen.github.io/myblog/categories/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/categories/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/categories/"
+                href="allergicrosen.xyz/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/categories/"
+                href="allergicrosen.xyz/categories/"
                 />
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/post/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/post/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/tags/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/tags/"
+                href="allergicrosen.xyz/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/tags/"
+                href="allergicrosen.xyz/tags/"
                 />
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/vba/</loc>
+    <loc>allergicrosen.xyz/categories/vba/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/vba/</loc>
+    <loc>allergicrosen.xyz/tags/vba/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/vba_array-and-variable/</loc>
+    <loc>allergicrosen.xyz/p/vba_array-and-variable/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>allergicrosen.xyz/tags/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E5%8F%98%E9%87%8F/</loc>
+    <loc>allergicrosen.xyz/tags/%E5%8F%98%E9%87%8F/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E6%95%B0%E7%BB%84/</loc>
+    <loc>allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/vba_learning/</loc>
+    <loc>allergicrosen.xyz/p/vba_learning/</loc>
     <lastmod>2025-10-20T22:30:44+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/gui/</loc>
+    <loc>allergicrosen.xyz/tags/gui/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/powershell/</loc>
+    <loc>allergicrosen.xyz/tags/powershell/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/windows-powershell/</loc>
+    <loc>allergicrosen.xyz/categories/windows-powershell/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/windows_powershell_gui/</loc>
+    <loc>allergicrosen.xyz/p/windows_powershell_gui/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</loc>
+    <loc>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/windows/</loc>
+    <loc>allergicrosen.xyz/tags/windows/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/windows_powershell_module/</loc>
+    <loc>allergicrosen.xyz/p/windows_powershell_module/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</loc>
+    <loc>allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2025-10-23T21:36:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
+    <loc>allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2025-10-23T21:36:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/windows_charmap/</loc>
+    <loc>allergicrosen.xyz/p/windows_charmap/</loc>
     <lastmod>2025-03-11T17:39:39+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>allergicrosen.xyz/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2025-03-11T17:39:39+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
+    <loc>allergicrosen.xyz/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
+    <loc>allergicrosen.xyz/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
+    <loc>allergicrosen.xyz/p/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E8%84%9A%E6%9C%AC/</loc>
+    <loc>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/wave_function_overlap_integral_cp2k/</loc>
+    <loc>allergicrosen.xyz/p/wave_function_overlap_integral_cp2k/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/latex_thesis_writing/</loc>
+    <loc>allergicrosen.xyz/p/latex_thesis_writing/</loc>
     <lastmod>2025-02-16T15:00:11+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/shell/</loc>
+    <loc>allergicrosen.xyz/categories/shell/</loc>
     <lastmod>2025-01-21T21:03:54+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/shell/</loc>
+    <loc>allergicrosen.xyz/tags/shell/</loc>
     <lastmod>2025-01-21T21:03:54+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/shell-command/</loc>
+    <loc>allergicrosen.xyz/p/shell-command/</loc>
     <lastmod>2025-01-21T21:03:54+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/elastic-constants/</loc>
+    <loc>allergicrosen.xyz/tags/elastic-constants/</loc>
     <lastmod>2025-01-08T21:28:02+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/vasp/</loc>
+    <loc>allergicrosen.xyz/tags/vasp/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</loc>
+    <loc>allergicrosen.xyz/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/elastic-constants/</loc>
+    <loc>allergicrosen.xyz/p/elastic-constants/</loc>
     <lastmod>2025-01-08T21:28:02+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/namd/</loc>
+    <loc>allergicrosen.xyz/p/namd/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/namd/</loc>
+    <loc>allergicrosen.xyz/tags/namd/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/defect-formation-energy/</loc>
+    <loc>allergicrosen.xyz/p/defect-formation-energy/</loc>
     <lastmod>2024-12-24T21:45:57+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/pyxaid/</loc>
+    <loc>allergicrosen.xyz/tags/pyxaid/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/pyxaid-compile/</loc>
+    <loc>allergicrosen.xyz/p/pyxaid-compile/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/vasp_compile/</loc>
+    <loc>allergicrosen.xyz/p/vasp_compile/</loc>
     <lastmod>2024-11-27T21:03:24+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/hugo/</loc>
+    <loc>allergicrosen.xyz/categories/hugo/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/notes/</loc>
+    <loc>allergicrosen.xyz/p/notes/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/shortcut/</loc>
+    <loc>allergicrosen.xyz/tags/shortcut/</loc>
     <lastmod>2025-01-21T20:34:38+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/video-test/</loc>
+    <loc>allergicrosen.xyz/p/video-test/</loc>
     <lastmod>2025-01-21T20:34:38+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/test/</loc>
+    <loc>allergicrosen.xyz/p/test/</loc>
     <lastmod>2024-11-05T15:55:37+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/test-timeline/</loc>
+    <loc>allergicrosen.xyz/categories/test-timeline/</loc>
     <lastmod>2024-11-05T15:55:37+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>allergicrosen.xyz/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-11-05T15:55:37+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/hugo/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/tags/hugo/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/hugo/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/p/hugo/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/utterances/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/tags/utterances/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/tags/first-blog/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/tags/first-blog/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/p/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/p/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/page/</loc>
+    <loc>allergicrosen.xyz/page/</loc>
     <lastmod>2024-11-29T12:07:12+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/archives/</loc>
+    <loc>allergicrosen.xyz/archives/</loc>
     <lastmod>2024-10-22T21:46:37+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/</loc>
+    <loc>allergicrosen.xyz/</loc>
     <lastmod>2024-09-25T17:56:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.github.io/myblog/en/"
+                href="allergicrosen.xyz/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.github.io/myblog/"
+                href="allergicrosen.xyz/"
                 />
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/gallery/</loc>
-    <lastmod>2025-11-25T15:29:33+00:00</lastmod>
+    <loc>allergicrosen.xyz/gallery/</loc>
+    <lastmod>2025-11-25T15:33:21+00:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>allergicrosen.xyz/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2024-09-26T18:39:52+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/%E9%93%BE%E6%8E%A5/</loc>
+    <loc>allergicrosen.xyz/%E9%93%BE%E6%8E%A5/</loc>
     <lastmod>2024-11-29T12:07:12+08:00</lastmod>
   </url><url>
-    <loc>https://allergicrosen.github.io/myblog/search/</loc>
+    <loc>allergicrosen.xyz/search/</loc>
     <lastmod>2024-10-17T16:35:47+08:00</lastmod>
   </url>
 </urlset>
