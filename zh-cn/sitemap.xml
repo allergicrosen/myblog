@@ -2,220 +2,220 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>allergicrosen.xyz/post/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzpost/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/test/</loc>
+    <loc>https:allergicrosen.xyzp/test/</loc>
     <lastmod>2025-11-26T00:06:28+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzcategories/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="allergicrosen.xyz/en/categories/"
+                href="https:allergicrosen.xyzen/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="allergicrosen.xyz/categories/"
+                href="https:allergicrosen.xyzcategories/"
                 />
   </url><url>
-    <loc>allergicrosen.xyz/tags/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyztags/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="allergicrosen.xyz/en/tags/"
+                href="https:allergicrosen.xyzen/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="allergicrosen.xyz/tags/"
+                href="https:allergicrosen.xyztags/"
                 />
   </url><url>
-    <loc>allergicrosen.xyz/categories/vba/</loc>
+    <loc>https:allergicrosen.xyzcategories/vba/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/vba/</loc>
+    <loc>https:allergicrosen.xyztags/vba/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/vba_array-and-variable/</loc>
+    <loc>https:allergicrosen.xyzp/vba_array-and-variable/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https:allergicrosen.xyztags/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E5%8F%98%E9%87%8F/</loc>
+    <loc>https:allergicrosen.xyztags/%E5%8F%98%E9%87%8F/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</loc>
+    <loc>https:allergicrosen.xyztags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2025-10-23T21:33:49+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/vba_learning/</loc>
+    <loc>https:allergicrosen.xyzp/vba_learning/</loc>
     <lastmod>2025-10-20T22:30:44+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/gui/</loc>
+    <loc>https:allergicrosen.xyztags/gui/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/powershell/</loc>
+    <loc>https:allergicrosen.xyztags/powershell/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/windows-powershell/</loc>
+    <loc>https:allergicrosen.xyzcategories/windows-powershell/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/windows_powershell_gui/</loc>
+    <loc>https:allergicrosen.xyzp/windows_powershell_gui/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</loc>
+    <loc>https:allergicrosen.xyztags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/windows/</loc>
+    <loc>https:allergicrosen.xyztags/windows/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/windows_powershell_module/</loc>
+    <loc>https:allergicrosen.xyzp/windows_powershell_module/</loc>
     <lastmod>2025-09-10T23:31:43+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</loc>
+    <loc>https:allergicrosen.xyzcategories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2025-10-23T21:36:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
+    <loc>https:allergicrosen.xyzp/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2025-10-23T21:36:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/windows_charmap/</loc>
+    <loc>https:allergicrosen.xyzp/windows_charmap/</loc>
     <lastmod>2025-03-11T17:39:39+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>https:allergicrosen.xyzcategories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2025-03-11T17:39:39+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
+    <loc>https:allergicrosen.xyzcategories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
+    <loc>https:allergicrosen.xyztags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
+    <loc>https:allergicrosen.xyzp/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC/</loc>
+    <loc>https:allergicrosen.xyztags/%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/wave_function_overlap_integral_cp2k/</loc>
+    <loc>https:allergicrosen.xyzp/wave_function_overlap_integral_cp2k/</loc>
     <lastmod>2025-02-24T22:58:48+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/latex_thesis_writing/</loc>
+    <loc>https:allergicrosen.xyzp/latex_thesis_writing/</loc>
     <lastmod>2025-02-16T15:00:11+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/shell/</loc>
+    <loc>https:allergicrosen.xyzcategories/shell/</loc>
     <lastmod>2025-01-21T21:03:54+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/shell/</loc>
+    <loc>https:allergicrosen.xyztags/shell/</loc>
     <lastmod>2025-01-21T21:03:54+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/shell-command/</loc>
+    <loc>https:allergicrosen.xyzp/shell-command/</loc>
     <lastmod>2025-01-21T21:03:54+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/elastic-constants/</loc>
+    <loc>https:allergicrosen.xyztags/elastic-constants/</loc>
     <lastmod>2025-01-08T21:28:02+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/vasp/</loc>
+    <loc>https:allergicrosen.xyztags/vasp/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</loc>
+    <loc>https:allergicrosen.xyzcategories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/elastic-constants/</loc>
+    <loc>https:allergicrosen.xyzp/elastic-constants/</loc>
     <lastmod>2025-01-08T21:28:02+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/namd/</loc>
+    <loc>https:allergicrosen.xyzp/namd/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/namd/</loc>
+    <loc>https:allergicrosen.xyztags/namd/</loc>
     <lastmod>2025-01-22T10:16:44+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/defect-formation-energy/</loc>
+    <loc>https:allergicrosen.xyzp/defect-formation-energy/</loc>
     <lastmod>2024-12-24T21:45:57+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/pyxaid/</loc>
+    <loc>https:allergicrosen.xyztags/pyxaid/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/pyxaid-compile/</loc>
+    <loc>https:allergicrosen.xyzp/pyxaid-compile/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/vasp_compile/</loc>
+    <loc>https:allergicrosen.xyzp/vasp_compile/</loc>
     <lastmod>2024-11-27T21:03:24+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/hugo/</loc>
+    <loc>https:allergicrosen.xyzcategories/hugo/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/notes/</loc>
+    <loc>https:allergicrosen.xyzp/notes/</loc>
     <lastmod>2024-12-15T14:59:46+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/shortcut/</loc>
+    <loc>https:allergicrosen.xyztags/shortcut/</loc>
     <lastmod>2025-01-21T20:34:38+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/video-test/</loc>
+    <loc>https:allergicrosen.xyzp/video-test/</loc>
     <lastmod>2025-01-21T20:34:38+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/hugo/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyztags/hugo/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/hugo/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzp/hugo/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/utterances/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyztags/utterances/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzp/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzcategories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyztags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/tags/first-blog/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyztags/first-blog/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/p/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzp/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzcategories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/page/</loc>
+    <loc>https:allergicrosen.xyzpage/</loc>
     <lastmod>2024-11-29T12:07:12+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/archives/</loc>
+    <loc>https:allergicrosen.xyzarchives/</loc>
     <lastmod>2024-10-22T21:46:37+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/</loc>
+    <loc>https:allergicrosen.xyz</loc>
     <lastmod>2024-09-25T17:56:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="allergicrosen.xyz/en/"
+                href="https:allergicrosen.xyzen/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="allergicrosen.xyz/"
+                href="https:allergicrosen.xyz"
                 />
   </url><url>
-    <loc>allergicrosen.xyz/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzgallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/gallery/</loc>
-    <lastmod>2025-11-25T16:06:45+00:00</lastmod>
+    <loc>https:allergicrosen.xyzgallery/</loc>
+    <lastmod>2025-11-25T16:10:43+00:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https:allergicrosen.xyz%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2024-09-26T18:39:52+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/%E9%93%BE%E6%8E%A5/</loc>
+    <loc>https:allergicrosen.xyz%E9%93%BE%E6%8E%A5/</loc>
     <lastmod>2024-11-29T12:07:12+08:00</lastmod>
   </url><url>
-    <loc>allergicrosen.xyz/search/</loc>
+    <loc>https:allergicrosen.xyzsearch/</loc>
     <lastmod>2024-10-17T16:35:47+08:00</lastmod>
   </url>
 </urlset>

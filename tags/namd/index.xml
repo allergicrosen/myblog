@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>NAMD on allergicrosen</title>
-        <link>allergicrosen.xyz/tags/namd/</link>
+        <link>https:allergicrosen.xyztags/namd/</link>
         <description>Recent content in NAMD on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 22 Jan 2025 10:16:44 +0800</lastBuildDate><atom:link href="allergicrosen.xyz/tags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Jan 2025 10:16:44 +0800</lastBuildDate><atom:link href="https:allergicrosen.xyztags/namd/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NAC计算</title>
-        <link>allergicrosen.xyz/p/namd/</link>
+        <link>https:allergicrosen.xyzp/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/p/namd/</guid>
+        <guid>https:allergicrosen.xyzp/namd/</guid>
         <description>&lt;img src="https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png" alt="Featured image of post NAC计算" /&gt;&lt;h1 id=&#34;namd计算&#34;&gt;NAMD计算
 &lt;/h1&gt;&lt;p&gt;记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)&lt;br&gt;
 &lt;strong&gt;基于凯峰给的NAMD-example&lt;/strong&gt;&lt;/p&gt;
@@ -495,7 +495,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;pop&#34;&gt;&lt;strong&gt;Pop：&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;载流子寿命：&lt;br&gt;
 圈起来的那两列为所需数据&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/namd/image.png&#34;
+&lt;img src=&#34;https:allergicrosen.xyz/p/namd/image.png&#34;
 	width=&#34;878&#34;
 	height=&#34;661&#34;
 	
@@ -511,7 +511,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;&lt;br&gt;
 &lt;em&gt;pop.dat&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;绘制后应该是从1下降，&lt;strong&gt;斜率为&lt;em&gt;K&lt;/em&gt;, -1/&lt;em&gt;K&lt;/em&gt;为寿命（单位为 &lt;em&gt;fs&lt;/em&gt;）&lt;/strong&gt; &lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/namd/image-1.png&#34;
+&lt;img src=&#34;https:allergicrosen.xyz/p/namd/image-1.png&#34;
 	width=&#34;480&#34;
 	height=&#34;371&#34;
 	
@@ -527,7 +527,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;&lt;br&gt;
 &lt;em&gt;pop.img&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;要得到&lt;em&gt;K&lt;/em&gt;,需要使用origin拟合斜率，&lt;em&gt;y&lt;/em&gt;轴截距设置为&lt;strong&gt;1&lt;/strong&gt;。&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/namd/image-2.png&#34;
+&lt;img src=&#34;https:allergicrosen.xyz/p/namd/image-2.png&#34;
 	width=&#34;554&#34;
 	height=&#34;445&#34;
 	
@@ -541,7 +541,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 		data-flex-basis=&#34;298px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/namd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https:allergicrosen.xyz/p/namd/image-3.png&#34;
 	width=&#34;477&#34;
 	height=&#34;384&#34;
 	
@@ -559,7 +559,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;dephasing&#34;&gt;&lt;strong&gt;Dephasing:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;退相干：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Dephasing_function.txt&lt;/code&gt;的第一和第三列作为&lt;code&gt;x&lt;/code&gt;和&lt;code&gt;y&lt;/code&gt;导入origin，绘制图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/namd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https:allergicrosen.xyz/p/namd/image-4.png&#34;
 	width=&#34;917&#34;
 	height=&#34;804&#34;
 	
@@ -578,7 +578,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;spectral_&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;振动谱：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/namd/image-5.png&#34;
+&lt;img src=&#34;https:allergicrosen.xyz/p/namd/image-5.png&#34;
 	width=&#34;624&#34;
 	height=&#34;476&#34;
 	
