@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>电脑相关 on allergicrosen</title>
-        <link>allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</link>
+        <link>https://allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</link>
         <description>Recent content in 电脑相关 on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Thu, 23 Oct 2025 21:36:48 +0800</lastBuildDate><atom:link href="allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Oct 2025 21:36:48 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关于电脑微信QQ等软件有网，但是浏览器无网络相关问题</title>
-        <link>allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+        <link>https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
         <pubDate>Fri, 13 Jun 2025 20:25:09 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;被这个问题折磨了很久一直没发现是什么原因，具体就是每次电脑重启都会这样，一直使用360自带的&lt;strong&gt;断网急救箱&lt;/strong&gt;解决，但是每次开机都需要这样设置非常麻烦！&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/360-gongneng.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/360-gongneng.png&#34;
 	width=&#34;1150&#34;
 	height=&#34;724&#34;
 	
@@ -35,7 +35,7 @@
 &lt;/h2&gt;&lt;p&gt;好了，现在将展示修改代理，其实随便百度下就知道如何了，这里简单示意下。（以&lt;code&gt;Windows 11 &lt;/code&gt;为例）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;首先打开&lt;code&gt;网络和Internet&lt;/code&gt;，找到&lt;code&gt;高级网络设置&lt;/code&gt;。&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-setting.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-setting.png&#34;
 	width=&#34;1257&#34;
 	height=&#34;725&#34;
 	
@@ -50,7 +50,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;接着找到&lt;code&gt;internet选项&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-xuanxiang.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-xuanxiang.png&#34;
 	width=&#34;1300&#34;
 	height=&#34;872&#34;
 	
@@ -65,7 +65,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;点击&lt;code&gt;Internet属性&lt;/code&gt;，依次点击&lt;code&gt;连接&lt;/code&gt;-&lt;code&gt;局域网设置&lt;/code&gt;。&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-shuxing.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-shuxing.png&#34;
 	width=&#34;626&#34;
 	height=&#34;812&#34;
 	
@@ -80,7 +80,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;接着取消勾选&lt;code&gt;局域网（LAN）&lt;/code&gt;设置。&lt;br&gt;
-&lt;img src=&#34;allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/LAN-setting.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/LAN-setting.png&#34;
 	width=&#34;584&#34;
 	height=&#34;520&#34;
 	

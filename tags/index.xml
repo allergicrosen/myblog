@@ -2,169 +2,169 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on allergicrosen</title>
-        <link>allergicrosen.xyz/tags/</link>
+        <link>https://allergicrosen.xyz/tags/</link>
         <description>Recent content in Tags on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 25 Nov 2025 16:23:47 +0000</lastBuildDate><atom:link href="allergicrosen.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Nov 2025 16:26:38 +0000</lastBuildDate><atom:link href="https://allergicrosen.xyz/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VBA</title>
-        <link>allergicrosen.xyz/tags/vba/</link>
+        <link>https://allergicrosen.xyz/tags/vba/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/vba/</guid>
+        <guid>https://allergicrosen.xyz/tags/vba/</guid>
         <description></description>
         </item>
         <item>
         <title>编程</title>
-        <link>allergicrosen.xyz/tags/%E7%BC%96%E7%A8%8B/</link>
+        <link>https://allergicrosen.xyz/tags/%E7%BC%96%E7%A8%8B/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E7%BC%96%E7%A8%8B/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E7%BC%96%E7%A8%8B/</guid>
         <description></description>
         </item>
         <item>
         <title>变量</title>
-        <link>allergicrosen.xyz/tags/%E5%8F%98%E9%87%8F/</link>
+        <link>https://allergicrosen.xyz/tags/%E5%8F%98%E9%87%8F/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E5%8F%98%E9%87%8F/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E5%8F%98%E9%87%8F/</guid>
         <description></description>
         </item>
         <item>
         <title>数组</title>
-        <link>allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</link>
+        <link>https://allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E6%95%B0%E7%BB%84/</guid>
         <description></description>
         </item>
         <item>
         <title>GUI</title>
-        <link>allergicrosen.xyz/tags/gui/</link>
+        <link>https://allergicrosen.xyz/tags/gui/</link>
         <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/gui/</guid>
+        <guid>https://allergicrosen.xyz/tags/gui/</guid>
         <description></description>
         </item>
         <item>
         <title>PowerShell</title>
-        <link>allergicrosen.xyz/tags/powershell/</link>
+        <link>https://allergicrosen.xyz/tags/powershell/</link>
         <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/powershell/</guid>
+        <guid>https://allergicrosen.xyz/tags/powershell/</guid>
         <description></description>
         </item>
         <item>
         <title>脚本开发</title>
-        <link>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</link>
+        <link>https://allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</link>
         <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows</title>
-        <link>allergicrosen.xyz/tags/windows/</link>
+        <link>https://allergicrosen.xyz/tags/windows/</link>
         <pubDate>Wed, 10 Sep 2025 22:18:05 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/windows/</guid>
+        <guid>https://allergicrosen.xyz/tags/windows/</guid>
         <description></description>
         </item>
         <item>
         <title>按键精灵</title>
-        <link>allergicrosen.xyz/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</link>
+        <link>https://allergicrosen.xyz/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</link>
         <pubDate>Wed, 19 Feb 2025 13:43:27 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</guid>
         <description></description>
         </item>
         <item>
         <title>脚本</title>
-        <link>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC/</link>
+        <link>https://allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC/</link>
         <pubDate>Wed, 19 Feb 2025 13:43:27 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E8%84%9A%E6%9C%AC/</guid>
         <description></description>
         </item>
         <item>
         <title>Shell</title>
-        <link>allergicrosen.xyz/tags/shell/</link>
+        <link>https://allergicrosen.xyz/tags/shell/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/shell/</guid>
+        <guid>https://allergicrosen.xyz/tags/shell/</guid>
         <description></description>
         </item>
         <item>
         <title>Elastic Constants</title>
-        <link>allergicrosen.xyz/tags/elastic-constants/</link>
+        <link>https://allergicrosen.xyz/tags/elastic-constants/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/elastic-constants/</guid>
+        <guid>https://allergicrosen.xyz/tags/elastic-constants/</guid>
         <description></description>
         </item>
         <item>
         <title>Vasp</title>
-        <link>allergicrosen.xyz/tags/vasp/</link>
+        <link>https://allergicrosen.xyz/tags/vasp/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/vasp/</guid>
+        <guid>https://allergicrosen.xyz/tags/vasp/</guid>
         <description></description>
         </item>
         <item>
         <title>NAMD</title>
-        <link>allergicrosen.xyz/tags/namd/</link>
+        <link>https://allergicrosen.xyz/tags/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/namd/</guid>
+        <guid>https://allergicrosen.xyz/tags/namd/</guid>
         <description></description>
         </item>
         <item>
         <title>Pyxaid</title>
-        <link>allergicrosen.xyz/tags/pyxaid/</link>
+        <link>https://allergicrosen.xyz/tags/pyxaid/</link>
         <pubDate>Wed, 04 Dec 2024 10:19:47 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/pyxaid/</guid>
+        <guid>https://allergicrosen.xyz/tags/pyxaid/</guid>
         <description></description>
         </item>
         <item>
         <title>Shortcut</title>
-        <link>allergicrosen.xyz/tags/shortcut/</link>
+        <link>https://allergicrosen.xyz/tags/shortcut/</link>
         <pubDate>Mon, 04 Nov 2024 16:32:18 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/tags/shortcut/</guid>
+        <guid>https://allergicrosen.xyz/tags/shortcut/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>allergicrosen.xyz/tags/hugo/</link>
+        <link>https://allergicrosen.xyz/tags/hugo/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>allergicrosen.xyz/tags/hugo/</guid>
+        <guid>https://allergicrosen.xyz/tags/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Utterances</title>
-        <link>allergicrosen.xyz/tags/utterances/</link>
+        <link>https://allergicrosen.xyz/tags/utterances/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>allergicrosen.xyz/tags/utterances/</guid>
+        <guid>https://allergicrosen.xyz/tags/utterances/</guid>
         <description></description>
         </item>
         <item>
         <title>微信小程序</title>
-        <link>allergicrosen.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+        <link>https://allergicrosen.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>allergicrosen.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+        <guid>https://allergicrosen.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
         <description></description>
         </item>
         <item>
         <title>First Blog</title>
-        <link>allergicrosen.xyz/tags/first-blog/</link>
+        <link>https://allergicrosen.xyz/tags/first-blog/</link>
         <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>allergicrosen.xyz/tags/first-blog/</guid>
+        <guid>https://allergicrosen.xyz/tags/first-blog/</guid>
         <description></description>
         </item>
         

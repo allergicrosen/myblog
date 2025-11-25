@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Elastic Constants on allergicrosen</title>
-        <link>allergicrosen.xyz/tags/elastic-constants/</link>
+        <link>https://allergicrosen.xyz/tags/elastic-constants/</link>
         <description>Recent content in Elastic Constants on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 08 Jan 2025 21:28:02 +0800</lastBuildDate><atom:link href="allergicrosen.xyz/tags/elastic-constants/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 08 Jan 2025 21:28:02 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/tags/elastic-constants/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>弹性常数计算</title>
-        <link>allergicrosen.xyz/p/elastic-constants/</link>
+        <link>https://allergicrosen.xyz/p/elastic-constants/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/p/elastic-constants/</guid>
+        <guid>https://allergicrosen.xyz/p/elastic-constants/</guid>
         <description>&lt;p&gt;介绍VASP对弹性模量，泊松比等力学常数的相关计算。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;弹性常数&lt;/strong&gt;描述了晶体对外加应变的响应的刚度。在材料的线性变形范围内（应变较小的情况下），体系的应力与应变满足胡克定律(&lt;code&gt;F=-kx&lt;/code&gt;  )。也就是说，对于足够的小的变形，应力与应变成正比，即应力分量(S)是应变分量(E)的线性函数，材料在各个方向上的弹性模量不同，最好体现这种不同的方式就是将胡克定律推广到矩阵形式。&lt;br&gt;
 三维材料的弹性刚度常数矩阵是6×6的：&lt;/p&gt;
