@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Vasp on allergicrosen</title>
-        <link>https:allergicrosen.github.io/blogtags/vasp/</link>
+        <link>allergicrosen.xyz/tags/vasp/</link>
         <description>Recent content in Vasp on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 22 Jan 2025 10:16:44 +0800</lastBuildDate><atom:link href="https:allergicrosen.github.io/blogtags/vasp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Jan 2025 10:16:44 +0800</lastBuildDate><atom:link href="allergicrosen.xyz/tags/vasp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>弹性常数计算</title>
-        <link>https:allergicrosen.github.io/blogp/elastic-constants/</link>
+        <link>allergicrosen.xyz/p/elastic-constants/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>https:allergicrosen.github.io/blogp/elastic-constants/</guid>
+        <guid>allergicrosen.xyz/p/elastic-constants/</guid>
         <description>&lt;p&gt;介绍VASP对弹性模量，泊松比等力学常数的相关计算。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;弹性常数&lt;/strong&gt;描述了晶体对外加应变的响应的刚度。在材料的线性变形范围内（应变较小的情况下），体系的应力与应变满足胡克定律(&lt;code&gt;F=-kx&lt;/code&gt;  )。也就是说，对于足够的小的变形，应力与应变成正比，即应力分量(S)是应变分量(E)的线性函数，材料在各个方向上的弹性模量不同，最好体现这种不同的方式就是将胡克定律推广到矩阵形式。&lt;br&gt;
 三维材料的弹性刚度常数矩阵是6×6的：&lt;/p&gt;
@@ -132,10 +132,10 @@ matlab命令行输入：&lt;code&gt;mechanics_3d_plot_matlab&lt;/code&gt;,输入
         </item>
         <item>
         <title>NAC计算</title>
-        <link>https:allergicrosen.github.io/blogp/namd/</link>
+        <link>allergicrosen.xyz/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
         
-        <guid>https:allergicrosen.github.io/blogp/namd/</guid>
+        <guid>allergicrosen.xyz/p/namd/</guid>
         <description>&lt;img src="https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png" alt="Featured image of post NAC计算" /&gt;&lt;h1 id=&#34;namd计算&#34;&gt;NAMD计算
 &lt;/h1&gt;&lt;p&gt;记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)&lt;br&gt;
 &lt;strong&gt;基于凯峰给的NAMD-example&lt;/strong&gt;&lt;/p&gt;
@@ -618,7 +618,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;pop&#34;&gt;&lt;strong&gt;Pop：&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;载流子寿命：&lt;br&gt;
 圈起来的那两列为所需数据&lt;br&gt;
-&lt;img src=&#34;https:allergicrosen.github.io/blog/p/namd/image.png&#34;
+&lt;img src=&#34;allergicrosen.xyz/p/namd/image.png&#34;
 	width=&#34;878&#34;
 	height=&#34;661&#34;
 	
@@ -634,7 +634,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;&lt;br&gt;
 &lt;em&gt;pop.dat&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;绘制后应该是从1下降，&lt;strong&gt;斜率为&lt;em&gt;K&lt;/em&gt;, -1/&lt;em&gt;K&lt;/em&gt;为寿命（单位为 &lt;em&gt;fs&lt;/em&gt;）&lt;/strong&gt; &lt;br&gt;
-&lt;img src=&#34;https:allergicrosen.github.io/blog/p/namd/image-1.png&#34;
+&lt;img src=&#34;allergicrosen.xyz/p/namd/image-1.png&#34;
 	width=&#34;480&#34;
 	height=&#34;371&#34;
 	
@@ -650,7 +650,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;&lt;br&gt;
 &lt;em&gt;pop.img&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;要得到&lt;em&gt;K&lt;/em&gt;,需要使用origin拟合斜率，&lt;em&gt;y&lt;/em&gt;轴截距设置为&lt;strong&gt;1&lt;/strong&gt;。&lt;br&gt;
-&lt;img src=&#34;https:allergicrosen.github.io/blog/p/namd/image-2.png&#34;
+&lt;img src=&#34;allergicrosen.xyz/p/namd/image-2.png&#34;
 	width=&#34;554&#34;
 	height=&#34;445&#34;
 	
@@ -664,7 +664,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 		data-flex-basis=&#34;298px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https:allergicrosen.github.io/blog/p/namd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/namd/image-3.png&#34;
 	width=&#34;477&#34;
 	height=&#34;384&#34;
 	
@@ -682,7 +682,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;dephasing&#34;&gt;&lt;strong&gt;Dephasing:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;退相干：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Dephasing_function.txt&lt;/code&gt;的第一和第三列作为&lt;code&gt;x&lt;/code&gt;和&lt;code&gt;y&lt;/code&gt;导入origin，绘制图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https:allergicrosen.github.io/blog/p/namd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;allergicrosen.xyz/p/namd/image-4.png&#34;
 	width=&#34;917&#34;
 	height=&#34;804&#34;
 	
@@ -701,7 +701,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;spectral_&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;振动谱：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围&lt;br&gt;
-&lt;img src=&#34;https:allergicrosen.github.io/blog/p/namd/image-5.png&#34;
+&lt;img src=&#34;allergicrosen.xyz/p/namd/image-5.png&#34;
 	width=&#34;624&#34;
 	height=&#34;476&#34;
 	
@@ -786,11 +786,11 @@ NAC目录下，有如下文件：&lt;/p&gt;
         </item>
         <item>
         <title>广州超算编译安装Vasp.5.4.4</title>
-        <link>https:allergicrosen.github.io/blogp/vasp_compile/</link>
+        <link>allergicrosen.xyz/p/vasp_compile/</link>
         <pubDate>Wed, 27 Nov 2024 18:01:14 +0800</pubDate>
         
-        <guid>https:allergicrosen.github.io/blogp/vasp_compile/</guid>
-        <description>&lt;img src="https:allergicrosen.github.io/blog" alt="Featured image of post 广州超算编译安装Vasp.5.4.4" /&gt;&lt;p&gt;这是一个vasp.5.4.4的编译教程（以广州超算为例）&lt;/p&gt;
+        <guid>allergicrosen.xyz/p/vasp_compile/</guid>
+        <description>&lt;img src="allergicrosen.xyz/allergicrosen.xyz/p/vasp_compile/vasp.webp" alt="Featured image of post 广州超算编译安装Vasp.5.4.4" /&gt;&lt;p&gt;这是一个vasp.5.4.4的编译教程（以广州超算为例）&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;准备好vasp544安装包&#34;&gt;准备好vasp.5.4.4安装包
 &lt;/h2&gt;&lt;p&gt;自行下载，或者邮件给我留言 &lt;a href=&#34;mailto:liaojinbo1999@163.com&#34;&gt;点击发送电子邮件至liaojinbo1999@163.com &lt;/a&gt;，vasp为商业软件，请确保有授权！&lt;/p&gt;
