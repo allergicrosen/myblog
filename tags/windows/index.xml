@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Windows on allergicrosen</title>
-        <link>https:allergicrosen.xyztags/windows/</link>
+        <link>https:allergicrosen.github.io/blogtags/windows/</link>
         <description>Recent content in Windows on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 10 Sep 2025 23:31:43 +0800</lastBuildDate><atom:link href="https:allergicrosen.xyztags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Sep 2025 23:31:43 +0800</lastBuildDate><atom:link href="https:allergicrosen.github.io/blogtags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows powershell module install</title>
-        <link>https:allergicrosen.xyzp/windows_powershell_module/</link>
+        <link>https:allergicrosen.github.io/blogp/windows_powershell_module/</link>
         <pubDate>Wed, 10 Sep 2025 22:18:05 +0800</pubDate>
         
-        <guid>https:allergicrosen.xyzp/windows_powershell_module/</guid>
-        <description>&lt;img src="https:allergicrosen.xyz" alt="Featured image of post Windows powershell module install" /&gt;&lt;p&gt;本笔记记录公司限制连接外网，且无法获取管理员权限的情况下安装&lt;code&gt;PowerShell&lt;/code&gt;模块的教程。
+        <guid>https:allergicrosen.github.io/blogp/windows_powershell_module/</guid>
+        <description>&lt;img src="https:allergicrosen.github.io/blog" alt="Featured image of post Windows powershell module install" /&gt;&lt;p&gt;本笔记记录公司限制连接外网，且无法获取管理员权限的情况下安装&lt;code&gt;PowerShell&lt;/code&gt;模块的教程。
 有网络直接命令行输入：&lt;code&gt;Install-Module -Name 模块名称&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;核心思路&lt;/strong&gt;
 由于无法通过Install-Module自动解决依赖，我们需要手动确保模块的所有依赖项都完整存在，并且放置在&lt;code&gt;PowerShell&lt;/code&gt;能够识别的个人模块目录中。&lt;/p&gt;
@@ -29,7 +29,7 @@
    &lt;/svg&gt;&lt;/span&gt;
    
     获取所需module
-&lt;img src=&#34;https:allergicrosen.xyz/p/windows_powershell_module/image.png&#34;
+&lt;img src=&#34;https:allergicrosen.github.io/blog/p/windows_powershell_module/image.png&#34;
 	width=&#34;1628&#34;
 	height=&#34;1053&#34;
 	
@@ -142,10 +142,10 @@
         </item>
         <item>
         <title>Windows 特殊字符快捷键（Alt 代码）</title>
-        <link>https:allergicrosen.xyzp/windows_charmap/</link>
+        <link>https:allergicrosen.github.io/blogp/windows_charmap/</link>
         <pubDate>Tue, 11 Mar 2025 17:36:14 +0800</pubDate>
         
-        <guid>https:allergicrosen.xyzp/windows_charmap/</guid>
+        <guid>https:allergicrosen.github.io/blogp/windows_charmap/</guid>
         <description>&lt;h1 id=&#34;windows-特殊字符快捷键大全alt-代码&#34;&gt;Windows 特殊字符快捷键大全（Alt 代码）
 &lt;/h1&gt;&lt;h2 id=&#34;常用数学符号&#34;&gt;常用数学符号
 &lt;/h2&gt;&lt;table&gt;
