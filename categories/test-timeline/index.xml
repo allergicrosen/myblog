@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Test-Timeline on allergicrosen</title>
-        <link>https://allergicrosen.fun/categories/test-timeline/</link>
+        <link>https://allergicrosen.xyz/categories/test-timeline/</link>
         <description>Recent content in Test-Timeline on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate></lastBuildDate><atom:link href="https://allergicrosen.fun/categories/test-timeline/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate></lastBuildDate><atom:link href="https://allergicrosen.xyz/categories/test-timeline/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>allergicrosen</title>
-        <link>https://allergicrosen.fun/</link>
+        <link>https://allergicrosen.xyz/</link>
         <description>Recent content on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.fun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>allergicrosen</copyright><atom:link href="https://allergicrosen.xyz/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VBA数组与变量</title>
-        <link>https://allergicrosen.fun/p/vba_array-and-variable/</link>
+        <link>https://allergicrosen.xyz/p/vba_array-and-variable/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/vba_array-and-variable/</guid>
+        <guid>https://allergicrosen.xyz/p/vba_array-and-variable/</guid>
         <description>&lt;p&gt;VBA中，&lt;strong&gt;数组（Array）&lt;/strong&gt; 和&lt;strong&gt;集合（Collection）&lt;/strong&gt; 是用于批量存储数据的容器。&lt;/p&gt;
 &lt;h3 id=&#34;数组array相同类型数据的有序集合&#34;&gt;数组（Array）：相同类型数据的有序集合
 &lt;/h3&gt;&lt;p&gt;数组是&lt;strong&gt;相同数据类型&lt;/strong&gt;的元素组成的有序列表，每个元素通过「索引」（位置编号）访问。&lt;br&gt;
@@ -259,10 +259,10 @@
         </item>
         <item>
         <title>VBA_learning</title>
-        <link>https://allergicrosen.fun/p/vba_learning/</link>
+        <link>https://allergicrosen.xyz/p/vba_learning/</link>
         <pubDate>Thu, 16 Oct 2025 21:56:27 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/vba_learning/</guid>
+        <guid>https://allergicrosen.xyz/p/vba_learning/</guid>
         <description>&lt;h1 id=&#34;vba入门教程&#34;&gt;VBA入门教程
 &lt;/h1&gt;&lt;h2 id=&#34;vba基础概述&#34;&gt;VBA基础概述
 &lt;/h2&gt;&lt;h3 id=&#34;什么是vba&#34;&gt;什么是VBA？
@@ -2274,10 +2274,10 @@
         </item>
         <item>
         <title>Windows powershell GUI 方法</title>
-        <link>https://allergicrosen.fun/p/windows_powershell_gui/</link>
+        <link>https://allergicrosen.xyz/p/windows_powershell_gui/</link>
         <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/windows_powershell_gui/</guid>
+        <guid>https://allergicrosen.xyz/p/windows_powershell_gui/</guid>
         <description>&lt;p&gt;PowerShell GUI脚本开发&lt;/p&gt;
 &lt;p&gt;在公司电脑没有管理员权限、没有互联网连接的情况下，使用PowerShell内置的.NET框架创建图形用户界面(GUI)应用程序。主要利用以下两种技术：&lt;/p&gt;
 &lt;ul&gt;
@@ -2441,7 +2441,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 启动窗体&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ShowDialog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行后可以看到：
-&lt;img src=&#34;https://allergicrosen.fun/p/windows_powershell_gui/image.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/windows_powershell_gui/image.png&#34;
 	width=&#34;750&#34;
 	height=&#34;624&#34;
 	
@@ -2473,11 +2473,11 @@
         </item>
         <item>
         <title>Windows powershell module install</title>
-        <link>https://allergicrosen.fun/p/windows_powershell_module/</link>
+        <link>https://allergicrosen.xyz/p/windows_powershell_module/</link>
         <pubDate>Wed, 10 Sep 2025 22:18:05 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/windows_powershell_module/</guid>
-        <description>&lt;img src="https://allergicrosen.fun/p/windows_powershell_module/cover.png" alt="Featured image of post Windows powershell module install" /&gt;&lt;p&gt;本笔记记录公司限制连接外网，且无法获取管理员权限的情况下安装&lt;code&gt;PowerShell&lt;/code&gt;模块的教程。
+        <guid>https://allergicrosen.xyz/p/windows_powershell_module/</guid>
+        <description>&lt;img src="https://allergicrosen.xyz/p/windows_powershell_module/cover.png" alt="Featured image of post Windows powershell module install" /&gt;&lt;p&gt;本笔记记录公司限制连接外网，且无法获取管理员权限的情况下安装&lt;code&gt;PowerShell&lt;/code&gt;模块的教程。
 有网络直接命令行输入：&lt;code&gt;Install-Module -Name 模块名称&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;核心思路&lt;/strong&gt;
 由于无法通过Install-Module自动解决依赖，我们需要手动确保模块的所有依赖项都完整存在，并且放置在&lt;code&gt;PowerShell&lt;/code&gt;能够识别的个人模块目录中。&lt;/p&gt;
@@ -2493,7 +2493,7 @@
    &lt;/svg&gt;&lt;/span&gt;
    
     获取所需module
-&lt;img src=&#34;https://allergicrosen.fun/p/windows_powershell_module/image.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/windows_powershell_module/image.png&#34;
 	width=&#34;1628&#34;
 	height=&#34;1053&#34;
 	
@@ -2606,14 +2606,14 @@
         </item>
         <item>
         <title>关于电脑微信QQ等软件有网，但是浏览器无网络相关问题</title>
-        <link>https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
+        <link>https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</link>
         <pubDate>Fri, 13 Jun 2025 20:25:09 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;被这个问题折磨了很久一直没发现是什么原因，具体就是每次电脑重启都会这样，一直使用360自带的&lt;strong&gt;断网急救箱&lt;/strong&gt;解决，但是每次开机都需要这样设置非常麻烦！&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/360-gongneng.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/360-gongneng.png&#34;
 	width=&#34;1150&#34;
 	height=&#34;724&#34;
 	
@@ -2632,7 +2632,7 @@
 &lt;/h2&gt;&lt;p&gt;好了，现在将展示修改代理，其实随便百度下就知道如何了，这里简单示意下。（以&lt;code&gt;Windows 11 &lt;/code&gt;为例）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;首先打开&lt;code&gt;网络和Internet&lt;/code&gt;，找到&lt;code&gt;高级网络设置&lt;/code&gt;。&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-setting.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-setting.png&#34;
 	width=&#34;1257&#34;
 	height=&#34;725&#34;
 	
@@ -2647,7 +2647,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;接着找到&lt;code&gt;internet选项&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-xuanxiang.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-xuanxiang.png&#34;
 	width=&#34;1300&#34;
 	height=&#34;872&#34;
 	
@@ -2662,7 +2662,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;点击&lt;code&gt;Internet属性&lt;/code&gt;，依次点击&lt;code&gt;连接&lt;/code&gt;-&lt;code&gt;局域网设置&lt;/code&gt;。&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-shuxing.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/internet-shuxing.png&#34;
 	width=&#34;626&#34;
 	height=&#34;812&#34;
 	
@@ -2677,7 +2677,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;接着取消勾选&lt;code&gt;局域网（LAN）&lt;/code&gt;设置。&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/LAN-setting.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E5%BE%AE%E4%BF%A1qq%E7%AD%89%E8%BD%AF%E4%BB%B6%E6%9C%89%E7%BD%91%E4%BD%86%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/LAN-setting.png&#34;
 	width=&#34;584&#34;
 	height=&#34;520&#34;
 	
@@ -2699,10 +2699,10 @@
         </item>
         <item>
         <title>Windows 特殊字符快捷键（Alt 代码）</title>
-        <link>https://allergicrosen.fun/p/windows_charmap/</link>
+        <link>https://allergicrosen.xyz/p/windows_charmap/</link>
         <pubDate>Tue, 11 Mar 2025 17:36:14 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/windows_charmap/</guid>
+        <guid>https://allergicrosen.xyz/p/windows_charmap/</guid>
         <description>&lt;h1 id=&#34;windows-特殊字符快捷键大全alt-代码&#34;&gt;Windows 特殊字符快捷键大全（Alt 代码）
 &lt;/h1&gt;&lt;h2 id=&#34;常用数学符号&#34;&gt;常用数学符号
 &lt;/h2&gt;&lt;table&gt;
@@ -3030,10 +3030,10 @@
         </item>
         <item>
         <title>shell command</title>
-        <link>https://allergicrosen.fun/p/shell-command/</link>
+        <link>https://allergicrosen.xyz/p/shell-command/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/shell-command/</guid>
+        <guid>https://allergicrosen.xyz/p/shell-command/</guid>
         <description>&lt;h1 id=&#34;记录些有用的命令&#34;&gt;&lt;strong&gt;记录些有用的命令&lt;/strong&gt;
 &lt;/h1&gt;&lt;h2 id=&#34;rsync&#34;&gt;&lt;strong&gt;rsync&lt;/strong&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;code&gt;rsync -av --progress source/ destination/&lt;/code&gt;&lt;br&gt;
@@ -3117,10 +3117,10 @@ $0：整行内容。&lt;/p&gt;
         </item>
         <item>
         <title>弹性常数计算</title>
-        <link>https://allergicrosen.fun/p/elastic-constants/</link>
+        <link>https://allergicrosen.xyz/p/elastic-constants/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/elastic-constants/</guid>
+        <guid>https://allergicrosen.xyz/p/elastic-constants/</guid>
         <description>&lt;p&gt;介绍VASP对弹性模量，泊松比等力学常数的相关计算。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;弹性常数&lt;/strong&gt;描述了晶体对外加应变的响应的刚度。在材料的线性变形范围内（应变较小的情况下），体系的应力与应变满足胡克定律(&lt;code&gt;F=-kx&lt;/code&gt;  )。也就是说，对于足够的小的变形，应力与应变成正比，即应力分量(S)是应变分量(E)的线性函数，材料在各个方向上的弹性模量不同，最好体现这种不同的方式就是将胡克定律推广到矩阵形式。&lt;br&gt;
 三维材料的弹性刚度常数矩阵是6×6的：&lt;/p&gt;
@@ -3240,10 +3240,10 @@ matlab命令行输入：&lt;code&gt;mechanics_3d_plot_matlab&lt;/code&gt;,输入
         </item>
         <item>
         <title>NAC计算</title>
-        <link>https://allergicrosen.fun/p/namd/</link>
+        <link>https://allergicrosen.xyz/p/namd/</link>
         <pubDate>Tue, 10 Dec 2024 01:20:09 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/namd/</guid>
+        <guid>https://allergicrosen.xyz/p/namd/</guid>
         <description>&lt;img src="https://quantum-dynamics-hub.github.io/pyxaid/pyxaid_logo.png" alt="Featured image of post NAC计算" /&gt;&lt;h1 id=&#34;namd计算&#34;&gt;NAMD计算
 &lt;/h1&gt;&lt;p&gt;记录计算NAMD过程的一些笔记以及注意事项(只记录计算步骤，不涉及背后原理，因为我自己也没搞明白，后续可能会有完善)&lt;br&gt;
 &lt;strong&gt;基于凯峰给的NAMD-example&lt;/strong&gt;&lt;/p&gt;
@@ -3726,7 +3726,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;pop&#34;&gt;&lt;strong&gt;Pop：&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;载流子寿命：&lt;br&gt;
 圈起来的那两列为所需数据&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/namd/image.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/namd/image.png&#34;
 	width=&#34;878&#34;
 	height=&#34;661&#34;
 	
@@ -3742,7 +3742,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;&lt;br&gt;
 &lt;em&gt;pop.dat&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;绘制后应该是从1下降，&lt;strong&gt;斜率为&lt;em&gt;K&lt;/em&gt;, -1/&lt;em&gt;K&lt;/em&gt;为寿命（单位为 &lt;em&gt;fs&lt;/em&gt;）&lt;/strong&gt; &lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-1.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/namd/image-1.png&#34;
 	width=&#34;480&#34;
 	height=&#34;371&#34;
 	
@@ -3758,7 +3758,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &gt;&lt;br&gt;
 &lt;em&gt;pop.img&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;要得到&lt;em&gt;K&lt;/em&gt;,需要使用origin拟合斜率，&lt;em&gt;y&lt;/em&gt;轴截距设置为&lt;strong&gt;1&lt;/strong&gt;。&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-2.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/namd/image-2.png&#34;
 	width=&#34;554&#34;
 	height=&#34;445&#34;
 	
@@ -3772,7 +3772,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 		data-flex-basis=&#34;298px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/namd/image-3.png&#34;
 	width=&#34;477&#34;
 	height=&#34;384&#34;
 	
@@ -3790,7 +3790,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;dephasing&#34;&gt;&lt;strong&gt;Dephasing:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;退相干：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Dephasing_function.txt&lt;/code&gt;的第一和第三列作为&lt;code&gt;x&lt;/code&gt;和&lt;code&gt;y&lt;/code&gt;导入origin，绘制图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/namd/image-4.png&#34;
 	width=&#34;917&#34;
 	height=&#34;804&#34;
 	
@@ -3809,7 +3809,7 @@ NAC目录下，有如下文件：&lt;/p&gt;
 &lt;h4 id=&#34;spectral_&#34;&gt;&lt;strong&gt;Spectral_density:&lt;/strong&gt;
 &lt;/h4&gt;&lt;p&gt;振动谱：&lt;br&gt;
 将&lt;code&gt;icond0pair0_1Spectral_density.txt&lt;/code&gt;的第4列作为为x轴，第8列作为y轴）导入至origin，设置好x轴范围&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/namd/image-5.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/namd/image-5.png&#34;
 	width=&#34;624&#34;
 	height=&#34;476&#34;
 	
@@ -3894,11 +3894,11 @@ NAC目录下，有如下文件：&lt;/p&gt;
         </item>
         <item>
         <title>广州超算编译安装Vasp.5.4.4</title>
-        <link>https://allergicrosen.fun/p/vasp_compile/</link>
+        <link>https://allergicrosen.xyz/p/vasp_compile/</link>
         <pubDate>Wed, 27 Nov 2024 18:01:14 +0800</pubDate>
         
-        <guid>https://allergicrosen.fun/p/vasp_compile/</guid>
-        <description>&lt;img src="https://allergicrosen.fun/p/vasp_compile/vasp.webp" alt="Featured image of post 广州超算编译安装Vasp.5.4.4" /&gt;&lt;p&gt;这是一个vasp.5.4.4的编译教程（以广州超算为例）&lt;/p&gt;
+        <guid>https://allergicrosen.xyz/p/vasp_compile/</guid>
+        <description>&lt;img src="https://allergicrosen.xyz/p/vasp_compile/vasp.webp" alt="Featured image of post 广州超算编译安装Vasp.5.4.4" /&gt;&lt;p&gt;这是一个vasp.5.4.4的编译教程（以广州超算为例）&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;准备好vasp544安装包&#34;&gt;准备好vasp.5.4.4安装包
 &lt;/h2&gt;&lt;p&gt;自行下载，或者邮件给我留言 &lt;a href=&#34;mailto:liaojinbo1999@163.com&#34;&gt;点击发送电子邮件至liaojinbo1999@163.com &lt;/a&gt;，vasp为商业软件，请确保有授权！&lt;/p&gt;
@@ -4121,13 +4121,13 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         </item>
         <item>
         <title>hugo增加utterances功能</title>
-        <link>https://allergicrosen.fun/p/hugo/</link>
+        <link>https://allergicrosen.xyz/p/hugo/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/p/hugo/</guid>
-        <description>&lt;img src="https://allergicrosen.fun/p/hugo/cover.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
+        <guid>https://allergicrosen.xyz/p/hugo/</guid>
+        <description>&lt;img src="https://allergicrosen.xyz/p/hugo/cover.png" alt="Featured image of post hugo增加utterances功能" /&gt;&lt;h1 id=&#34;hugo在个人网站增加评论区的功能&#34;&gt;Hugo在个人网站增加评论区的功能
 &lt;/h1&gt;&lt;h2 id=&#34;step1-打开hugo主目录前提已经部署好&#34;&gt;Step1 :打开hugo主目录（前提已经部署好）
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/hugo/%E4%B8%BB%E7%9B%AE%E5%BD%95.png&#34;
 	width=&#34;651&#34;
 	height=&#34;692&#34;
 	
@@ -4195,7 +4195,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
    &lt;/svg&gt;&lt;/span&gt;
    
     &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/hugo/1.png&#34;
 	width=&#34;1019&#34;
 	height=&#34;402&#34;
 	
@@ -4209,7 +4209,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
 		data-flex-basis=&#34;608px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://allergicrosen.fun/p/hugo/2.png&#34;
+&lt;p&gt;登录验证，按照提示操作，选择所需仓库进行安装&lt;img src=&#34;https://allergicrosen.xyz/p/hugo/2.png&#34;
 	width=&#34;733&#34;
 	height=&#34;892&#34;
 	
@@ -4224,7 +4224,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;完毕后检查是否安装：所需仓库-&amp;gt;Settings-&amp;gt;Integrations-&amp;gt;Github Apps里可以看到utterances。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/hugo/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/hugo/3.png&#34;
 	width=&#34;792&#34;
 	height=&#34;193&#34;
 	
@@ -4245,11 +4245,11 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         </item>
         <item>
         <title>动手做一个和女朋友互动的微信小程序</title>
-        <link>https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+        <link>https://allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
-        <description>&lt;img src="https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/WeChatminiprogram.webp" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
+        <guid>https://allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+        <description>&lt;img src="https://allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/WeChatminiprogram.webp" alt="Featured image of post 动手做一个和女朋友互动的微信小程序" /&gt;&lt;p&gt;&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A4%BA%E6%84%8F.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1032&#34;
 	
@@ -4319,7 +4319,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意应当是导入这个目录&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d-----        2024/10/14     16:02                miniprogram
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为作者写的云函数，所以需要用到云开发工具，点击左上角的云开发按钮&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%91%E5%BC%80%E5%8F%91.png&#34;
 	width=&#34;396&#34;
 	height=&#34;96&#34;
 	
@@ -4354,7 +4354,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
    
     &lt;br&gt;
 点击&lt;code&gt;基础功能———订阅消息&lt;/code&gt;，去挑选一个适合自己的模板&lt;br&gt;
-&lt;img src=&#34;https://allergicrosen.fun/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/p/%E5%8A%A8%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E5%92%8C%E5%A5%B3%E6%9C%8B%E5%8F%8B%E4%BA%92%E5%8A%A8%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5.png&#34;
 	width=&#34;1700&#34;
 	height=&#34;539&#34;
 	
@@ -4415,11 +4415,11 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         </item>
         <item>
         <title>博客网站</title>
-        <link>https://allergicrosen.fun/p/%E9%9A%8F%E7%AC%94/</link>
+        <link>https://allergicrosen.xyz/p/%E9%9A%8F%E7%AC%94/</link>
         <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/p/%E9%9A%8F%E7%AC%94/</guid>
-        <description>&lt;img src="https://allergicrosen.fun/p/%E9%9A%8F%E7%AC%94/wallhaven-x6r1wd.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h1 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;本人咸鱼，有空就更，没空就在划水
+        <guid>https://allergicrosen.xyz/p/%E9%9A%8F%E7%AC%94/</guid>
+        <description>&lt;img src="https://allergicrosen.xyz/p/%E9%9A%8F%E7%AC%94/wallhaven-x6r1wd.jpg" alt="Featured image of post 博客网站" /&gt;&lt;h1 id=&#34;本人咸鱼有空就更没空就在划水&#34;&gt;本人咸鱼，有空就更，没空就在划水
 &lt;/h1&gt;&lt;p&gt;主要记录一些想法，日常，还有知识分享。&lt;/p&gt;
 &lt;h2 id=&#34;个人喜欢的一首歌&#34;&gt;个人喜欢的一首歌
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -4483,18 +4483,18 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         </item>
         <item>
         <title>归档</title>
-        <link>https://allergicrosen.fun/archives/</link>
+        <link>https://allergicrosen.xyz/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/archives/</guid>
+        <guid>https://allergicrosen.xyz/archives/</guid>
         <description></description>
         </item>
         <item>
         <title></title>
-        <link>https://allergicrosen.fun/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</link>
+        <link>https://allergicrosen.xyz/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</guid>
+        <guid>https://allergicrosen.xyz/gallery/hugo%E5%A2%9E%E5%8A%A0utterances%E5%8A%9F%E8%83%BD/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;content
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── gallery
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    └─hugo增加utterances功能
@@ -4507,10 +4507,10 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         </item>
         <item>
         <title>关于</title>
-        <link>https://allergicrosen.fun/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://allergicrosen.xyz/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://allergicrosen.xyz/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;GitHub主页：&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;https://github.com/allergicrosen&lt;/a&gt;
 
     &lt;/p&gt;
@@ -4525,18 +4525,18 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         </item>
         <item>
         <title>链接</title>
-        <link>https://allergicrosen.fun/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://allergicrosen.xyz/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://allergicrosen.xyz/%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://allergicrosen.fun/search/</link>
+        <link>https://allergicrosen.xyz/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.fun/search/</guid>
+        <guid>https://allergicrosen.xyz/search/</guid>
         <description></description>
         </item>
         

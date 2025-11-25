@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://allergicrosen.fun/en/categories/</loc>
+    <loc>https://allergicrosen.xyz/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.fun/categories/"
+                href="https://allergicrosen.xyz/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.fun/en/categories/"
+                href="https://allergicrosen.xyz/en/categories/"
                 />
   </url><url>
-    <loc>https://allergicrosen.fun/en/</loc>
+    <loc>https://allergicrosen.xyz/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.fun/"
+                href="https://allergicrosen.xyz/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.fun/en/"
+                href="https://allergicrosen.xyz/en/"
                 />
   </url><url>
-    <loc>https://allergicrosen.fun/en/tags/</loc>
+    <loc>https://allergicrosen.xyz/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://allergicrosen.fun/tags/"
+                href="https://allergicrosen.xyz/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://allergicrosen.fun/en/tags/"
+                href="https://allergicrosen.xyz/en/tags/"
                 />
   </url>
 </urlset>
