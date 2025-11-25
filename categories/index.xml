@@ -2,97 +2,97 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on allergicrosen</title>
-        <link>allergicrosen.xyz/categories/</link>
+        <link>www.allergicrosen.xyz/categories/</link>
         <description>Recent content in Categories on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 25 Nov 2025 15:33:21 +0000</lastBuildDate><atom:link href="allergicrosen.xyz/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Nov 2025 15:42:00 +0000</lastBuildDate><atom:link href="www.allergicrosen.xyz/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VBA</title>
-        <link>allergicrosen.xyz/categories/vba/</link>
+        <link>www.allergicrosen.xyz/categories/vba/</link>
         <pubDate>Thu, 23 Oct 2025 21:15:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/vba/</guid>
+        <guid>www.allergicrosen.xyz/categories/vba/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows PowerShell</title>
-        <link>allergicrosen.xyz/categories/windows-powershell/</link>
+        <link>www.allergicrosen.xyz/categories/windows-powershell/</link>
         <pubDate>Wed, 10 Sep 2025 22:39:53 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/windows-powershell/</guid>
+        <guid>www.allergicrosen.xyz/categories/windows-powershell/</guid>
         <description></description>
         </item>
         <item>
         <title>电脑相关</title>
-        <link>allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</link>
+        <link>www.allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</link>
         <pubDate>Fri, 13 Jun 2025 20:25:09 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</guid>
+        <guid>www.allergicrosen.xyz/categories/%E7%94%B5%E8%84%91%E7%9B%B8%E5%85%B3/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows快捷键</title>
-        <link>allergicrosen.xyz/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+        <link>www.allergicrosen.xyz/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
         <pubDate>Tue, 11 Mar 2025 17:36:14 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+        <guid>www.allergicrosen.xyz/categories/windows%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
         <description></description>
         </item>
         <item>
         <title>按键精灵</title>
-        <link>allergicrosen.xyz/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</link>
+        <link>www.allergicrosen.xyz/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</link>
         <pubDate>Wed, 19 Feb 2025 13:43:27 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</guid>
+        <guid>www.allergicrosen.xyz/categories/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5/</guid>
         <description></description>
         </item>
         <item>
         <title>Shell</title>
-        <link>allergicrosen.xyz/categories/shell/</link>
+        <link>www.allergicrosen.xyz/categories/shell/</link>
         <pubDate>Thu, 16 Jan 2025 01:34:15 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/shell/</guid>
+        <guid>www.allergicrosen.xyz/categories/shell/</guid>
         <description></description>
         </item>
         <item>
         <title>材料计算</title>
-        <link>allergicrosen.xyz/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</link>
+        <link>www.allergicrosen.xyz/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</link>
         <pubDate>Wed, 08 Jan 2025 20:13:35 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</guid>
+        <guid>www.allergicrosen.xyz/categories/%E6%9D%90%E6%96%99%E8%AE%A1%E7%AE%97/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>allergicrosen.xyz/categories/hugo/</link>
+        <link>www.allergicrosen.xyz/categories/hugo/</link>
         <pubDate>Mon, 04 Nov 2024 20:26:54 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/hugo/</guid>
+        <guid>www.allergicrosen.xyz/categories/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Test-Timeline</title>
-        <link>allergicrosen.xyz/categories/test-timeline/</link>
+        <link>www.allergicrosen.xyz/categories/test-timeline/</link>
         <pubDate>Tue, 22 Oct 2024 19:11:51 +0800</pubDate>
         
-        <guid>allergicrosen.xyz/categories/test-timeline/</guid>
+        <guid>www.allergicrosen.xyz/categories/test-timeline/</guid>
         <description></description>
         </item>
         <item>
         <title>网页开发</title>
-        <link>allergicrosen.xyz/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</link>
+        <link>www.allergicrosen.xyz/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>allergicrosen.xyz/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</guid>
+        <guid>www.allergicrosen.xyz/categories/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/</guid>
         <description></description>
         </item>
         <item>
         <title>随笔</title>
-        <link>allergicrosen.xyz/categories/%E9%9A%8F%E7%AC%94/</link>
+        <link>www.allergicrosen.xyz/categories/%E9%9A%8F%E7%AC%94/</link>
         <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>allergicrosen.xyz/categories/%E9%9A%8F%E7%AC%94/</guid>
+        <guid>www.allergicrosen.xyz/categories/%E9%9A%8F%E7%AC%94/</guid>
         <description></description>
         </item>
         

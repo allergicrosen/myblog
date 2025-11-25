@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Example Site</title>
-        <link>allergicrosen.xyz/en/categories/</link>
+        <link>www.allergicrosen.xyz/en/categories/</link>
         <description>Recent content in Categories on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>allergicrosen</copyright><atom:link href="allergicrosen.xyz/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>allergicrosen</copyright><atom:link href="www.allergicrosen.xyz/en/categories/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
