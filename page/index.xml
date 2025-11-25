@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on allergicrosen</title>
-        <link>https://allergicrosen.xyz/page/</link>
+        <link>https://allergicrosen.github.io/myblog/page/</link>
         <description>Recent content in Pages on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Fri, 29 Nov 2024 12:07:12 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 Nov 2024 12:07:12 +0800</lastBuildDate><atom:link href="https://allergicrosen.github.io/myblog/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>https://allergicrosen.xyz/archives/</link>
+        <link>https://allergicrosen.github.io/myblog/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.xyz/archives/</guid>
+        <guid>https://allergicrosen.github.io/myblog/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>https://allergicrosen.xyz/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://allergicrosen.github.io/myblog/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.xyz/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://allergicrosen.github.io/myblog/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;GitHub主页：&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;https://github.com/allergicrosen&lt;/a&gt;
 
     &lt;/p&gt;
@@ -35,18 +35,18 @@
         </item>
         <item>
         <title>链接</title>
-        <link>https://allergicrosen.xyz/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://allergicrosen.github.io/myblog/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.xyz/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://allergicrosen.github.io/myblog/%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://allergicrosen.xyz/search/</link>
+        <link>https://allergicrosen.github.io/myblog/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://allergicrosen.xyz/search/</guid>
+        <guid>https://allergicrosen.github.io/myblog/search/</guid>
         <description></description>
         </item>
         
