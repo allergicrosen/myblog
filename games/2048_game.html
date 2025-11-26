@@ -1,296 +1,511 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2048 小游戏</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>2048 经典小游戏 - 响应式</title>
     <style>
-        .game-board {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            background-color: #bbada0;
-            padding: 10px;
-            border-radius: 5px;
+        /* CSS Variables for easy theming */
+        :root {
+            --bg-color: #faf8ef;
+            --grid-color: #bbada0;
+            --font-color: #776e65;
+            --tile-2-bg: #eee4da;
+            --tile-4-bg: #ede0c8;
+            --tile-8-bg: #f2b179;
+            --tile-16-bg: #f59563;
+            --tile-32-bg: #f67c5f;
+            --tile-64-bg: #f65e3b;
+            --tile-128-bg: #edcf72;
+            --tile-256-bg: #edcc61;
+            --tile-512-bg: #edc850;
+            --tile-1024-bg: #edc53f;
+            --tile-2048-bg: #edc22e;
+            --dark-font: #f9f6f2;
+
+            /* 定义网格间距 */
+            --grid-gap: 10px;
+            /* 由 JS 动态设置的方块尺寸占位 */
+            --tile-calculated-size: 100px;
         }
 
-        .game-cell {
-            width: 100px;
-            height: 100px;
-            background-color: rgba(238, 228, 218, 0.35);
-            border-radius: 5px;
+        body {
+            font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--font-color);
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 36px;
-            font-weight: bold;
+            min-height: 100vh;
+            padding: 20px;
+            touch-action: none; 
+            box-sizing: border-box; 
+            overflow: hidden; /* 防止滑动时出现滚动条 */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--font-color);
+        }
+
+        .scores-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .score-box {
+            background: var(--grid-color);
+            color: var(--dark-font);
+            padding: 5px 15px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .score-value {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .new-game-btn {
+            background-color: #8f7a66;
+            color: var(--dark-font);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1em;
+            margin-left: 10px;
+            transition: opacity 0.2s;
+        }
+        .new-game-btn:hover { opacity: 0.8; }
+
+        /* --- 游戏网格和方块样式 --- */
+        .game-container {
+            position: relative;
+            background-color: var(--grid-color);
+            border-radius: 6px;
+            padding: var(--grid-gap); 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: var(--grid-gap); 
+        }
+
+        .grid-cell {
+            width: 100%;
+            padding-bottom: 100%; 
+            background-color: rgba(238, 228, 218, 0.35);
+            border-radius: 3px;
+            position: relative; 
+        }
+
+        .tile-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; 
+            box-sizing: border-box; 
+        }
+
+        .tile {
+            position: absolute;
+            width: var(--tile-calculated-size); 
+            height: var(--tile-calculated-size); 
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 2.5em;
+            transition: transform 0.1s ease-in-out; /* 平滑移动动画 */
+        }
+        
+        /* 动画：新生成的方块 */
+        .tile.tile-new {
+            animation: appear 0.2s ease-in;
+        }
+
+        @keyframes appear {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* 颜色主题映射 (保留，与 JS 中的 drawBoard 配合) */
+        .tile-2 { background: var(--tile-2-bg); font-size: 2.5em; color: var(--font-color); }
+        .tile-4 { background: var(--tile-4-bg); font-size: 2.5em; color: var(--font-color); }
+        .tile-8 { background: var(--tile-8-bg); font-size: 2.5em; color: var(--dark-font); }
+        .tile-16 { background: var(--tile-16-bg); font-size: 2em; color: var(--dark-font); }
+        .tile-32 { background: var(--tile-32-bg); font-size: 2em; color: var(--dark-font); }
+        .tile-64 { background: var(--tile-64-bg); font-size: 2em; color: var(--dark-font); }
+        .tile-128 { background: var(--tile-128-bg); font-size: 1.5em; color: var(--dark-font); }
+        .tile-256 { background: var(--tile-256-bg); font-size: 1.5em; color: var(--dark-font); }
+        .tile-512 { background: var(--tile-512-bg); font-size: 1.5em; color: var(--dark-font); }
+        .tile-1024 { background: var(--tile-1024-bg); font-size: 1em; color: var(--dark-font); }
+        .tile-2048 { background: var(--tile-2048-bg); font-size: 1em; color: var(--dark-font); }
+        
+        /* 移动端字体调整 */
+        @media (max-width: 400px) {
+            .tile { font-size: 2em; }
+            .tile-128, .tile-256, .tile-512 { font-size: 1.3em; }
+            .tile-1024, .tile-2048 { font-size: 0.9em; }
+            h1 { font-size: 3em; }
         }
     </style>
 </head>
+<body>
 
-<body class="bg-gray-100 flex justify-center items-center h-screen">
-    <div class="game-container">
-        <h1 class="text-3xl font-bold mb-4">2048 小游戏</h1>
-        <div class="text-2xl mb-4">分数: <span id="score">0</span></div>
-        <div class="game-board" id="game-board"></div>
-        <div class="mt-4">
-            <button id="new-game" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">新游戏</button>
+<div class="container">
+    <header>
+        <h1>2048</h1>
+        <div class="scores-container">
+            <div class="score-box">
+                分数<br>
+                <span id="score" class="score-value">0</span>
+            </div>
+            <div class="score-box">
+                最高分<br>
+                <span id="best-score" class="score-value">0</span>
+            </div>
         </div>
+        <button id="new-game-btn" class="new-game-btn">新游戏</button>
+    </header>
+
+    <div id="game-grid-bg" class="game-container">
+        <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+        <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+        <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+        <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+        <div id="tile-container" class="tile-container"></div>
     </div>
-    <script>
-        const boardSize = 4;
-        const gameBoard = document.getElementById('game-board');
-        const newGameButton = document.getElementById('new-game');
-        let board = [];
-        let score = 0;  // 新增分数变量
+</div>
 
-        function initBoard() {
-            board = Array.from({ length: boardSize }, () => Array(boardSize).fill(0));
-            addRandomTile();
-            addRandomTile();
-            renderBoard();
-            score = 0;  // 重置分数
-            document.getElementById('score').textContent = score;
-        }
+<script>
+    const GRID_SIZE = 4;
+    // 从 CSS 变量获取间距值
+    const TILE_GAP_VAR = getComputedStyle(document.documentElement).getPropertyValue('--grid-gap');
+    const TILE_GAP = parseFloat(TILE_GAP_VAR); 
 
-        function addRandomTile() {
-            const emptyCells = [];
-            for (let i = 0; i < boardSize; i++) {
-                for (let j = 0; j < boardSize; j++) {
-                    if (board[i][j] === 0) {
-                        emptyCells.push({ row: i, col: j });
-                    }
-                }
-            }
-            if (emptyCells.length > 0) {
-                const randomIndex = Math.floor(Math.random() * emptyCells.length);
-                const { row, col } = emptyCells[randomIndex];
-                board[row][col] = Math.random() < 0.9 ? 2 : 4;
-            }
-        }
+    let board = [];
+    let score = 0;
+    let isGameOver = false;
 
-        function renderBoard() {
-            gameBoard.innerHTML = '';
-            for (let i = 0; i < boardSize; i++) {
-                for (let j = 0; j < boardSize; j++) {
-                    const cell = document.createElement('div');
-                    cell.classList.add('game-cell');
-                    if (board[i][j] !== 0) {
-                        cell.textContent = board[i][j];
-                        cell.style.backgroundColor = getTileColor(board[i][j]);
-                    }
-                    gameBoard.appendChild(cell);
-                }
-            }
-        }
-
-        function getTileColor(value) {
-            switch (value) {
-                case 2: return '#eee4da';
-                case 4: return '#ede0c8';
-                case 8: return '#f2b179';
-                case 16: return '#f59563';
-                case 32: return '#f67c5f';
-                case 64: return '#f65e3b';
-                case 128: return '#edcf72';
-                case 256: return '#edcc61';
-                case 512: return '#edc850';
-                case 1024: return '#edc53f';
-                case 2048: return '#edc22e';
-                default: return '#3c3a32';
-            }
-        }
-
-        function handleKeyPress(event) {
-            let moved = false;
-            switch (event.key) {
-                case 'ArrowUp':
-                    moved = moveUp();
-                    break;
-                case 'ArrowDown':
-                    moved = moveDown();
-                    break;
-                case 'ArrowLeft':
-                    moved = moveLeft();
-                    break;
-                case 'ArrowRight':
-                    moved = moveRight();
-                    break;
-            }
-            if (moved) {
-                addRandomTile();
-                renderBoard();
-                if (isGameOver()) {
-                    alert('游戏结束！');
-                }
-            }
-        }
-
-        // 在 renderBoard() 函数后添加：
-        function updateScore(value) {
-            score += value;
-            document.getElementById('score').textContent = score;
-        }
-
-        // 修改所有移动函数（以 moveUp 为例），在合并方块时增加分数：
-        function moveUp() {
-            let moved = false;
-            for (let col = 0; col < boardSize; col++) {
-                const newCol = [];
-                let merged = false;
-                for (let row = 0; row < boardSize; row++) {
-                    if (board[row][col] !== 0) {
-                        if (newCol.length > 0 && !merged && newCol[newCol.length - 1] === board[row][col]) {
-                            newCol[newCol.length - 1] *= 2;
-                            updateScore(newCol[newCol.length - 1]);  // 新增分数更新
-                            merged = true;
-                            moved = true;
-                        } else {
-                            newCol.push(board[row][col]);
-                            merged = false;
-                        }
-                    }
-                }
-                while (newCol.length < boardSize) {
-                    newCol.push(0);
-                }
-                for (let row = 0; row < boardSize; row++) {
-                    if (board[row][col]!== newCol[row]) {
-                        moved = true;
-                    }
-                    board[row][col] = newCol[row];
-                }
-            }
-            return moved;
-        }
-
-        function moveDown() {
-            let moved = false;
-            for (let col = 0; col < boardSize; col++) {
-                const newCol = [];
-                let merged = false;
-                for (let row = boardSize - 1; row >= 0; row--) {
-                    if (board[row][col] !== 0) {
-                        if (newCol.length > 0 &&!merged && newCol[newCol.length - 1] === board[row][col]) {
-                            newCol[newCol.length - 1] *= 2;
-                            updateScore(newCol[newCol.length - 1]);  // 新增分数更新
-                            merged = true;
-                            moved = true;
-                        } else {
-                            newCol.push(board[row][col]);
-                            merged = false;
-                        }
-                    }
-                }
-                while (newCol.length < boardSize) {
-                    newCol.push(0);
-                }
-                newCol.reverse();
-                for (let row = 0; row < boardSize; row++) {
-                    if (board[row][col]!== newCol[row]) {
-                        moved = true;
-                    }
-                    board[row][col] = newCol[row];
-                }
-            }
-            return moved;
-        }
-
-        function moveLeft() {
-            let moved = false;
-            for (let row = 0; row < boardSize; row++) {
-                const newRow = [];
-                let merged = false;
-                for (let col = 0; col < boardSize; col++) {
-                    if (board[row][col] !== 0) {
-                        if (newRow.length > 0 &&!merged && newRow[newRow.length - 1] === board[row][col]) {
-                            newRow[newRow.length - 1] *= 2;
-                            updateScore(newRow[newRow.length - 1]);  // 新增分数更新
-                            merged = true;
-                            moved = true;
-                        } else {
-                            newRow.push(board[row][col]);
-                            merged = false;
-                        }
-                    }
-                }
-                while (newRow.length < boardSize) {
-                    newRow.push(0);
-                }
-                for (let col = 0; col < boardSize; col++) {
-                    if (board[row][col]!== newRow[col]) {
-                        moved = true;
-                    }
-                    board[row][col] = newRow[col];
-                }
-            }
-            return moved;
-        }
-
-        function moveRight() {
-            let moved = false;
-            for (let row = 0; row < boardSize; row++) {
-                const newRow = [];
-                let merged = false;
-                for (let col = boardSize - 1; col >= 0; col--) {
-                    if (board[row][col] !== 0) {
-                        if (newRow.length > 0 &&!merged && newRow[newRow.length - 1] === board[row][col]) {
-                            newRow[newRow.length - 1] *= 2;
-                            updateScore(newRow[newRow.length - 1]);  // 新增分数更新
-                            merged = true;
-                            moved = true;
-                        } else {
-                            newRow.push(board[row][col]);
-                            merged = false;
-                        }
-                    }
-                }
-                while (newRow.length < boardSize) {
-                    newRow.push(0);
-                }
-                newRow.reverse();
-                for (let col = 0; col < boardSize; col++) {
-                    if (board[row][col]!== newRow[col]) {
-                        moved = true;
-                    }
-                    board[row][col] = newRow[col];
-                }
-            }
-            return moved;
-        }
-
-        function isGameOver() {
-            for (let i = 0; i < boardSize; i++) {
-                for (let j = 0; j < boardSize; j++) {
-                    if (board[i][j] === 0) {
-                        return false;
-                    }
-                    if (i > 0 && board[i][j] === board[i - 1][j]) {
-                        return false;
-                    }
-                    if (i < boardSize - 1 && board[i][j] === board[i + 1][j]) {
-                        return false;
-                    }
-                    if (j > 0 && board[i][j] === board[i][j - 1]) {
-                        return false;
-                    }
-                    if (j < boardSize - 1 && board[i][j] === board[i][j + 1]) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        newGameButton.addEventListener('click', initBoard);
-        document.addEventListener('keydown', handleKeyPress);
-
-        initBoard();
-    </script>
-</body>
-
-</html>
+    const gameGridBg = document.getElementById('game-grid-bg');
+    const tileContainer = document.getElementById('tile-container');
+    const scoreDisplay = document.getElementById('score');
+    const bestScoreDisplay = document.getElementById('best-score');
+    const newGameBtn = document.getElementById('new-game-btn');
     
+    let TILE_SIZE = 0; // 动态计算方块尺寸
+
+    // --- 1. 游戏初始化和状态管理 ---
+
+    // 获取方块的 CSS translate 属性值
+    function getTilePosition(row, col) {
+        // 获取game-grid-bg的padding值
+        const gameGridBgStyle = getComputedStyle(gameGridBg);
+        const paddingLeft = parseFloat(gameGridBgStyle.paddingLeft);
+        const paddingTop = parseFloat(gameGridBgStyle.paddingTop);
+        
+        // x/y 坐标 = padding值 + (列/行索引) * (方块尺寸 + 间距)
+        const x = paddingLeft + col * (TILE_SIZE + TILE_GAP);
+        const y = paddingTop + row * (TILE_SIZE + TILE_GAP);
+        return `translate(${x}px, ${y}px)`;
+    }
+
+    function calculateTileSize() {
+        // 获取实际的网格单元尺寸
+        const firstGridCell = document.querySelector('.grid-cell');
+        if (firstGridCell) {
+            const newTileSize = firstGridCell.offsetWidth;
+            
+            // 只有尺寸确实改变了，才进行更新和重绘
+            if (newTileSize !== TILE_SIZE) {
+                TILE_SIZE = newTileSize;
+                
+                // 1. 更新 CSS 变量，供 .tile 样式使用
+                document.documentElement.style.setProperty('--tile-calculated-size', `${TILE_SIZE}px`);
+                
+                // 2. 核心修复：尺寸变化时，重新绘制所有方块，确保它们对齐
+                if (board.length > 0) {
+                     drawBoard(); 
+                }
+            }
+        }
+    }
+
+    function setupGame() {
+        board = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(0));
+        score = 0;
+        isGameOver = false;
+        scoreDisplay.textContent = 0;
+        
+        tileContainer.innerHTML = '';
+        
+        loadBestScore();
+        
+        // 确保在生成方块前计算好尺寸
+        calculateTileSize(); 
+        
+        addRandomTile();
+        addRandomTile();
+        
+        drawBoard();
+    }
+    
+    function loadBestScore() {
+        const bestScore = localStorage.getItem('2048_best_score') || 0;
+        bestScoreDisplay.textContent = bestScore;
+    }
+    
+    function updateBestScore() {
+        if (score > parseInt(bestScoreDisplay.textContent)) {
+            bestScoreDisplay.textContent = score;
+            localStorage.setItem('2048_best_score', score);
+        }
+    }
+    
+    // --- 2. 渲染和绘图逻辑 ---
+
+    function drawBoard() {
+        // 清除所有方块元素
+        tileContainer.innerHTML = ''; 
+
+        for (let r = 0; r < GRID_SIZE; r++) {
+            for (let c = 0; c < GRID_SIZE; c++) {
+                const value = board[r][c];
+                if (value !== 0) {
+                    const tile = document.createElement('div');
+                    tile.textContent = value;
+                    
+                    tile.className = `tile tile-${value}`;
+                    
+                    // 设置方块的实际尺寸 (使用 JS 动态尺寸)
+                    tile.style.width = `${TILE_SIZE}px`;
+                    tile.style.height = `${TILE_SIZE}px`;
+
+                    // 设置位置
+                    tile.style.transform = getTilePosition(r, c);
+                    
+                    tileContainer.appendChild(tile);
+                }
+            }
+        }
+        scoreDisplay.textContent = score;
+        updateBestScore();
+    }
+
+    // --- 3. 游戏逻辑：生成新方块 ---
+
+    function getEmptyCells() {
+        const emptyCells = [];
+        for (let r = 0; r < GRID_SIZE; r++) {
+            for (let c = 0; c < GRID_SIZE; c++) {
+                if (board[r][c] === 0) {
+                    emptyCells.push({ r, c });
+                }
+            }
+        }
+        return emptyCells;
+    }
+
+    function addRandomTile() {
+        const emptyCells = getEmptyCells();
+        if (emptyCells.length === 0) return false;
+        
+        const randomIndex = Math.floor(Math.random() * emptyCells.length);
+        const { r, c } = emptyCells[randomIndex];
+        
+        board[r][c] = (Math.random() < 0.9) ? 2 : 4;
+        return true;
+    }
+
+    // --- 4. 游戏逻辑：移动和合并 (核心不变) ---
+
+    function rotateBoard(matrix) {
+        const N = matrix.length;
+        const newMatrix = Array.from({ length: N }, () => Array(N).fill(0));
+        for (let i = 0; i < N; i++) {
+            for (let j = 0; j < N; j++) {
+                newMatrix[N - 1 - j][i] = matrix[i][j];
+            }
+        }
+        return newMatrix;
+    }
+
+    function moveRow(row) {
+        const newRow = row.filter(val => val !== 0);
+        const zeros = Array(GRID_SIZE - newRow.length).fill(0);
+        return newRow.concat(zeros);
+    }
+    
+    function combineRow(row) {
+        let newScore = 0;
+        for (let i = 0; i < GRID_SIZE - 1; i++) {
+            if (row[i] !== 0 && row[i] === row[i + 1]) {
+                row[i] *= 2;
+                newScore += row[i];
+                row[i + 1] = 0;
+            }
+        }
+        return newScore;
+    }
+
+    function handleMove(direction) {
+        if (isGameOver) return;
+        
+        let rotationCount = 0;
+        let tempBoard = board.map(row => [...row]); 
+
+        switch (direction) {
+            case 'up': rotationCount = 1; break;
+            case 'right': rotationCount = 2; break;
+            case 'down': rotationCount = 3; break;
+            case 'left': rotationCount = 0; break;
+        }
+
+        for (let i = 0; i < rotationCount; i++) {
+            tempBoard = rotateBoard(tempBoard);
+        }
+
+        let newBoard = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(0));
+        let moveOccurred = false;
+
+        for (let r = 0; r < GRID_SIZE; r++) {
+            let row = tempBoard[r];
+            const oldRowString = row.join(','); 
+
+            row = moveRow(row);
+            score += combineRow(row);
+            row = moveRow(row);
+            
+            if (oldRowString !== row.join(',')) {
+                moveOccurred = true;
+            }
+
+            newBoard[r] = row;
+        }
+
+        for (let i = 0; i < (4 - rotationCount) % 4; i++) {
+            newBoard = rotateBoard(newBoard);
+        }
+        
+        if (moveOccurred) {
+            board = newBoard;
+            addRandomTile(); 
+            drawBoard();     
+            checkGameOver();
+        }
+    }
+    
+    // --- 5. 游戏结束判断 ---
+    
+    function hasMoves() {
+        if (getEmptyCells().length > 0) return true;
+
+        for (let r = 0; r < GRID_SIZE; r++) {
+            for (let c = 0; c < GRID_SIZE; c++) {
+                const val = board[r][c];
+                if (c < GRID_SIZE - 1 && board[r][c + 1] === val) return true;
+                if (r < GRID_SIZE - 1 && board[r + 1][c] === val) return true;
+            }
+        }
+        return false;
+    }
+
+    function checkGameOver() {
+        if (hasMoves()) {
+            return;
+        }
+        isGameOver = true;
+        // 游戏结束提示
+        setTimeout(() => {
+            alert(`游戏结束！您的得分是：${score}。点击确定开始新游戏。`);
+            setupGame();
+        }, 100); // 延迟执行，确保最后一步动画完成
+    }
+
+    // --- 6. 事件监听 (PC键盘) ---
+
+    document.addEventListener('keydown', function(event) {
+        if (isGameOver) return;
+        
+        let direction = null;
+        switch (event.key) {
+            case 'ArrowUp': direction = 'up'; break;
+            case 'ArrowDown': direction = 'down'; break;
+            case 'ArrowLeft': direction = 'left'; break;
+            case 'ArrowRight': direction = 'right'; break;
+        }
+
+        if (direction) {
+            event.preventDefault(); 
+            handleMove(direction);
+        }
+    });
+
+    // --- 7. 事件监听 (手机滑动) ---
+
+    let startX, startY;
+    const threshold = 50; 
+
+    tileContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }, { passive: false }); 
+
+    tileContainer.addEventListener('touchend', (e) => {
+        if (isGameOver || !startX || !startY) return;
+
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        
+        const dx = endX - startX;
+        const dy = endY - startY;
+
+        startX = startY = null; 
+
+        if (Math.abs(dx) > threshold || Math.abs(dy) > threshold) {
+            if (Math.abs(dx) > Math.abs(dy)) {
+                handleMove(dx > 0 ? 'right' : 'left');
+            } else {
+                handleMove(dy > 0 ? 'down' : 'up');
+            }
+        }
+    });
+
+    // --- 8. 响应式调整和初始化 ---
+
+    // 监听窗口大小变化，重新计算方块尺寸并重绘
+    window.addEventListener('resize', calculateTileSize);
+
+    newGameBtn.addEventListener('click', setupGame);
+
+    // 页面加载完成后启动游戏
+    window.onload = function() {
+        setupGame();
+    }
+
+</script>
+</body>
+</html>
