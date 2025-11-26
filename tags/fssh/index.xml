@@ -7,13 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Wed, 26 Nov 2025 23:52:01 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/tags/fssh/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Nov 2025 23:59:37 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/tags/fssh/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>最小面跳跃（FSSH）推导</title>
         <link>https://allergicrosen.xyz/p/fssh/</link>
         <pubDate>Wed, 26 Nov 2025 23:46:01 +0800</pubDate>
         
         <guid>https://allergicrosen.xyz/p/fssh/</guid>
-        <description>&lt;img src="https://allergicrosen.xyz/p/fssh/%E5%9B%BE1.2.jpg" alt="Featured image of post 最小面跳跃（FSSH）推导" /&gt;&lt;h1 id=&#34;最小面跳跃fssh推导&#34;&gt;最小面跳跃（FSSH）推导
+        <description>&lt;img src="https://allergicrosen.xyz/p/fssh/%E5%9B%BE1.2.jpg" alt="Featured image of post 最小面跳跃（FSSH）推导" /&gt;&lt;br&gt;
+&lt;div style=&#34;background-color: #f5f7fa; border-radius: 8px; padding: 20px; margin: 20px 0; border-left: 4px solid #4299e1;&#34;&gt;
+  &lt;h4 style=&#34;margin: 0 0 10px 0; color: #2d3748; font-size: 16px;&#34;&gt;✍️ 作者信息&lt;/h4&gt;
+  &lt;p style=&#34;margin: 5px 0; color: #4a5568; line-height: 1.6;&#34;&gt;
+    &lt;strong&gt;姓名：&lt;/strong&gt;王凯平
+  &lt;/p&gt;
+  &lt;p style=&#34;margin: 5px 0; color: #4a5568; line-height: 1.6;&#34;&gt;
+    &lt;!-- &lt;strong&gt;发布时间：&lt;/strong&gt;2025年11月26日 --&gt;
+  &lt;/p&gt;
+  &lt;p style=&#34;margin: 5px 0; color: #4a5568; line-height: 1.6;&#34;&gt;
+    &lt;strong&gt;个人简介：&lt;/strong&gt;北京师范大学在读博士&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p style=&#34;margin: 10px 0 0 0; color: #718096; font-size: 14px; font-style: italic;&#34;&gt;
+    &lt;!-- 本文为原创内容，转载请注明出处～ --&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;最小面跳跃fssh推导&#34;&gt;最小面跳跃（FSSH）推导
 &lt;/h1&gt;&lt;h2 id=&#34;需要使用到的量子力学还是放在后面吧&#34;&gt;需要使用到的量子力学：（还是放在后面吧）
 &lt;/h2&gt;&lt;h3 id=&#34;1波函数假设&#34;&gt;1、波函数假设
 &lt;/h3&gt;&lt;h3 id=&#34;量子系统的状态由一个波函数-psimathbfr-t-完全描述&#34;&gt;量子系统的状态由一个&lt;strong&gt;波函数&lt;/strong&gt; $\Psi(\mathbf{r}, t)$ 完全描述。
