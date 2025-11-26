@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>FSSH on allergicrosen</title>
+        <link>https://allergicrosen.xyz/tags/fssh/</link>
+        <description>Recent content in FSSH on allergicrosen</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>allergicrosen</copyright>
+        <lastBuildDate>Wed, 26 Nov 2025 23:52:01 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/tags/fssh/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>最小面跳跃（FSSH）推导</title>
+        <link>https://allergicrosen.xyz/p/fssh/</link>
+        <pubDate>Wed, 26 Nov 2025 23:46:01 +0800</pubDate>
+        
+        <guid>https://allergicrosen.xyz/p/fssh/</guid>
+        <description>&lt;img src="https://allergicrosen.xyz/p/fssh/%E5%9B%BE1.2.jpg" alt="Featured image of post 最小面跳跃（FSSH）推导" /&gt;&lt;h1 id=&#34;最小面跳跃fssh推导&#34;&gt;最小面跳跃（FSSH）推导
+&lt;/h1&gt;&lt;h2 id=&#34;需要使用到的量子力学还是放在后面吧&#34;&gt;需要使用到的量子力学：（还是放在后面吧）
+&lt;/h2&gt;&lt;h3 id=&#34;1波函数假设&#34;&gt;1、波函数假设
+&lt;/h3&gt;&lt;h3 id=&#34;量子系统的状态由一个波函数-psimathbfr-t-完全描述&#34;&gt;量子系统的状态由一个&lt;strong&gt;波函数&lt;/strong&gt; $\Psi(\mathbf{r}, t)$ 完全描述。
+&lt;/h3&gt;$$
+\Psi(\mathbf{r}, t)
+$$&lt;p&gt;
+即波函数代表了在任何给定时间$t$时粒子的空间分布&lt;/p&gt;
+&lt;h3 id=&#34;统计诠释&#34;&gt;统计诠释
+&lt;/h3&gt;&lt;p&gt;其中，波函数的模平方给出粒子在位置 $\mathbf{r}$ 处出现的&lt;strong&gt;概率密度&lt;/strong&gt;：&lt;/p&gt;
+$$
+P(\mathbf{r}, t) = |\Psi(\mathbf{r}, t)|^2 = \Psi^*(\mathbf{r}, t)\Psi(\mathbf{r}, t)
+$$&lt;p&gt;上式又称为波函数的统计诠释。
+更精确一些表达：&lt;/p&gt;
+$$
+P(t) = \int_a^b |\Psi(x,t)|^2  dx
+$$&lt;p&gt;表示了在$t$时刻发现粒子处于a和b之间的几率。
+&lt;img src=&#34;https://allergicrosen.xyz/p/fssh/%E5%9B%BE1.2.jpg&#34;
+	width=&#34;1270&#34;
+	height=&#34;520&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图1.2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;244&#34;
+		data-flex-basis=&#34;586px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;归一化条件&#34;&gt;归一化条件
+&lt;/h3&gt;&lt;p&gt;总概率必须为1：&lt;/p&gt;
+$$
+\int_{-\infty}^{\infty} |\Psi(\mathbf{r}, t)|^2 d^3\mathbf{r} = 1
+$$&lt;p&gt;即在整个空间中一定能找到可以由$\Psi$表示的粒子，在全空间中找到它的概率为1。&lt;/p&gt;
+&lt;h2 id=&#34;1以哈密顿量作为起点&#34;&gt;1、以哈密顿量作为起点
+&lt;/h2&gt;&lt;p&gt;首先定义系统的总哈密顿量$H$：&lt;/p&gt;
+$$
+H = T_R + H_0(r, R)
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$r$ 代表电子坐标。&lt;/li&gt;
+&lt;li&gt;$R$ 代表原子核坐标。&lt;/li&gt;
+&lt;li&gt;$H_0(r, R)$ 是原子核固定在位置$R$时的电子哈密顿量（包含电子动能、电子-电子势能、电子-核势能、核-核势能）。&lt;/li&gt;
+&lt;li&gt;$T_R$ 代表了原子核动能部分。但是由于原子核的运动由经典轨迹 $R(t)$ 描述。电子动能是在固定核位置 $R(t)$ 的瞬时情况下求解，而核运动是在电子提供的势能面上经典运动（玻恩-奥本海默近似），不过在后续的非绝热耦合项中会出现核速度。因此，核动能的影响已经通过非绝热耦合项包含，而不是显式的 $T_R$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2电子波函数展开&#34;&gt;2、电子波函数展开
+&lt;/h2&gt;&lt;p&gt;原子核的运动由经典轨迹 $R(t)$ 描述。因此，电子波函数 $\psi(r, R, t)$ 需要满足含时电子薛定谔方程。
+此时，原子核坐标 $R$ 是时间 $t$ 的函数 $R(t)$。&lt;/p&gt;
+$$
+i\hbar \frac{\partial \psi}{\partial t} = H_0(r, R(t)) \psi
+$$&lt;p&gt;选择一组正交归一的电子基函数 $\phi_j(r; R)$ 来展开总的电子波函数 $\psi$。通常是绝热基函数。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：表象本质上是基函数的选择，是对同一个东西的不同表示。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直角坐标系（直角坐标系表象）：用 $(x, y, z)$ 三个数字来描述一个矢量。&lt;/li&gt;
+&lt;li&gt;球坐标系（球坐标系表象）：用 $(r, \theta, \phi)$ 三个数字来描述同一个矢量。&lt;/li&gt;
+&lt;li&gt;虽然给出的基函数： $(x, y, z)$ 和 $(r, \theta, \phi)$ 不同，但是表示的是相同的量。&lt;/li&gt;
+&lt;li&gt;在非绝热动力学中，绝热表象 (Adiabatic Representation) 和 透热表象 (Diabatic Representation)是主要选择的两种基函数。&lt;/li&gt;
+&lt;li&gt;一般第一性原理计算软件均采用绝热基函数，计算出的HOMO、LUMO、势能面、能级等均是基于绝热表象定义的。且哈密顿量的对角项即为本征能量，因此物理图像直观。透热基的哈密顿量矩阵不再是对角的，转换较繁琐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+$$
+\Psi(r,R,t)=\sum_{i}c_{i}(t)\Phi_{i}(r;R(t))
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\Phi_i(r;R(t))$：是基函数。&lt;/li&gt;
+&lt;li&gt;基函数只负责形状，即电子云应该长什么样。不过基函数包含了$R(t)$，隐式包含时间。如果让基函数显示包含时间，非绝热耦合的计算会变得极为复杂&lt;/li&gt;
+&lt;li&gt;$c_i(t)$：是展开系数。模方 $|c_i(t)|^2$ 代表系统处于第 $i$ 个状态的概率。（$c_i(t)$ 是复数，包含实部和虚部）&lt;/li&gt;
+&lt;li&gt;展开系数负责时间演化，其中包含了时间相位，即$e^{-i\int E dt/\hbar}$，后面写相修正的时候应该会再提（如果能写到的话）。&lt;/li&gt;
+&lt;li&gt;物理意义：将复杂的波函数 $\Psi$ 转化为了寻找一组展开系数 $c_i(t)$ 随时间变化的问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;在之后的推导中做出如下约定r代表电子坐标r代表核坐标剩下的想到了再打上来&#34;&gt;在之后的推导中做出如下约定：r代表电子坐标，R代表核坐标……剩下的想到了再打上来
+&lt;/h3&gt;&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
+&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
