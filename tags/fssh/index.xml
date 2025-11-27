@@ -13,7 +13,7 @@
         <pubDate>Wed, 26 Nov 2025 23:46:01 +0800</pubDate>
         
         <guid>https://allergicrosen.xyz/p/fssh/</guid>
-        <description>&lt;img src="https://allergicrosen.xyz/p/fssh/%E5%9B%BE1.2.jpg" alt="Featured image of post 最小面跳跃（FSSH）推导" /&gt;&lt;br&gt;
+        <description>&lt;img src="https://allergicrosen.xyz/%E5%9B%BE1.2.jpg" alt="Featured image of post 最小面跳跃（FSSH）推导" /&gt;&lt;br&gt;
 &lt;div style=&#34;background-color: #f5f7fa; border-radius: 8px; padding: 20px; margin: 20px 0; border-left: 4px solid #4299e1;&#34;&gt;
   &lt;h4 style=&#34;margin: 0 0 10px 0; color: #2d3748; font-size: 16px;&#34;&gt;✍️ 作者信息&lt;/h4&gt;
   &lt;p style=&#34;margin: 5px 0; color: #4a5568; line-height: 1.6;&#34;&gt;
@@ -46,18 +46,14 @@ $$&lt;p&gt;上式又称为波函数的统计诠释。
 $$
 P(t) = \int_a^b |\Psi(x,t)|^2  dx
 $$&lt;p&gt;表示了在$t$时刻发现粒子处于a和b之间的几率。
-&lt;img src=&#34;https://allergicrosen.xyz/p/fssh/%E5%9B%BE1.2.jpg&#34;
-	width=&#34;1270&#34;
-	height=&#34;520&#34;
+&lt;img src=&#34;https://allergicrosen.xyz/%e5%9b%be1.2.jpg&#34;
+	
+	
 	
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;图1.2&#34;
 	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;244&#34;
-		data-flex-basis=&#34;586px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;归一化条件&#34;&gt;归一化条件
