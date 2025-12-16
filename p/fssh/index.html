@@ -10,7 +10,7 @@
 <meta property='og:description' content="\n🧑\u200d💻 作者信息 姓名：王凯平 邮箱：104753210960@henu.edu.cn ">
 <meta property='og:url' content='https://allergicrosen.xyz/p/fssh/'>
 <meta property='og:site_name' content='allergicrosen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='FSSH' /><meta property='article:tag' content='量子力学' /><meta property='article:published_time' content='2025-11-26T23:46:01&#43;08:00'/><meta property='article:modified_time' content='2025-11-27T23:50:31&#43;08:00'/><meta property='og:image' content='https://allergicrosen.xyz/p/fssh/cover.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='FSSH' /><meta property='article:tag' content='量子力学' /><meta property='article:published_time' content='2025-11-26T23:46:01&#43;08:00'/><meta property='article:modified_time' content='2025-12-16T22:32:05&#43;08:00'/><meta property='og:image' content='https://allergicrosen.xyz/p/fssh/cover.jpg' />
 <meta name="twitter:title" content="最小面跳跃（FSSH）推导">
 <meta name="twitter:description" content="\n🧑\u200d💻 作者信息 姓名：王凯平 邮箱：104753210960@henu.edu.cn "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://allergicrosen.xyz/p/fssh/cover.jpg' />
@@ -598,9 +598,6 @@ fill="#000000" stroke="none">
     <li><a href="#3投影">3、投影</a></li>
     <li><a href="#3处理展开式">3、处理展开式</a></li>
     <li><a href="#4引入密度矩阵">4、引入密度矩阵</a></li>
-  </ol>
-
-  <ol>
     <li><a href="#5如何发生跃迁">5、如何发生跃迁</a>
       <ol>
         <li><a href="#n条轨迹">N条轨迹</a></li>
@@ -611,6 +608,15 @@ fill="#000000" stroke="none">
   </ol>
 
   <ol>
+    <li><a href="#ks轨道近似">KS轨道近似</a></li>
+    <li><a href="#经典路径近似classical-path-approximation-cpa">经典路径近似（Classical Path Approximation, CPA）</a></li>
+    <li><a href="#量子退相干修正">量子退相干修正</a>
+      <ol>
+        <li><a href="#随机演化算符">随机演化算符</a></li>
+        <li><a href="#退相干时间">退相干时间</a></li>
+        <li><a href="#随机判断退相干事件">随机判断退相干事件</a></li>
+      </ol>
+    </li>
     <li><a href="#需要使用到的量子力学">需要使用到的量子力学：</a>
       <ol>
         <li><a href="#1波函数假设">1、波函数假设</a>
@@ -740,7 +746,7 @@ fill="#000000" stroke="none">
 </svg>
 
                 <time>
-                    2025-11-27 23:50
+                    2025-12-16 22:32
                 </time>
             </div>
             <div>|</div>
@@ -755,7 +761,7 @@ fill="#000000" stroke="none">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 15 分钟
+                    阅读时长: 33 分钟
                 </time>
             </div>
             
@@ -800,7 +806,7 @@ fill="#000000" stroke="none">
     <!-- 本文为原创内容，转载请注明出处～ -->
   </p>
 </div>
-<h1 id="最小面跳跃fewest-switches-surface-hopping-fssh推导">最小面跳跃（Fewest-Switches Surface Hopping, FSSH）推导
+<h1 id="非绝热载流子动力学理论计算方法">非绝热载流子动力学理论计算方法
 </h1><h2 id="最小面跳跃主要推导过程fewest-switches-surface-hopping-fssh">最小面跳跃主要推导过程（Fewest-Switches Surface Hopping, FSSH）
 </h2><h2 id="1哈密顿量">1、哈密顿量
 </h2><p>首先定义系统的总哈密顿量$H$：</p>
@@ -810,14 +816,15 @@ $$<p>其中：</p>
 <ul>
 <li>$r$ 代表电子坐标。</li>
 <li>$R$ 代表原子核坐标。</li>
-<li>$H_0(r, R)$ 是原子核固定在位置$R$时的电子哈密顿量（包含电子动能、电子-电子势能、电子-核势能、核-核势能）。</li>
+<li>$H_0(r, R)$ 是原子核固定在位置$R$时的电子哈密顿量（包含电子动能$T_e$、电子-电子势能$V_{ee}$、电子-核势能$V_{ne}$、核-核势能$V_{nn}$）。</li>
 <li>$T_R$ 代表了原子核动能部分。但是由于电子动能是在固定核位置 $R(t)$ 的瞬时情况下求解，原子核的运动由经典轨迹 $R(t)$ 描述，即在电子提供的势能面上经典运动（玻恩-奥本海默近似）。但是，在后续的非绝热耦合项中会出现核速度。因此，核动能的影响已经通过非绝热耦合项包含，而不是显式的 $T_R$。</li>
+<li>由于原子核动能可以被精确求解，因此将原子核动能提出，其他项作为哈密顿量$H$微扰项处理。需要注意的是，虽然核势能仅依赖核坐标，求解时被视为常数，但是会影响电子态的能量，因此包含在电子哈密顿量中。</li>
 </ul>
 <h2 id="2含时薛定谔方程及电子波函数展开">2、含时薛定谔方程及电子波函数展开
 </h2><p>原子核的运动由经典轨迹 $R(t)$ 描述。因此，电子波函数 $\psi(r, R, t)$ 需要满足含时薛定谔方程：</p>
 $$
 i\hbar \frac{\partial \psi}{\partial t} = H_0(r, R(t)) \psi \tag{2}
-$$<p>此时，原子核坐标 $R$ 是时间 $t$ 的函数 $R(t)$。选择一组<strong>正交归一</strong>的电子基函数 $\phi_j(r; R)$ 来展开总的电子波函数 $\psi$。通常是绝热基函数。</p>
+$$<p>此时，原子核坐标 $R$ 是时间 $t$ 的函数 $R(t)$。选择一组<strong>正交归一</strong>的电子基函数 $\phi_j(r; R)$ 来展开总的电子波函数 $\psi$。通常是绝热基函数。此处的展开为波恩-黄（Born-Huang）展开，</p>
 <blockquote>
 <p><strong>说明</strong>：表象本质上是基函数的选择，是对同一个东西的不同表示。</p>
 <ul>
@@ -937,7 +944,7 @@ $$<p>从式（16）中可以看出，电子态$k$的系数演化$\dot{c}_k$由�
 	
 	loading="lazy"
 	
-		alt="image2"
+		alt="alt text"
 	
 	
 		class="gallery-image" 
@@ -951,19 +958,20 @@ $$<p>从式（16）中可以看出，电子态$k$的系数演化$\dot{c}_k$由�
 <h2 id="4引入密度矩阵">4、引入密度矩阵
 </h2><p>根据前面的推导可以得到$\dot{c}_k$，但是这个形式只能表示单一态$k$的变化（纯态），且初始条件需要确定。但是一般来说，电子的初始情况是不确定的，可能是纯态，可能是混合态，因此需要引入密度矩阵来讨论更一般的情况。
 密度矩阵定义为：</p>
-<h1 id="endpmatrix">$$
+$$
 a_{kj} = c_k c_j^* =  \begin{pmatrix}
-a_{kk} &amp; a_{kj} \
-a_{jk} &amp; a_{jj}
+c_{kk} & c_{kj} \\
+c_{jk} & c_{jj}
 \end{pmatrix}
-</h1><p>\begin{pmatrix}
-|c_k|^2 &amp; c_k c_j^* \
-c_j c_k^* &amp; |c_j|^2
+= \begin{pmatrix}
+|c_k|^2 & c_k c_j^* \\
+c_j c_k^* & |c_j|^2
 \end{pmatrix} \tag{17}
-$$</p>
-<p>其中：
-对角元：$a_{kk} = $|c_k|^2$$ 。这时，密度矩阵和$|c_k|^2$物理含义相同，表示的是态 $k$ 的布居数。
-非对角元：$a_{kj} 表示的是态 $j$ 和 $k$ 之间的相干项（复数）。</p>
+$$<p>其中：</p>
+<ul>
+<li>对角元：$a_{kk} = |c_k|^2$ 。这时，密度矩阵和$|c_k|^2$物理含义相同，表示的是态 $k$ 的布居数。</li>
+<li>非对角元：$a_{kj}$ 表示的是态 $j$ 和 $k$ 之间的相干项（复数）。</li>
+</ul>
 <blockquote>
 <p><strong>例子</strong>：</p>
 <ul>
@@ -1002,7 +1010,7 @@ $\langle \nabla_R \phi_k | \phi_j \rangle + d_{jk} = 0$ <br>
 	
 	loading="lazy"
 	
-		alt="image3"
+		alt="alt text"
 	
 	
 		class="gallery-image" 
@@ -1024,7 +1032,7 @@ $$<blockquote>
 </p>
 $$
 \dot{a}_{kj} = \frac{1}{i\hbar} \sum_l \left\{ {c_l c_j^*} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - {c_k c_l^*} (V_{jl}^* + i\hbar \dot{R} \cdot d_{jl}^*) \right\} \tag{21}
-$$<p>其中，$a_{lj} = c_l c_j^<em>$，$a_{kl} = c_k c_l^</em>$，因此，上式写为：
+$$<p>其中，$a_{lj} = c_l c_j^<em>$ ，$a_{kl} = c_k c_l^</em>$，因此，上式写为：
 </p>
 $$
 \dot{a}_{kj} = \frac{1}{i\hbar} \sum_l \left\{ a_{lj} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{jl}^* + i\hbar \dot{R} \cdot d_{jl}^*) \right\} \tag{22}
@@ -1056,44 +1064,44 @@ $$
 \dot{a}_{kj} = \frac{1}{i\hbar} \sum_l \left\{ a_{lj} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lj} - i\hbar \dot{R} \cdot d_{lj}) \right\} \tag{23}
 $$<p>首先，我们主要关心布居数 $a_{kk}$ 的变化率。令 $j=k$，上式（23）可以写作：</p>
 $$
-\dot{a}_{kk} = \frac{1}{i\hbar} \sum_l \left\{ a_{lk} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lk} - i\hbar \dot{R} \cdot d_{lk}) \right\}
+\dot{a}_{kk} = \frac{1}{i\hbar} \sum_l \left\{ a_{lk} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lk} - i\hbar \dot{R} \cdot d_{lk}) \right\} \tag{24}
 $$<p>当$l=k$时，$\dot{a}_{kk}$为0，因此求和只需考虑 $l \neq k$的情况，即：</p>
 $$
-\dot{a}_{kk} = \frac{1}{i\hbar} \sum_{l \neq k} \left\{ a_{lk} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lk} - i\hbar \dot{R} \cdot d_{lk}) \right\}
+\dot{a}_{kk} = \frac{1}{i\hbar} \sum_{l \neq k} \left\{ a_{lk} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lk} - i\hbar \dot{R} \cdot d_{lk}) \right\} \tag{25}
 $$<p>为了方便，做如下替换：
 </p>
 $$
-\dot{a}_{kk} = \sum_{l \neq k} b_{kl} \tag{24}
-$$<p>态 $k$ 布居数的变化率 ($\dot{a}<em>{kk}$)等于从所有其他态 $l$ 流入态 $k$ 的布居流 ($b</em>{kl}$) 之和。<br>
-如果 $b_{kl}$ 为正，表示有净流量从 $l$ 流向 $k$。<br></p>
+\dot{a}_{kk} = \sum_{l \neq k} b_{kl} \tag{26}
+$$<p>态 $k$ 布居数的变化率 $\dot{a}<em>{kk}$等于从所有其他态 $l$ 流入态 $k$ 的布居流$b</em>{kl}$之和。<br>
+如果$b_{kl}$为正，表示有净流量从 $l$ 流向 $k$。<br></p>
 $$
-b_{kl} = \frac{1}{i\hbar} \left[ a_{lk} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lk} - i\hbar \dot{R} \cdot d_{lk}) \right] \tag{25}
+b_{kl} = \frac{1}{i\hbar} \left[ a_{lk} (V_{kl} - i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (V_{lk} - i\hbar \dot{R} \cdot d_{lk}) \right] \tag{27}
 $$<p>利用 $a_{lk} = a_{kl}^<em>$ 和 $V_{lk} = V_{kl}^</em>$将上式当中的势能项和非绝热耦合项合并。<br>
 1、势能项写作：
 </p>
 $$
-\frac{1}{i\hbar} (a_{kl}^* V_{kl} - a_{kl} V_{kl}^*)  \tag{26}
+\frac{1}{i\hbar} (a_{kl}^* V_{kl} - a_{kl} V_{kl}^*)  \tag{28}
 $$<p>
 这时，如果令$z = a_{kl}^* V_{kl}$，那么$z^* = a_{kl} V_{kl}^<em>$，上式就可以写作：
 $$
-\frac{1}{i\hbar} (z - z^*) \tag{27}
+\frac{1}{i\hbar} (z - z^*) \tag{29}
 $$
 对于任意复数 $z = x + iy$，$z - z^</em> = (x + iy) - (x - iy) = 2iy = 2i \text{Im}(z)$。<br>
-因此，式（26）又可以写作：
+因此，式（29）又可以写作：
 </p>
 $$
- \frac{1}{i\hbar} (2i \text{Im}(z)) =  \frac{2}{\hbar} \text{Im}(z) \tag{28}
+ \frac{1}{i\hbar} (2i \text{Im}(z)) =  \frac{2}{\hbar} \text{Im}(z) \tag{30}
 $$<p>
 将 $z$ 还原为 $a_{kl}^* V_{kl}$，可得势能项写作
 </p>
 $$
-\frac{2}{\hbar} \text{Im}(a_{kl}^* V_{kl}) \tag{29}
+\frac{2}{\hbar} \text{Im}(a_{kl}^* V_{kl}) \tag{31}
 $$<p><strong>注意</strong>：
 势能项中我们取出的是虚数部分的虚部，而不是虚数，例如$a + bi$中，$a和b$都是实数，$bi$为虚数，但是我们需要的是虚部上的实数，即$b$。</p>
 <p>2、非绝热耦合项写作：
 </p>
 $$
-\frac{1}{i\hbar} \left[ a_{kl}^* (-i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (-i\hbar \dot{R} \cdot d_{lk}) \right] \tag{30}
+\frac{1}{i\hbar} \left[ a_{kl}^* (-i\hbar \dot{R} \cdot d_{kl}) - a_{kl} (-i\hbar \dot{R} \cdot d_{lk}) \right] \tag{32}
 $$<p>
 类似的，令$z =  -i\hbar a_{kl}^* \dot{R} \cdot d_{kl}$，那么$z^* =  i\hbar a_{kl} \dot{R} \cdot d_{kl}$，上式就可以写作：
 </p>
@@ -1101,60 +1109,78 @@ $$
 \frac{1}{i\hbar} (z + z^*) \tag{31}
 $$<p>
 对于任意复数 $z = x + iy$，$z + z^* = (x + iy) + (x - iy) = 2x = 2 \text{Re}(z)$。<br>
-因此，式（30）又可以写作：
+因此，式（32）又可以写作：
 </p>
 $$
- -2 \text{Re}( a_{kl}^* \dot{R} \cdot d_{kl} ) \tag{32}
-$$<p>最终，我们可以将式（25）写作如下形式：
+ -2 \text{Re}( a_{kl}^* \dot{R} \cdot d_{kl} ) \tag{33}
+$$<p>最终，我们可以将式（27）写作如下形式：
 </p>
 $$
-b_{kl} = \frac{2}{\hbar} \text{Im}(a_{kl}^* V_{kl}) - 2 \text{Re}(a_{kl}^* \dot{R} \cdot d_{kl}) \tag{33}
+b_{kl} = \frac{2}{\hbar} \text{Im}(a_{kl}^* V_{kl}) - 2 \text{Re}(a_{kl}^* \dot{R} \cdot d_{kl}) \tag{34}
 $$<p>那么，密度矩阵的布居流可以写成如下形式：</p>
 $$
-\dot{a}_{kk} = \sum_{l \neq k}  (\frac{2}{\hbar} \text{Im}(a_{kl}^* V_{kl}) - 2 \text{Re}(a_{kl}^* \dot{R} \cdot d_{kl})) \tag{34}
+\dot{a}_{kk} = \sum_{l \neq k}  (\frac{2}{\hbar} \text{Im}(a_{kl}^* V_{kl}) - 2 \text{Re}(a_{kl}^* \dot{R} \cdot d_{kl})) \tag{35}
 $$<p>而在绝热基下，哈密顿量的非对角元为0，即$V_{kl} = 0$ 因此，最终的$\dot{a}_{kk}$布居数变化仅仅依赖于非绝热耦合的作用，即：</p>
 $$
-\dot{a}_{kk} = \sum_{l \neq k}  (\frac{1}{\hbar}  \text{Re}(a_{kl}^* \dot{R} \cdot d_{kl})) \tag{34}
+\dot{a}_{kk} = \sum_{l \neq k}  (2  \text{Re}(a_{kl}^* \dot{R} \cdot d_{kl})) \tag{36}
 $$<h2 id="5如何发生跃迁">5、如何发生跃迁
 </h2><p>如果要实现最小面跳跃，我们需要做出如下约定：<br></p>
 <ul>
 <li>1、在发生电子跃迁之前，原子核仅在一个电子态势能面上做经典运动。<br></li>
 <li>2、允许第$𝑘$个电子态跳跃至其他态$𝑙$ ，并且$𝑘$跳跃至不同$𝑙$是独立的，不允许往返跳跃，以保证跳跃次数最少。<br></li>
 <li>3、当轨迹足够多时，原子核在$𝑡$时刻处在$𝑘$电子态的比例应等于$𝑎_𝑘𝑘$。<br>
-!image4](image4.png)</li>
+<img src="/p/fssh/image4.png"
+	width="679"
+	height="413"
+	
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="394px"
+	
+></li>
 </ul>
 <h3 id="n条轨迹">N条轨迹
 </h3><p>考虑原子核运动共$𝑁$条的经典轨迹（N足够大），在$𝑡$时刻，处在第$𝑘$个电子态上的轨迹数是$𝑁_𝑘(t)$。 <br>
 此时轨迹分布比例应为体系处于该电子态的布居数，即：
 </p>
 $$
-𝑁_𝑘 (𝑡)/𝑁 = 𝑎_𝑘𝑘 (𝑡)=|𝑐_𝑘 (𝑡)|^2 \tag{35}
+𝑁_𝑘 (𝑡)/𝑁 = 𝑎_𝑘𝑘 (𝑡)=|𝑐_𝑘 (𝑡)|^2 \tag{37}
 $$<p>在下一个时刻，即$t+\Delta t$时刻，第$𝑘$个电子态的布居数是$𝑎_{𝑘𝑘} (t+\Delta t)$ 。<br>
 我们假定此时在第$𝑘$个电子态的布居数减少，对于经典轨迹来说，处于$k$电子态的轨迹数变少，即$N_k (t)&gt;N_k (t + \Delta t)$此时布居数：
 </p>
 $$
-𝑎_{𝑘𝑘} (t) > 𝑎_{𝑘𝑘} (t+\Delta t) \tag{36}
+𝑎_{𝑘𝑘} (t) > 𝑎_{𝑘𝑘} (t+\Delta t) \tag{38}
 $$<p>
 在$\Delta t$时间间隔后，从第$𝑘$个电子态离开的几率为：
 </p>
 $$
-𝑃_𝑘 (t, \Delta t)=(\frac{𝑎_𝑘𝑘 (𝑡) − 𝑎_𝑘𝑘 (t+\Delta t)}{𝑎_𝑘𝑘 (𝑡)} ) = (\frac{ \Delta t ⋅ \frac{\partial}{\partial t} 𝑎_{𝑘𝑘}} {𝑎_𝑘𝑘 (t)}) = \sum_{l \neq k} \frac{\Delta t}{𝑎_{𝑘𝑘} }b_{kl}  \tag{37}
+𝑃_𝑘 (t, \Delta t)=(\frac{𝑎_𝑘𝑘 (𝑡) − 𝑎_𝑘𝑘 (t+\Delta t)}{𝑎_𝑘𝑘 (𝑡)} ) = (\frac{ \Delta t ⋅ \frac{\partial}{\partial t} 𝑎_{𝑘𝑘}} {𝑎_𝑘𝑘 (t)}) = \sum_{l \neq k} \frac{\Delta t}{𝑎_{𝑘𝑘} }b_{kl}  \tag{39}
 $$<p>
 其中，单独的$j$态向$k$态跃迁的概率为：
 </p>
 $$
-g_{kj} = \frac{\Delta t}{a_{kk}} b_{jk} \tag{38}
+g_{kj} = \frac{\Delta t}{a_{kk}} b_{jk} \tag{40}
 $$<p>
 单独的$j$态跃迁概率不一定为正，因此需要判断：
 </p>
 $$
-g_{kj} = \max\left(0, \frac{\Delta t}{a_{kk}} b_{jk}\right) \tag{39}
+g_{kj} = \max\left(0, \frac{\Delta t}{a_{kk}} b_{jk}\right) \tag{41}
 $$<p>
 如果后一项小于0，则将这个态的跃迁概率设置为0。<br>
 求得所有态向$k$态跃迁概率即为$𝑃_𝑘 (t, \Delta t)$：
 </p>
 $$
-𝑃_𝑘 (t, \Delta t)= \sum_{l \neq k} g_{kj} \tag{40}
+𝑃_𝑘 (t, \Delta t)= \sum_{l \neq k} g_{kj}  \tag{42}
+$$<p>
+因此，从j态向k态的跃迁概率最后可以写作：
+</p>
+$$
+P_{j \to k} = \frac{2 \text{Re}(C_j^* C_k d_{jk} \cdot \mathbf{v})}{|C_j|^2}  \Delta t \tag{43}
 $$<h3 id="判断是否跃迁的随机算法">判断是否跃迁的随机算法
 </h3><p>1、<strong>计算所有$g_{kj}$</strong></p>
 <p>2、<strong>生成$\xi \in [0,1)$的随机数</strong></p>
@@ -1171,8 +1197,371 @@ $$<h3 id="判断是否跃迁的随机算法">判断是否跃迁的随机算法
 <li>调整的核速度方向需要沿着非绝热耦合矢（$d_{jk}$）方向。</li>
 <li>如果动能调整后依然不能满足能量守恒，那么这次跃迁不发生。</li>
 </ul>
-<h1 id="引入经典路径近似the-classical-path-approximation">引入经典路径近似（The Classical Path Approximation）
-</h1><h2 id="需要使用到的量子力学">需要使用到的量子力学：
+<h1 id="含时密度泛函理论下的面跳跃">含时密度泛函理论下的面跳跃
+</h1><h2 id="ks轨道近似">KS轨道近似
+</h2><p>尽管Tully教授提出的FSSH在非绝热动力学模拟中提供了显著的简化，使其能够处理多种电子激发态之间的跃迁。<br>
+然而FSSH涉及复杂势能面或者较多电子数时（例如凝聚态系统），依然需要计算多个激发态势能面以及非绝热耦合，这使得计算成本非常高昂。<br>
+因此，Oleg教授通过引入科恩-沈吕九（Kohn-Sham, KS）轨道理论对电子态简化处理，并采用经典路径近似，专注描述电子的动力学过程。<br>
+之前我们所讨论，电子波函数$\Psi(r,R,t)$是在绝热基函数$\phi_{i}(r;R(t))$上展开的，而我们使用的绝热基函数一般是多电子态的，下面我们需要了解绝热基函数和KS轨道的联系。<br></p>
+<p>我们之前讨论过，整个体系的电子波函数可以由绝热基展开，即公式（3）：$\Psi(r,R,t)=\sum_{i}c_{i}(t)\phi_{i}(r;R(t))$ <br>
+在这之中，如果整个体系的电子波函数包含$N$个电子，那么每个绝热基函数同样需要包含$N$个电子：
+</p>
+$$
+\Psi(\mathbf{r}_1, ..., \mathbf{r}_N, t) = c_1(t) \phi_1(\mathbf{r}_1, ..., \mathbf{r}_N) + c_2(t) \phi_2(\mathbf{r}_1, ..., \mathbf{r}_N) + \dots \tag{44}
+$$<p><strong>说明</strong>：</p>
+<ul>
+<li>左边的$\Psi$：是一个依赖于$N$个独立变量 $(\mathbf{r}_1, \mathbf{r}_2, &hellip;, \mathbf{r}_N)$ 的函数。</li>
+<li>如果右边某一项$\phi_1$只包含了$(\mathbf{r}_2, &hellip;, \mathbf{r}_N)$，那它只是$N-1$个变量的函数。对于变量 $\mathbf{r}_1$而言，它是一个常数。这表明$\mathbf{r}_1$无法描述电子1。</li>
+<li>左边的$\Psi$的维度为$N$，对于不包含电子1的$\phi_1{r}$，维数为$N-1$，我们无法使用$N-1$维的函数构建出一个$N$维的函数。</li>
+<li>所有的基函数必须包含完全相同数量的电子。一旦有基函数缺少电子，那么维数为$N-1$无法和$N$维的其他基函数做运算（矩阵、向量计算）。</li>
+</ul>
+<p>我们现在了解绝热基函数是多电子态的，接下来需要将多电子态使用单电子基再来描述，即KS轨道，表明KS轨道描述的是单个电子运动的波函数$\varphi_i(r)$ <br></p>
+<p>为了描述多电子态绝热基函数 $\Phi_I$ 需要由$N$个选定的单电子态的KS轨道组成的Slater行列式表示。<br></p>
+<p>引入Slater行列式是为了满足以下两点要求：
+1、全部电子都是等价的，无法区分。
+2、任意交换两个电子，波函数的符号相反，即$\phi (r_1 , r_2)$ = $-\phi (r_2 , r_1)$。（量子力学假定5）</p>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>这里说的无法区分指的是可测量的物理量是无法区分的，即$\langle \Psi | \hat{A}  | \Psi \rangle$，对于可测量的物理量$A$来说，其测量的期望值 $\left\langle A\right\rangle=\int_{-\infty}^\infty A\left|\Psi(r,t)\right|^2dr$，其中波函数取了平方，符号改变也不会影响$A$的期望值。</li>
+</ul>
+<p>为表述方便，我们一般使用$\phi = |\varphi_a(1) \varphi_a(2) \dots \varphi_a(N)|$ 表示多电子的Slater行列式，即：</p>
+$$
+|\varphi_a(1) \varphi_a(2) \dots \varphi_a(N)| = \frac{1}{\sqrt{N!}}
+\begin{vmatrix}
+\varphi_a(1) & \varphi_b(1) & \dots & \varphi_N(1) \\
+\varphi_a(2) & \varphi_b(2) & \dots & \varphi_N(2) \\
+\vdots & \vdots & \ddots & \vdots \\
+\varphi_a(N) & \varphi_b(N) & \dots & \varphi_N(N)
+\end{vmatrix}
+$$<p>其中$\frac{1}{\sqrt{N!}}$ 为归一化系数。</p>
+<p>考虑一个简单的两电子体系来说，一个在轨道 $\varphi_a$ 上，另一个在轨道 $\varphi_b$ 上。<br></p>
+<p>我们可以写成行列式：
+</p>
+$$
+\phi(1, 2) = \frac{1}{\sqrt{2}} \left| \begin{matrix} \varphi_a(1) & \varphi_b(1) \\ \varphi_a(2) & \varphi_b(2) \end{matrix} \right| \tag{45}
+$$<p>
+上式也可以写作：
+</p>
+$$
+\phi(1, 2) = \frac{1}{\sqrt{2}} [\varphi_a(1)\varphi_b(2) - \varphi_b(1)\varphi_a(2)] \tag{46}
+$$<p>其中每一项的系数为$\frac{1}{\sqrt{2}}$，平方和相加等于1，因此满足概率为1。<br>
+如果交换两个电子，式（46）变为：
+</p>
+$$
+\phi(2, 1) = \frac{1}{\sqrt{2}} [\varphi_a(2)\varphi_b(1) - \varphi_b(2)\varphi_a(1)] \tag{47}
+$$<p>
+和式（46）差一个负号。
+<strong>注意</strong>：</p>
+<ul>
+<li>这里并没有取复共轭，也没有算符，因此$\varphi_a(2)\varphi_b(1)$可以交换顺序。</li>
+</ul>
+<p>使用Slater行列式可以极大降低计算量，能够使所有电子的3N维空间积分变成只针对变化的电子的三维积分</p>
+<blockquote>
+<ul>
+<li>考虑最简单的两电子体系，此时有三个KS轨道$\varphi_A, \varphi_B, \varphi_C$，它们是正交归一的。</li>
+<li>初态$\phi_in$，电子占据$\varphi_A$ 和 $\varphi_B$。</li>
+<li>末态$\phi_out$，电子占据$\varphi_A$ 和 $\varphi_C$。（电子从B轨道跳跃到了C轨道，A不发生改变）</li>
+<li>此时计算其非绝热耦合，由之前的推导可得非绝热耦合的算符为：$\frac{\partial}{\partial t}$。</li>
+<li>非绝热耦合算符为单体算符，因此需要对两个电子分别作用，即总的非绝热耦合算符$\hat{O} = \hat{o}(1) + \hat{o}(2)$。其中$\hat{o}(1) = \hat{o}(2) = \frac{\partial}{\partial t}$。</li>
+<li>因此，总的非绝热耦合$d_{IO} = \langle \phi_{in} | \hat{O} | \phi_{out} \rangle$。</li>
+<li>我们将初态和末态写成Slater行列式展开：
+$$
+> \phi_{in} = \frac{1}{\sqrt{2}} [\varphi_A(1)\varphi_B(2) - \varphi_B(1)\varphi_A(2)]
+> $$
+$$
+> \phi_{out} = \frac{1}{\sqrt{2}} [\varphi_A(1)\varphi_C(2) - \varphi_C(1)\varphi_A(2)]
+> $$</li>
+<li>我们可以得到非绝热耦合形式应为：
+$$
+> d_{12} = \langle \phi_{in} | \hat{o}(1) + \hat{o}(2) | \phi_{out} \rangle
+> $$
+$$
+> \frac{1}{2} [ \langle \varphi_A(1)\varphi_B(2) | - \langle \varphi_B(1)\varphi_A(2) | ] \hat{o}(1) + \hat{o}(2) |  [ | \varphi_A(1)\varphi_C(2) \rangle - | \varphi_C(1)\varphi_A(2) \rangle ]
+> $$</li>
+<li>将积分写开会有四项乘积，我们只看第一项即可，其他的均类似。</li>
+<li>第一项写作：
+$$
+> \langle \varphi_A(1)\varphi_B(2) | \hat{o}(1) + \hat{o}(2) | \varphi_A(1)\varphi_C(2) \rangle
+> $$</li>
+<li>其中积分包括两部分，分别对应 $\hat{o}(1)$ 和 $\hat{o}(2)$</li>
+</ul>
+<ul>
+<li>1、计算 $\hat{o}(1)$：
+$$
+> \iint d r_1 dr_2 [\varphi_A^*(1)\varphi_B^*(2)] \cdot \hat{o}(1) \cdot [\varphi_A(1)\varphi_C(2)]
+> $$</li>
+</ul>
+<ul>
+<li>此处，乘法可以交换顺序，除了算符必须作用在它右边的函数上，因此我们把所有关于电子1的放在一起，所有关于电子2的放在一起，重写积分函数
+$$
+> \iint dr_1 dr_2 \left[ \varphi_A^*(1) \hat{o}(1) \varphi_A(1) \right] \cdot \left[ \varphi_B^*(2) \varphi_C(2) \right]
+> $$</li>
+<li>其中算符$\hat{o}(1)$ 只对电子1有作用，关于电子2的函数被视为常数，因此可以移动各项位置，但是要保证$\hat{o}(1)$左侧为$\varphi_A(1)$。</li>
+<li>接下来使用<strong>微积分基本定理</strong>：如果被积函数是 $f(x) \cdot g(y)$ 的形式，且积分区域 $x$ 和 $y$ 互不干扰，那么双重积分等于两个单重积分的乘积。
+$$
+> \iint f(x)g(y) dx dy = \left( \int f(x) dx \right) \cdot \left( \int g(y) dy \right)
+> $$</li>
+<li>因此积分又可以写作：
+$$
+> \int dr_2 \left[ \varphi_B^*(r_2) \varphi_C(r_2) \right] \cdot \left( \int dr_1 \varphi_A^*(r_1) \hat{o}(1) \varphi_A(r_1) \right)
+> $$</li>
+<li>因为 $\varphi_B$ 和 $\varphi_C$ 是不同的本征轨道，它们互相正交，所以 $\langle \varphi_B | \varphi_C \rangle = \int dr_2 \left[ \varphi_B^*(r_2) \varphi_C(r_2) \right] = 0$，即第一项为0，因此本项为0。</li>
+</ul>
+<ul>
+<li>2、计算 $\hat{o}(2)$：</li>
+</ul>
+<ul>
+<li>类似地，积分写作：
+$$
+> \int dr_1 \left[ \varphi_A^*(r_1) \varphi_A(r_1) \right] \cdot \left( \int dr_2 \varphi_B^*(r_2) \hat{o}(2) \varphi_C(r_2) \right)
+> $$</li>
+<li>其中第一部分为$\varphi_A$ 自己的重叠积分，即$\langle \varphi_A | \varphi_A \rangle = 1$，因此，这项积分变为单电子积分 $\langle \varphi_B | \hat{o} | \varphi_C \rangle$。
+第一项为0，第二项仅和两个轨道的单电子积分有关，因此，复杂的多体积分能够转化为简单的单体积分：
+$$
+> d_{IO} = \langle \phi_{in} | \sum_k \hat{o}(k) | \phi_{out} \rangle = \langle \varphi_B | \hat{o} | \varphi_C \rangle
+> $$
+这里仅计算第一项，其他项同理。
+因此，即使行列式不管多么复杂，实际只需要计算单个KS轨道之间的非绝热耦合即可。</li>
+</ul>
+</blockquote>
+<p><strong>以上，为KS轨道和Slater行列式的引入原因。</strong><br></p>
+<p>因此，式（12）所得的非绝热耦合矢 $\langle \phi_k|\frac{\partial}{\partial t}|\phi_j \rangle \cdot$便可以写作两个不同单电子（$p，q$）KS轨道之间的非绝热耦合：
+</p>
+$$
+\langle \phi_k|\frac{\partial}{\partial t}|\phi_j \rangle  = \langle \varphi_p|\frac{\partial}{\partial t}|\varphi_q \rangle \tag{48}
+$$<p>
+此时，非绝热耦合可以通过数值差分方法求解：
+</p>
+$$
+d_{pq}(t) = \langle \varphi_p(t) | \frac{\partial}{\partial t} | \varphi_q(t) \rangle \tag{49}
+$$<p>
+首先，我们将 $t + \Delta t$ 时刻的波函数 $|\varphi_q(t + \Delta t)\rangle$ 在时刻 $t$ 处进行一阶泰勒展开：
+</p>
+$$
+|\varphi_q(t + \Delta t)\rangle \approx |\varphi_q(t)\rangle + \Delta t \frac{\partial}{\partial t}|\varphi_q(t)\rangle + O(\Delta t^2) \tag{50}
+$$<p>
+上式左乘 $\langle \varphi_p(t)|$：
+</p>
+$$
+\langle \varphi_p(t) | \varphi_q(t + \Delta t)\rangle \approx \langle \varphi_p(t) | \varphi_q(t)\rangle + \Delta t \langle \varphi_p(t) | \frac{\partial}{\partial t} | \varphi_q(t)\rangle \tag{51}
+$$<p>
+其中，$O(\Delta t^2)$二阶项极小，因此忽略。并且$\langle \varphi_p(t) | \varphi_q(t)\rangle = 0$，因此忽略。<br>
+我们就得到了初步近似：
+</p>
+$$
+\langle \varphi_p(t) | \frac{\partial}{\partial t} | \varphi_q(t)\rangle \approx \frac{1}{\Delta t} \langle \varphi_p(t) | \varphi_q(t+\Delta t)\rangle \tag{52}
+$$<p>
+其中 $\langle \varphi_p(t) | \varphi_q(t+\Delta t)\rangle$ 被称为时间重叠矩阵 (Time-overlap matrix)。<br>
+但是上式并不对称，因为有限时间步长会$\Delta t$引入高阶截断误差，从而导致非绝热耦合不是严格反厄密的。因此，使用对称修正解决这个问题。<br>
+考虑另一个方向的重叠：
+</p>
+$$
+\langle \varphi_p(t+\Delta t) | \varphi_q(t)\rangle \tag{53}
+$$<p>
+进行类似的展开：
+</p>
+$$
+\langle \varphi_q(t) | \frac{\partial}{\partial t} | \varphi_p(t)\rangle \approx \frac{1}{\Delta t} \langle \varphi_q(t) | \varphi_p(t+\Delta t)\rangle \tag{54}
+$$<p>
+根据式（51）和（52），我们有两个近似式：</p>
+<ul>
+<li>1、$\Delta t \cdot d_{pq} \approx \langle \varphi_p(t) | \varphi_q(t+\Delta t)\rangle$</li>
+<li>2、$\Delta t \cdot d_{pq} \approx -\langle \varphi_p(t+\Delta t) | \varphi_q(t)\rangle$
+相加可得：
+$$
+2\Delta t \cdot d_{pq} \approx \langle \varphi_p(t) | \varphi_q(t+\Delta t)\rangle - \langle \varphi_p(t+\Delta t) | \varphi_q(t)\rangle \tag{55}
+$$
+现在，我们便求得了$d_{pq}$，将其代入式（36），即电子哈密顿量矩阵元可以写作：$H_{pq} = -i\hbar d_{pq}$，（势能项由于绝热基展开为0）代入上式可得：
+<strong>注意</strong></li>
+<li>此处使用的是$\langle \phi_k |  \frac{\partial}{\partial t} | \phi_j \rangle$，因此并未出现核速度。
+$$
+H_{pq}(t + \frac{dt}{2}) = -i\hbar \frac{\langle \varphi_p(t) | \varphi_q(t+dt) \rangle - \langle \varphi_p(t+dt) | \varphi_q(t) \rangle}{2dt} \tag{56}
+$$
+上式中：</li>
+<li>分子为不同时刻波函数的重叠矩阵的差。</li>
+<li>分母来自对称差分的两次时间步长。</li>
+<li>时刻为$(t + \frac{dt}{2})$表示，计算出的两个时间步的中点，例如计算出$1 fs$和$2 fs$的电子哈密顿矩阵元后，这个数值被认为是$1.5 fs$的数值，以保证数值的稳定性。</li>
+</ul>
+<h2 id="经典路径近似classical-path-approximation-cpa">经典路径近似（Classical Path Approximation, CPA）
+</h2><p>由于凝聚态体系通常较大，电子激发对核运动的影响通常可以被忽略，这就是经典路径近似。<br>
+采取经典路径近似表明：</p>
+<ul>
+<li>1、原子核轨迹是在基态上计算好的，不再随电子态跳跃而改变。</li>
+<li>2、核速度不再调整，因为轨迹已经固定。</li>
+</ul>
+<p>因为不再调整核速度，因此，为了让体系依旧满足<strong>细致平衡（Detailed Balance）</strong>，需要引入玻尔兹曼因子对跳跃概率进行缩放。</p>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>细致平衡指在一个描述的是平衡态下的流量守恒。要求从低能态 $k$ 跳到高能态 $j$ 的总流量，必须等于从 $j$ 跳回 $k$ 的总流量。</li>
+<li>在热平衡下，状态的概率由玻尔兹曼分布给出：
+$$
+\frac{P_k}{P_j}=\frac{e^{-E_i/k_BT}}{e^{-E_j/k_BT}}=e^{(E_j-E_k)/k_BT}
+$$</li>
+<li>采用CPA后，原子核不再对电子能量的变化做出反应。而在标准FSSH中，向上跃迁（吸收能量）需要原子核动能改变以保证总能量守恒，如果动能改变不足以支付跃迁的能垒，就不会跳跃，从而维持平衡。</li>
+<li>CPA以后，相当于向上跃迁不再需要能垒，因此，向上跃迁（吸收能量）和向下跃迁（放出能量）将由同样的耦合强度驱动，概率几乎相等。这将导致长时间的演化后，计算出的所有态会有相同的布居数，即$\frac{P_k}{P_j}$ = 1。在上式中，对应于$T = \infty$，因此，需要使用玻尔兹曼因子对向上跃迁进行抑制。</li>
+</ul>
+<p>修正后的跃迁概率公式：
+</p>
+$$
+g_{k \to j}^{CPA} = g_{k \to j}^{FSSH} \times b_{k \to j}(t) \tag{57}
+$$<p>
+如果是向下跃迁：
+</p>
+$$
+b_{k \to j} = 1 \tag{58}
+$$<p>
+表明向下跃迁（放出能量）不会受到限制。
+如果是向上跃迁：
+</p>
+$$
+b_{k \to j} = \exp\left( -\frac{E_j - E_k}{k_B T} \right) \tag{59}
+$$<p>
+表明向上跃迁（吸收能量）被指数抑制，抑制程度取决于能级差和温度。</p>
+<h2 id="量子退相干修正">量子退相干修正
+</h2><p>在量子系统的独立演化过程中，若无外界干扰，量子态之间的相干性能够保持。但当系统受到外部扰动时，量子叠加态会被破坏，导致波函数分支和相位分离，使体系迅速坍缩至某一量子态，即发生退相干。<br>
+但是，混合量子-经典的FSSH方法将量子态分叉、相干演化与核波包传播替换成 ‘经典轨迹 + 随机跳跃’。<br>
+在全量子方法中，电子与原子核均进行量子化处理，体系波函数能够保持良好地相干性质。<br>
+但是在FSSH方法中，电子被量子化地处理，而原子核采用经典描述，电子与核波函数之间的量子耦合作用无法被正确地描述，因而天然地具有退相干缺失的算法缺陷。<br>
+因此，FSSH无法严格满足量子理论对动量、布居数和相干性的要求。<br></p>
+<p>一般来说，我们认为在CPA-FSSH量子-经典混合动力学方法中天然地具有过度相干的问题，这主要来自于以下三个方面：</p>
+<ul>
+<li>1、CPA近似导致原子核轨迹并未依照非绝热跃迁发生分支，电子波函数的相干演化被保持过久，即使已经发生跃迁，电子波函数仍保留之前轨道的信息，核轨迹之间的相干没有被及时破坏引发过度相干。</li>
+<li>2、FSSH算法通过概率公式决定是否发生跳跃的，即式（43）：</li>
+<li>$$P_{j \to k} = \frac{2 \text{Re}(c_j^* c_k d_{jk} \cdot \mathbf{v})}{|c_j|^2}  \Delta t $$</li>
+<li>假设已经发生了跃迁，即由j态跃迁到了k态，但是电子的波函数的系数并没有随之坍缩，而是继续连续演化。也就是说，系数 $c_j$ 和 $c_k$ 的数值不会发生突变，依然保留了跳跃前的数值，并继续平滑演变。这样会导致对于原子核部分来说系统已经完全处于跳跃后的k态了，但是电子依然是j态和k态的混合态，违背了量子测量的坍缩原理（测量假设）。在使用上式计算概率时，通常会给$c_j$一个极小值，这使得电子始终处于多态叠加的状态，而不是单一明确的状态，从而引入了非物理的过度相干。</li>
+<li>3、通常我们采用一系列不同的初始条件，形成大量跃迁轨迹的系综，并对系综平均尝试人为地引入不确定度，从而重构量子效应。但这种方法获得的轨迹间的相位关系仍然被保留，不同轨迹之间存在高度相似的演化过程，仍然无法有效引入退相干。</li>
+</ul>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>如果电子处于两个态，例如基态Groud State和激发态Exctied State的叠加时，我们可以把波函数写作如下形式：</li>
+<li>$$\varphi = c_{k} \phi_{k} + c_{j} \phi_{j}$$</li>
+<li>这里的系数 $c$ 是复数，可以将模和相位分开表示：$c_k = |c_k|e^{i\theta_k}, c_j = |c_j|e^{i\theta_j}$。</li>
+<li>相位差就是$\Delta \theta = \theta_k - \theta_j$。</li>
+<li>根据式（17）下的例子，我们引入的密度矩阵中，密度矩阵的非对角元体现了相干性，这里考虑非对角元其中一项：</li>
+<li>$$ c_k c_j^* = |c_k||c_j| e^{i(\theta_k - \theta_j)}$$</li>
+<li>只要$c_k c_j^* \neq 0$，那么这两个态就存在相位关系，就具有相干性，能够发生量子干涉。</li>
+<li>但是，在统计平均下，相位差是完全随机的，有是相位差是$0°$ （$e^{i0} = 1$），有时是$180°$（$e^{i\pi} = -1$），这就导致在时间平均下，$c_k c_j^* \to 0$。此时两个态失去了量子相干性，导致退相干，此时量子概率变成了经典轨迹，这是量子测量的基本假设所决定的。</li>
+</ul>
+<p>尽管存在**退相干诱导表面跳跃（Decoherence-Induced Surface Hopping, DISH）**等方案能够在面跳跃过程中显式地引入退相干和态坍缩过程，但其结果仍是近似的。不过对于目前的计算资源限制来说，CPA+DISH修正依然是一座无法逾越的大山。</p>
+<h3 id="随机演化算符">随机演化算符
+</h3><p>在DISH方法中，首先定义了复合时间演化算符 $\tilde{\hat{U}}(t, t_0)$，并引入一个退相干算符$\hat{L}_{\alpha}(t)$和标准含时薛定谔方程演化算符$\hat{U}(t, t_0)$，其中复合时间演化算符定义为：
+</p>
+$$
+\tilde{\hat{U}}(t, t_0) = \prod_{\alpha} [\hat{L}_{\alpha}(t)] \hat{U}(t, t_0) \tag{60}
+$$<p>
+其中：</p>
+<ul>
+<li>$\hat{U}(t, t_0)$：代表标准的含时薛定谔方程演化，产生相干的量子叠加态。</li>
+<li>$\hat{L}_{\alpha}(t)$：代表退相干算符，它随机地将波函数“定位”或“坍缩”到某个绝热基态上。</li>
+</ul>
+<p><strong>时间演化算符说明</strong>：</p>
+<ul>
+<li>在和外界没有任何相互作用的孤立系统中，波函数的演化严格遵循含时薛定谔方程，即式（2）：</li>
+<li>$$i\hbar \frac{\partial}{\partial t} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle$$</li>
+<li>定义的时间演化算符$\hat{U}(t, t_0)$作用在$\partial t$上能够把波函数从$t_0$时刻转移到$t$时刻，即：</li>
+<li>$$|\psi(t)\rangle = \hat{U}(t, t_0) |\psi(t_0)\rangle$$</li>
+<li>需要注意的是，含时薛定谔方程是微分方程，其描述的是波函数在某一时刻$t$的变化率。但是时间演化算符是积分形式，描述的是波函数在到$t$时刻会变成什么样子。特别是在数值模拟中，我们已知初始状态$\psi(t)$以后，含时薛定谔方程给了我们这个波函数如何变化，但是时间演化算法才能直接计算出下一刻位置波函数的样子$\psi(t_0)$</li>
+<li>我们将时间演化算符代入含时薛定谔方程中，得到：</li>
+<li>$$i\hbar \frac{\partial}{\partial t} \left( \hat{U}(t, t_0) |\psi(t_0)\rangle \right) = \hat{H} \left( \hat{U}(t, t_0) |\psi(t_0)\rangle \right)$$</li>
+<li>此时，我们得到的波函数$\psi(t_0)$已经是在$t_0$时刻的波函数了，此时这个波函数是定态的，与时间无关，因此两边可以直接把$\psi(t_0)$约掉，得到算符的微分方程：</li>
+<li>$$i\hbar \frac{d}{dt} \hat{U}(t, t_0) = \hat{H} \hat{U}(t, t_0)$$</li>
+<li>把常数移到右边可得：</li>
+<li>$$\frac{d}{dt} \hat{U}(t, t_0) = -\frac{i}{\hbar} \hat{H} \hat{U}(t, t_0)$$</li>
+<li>我们可以看到，算符$\hat{U}(t, t_0)$在求导后等于它本身，因此，我们可以认为它的解是一个$e$指数形式：</li>
+<li>$$\hat{U}(t, t_0) = e^{-i\hat{H}(t - t_0)/\hbar}$$</li>
+<li>时间演化算符属于幺正算符，即$\hat{U}^* \hat{U} = \hat{U} \hat{U}^* = \hat{I}$。其中，$\hat{I}$为单位算符。将时间演化算符作用在波函数上以后，只改变波函数的方向（相位）而不改变大小（模长）。这种演化会长时间保持系统的相干性。因此，我们需要在时间演化算符作用下，让波函数在有相干性的动力学过程中发生演化，再由退相干算符介入，打破相干性，从而使用这两个算符实现退相干。</li>
+</ul>
+<p><strong>退相干算符说明</strong>：</p>
+<ul>
+<li>退相干算符$\hat{L}_{k}(t)$是一个随机算符，其具体形式取决于一个均匀分布的随机数 $\zeta \in [0, 1]$ 与当前量子态在态 $k$ 上的概率 $|c_k|^2$ 的比较结果，其定义如下：</li>
+<li>$$\hat{L}_{k}(t) =\begin{cases}\frac{\hat{P}_{k}}{|| \hat{P}_{k} |\psi\rangle ||} & \text{如果 } \zeta \le |c_{k}|^2 \quad (\text{坍缩到态k} ) \\\frac{\hat{I} - \hat{P}_{k}}{|| (\hat{I} - \hat{P}_{k}) |\psi\rangle ||} & \text{如果 } \zeta > |c_{k}|^2 \quad (\text{将态k投影出去，使其不再存在在波函数中})\end{cases}$$</li>
+<li>其中$\hat{P}<em>{k} = |\phi</em>{k}\rangle\langle\phi_{k}|$ 是向绝热基态 $k$ 的投影算符。分母就为归一化因子，确保作用后波函数的模长为1。</li>
+<li>在之前的推导中，我们提到过需要将态进行投影从而得到得到某个态的系数变化率。但是这里，我们需要的是演化后的一个新的态，而不是数值，因此我们需要使用投影算符$\hat{P}<em>{k} = |\phi</em>{k}\rangle\langle\phi_{k}|$将其作用在一个态上，才能产生一个新的态。例如：</li>
+<li>假设$|\psi\rangle = c_1 |\phi_1\rangle + c_2 \phi_2\rangle|$，将投影算符$\hat{P}_1 = |\phi_1\rangle\langle\phi_1|$作用在上面</li>
+<li>$$\hat{P}_1 |\psi\rangle = (|\phi_1\rangle\langle\phi_1|) |\psi\rangle = c_1 |\phi_1\rangle$$</li>
+<li>这样，我们就通过投影算符得到了一个新的波函数，这个波函数保留了原来的振幅信息 $c_1$，但方向被强行改变到了基函数 $|\phi_1\rangle$ 的方向上。这正是“波函数坍缩”的数学定义。</li>
+<li>但是随之而来的问题是，在投影到 $|\phi_1\rangle$ 方向之后，概率不再守恒。例如：</li>
+<li>波函数为 $|\psi\rangle = 0.6|\phi_1\rangle + 0.8|\phi_2\rangle$，此时总概率为$|0.6|^2 + |0.8|^2 = 0.36 + 0.64 = 1$。在不归一化的情况下使用投影算符$\hat{P}_1 = |\phi_1\rangle\langle\phi_1|$后：</li>
+<li>$$|\psi\rangle = \hat{P}_1 |\psi\rangle = 0.6|\phi_1\rangle$$</li>
+<li>此时新波函数的模长平方是 $|0.6|^2 = 0.36$。这意味着粒子只剩下 36% 的概率存在，另外 64% 的粒子凭空消失了，因此，这时候除以模长0.6后，才能使得新波函数在$|\phi_1\rangle$的概率为1。</li>
+<li>退相干算符不是幺正算符，因此上式才使用归一化。它会随机将波函数坍缩到某个绝热基态上。</li>
+<li>上面投影算符的式子表明，如果随机数小于概率$\zeta \le |c_{k}|^2 \quad$，那么投影算符作用在波函数上，导致波函数变为纯态 $\psi = \phi_k$，不再和其他态存在相干性。如果$\zeta &gt; |c_{k}|^2 \quad$，则将态k从投影出去，使其不再存在于波函数中，轨迹会根据剩余态的相对概率跳跃到其他的某个态上（因为此时我们已经得知此时不在k态上，因此为了符合测量导致态发生坍缩的投影假设，波函数中属于态k的成分必须消失）。</li>
+</ul>
+<h3 id="退相干时间">退相干时间
+</h3><p>DISH需要计算退相干时间从而判断叠加态能维持多久，退相干时间由下式决定：
+</p>
+$$
+\frac{1}{\tau_{k}(t)} = \sum_{k \neq j}^{N} |c_j(t)|^2 r_{kj} \tag{61}
+$$<p>
+其中：</p>
+<ul>
+<li>1、$r_{kj}$：是态 $k$ 和态 $j$ 之间的纯去相速率，可以由光学响应理论或冻结高斯近似等公式预先计算或在线计算。</li>
+<li>2、$|c_i(t)|^2$：是其他态的布居数。
+式（61）代表了，如果波函数主要处于态k上，那么其他态的布居数接近0，此时退相干时间接近$\infty$，此时能够一直稳定在态k上，如果其他态叠加程度高，退相干则发生的越快。</li>
+</ul>
+<p>纯去相速率使用光学响应理论表示。计算可以得到光学响应函数，或者叫得更熟悉一点——重叠积分$J_{jk}(t)$。重叠积分的模值衰减速率就是纯去相速率。
+</p>
+$$
+J_{jk}(t) = \langle \psi_j(t) | \psi_k(t) \rangle \tag{62}
+$$<p>
+<strong>注意</strong>：</p>
+<ul>
+<li>我们一般说的$\langle \psi_j | \psi_k \rangle = 0$指的是同一时刻，统一哈密顿量下的电子基函数是正交的。上面的重叠积分描述的是同一个态在两个势能面上演化的重叠程度，或者说是原子核在势能面k和势能面j上演化，在时间t时，两个态长得有多像。
+式（62）一般采用CPA后进行统计平均，一般来说，这两个波函数在一开始会处于同一个初态$\psi_0 \rangle$，然后随时间演化后发生态之间的跃迁：
+$$
+J_{jk}(t) = \langle \psi_j(t) | \psi_k(t) \rangle = \langle \psi_0 | e^{i\hat{H}_j t / \hbar} e^{-i\hat{H}_k t / \hbar} | \psi_0 \rangle \tag{63}
+$$
+其中 $\hat{H}<em>j$ 是当电子处于态 $j$ 时的原子核哈密顿量（动能和势能），因为$J</em>{jk}(t)$描述的是原子核在不同位置的重叠程度，因此这里是原子核的哈密顿量。
+在CPA近似下，式（63）中的原子核哈密顿量算符可以直接得到具体的数值，因为核轨迹$R(t)$ 已经被确定了，因此可以直接替换成某一时刻的标量函数，即
+$$
+\hat{H}_k \approx E_k(R(t)) \tag{64}
+$$
+因此，式（63）可以替换为：
+$$
+e^{-i\hat{H}_k t / \hbar} \rightarrow \exp\left[ -\frac{i}{\hbar} \int_0^t E_k(\mathbf{R}(\tau)) d\tau \right] \cdot \langle \psi_0 | \psi_0 \rangle \tag{65}
+$$
+将式（65）代入式（63）中，可得：
+$$
+J_{jk}(t) \approx \left\langle \exp\left[ \frac{i}{\hbar} \int_0^t E_j(\tau) d\tau \right] \exp\left[ -\frac{i}{\hbar} \int_0^t E_k(\tau) d\tau \right] \right\rangle \tag{66}
+$$
+$$
+J_{jk}(t) \approx \left\langle \exp\left[ -\frac{i}{\hbar} \int_0^t \left( E_k(\tau) - E_j(\tau) \right) d\tau \right] \right\rangle \tag{67}
+$$
+令$\Delta E_{jk}(\tau) = E_k(\tau) - E_j(\tau)$ ，那么
+$$
+J_{jk}(t) \approx \left\langle \exp\left[ -\frac{i}{\hbar} \int_{0}^{t} \Delta E_{jk}(\tau) d\tau \right] \right\rangle_T \tag{68}
+$$
+因为我们需要对大量初始位置和动量平均，因此引入了外面的尖括号 $\langle \dots \rangle_T$，表示对多条轨迹取平均。
+但是上式计算依旧复杂，通常使用二阶累积量展开近似。
+首先计算两条电子态之间的能级差$\Delta E_{jk}$相对于平均值的涨落：
+$$
+\delta U(t) = \Delta E_{ij}(t) - \langle \Delta E_{ij} \rangle \tag{69}
+$$
+然后计算能隙涨落的非归一化自相关函数（Unnormalized Autocorrelation Function, unACF）：
+$$
+C_{un}(t) = \langle \delta U(t) \delta U(0) \rangle \tag{70}
+$$
+上式反映的是环境对电子的能级位置影响持续多久，通常会随时间衰减。<br>
+将自相关函数进行双重时间积分，直接得到响应函数的衰减形式 ：
+$$
+J_{jk}(t) \approx \exp\left[ - \frac{1}{\hbar^2} \int_{0}^{t} d\tau_2 \int_{0}^{\tau_2} d\tau_1 \langle \delta U(\tau_1) \delta U(0) \rangle \right] \tag{71}
+$$
+t字母在之前使用过，因此使用$\tau$更换积分上限。<br>
+现在我们获得了$J_{jk}(t)$，求高斯拟合便可以获得纯去相速率。这种方法将复杂的量子相互作用的环境使用能级差来表示。<br>
+最后，我们将得到的纯去相速率代回（61），便能得到退相干时间。</li>
+</ul>
+<h3 id="随机判断退相干事件">随机判断退相干事件
+</h3><p>在DISH方法中，使用泊松过程来判断是否退相干。<br>
+首先根据之前的步骤计算退相干时间，设为$\tau_{k}$，它代表了在当前环境下，态 $k$ 平均能维持多久的相干性。<br>
+生成一个随机数$T$，代表在这次随机当中，允许叠加态存活的时间。<br>
+如果当前时间演化算符所演化的时间（距离上一次退相干过去的时间）超过了随机生成的寿命，那么立刻使用退相干算符对波函数进行坍缩或者投影移除态k，这就是DISH算法中发生跃迁的时刻。<br>
+如果没有超过，那么波函数继续根据时间演化算符进行演化，到下一个时间步长再判断。<br>
+这两种结果取决于量子概率 $|c_{k}|^2$：</p>
+<ul>
+<li>1、坍缩到k态，概率为$|c_{k}|^2$，这时波函数变为纯态$\psi = \phi_k$，如果当前势能面不为k态的势能面，则发生跳跃，跳到k态势能面上。</li>
+<li>2、将k态投影出去，概率为$1 - |c_{k}|^2$，态k的系数设置为0，波函数在剩余态中重新归一化。如果这时当前势能面为k态的势能面，但是k态被投影出去了，则必须跳跃到其他态上，跳跃到哪个态上根据剩下态归一化以后相对的概率分布决定。</li>
+</ul>
+<h2 id="需要使用到的量子力学">需要使用到的量子力学：
 </h2><h3 id="1波函数假设">1、波函数假设
 </h3><h4 id="量子系统的状态由一个波函数-psimathbfr-t-完全描述">量子系统的状态由一个<strong>波函数</strong> $\Psi(\mathbf{r}, t)$ 完全描述。
 </h4>$$
@@ -1199,7 +1588,7 @@ $$<p>表示了在$t$时刻发现粒子处于a和b之间的几率。
 	
 	loading="lazy"
 	
-		alt="image1"
+		alt="alt text"
 	
 	
 		class="gallery-image" 
@@ -1303,7 +1692,7 @@ $$<h3 id="5全同粒子假设">5、全同粒子假设
 
 
         <span>
-            最后更新于 2025-11-27 23:50
+            最后更新于 2025-12-16 22:32
         </span>
     </section></footer>
 
