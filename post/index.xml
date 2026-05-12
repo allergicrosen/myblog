@@ -7,8 +7,8 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>allergicrosen</copyright>
-        <lastBuildDate>Tue, 12 May 2026 14:52:55 +0000</lastBuildDate><atom:link href="https://allergicrosen.xyz/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Excition_re</title>
+        <lastBuildDate>Tue, 12 May 2026 14:57:43 +0000</lastBuildDate><atom:link href="https://allergicrosen.xyz/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>激子（Exciton）</title>
         <link>https://allergicrosen.xyz/p/excition_re/</link>
         <pubDate>Tue, 12 May 2026 22:46:08 +0800</pubDate>
         
@@ -29,6 +29,1544 @@
     &lt;!-- 本文为原创内容，转载请注明出处～ --&gt;
   &lt;/p&gt;
 &lt;/div&gt;
+&lt;h1 id=&#34;激子exciton讲义&#34;&gt;激子（Exciton）讲义
+&lt;/h1&gt;&lt;h2 id=&#34;目录&#34;&gt;目录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e6%bf%80%e5%ad%90exciton%e8%ae%b2%e4%b9%89&#34; &gt;激子（Exciton）讲义&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%9b%ae%e5%bd%95&#34; &gt;目录&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e6%bf%80%e5%ad%90exciton&#34; &gt;激子（exciton）&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%8d%95%e7%b2%92%e5%ad%90%e8%a1%a8%e8%b1%a1&#34; &gt;单粒子表象&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%a4%9a%e7%b2%92%e5%ad%90%e8%a1%a8%e8%b1%a1&#34; &gt;多粒子表象&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%b8%80%e6%ac%a1%e9%87%8f%e5%ad%90%e5%8c%96&#34; &gt;一次量子化&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%ba%8c%e6%ac%a1%e9%87%8f%e5%ad%90%e5%8c%96&#34; &gt;二次量子化&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%ba%a7%e7%94%9f%e4%b8%8e%e6%b9%ae%e7%81%ad%e7%ae%97%e7%ac%a6&#34; &gt;产生与湮灭算符&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%bd%8d%e7%bd%ae%e7%ae%97%e7%ac%a6%e4%b8%8e%e5%8a%a8%e9%87%8f%e7%ae%97%e7%ac%a6&#34; &gt;位置算符与动量算符&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%b8%80%e7%bb%b4%e8%b0%90%e6%8c%af%e5%ad%90&#34; &gt;一维谐振子&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%ba%a7%e7%94%9f%e6%b9%ae%e7%81%ad%e7%ae%97%e7%ac%a6%e7%9a%84%e6%80%a7%e8%b4%a8%e5%8f%8a%e7%89%a9%e7%90%86%e6%84%8f%e4%b9%89&#34; &gt;产生湮灭算符的性质及物理意义&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%90%91%e9%87%8f%e8%ae%a1%e7%ae%97&#34; &gt;向量计算&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%9c%ba%e7%ae%97%e7%ac%a6&#34; &gt;场算符&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%9c%ba%e7%ae%97%e7%ac%a6%e7%9a%84%e6%80%a7%e8%b4%a8%e5%8f%8a%e7%89%a9%e7%90%86%e6%84%8f%e4%b9%89&#34; &gt;场算符的性质及物理意义&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e6%bf%80%e5%ad%90%e6%a8%a1%e5%9e%8b&#34; &gt;激子模型&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%ba%8c%e6%ac%a1%e9%87%8f%e5%ad%90%e5%8c%96%e8%a1%a8%e7%a4%ba%e5%a4%9a%e4%bd%93%e9%a1%b9&#34; &gt;二次量子化表示多体项&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%8f%8c%e5%b8%a6%e8%bf%91%e4%bc%bc&#34; &gt;双带近似&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%8f%8c%e7%94%b5%e5%ad%90%e5%88%b0%e7%94%b5%e5%ad%90-%e7%a9%ba%e7%a9%b4%e5%af%b9&#34; &gt;双电子到电子-空穴对&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e6%bf%80%e5%ad%90%e5%93%88%e5%af%86%e9%a1%bf%e9%87%8f%e5%92%8c%e6%bf%80%e5%ad%90%e6%80%81&#34; &gt;激子哈密顿量和激子态&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#wannier-%e6%96%b9%e7%a8%8b&#34; &gt;Wannier 方程&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#gw--bse&#34; &gt;GW + BSE&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#gw-%e8%bf%91%e4%bc%bc&#34; &gt;GW 近似&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%8d%95%e7%b2%92%e5%ad%90%e6%a0%bc%e6%9e%97%e5%87%bd%e6%95%b0&#34; &gt;单粒子格林函数&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#dyson-%e6%96%b9%e7%a8%8b&#34; &gt;Dyson 方程&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%8f%8c%e7%b2%92%e5%ad%90%e6%a0%bc%e6%9e%97%e5%87%bd%e6%95%b0&#34; &gt;双粒子格林函数&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#hedin-%e6%96%b9%e7%a8%8b%e7%bb%84&#34; &gt;Hedin 方程组&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#schwinger-%e5%af%bc%e6%95%b0&#34; &gt;Schwinger 导数&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e9%80%86%e4%bb%8b%e7%94%b5%e5%87%bd%e6%95%b0%e5%92%8c%e9%a1%b6%e7%82%b9%e5%87%bd%e6%95%b0&#34; &gt;逆介电函数和顶点函数&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%ba%93%e4%bb%91%e5%b1%8f%e8%94%bd%e5%92%8c%e6%9e%81%e5%8c%96%e7%8e%87&#34; &gt;库仑屏蔽和极化率&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%b0%81%e9%97%ad%e5%be%aa%e7%8e%af%e4%b8%8e-g_0w_0&#34; &gt;封闭循环与 $G_0W_0$&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#bethesalpeter-%e6%96%b9%e7%a8%8b&#34; &gt;Bethe–Salpeter 方程&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#bse-%e5%93%88%e5%af%86%e9%a1%bf%e9%87%8f&#34; &gt;BSE 哈密顿量&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#bse-%e6%bf%80%e5%ad%90%e6%b3%a2%e5%87%bd%e6%95%b0&#34; &gt;BSE 激子波函数&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#casida-%e6%96%b9%e7%a8%8b&#34; &gt;Casida 方程&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%9c%ba%e7%ae%97%e7%ac%a6%e5%b1%95%e5%bc%80&#34; &gt;场算符展开&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e4%ba%8c%e6%ac%a1%e9%87%8f%e5%ad%90%e5%8c%96%e4%b8%8b%e7%9a%84%e6%97%b6%e9%97%b4%e6%bc%94%e5%8c%96%e5%af%86%e5%ba%a6%e7%9f%a9%e9%98%b5&#34; &gt;二次量子化下的时间演化密度矩阵&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e9%99%84%e5%bd%95&#34; &gt;附录&lt;/a&gt;
+
+    
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0&#34; &gt;参考文章&lt;/a&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;激子exciton&#34;&gt;激子（exciton）
+&lt;/h1&gt;&lt;p&gt;当价带上的电子被激发到导带上时，会在价带上留下一个空穴；电子与空穴之间存在强烈的库仑相互作用，由此形成的束缚电子-空穴对被称作&lt;strong&gt;激子（exciton）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果电子-空穴对能够与晶格发生强相互作用，激子周围的晶格会发生畸变，这种畸变会产生一个势阱，反过来将激子捕获在某一位点上，从而形成&lt;strong&gt;自陷激子态（self-trapped exciton, STE）&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;单粒子表象&#34;&gt;单粒子表象
+&lt;/h1&gt;&lt;p&gt;由于激子是存在强烈相互作用的电子-空穴对，因此单粒子近似（平均场近似）不能描述电子与空穴之间的强相互作用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当存在一个包含 $N$ 个相互作用粒子的系统时，描述它的完整波函数是 $N$ 个粒子坐标的函数，其复杂性随着粒子数指数增长，直接求解薛定谔方程几乎不可能。&lt;/li&gt;
+&lt;li&gt;这时，可以仅考虑将每个粒子看作是在一个由其他所有粒子平均作用形成的、静态的有效势场中独立运动，这种近似被称为单粒子近似或平均场近似。&lt;/li&gt;
+&lt;li&gt;因此，这种情况下，就能够将相互耦合的多体问题转化成较为简单的 $N$ 个单体问题（对应一个 $N$ 阶（$N\times N$）== 的 Slater 行列式）。&lt;/li&gt;
+&lt;li&gt;但是其局限性在于，如果考虑多粒子体系的关联作用，单粒子表象就会失效，因为单粒子表象无法描述多粒子之间的关联相互作用。&lt;/li&gt;
+&lt;li&gt;例如，我们关心粒子 1 和粒子 2 之间的耦合，但是在单粒子表象下，考虑粒子 1 的时候，其他所有粒子均被当作粒子 1 的平均势场；粒子 2 也是如此。因此，这种情况下无法考虑到粒子 1 和粒子 2 之间的瞬时相互作用。&lt;/li&gt;
+&lt;li&gt;此外，单粒子表象无法处理粒子的产生和湮灭（比如电子-空穴对的产生），因为 Slater 行列式的阶数是保持不变的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;多粒子表象&#34;&gt;多粒子表象
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;描述激子问题需要涉及电子-空穴之间的相互作用，而单粒子近似则会把二者的相互作用忽略。在单粒子近似下，激子的激发能只能是 $E_c - E_v$，即价带顶和导带底之间的能量差。在这种情况下，电子和空穴之间的相互作用被完全忽略了。在一般的单粒子表象下，电子在其他电子形成的平均场中运动；如果某个电子的状态发生变化，其他电子由于单粒子表象下缺乏与之的动态关联，因此其他电子的波函数不会进行瞬时调整。&lt;/li&gt;
+&lt;li&gt;因此对于需要关注的多粒子体系（例如激子或俄歇过程），需要引入多粒子表象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是在引入多粒子表象前，我们需要了解使用什么方法来处理多粒子表象下粒子数可变的情况。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一次量子化&#34;&gt;一次量子化
+&lt;/h2&gt;&lt;p&gt;一次量子化是我们最早接触的形式，例如在薛定谔方程中，单粒子哈密顿量可以表示成：&lt;/p&gt;
+$$
+h_i = \hat{T} + \hat{V} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r}) \tag{1}
+$$&lt;p&gt;其中 $\hat{T}$ 为&lt;strong&gt;动能算符&lt;/strong&gt;[^c1]，$\hat{V}$ 为势能算符。&lt;/p&gt;
+&lt;p&gt;动能项中，拉普拉斯算符 $\nabla^2$ 描述的是波函数的曲率，弯曲得越强表明曲率越大，动量越大。&lt;/p&gt;
+&lt;p&gt;势能项 $V(\mathbf{r})$ 是一个势场，不论是否作用在波函数上，其他粒子导致的平均势场一直都存在。&lt;/p&gt;
+&lt;p&gt;因此，整个哈密顿量是一个待解的微分方程算符，需要整体作用在波函数上，才能得到其本征能量等性质。&lt;/p&gt;
+&lt;p&gt;此时，如果我们使用最简单的独立粒子近似（即粒子间无相互作用），那么 $N$ 个电子整体的哈密顿量为：&lt;/p&gt;
+$$
+H_p \approx \sum_{i=1}^N h_i \tag{3}
+$$&lt;p&gt;最终得到的总能量等于每个电子能量的简单相加 $E = \sum \epsilon_i$。&lt;/p&gt;
+&lt;p&gt;如果考虑相互作用，此时 $N$ 个电子整体的哈密顿量为：&lt;/p&gt;
+$$
+H = \sum_{i=1}^N \left(-\frac{\hbar^2}{2m}\nabla_i^2 + V(\mathbf{r}_i)\right) + \frac{1}{2}\sum_{i \neq j} \frac{e^2}{|\mathbf{r}_i - \mathbf{r}_j|} \tag{4}
+$$&lt;p&gt;其中最后一项为多体算符，表示第 $i$ 个电子和第 $j$ 个电子之间的相互作用。&lt;/p&gt;
+&lt;p&gt;虽然第一量子化能够写出最后一项的电子-电子相互作用项，但是很难求解，因为第 $i$ 个电子和第 $j$ 个电子的坐标在分母中，在 $N$ 个电子的情况下需要求解一个 $3N$ 维[^c2]的偏微分方程。&lt;/p&gt;
+&lt;p&gt;如果考虑单电子（平均场）近似，那么这一项可以写作：&lt;/p&gt;
+$$
+V_{ee} = \sum_{i&lt;j} \frac{e^2}{r_{ij}} \tag{5}
+$$&lt;p&gt;在 DFT 中，对应的能量通常包含三部分：&lt;/p&gt;
+$$
+\left\langle \sum_{i&lt;j} \frac{e^2}{r_{ij}} \right\rangle = E_{\text{Hartree}} + E_{\text{Exchange}} + E_{\text{Correlation}} \tag{6}
+$$&lt;p&gt;第一项被称为 Hartree 项，包含了经典的静电排斥相互作用。后两项为交换-关联项。其中，&lt;strong&gt;交换项&lt;/strong&gt;来源于泡利不相容原理：相同自旋的电子会因 Pauli 排斥而相互回避（&amp;ldquo;Pauli 空穴&amp;rdquo;），从而降低体系能量。&lt;strong&gt;关联项&lt;/strong&gt;来源于不同自旋电子之间的瞬时库仑回避（&amp;ldquo;Coulomb 空穴&amp;rdquo;），它会让一个电子周围出现另一个电子的概率降低，进一步降低整体能量。&lt;/p&gt;
+&lt;p&gt;交换项和关联项均会导致额外的能量下降。其中，由于 Hartree–Fock 方法显式构造了 Slater 行列式，因此其计算的交换作用是精确的；主要难以准确描述的是关联项。&lt;/p&gt;
+&lt;p&gt;上述为一次量子化。由于需要构造巨大的 Slater 行列式，且无法处理粒子数变化的情况，因此需要进行二次量子化来处理这种情况。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二次量子化&#34;&gt;二次量子化
+&lt;/h2&gt;&lt;p&gt;在进入二次量子化之前，我们需要引入一些工具来描述二次量子化。&lt;/p&gt;
+&lt;h3 id=&#34;产生与湮灭算符&#34;&gt;产生与湮灭算符
+&lt;/h3&gt;&lt;p&gt;由于我们需要研究激子，而激子不是不变的——它们可以通过吸收光子而产生，也能通过辐射（发光）或非辐射（声子）过程湮灭。产生和湮灭算符可以很好地描述这种动态的粒子数变化情况。&lt;/p&gt;
+&lt;h4 id=&#34;位置算符与动量算符&#34;&gt;位置算符与动量算符
+&lt;/h4&gt;&lt;p&gt;在二次量子化的框架下，产生与湮灭算符并不是基础的算符，而是由位置算符和动量算符派生出来的。因此我们先来看位置算符和动量算符是怎么得来的。（以下过程可能和格里菲斯量子力学讲义中略有不同）&lt;/p&gt;
+&lt;p&gt;对于一个处于 $x$ 位置的&lt;strong&gt;粒子&lt;/strong&gt;[^c3]，其位置期望值应该是：&lt;/p&gt;
+$$
+\langle x \rangle = \int_{-\infty}^{\infty} x \, |\Psi(x, t)|^2 \, dx = \int_{-\infty}^{\infty} \Psi^*(x, t) \, \hat{x} \, \Psi(x, t) \, dx = \langle \Psi | \hat{x} | \Psi \rangle \tag{7}
+$$&lt;p&gt;我们可以看出，一个&amp;quot;算符&amp;quot;是对其后函数做某种操作的指令。位置算符告诉你乘以 $x$，作用在波函数上，就能得到波函数的位置期望值。因此，我们将位置算符定义为 $\hat{x}$。&lt;/p&gt;
+&lt;p&gt;同样地，我们可能对粒子的运动速度感兴趣，对 $\langle x \rangle$ 关于时间 $t$ 求导可得[^c4]：&lt;/p&gt;
+$$
+\frac{d\langle x \rangle}{dt} = \int x \frac{\partial}{\partial t} |\Psi|^2 dx = \int \left( \frac{\partial \Psi^*}{\partial t} x \Psi + \Psi^* x \frac{\partial \Psi}{\partial t} \right) dx \tag{7&#39;}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里没有对 $x$ 求 $dt$ 是因为 $x$ 的积分上下限是负无穷到正无穷，$x$ 为积分变量而与 $t$ 无关，即 $\frac{\partial x}{\partial t} = 0$，因此求导仅对波函数求导。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用含时薛定谔方程替换 $\frac{\partial \Psi}{\partial t}$，可以得到：&lt;/p&gt;
+$$
+i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V\Psi \tag{8}
+$$&lt;p&gt;仅在左侧保留 $\frac{\partial \Psi}{\partial t}$ 可得：&lt;/p&gt;
+$$
+\frac{\partial \Psi}{\partial t} = \frac{1}{i\hbar} \left( -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi}{\partial x^2} + V\Psi \right) \tag{9}
+$$&lt;p&gt;其复共轭可以写作：&lt;/p&gt;
+$$
+\frac{\partial \Psi^*}{\partial t} = -\frac{1}{i\hbar} \left( -\frac{\hbar^2}{2m} \frac{\partial^2 \Psi^*}{\partial x^2} + V\Psi^* \right) \tag{10}
+$$&lt;p&gt;将式 (9) 和式 (10) 代入式 (7&amp;rsquo;)，可以消去势能项，仅保留动能项：&lt;/p&gt;
+$$
+\frac{d\langle x \rangle}{dt} = -\frac{1}{i\hbar} \frac{\hbar^2}{2m} \int \left( -\frac{\partial^2 \Psi^*}{\partial x^2} x \Psi + \Psi^* x \frac{\partial^2 \Psi}{\partial x^2} \right) dx \tag{11}
+$$&lt;p&gt;提取其中公因子 $-\frac{i\hbar}{2m}$：&lt;/p&gt;
+$$
+\frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{2m} \int \left( \frac{\partial^2 \Psi^*}{\partial x^2} x \Psi - \Psi^* x \frac{\partial^2 \Psi}{\partial x^2} \right) dx \tag{12}
+$$&lt;p&gt;对其中 $\int \frac{\partial^2 \Psi^*}{\partial x^2} x \Psi , dx$ 进行分部积分计算，就可以得到：&lt;/p&gt;
+$$
+\frac{d\langle x \rangle}{dt} = -\frac{i\hbar}{m} \int \Psi^* \frac{\partial \Psi}{\partial x} dx \tag{13}
+$$&lt;p&gt;一般我们使用动量来描述粒子的速度，我们将其转化为动量：&lt;/p&gt;
+$$
+\langle p \rangle = m \frac{d\langle x \rangle}{dt} = -i\hbar \int \left( \Psi^* \frac{\partial \Psi}{\partial x} \right) dx \tag{14}
+$$&lt;p&gt;上式又能写成：&lt;/p&gt;
+$$
+\langle p \rangle = \int_{-\infty}^{\infty} \Psi^*(x, t) \left( -i\hbar \frac{\partial}{\partial x} \right) \Psi(x, t) \, dx = \langle \Psi | \left( -i\hbar \frac{\partial}{\partial x} \right) | \Psi \rangle \tag{15}
+$$&lt;p&gt;可以看出，括号内就是描述粒子动量的算符。它的意思是：对 $x$ 求导并将结果乘以 $-i\hbar$，作用在波函数上，就能得到波函数的动量期望值。因此，我们将动量算符定义为：&lt;/p&gt;
+$$
+\hat{p} = -i\hbar \frac{\partial}{\partial x}
+$$&lt;p&gt;我们对位置算符和动量算符还有一个重要的推广，即二者的对易关系为 $[\hat{x}, \hat{p}_x] = i\hbar$，其中：&lt;/p&gt;
+$$
+[\hat{x}, \hat{p}_x] \Psi = (\hat{x}\hat{p}_x - \hat{p}_x\hat{x}) \Psi \tag{16}
+$$&lt;p&gt;分别计算两项：&lt;/p&gt;
+$$
+\begin{aligned}
+(\hat{x}\hat{p}_x - \hat{p}_x\hat{x}) \Psi &amp;= \left( -i\hbar \, x \frac{\partial \Psi}{\partial x} \right) - \left( -i\hbar \Psi - i\hbar \, x \frac{\partial \Psi}{\partial x} \right) \\
+&amp;= i\hbar \Psi
+\end{aligned} \tag{17}
+$$&lt;p&gt;至此，我们完成了对位置算符和动量算符的推导。接下来我们需要在此基础上推导产生和湮灭算符，而其起源则是一维谐振子。&lt;/p&gt;
+&lt;h4 id=&#34;一维谐振子&#34;&gt;一维谐振子
+&lt;/h4&gt;&lt;p&gt;对于一个一维谐振子（例如弹簧上的小球）来说，它的经典能量是动能和势能之和（在经典力学中，哈密顿量为动能和势能的总和）：&lt;/p&gt;
+$$
+H = \frac{p^2}{2m} + \frac{1}{2}m\omega^2 x^2 \tag{18}
+$$&lt;p&gt;其中，$p$ 为粒子动量，$m$ 为粒子质量，$x$ 为粒子位置，$\omega$ 为角频率。&lt;/p&gt;
+&lt;p&gt;在一次量子化中，我们把 $p$ 和 $x$ 变成算符 $\hat{p}$ 和 $\hat{x}$，满足 $[\hat{x}, \hat{p}] = i\hbar$。此时哈密顿算符可以写作：&lt;/p&gt;
+$$
+\hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2 \hat{x}^2 \tag{19}
+$$&lt;p&gt;我们求解的思路是将哈密顿算符分解。如果是普通代数量 $u$ 和 $v$，比较容易看出 $u^2 + v^2 = (u - iv)(u + iv)$，但是由于 $\hat{p}$ 和 $\hat{x}$ 是算符，因此不能随意交换顺序。我们先引入约化后的过渡算符，去掉常数的干扰：&lt;/p&gt;
+$$
+\hat{X} = \sqrt{\frac{m\omega}{\hbar}} \, \hat{x}, \quad \hat{P} = \frac{1}{\sqrt{m\hbar\omega}} \, \hat{p} \tag{20}
+$$&lt;p&gt;此时哈密顿量可以写成更简洁的形式：&lt;/p&gt;
+$$
+\hat{H} = \frac{\hbar\omega}{2} (\hat{P}^2 + \hat{X}^2) \tag{21a}
+$$&lt;p&gt;这时，我们可以借用平方和分解的思想，将 $u^2 + v^2$ 分解为 $(u - iv)(u + iv)$。表现在算符上可以写作：&lt;/p&gt;
+$$
+\hat{a}_- = \frac{1}{\sqrt{2}}(\hat{X} + i\hat{P}) = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} + \frac{i}{m\omega} \hat{p} \right) \tag{21b}
+$$$$
+\hat{a}_+ = \frac{1}{\sqrt{2}}(\hat{X} - i\hat{P}) = \sqrt{\frac{m\omega}{2\hbar}} \left( \hat{x} - \frac{i}{m\omega} \hat{p} \right) \tag{22}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们将两个算符定义为 $(\hat{X} + i\hat{P})$ 和 $(\hat{X} - i\hat{P})$。&lt;/li&gt;
+&lt;li&gt;这二者是不能交换顺序的，不能写作 $(\hat{P} + i\hat{X})$，因为它们依然是非对易的。&lt;/li&gt;
+&lt;li&gt;证明如下：&lt;/li&gt;
+&lt;li&gt;考虑一个连在弹簧上的小球（质量 $m$，频率为 $\omega$）。&lt;/li&gt;
+&lt;li&gt;根据牛顿定律：$F = ma \implies -kx = m \ddot{x}$。我们更喜欢用频率代替 $k$，即 $k = m\omega^2$。&lt;/li&gt;
+&lt;li&gt;因此上式可以写作：$\ddot{x} + \omega^2 x = 0$。&lt;/li&gt;
+&lt;li&gt;这个方程的通解是正弦或者余弦函数，粒子的位置随时间变化的解为：$x(t) = A \cos(\omega t)$。&lt;/li&gt;
+&lt;li&gt;此处的 $A$ 为振幅。&lt;/li&gt;
+&lt;li&gt;而动量则为 $p = mv = m\dot{x}$，需要对时间求导，即：&lt;/li&gt;
+&lt;/ul&gt;
+$$\dot{x}(t) = \frac{d}{dt} [A \cos(\omega t)] = -A\omega \sin(\omega t) \tag{23}$$&lt;ul&gt;
+&lt;li&gt;因此，动量表示为：&lt;/li&gt;
+&lt;/ul&gt;
+$$p(t) = m \cdot (-A\omega \sin(\omega t)) = -m\omega A \sin(\omega t) \tag{24}$$&lt;ul&gt;
+&lt;li&gt;如果我们将位置和动量画在同一个坐标系中，横轴是位置，纵轴是动量，我们可以得到：&lt;/li&gt;
+&lt;/ul&gt;
+$$\frac{x(t)}{A} = \cos(\omega t) \tag{25}$$$$\frac{p(t)}{-m\omega A} = \sin(\omega t) \tag{26}$$&lt;ul&gt;
+&lt;li&gt;它们的平方和为 1，即：&lt;/li&gt;
+&lt;/ul&gt;
+$$\left( \frac{x}{A} \right)^2 + \left( \frac{p}{m\omega A} \right)^2 = 1 \tag{27}$$&lt;ul&gt;
+&lt;li&gt;它代表了：在 $x$-$p$ 相平面上，速度最大的时候位置在 0 点；位置最大（$A$）的时候速度为 0。&lt;/li&gt;
+&lt;li&gt;如果我们使用欧拉公式描述，即 $e^{-i\omega t} = \cos(\omega t) - i\sin(\omega t)$，那么实部对应位置，虚部对应动量，组合即 $\hat{X} + i\hat{P}$。它代表了：在复平面上，位置和动量有 90° 的相位差，即动量和位置是不同步的。&lt;/li&gt;
+&lt;li&gt;如果我们将算符写成 $\hat{P} + i\hat{X}$（这里先借用一个性质：湮灭算符作用在基态上必须等于 0，即 $\hat{a} |0\rangle = 0$），那么作用在波函数上，我们就得到 $\left( -i\frac{d}{dX} + iX \right)\psi = 0$，对应的波函数为 $\psi \sim e^{+X^2/2}$，这是一个发散的函数，归一化积分为无穷大，物理上不存在。因此，我们定义的算符顺序必须是 $(\hat{X} + i\hat{P})$ 和 $(\hat{X} - i\hat{P})$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;产生湮灭算符的性质及物理意义&#34;&gt;产生湮灭算符的性质及物理意义
+&lt;/h4&gt;&lt;p&gt;其中，式 (21b) 定义为湮灭算符 $\hat{a}&lt;em&gt;-$，式 (22) 定义为产生算符 $\hat{a}&lt;/em&gt;+$。&lt;/p&gt;
+&lt;p&gt;接下来我们考虑它们的对易子 $[\hat{a}&lt;em&gt;-, \hat{a}&lt;/em&gt;+]$：&lt;/p&gt;
+$$
+[\hat{a}_-, \hat{a}_+] = C^2 \left[ \left( \hat{x} + \frac{i}{m\omega}\hat{p} \right), \left( \hat{x} - \frac{i}{m\omega}\hat{p} \right) \right] \tag{28}
+$$&lt;p&gt;其中，为简化计算令 $C = \sqrt{\frac{m\omega}{2\hbar}}$。&lt;/p&gt;
+&lt;p&gt;对方括号中每一项求对易，可得：&lt;/p&gt;
+$$
+[\hat{a}_-, \hat{a}_+] = C^2 \Big( [\hat{x}, \hat{x}] + \left[\hat{x}, -\frac{i}{m\omega}\hat{p}\right] + \left[\frac{i}{m\omega}\hat{p}, \hat{x}\right] + \left[\frac{i}{m\omega}\hat{p}, -\frac{i}{m\omega}\hat{p}\right] \Big) \tag{29}
+$$&lt;p&gt;根据算符关系，算符与自身对易，即 $[\hat{x}, \hat{x}] = 0$，因此第一项和第四项为 0。第二项 $-\frac{i}{m\omega}[\hat{x}, \hat{p}]$ 由对易关系 $[\hat{x},\hat{p}]=i\hbar$ 得到 $\frac{\hbar}{m\omega}$，同理第三项也为 $\frac{\hbar}{m\omega}$。&lt;/p&gt;
+&lt;p&gt;因此，最终可以得到：&lt;/p&gt;
+$$
+[\hat{a}_-, \hat{a}_+] = \left( \frac{m\omega}{2\hbar} \right) \cdot \left( \frac{2\hbar}{m\omega} \right) = 1 \tag{30}
+$$&lt;p&gt;因此，式 (21a) 的哈密顿量最终可以分解成[^c5]：&lt;/p&gt;
+$$
+\hat{H} = \hbar\omega \left( \hat{a}_+ \hat{a}_- + \frac{1}{2} \right) \tag{31}
+$$&lt;p&gt;注意到由于算符的次序问题，导致后面是 $+\frac{1}{2}$。利用式 (30) 的对易关系 $[\hat{a}&lt;em&gt;-, \hat{a}&lt;/em&gt;+] = 1$，更一般的情况可以写作：&lt;/p&gt;
+$$
+\hat{H} = \hbar\omega \left( \hat{a}_{\mp} \hat{a}_{\pm} \mp \frac{1}{2} \right) \tag{32}
+$$&lt;p&gt;或者：&lt;/p&gt;
+$$
+\hat{H} = \frac{\hbar\omega}{2} (\hat{a}_+ \hat{a}_- + \hat{a}_- \hat{a}_+) \tag{33}
+$$&lt;p&gt;式 (32) 和式 (33) 是等价的。&lt;/p&gt;
+&lt;p&gt;下面我们说明为什么式 (21b) 被叫做湮灭算符、式 (22) 被叫做产生算符。&lt;/p&gt;
+&lt;p&gt;从薛定谔方程 $\hat H \psi = E \psi$ 出发，如果将上升算符 $\hat{a}_+$ 作用在波函数上：&lt;/p&gt;
+$$
+\hat{H} (\hat{a}_+ \psi) = \hat{a}_+ \hat{H} \psi + [\hat{H}, \hat{a}_+] \psi \tag{34}
+$$&lt;p&gt;其中对易关系为 $[\hat{H}, \hat{a}&lt;em&gt;+] = \hbar\omega , \hat{a}&lt;/em&gt;+$，则：&lt;/p&gt;
+$$
+\hat{H} (\hat{a}_+ \psi) = (E + \hbar\omega)(\hat{a}_+ \psi) \tag{35}
+$$&lt;p&gt;这说明，$\hat{a}_+$ 作用在波函数上后，新的波函数依然是 $\hat{H}$ 的本征态，本征能量为 $E + \hbar\omega$。这意味着，我们可以使用上升/下降算符（产生/湮灭算符）直接生成解。&lt;/p&gt;
+&lt;p&gt;然而如果对基态 $\psi_0$（能量 $\frac{1}{2}\hbar\omega$）作用湮灭算符：$\hat{a}_- \psi_0 = 0$，它代表波函数消失。这保证谐振子存在一个最低能量（基态）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 我们用 $\hat{x}, \hat{p}$ 表示出了产生湮灭算符，反过来也可以用产生湮灭算符表示位置算符和动量算符：&lt;/p&gt;
+$$\hat{x} = \sqrt{\frac{\hbar}{2m\omega}} (\hat{a}_+ + \hat{a}_-) \tag{36}$$$$\hat{p} = i\sqrt{\frac{m\hbar\omega}{2}} (\hat{a}_+ - \hat{a}_-) \tag{37}$$&lt;p&gt;这时，$\hat{x}$ 代表着：测量粒子位置时，对粒子数状态进行了扰动，系统同时处于&amp;quot;少一个粒子&amp;quot;和&amp;quot;多一个粒子&amp;quot;的叠加态。同理动量算符也是如此。将位置算符作用在有 $n$ 个粒子的 $|n\rangle$ 态上：&lt;/p&gt;
+$$\begin{aligned}
+\hat{x} |n\rangle &amp;\propto (\hat{a}_- + \hat{a}_+) |n\rangle \\
+&amp;= \hat{a}_- |n\rangle + \hat{a}_+ |n\rangle \\
+&amp;= \sqrt{n} |n-1\rangle + \sqrt{n+1} |n+1\rangle
+\end{aligned} \tag{38}$$&lt;p&gt;可以看到，位置算符作用在 $|n\rangle$ 态后，系统处在 $|n-1\rangle$ 和 $|n+1\rangle$ 的叠加态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;产生算符 $\hat{c}^\dagger$ 和湮灭算符 $\hat{c}$ 互为厄米共轭。（在二次量子化中，我们使用厄米共轭符号 $\dagger$ 表示产生算符，不加 $\dagger$ 的代表湮灭算符，作为一般的记号规则。）&lt;/li&gt;
+&lt;li&gt;湮灭算符我们使用之前的无量纲化形式：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{c} = C \left( \hat{x} + \frac{i}{m\omega} \hat{p} \right) \tag{39}$$&lt;ul&gt;
+&lt;li&gt;其中 $C = \sqrt{\frac{m\omega}{2\hbar}}$。&lt;/li&gt;
+&lt;li&gt;对其取厄米共轭 $\dagger$：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{c}^\dagger = \left[ C \left( \hat{x} + \frac{i}{m\omega} \hat{p} \right) \right]^\dagger \tag{40}$$&lt;ul&gt;
+&lt;li&gt;其中实数 $C$ 保持不变，即 $C^*=C$。又因为力学量算符均为厄米算符，故 $\hat{x}^\dagger = \hat{x}$、$\hat{p}^\dagger = \hat{p}$，中间仅 $i$ 变号，整理得：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{c}^\dagger = C \left( \hat{x} - \frac{i}{m\omega} \hat{p} \right) \tag{41}$$&lt;ul&gt;
+&lt;li&gt;我们就得到了产生算符，证毕。&lt;/li&gt;
+&lt;li&gt;因此，我们在后续约定使用 $\hat{c}^\dagger$ 代表产生算符，$\hat{c}$ 代表湮灭算符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;向量计算&#34;&gt;向量计算
+&lt;/h3&gt;&lt;p&gt;我们考虑一个包含三个态的系统，把它写作列向量：第一行定义为真空态，第二行定义为态 1，&lt;strong&gt;第三行&lt;/strong&gt;[^c6]定义为态 2，并作如下约定：&lt;/p&gt;
+$$
+|vac\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \tag{42}
+$$&lt;p&gt;它代表 100% 概率是空的，0% 在轨道（态）1，0% 在轨道（态）2。&lt;/p&gt;
+$$
+|1\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \tag{43}
+$$&lt;p&gt;它代表电子 100% 在第一个轨道（态）里。&lt;/p&gt;
+$$
+|2\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \tag{44}
+$$&lt;p&gt;它代表电子 100% 在第二个轨道（态）里。&lt;/p&gt;
+&lt;p&gt;产生算符的含义是将真空态变为某个态中有电子的情况。以态 1 为例，要把 $\begin{pmatrix} 1 \ 0 \ 0 \end{pmatrix}$ 变成 $\begin{pmatrix} 0 \ 1 \ 0 \end{pmatrix}$，那么态 1 的产生算符应该写作：&lt;/p&gt;
+$$
+\hat{c}_1^\dagger = \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \tag{45}
+$$&lt;p&gt;将这个算符作用在真空态：&lt;/p&gt;
+$$
+\begin{pmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \tag{46}
+$$&lt;p&gt;这时电子就产生在态 1 上。同理，态 2 的产生算符和湮灭算符也是如此，这里不再赘述。&lt;/p&gt;
+&lt;p&gt;如果要将电子从态 1 跳跃到态 2，我们可以写作：&lt;/p&gt;
+$$
+\hat{t}_{1\to2} = \hat{c}_2^\dagger \hat{c}_1 \tag{47}
+$$&lt;p&gt;因为算符的作用顺序是从右向左：首先湮灭算符作用在态 1 消灭电子，随后产生算符在态 2 产生电子，它们整体可以写作跳跃算符 $\hat{t}_{1\to2}$。&lt;/p&gt;
+&lt;h3 id=&#34;场算符&#34;&gt;场算符
+&lt;/h3&gt;&lt;p&gt;前面我们推导得到的哈密顿量（即式 33）是从非相互作用的谐振子得到的，也就是最理想的情况。然而实际更复杂的量子场是由无数个耦合在一起的谐振子组成的，我们并不清楚实际的产生湮灭算符是什么样子的。&lt;/p&gt;
+&lt;p&gt;现在，我们需要从一次量子化的形式转换为二次量子化。&lt;/p&gt;
+&lt;p&gt;在一次量子化中，希尔伯特空间内任意一个量子态 $|\psi\rangle$ 都可以用一组完备的基底 ${|n\rangle}$ 展开：&lt;/p&gt;
+$$
+|\psi\rangle = \sum_n C_n |n\rangle \tag{48}
+$$&lt;p&gt;其中 $C_n$ 是投影系数。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果我们使用哈密顿量作用在态 $|\Psi\rangle$ 上，得到的本征方程为：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{H} |\Psi\rangle = E |\Psi\rangle \tag{49}$$&lt;ul&gt;
+&lt;li&gt;它代表了哈密顿算符 $\hat{H}$ 作用在波函数 $|\Psi\rangle$ 上，得到了一个能量值 $E$。表明 $|\Psi\rangle$ 是一个能量定态：使用哈密顿算符测量能量，会得到一个 100% 的确定值 $E$，且测量后系统状态不变。上式为能量的本征方程。&lt;/li&gt;
+&lt;li&gt;类似地，如果有一个位置算符 $\hat{\vec{r}}$ 作用在状态 $|\Psi\rangle$ 上，得到的本征方程为：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{\vec{r}} |\Psi\rangle = \vec{R} |\Psi\rangle \tag{50}$$&lt;ul&gt;
+&lt;li&gt;它表明 $|\Psi\rangle$ 是一个位置定态。如果测量位置，那么粒子 100% 处于位置 $\vec{R}$ 处。上式为位置的本征方程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重要：&lt;/strong&gt; 根据波函数的定义——处于状态 $|n\rangle$ 的粒子在位置 $\vec{r}$ 被发现的概率幅——可以将波函数 $\phi_n(\vec{r})$ 写作：&lt;/li&gt;
+&lt;/ul&gt;
+$$\phi_n(\vec{r}) = \langle \vec{r} | n\rangle \tag{51}$$&lt;ul&gt;
+&lt;li&gt;其中，只要 ${|n\rangle}$ 是完备的，就具备以下性质：&lt;/li&gt;
+&lt;/ul&gt;
+$$\sum_n |n\rangle \langle n| = \hat{1} \tag{52}$$&lt;ul&gt;
+&lt;li&gt;这个算符为单位算符，可以将任何态投影上去且不丢失任何信息。上式叫做&lt;strong&gt;完备性关系&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;现在我们需要了解位置态。使用 ${|n\rangle}$ 将 $|\vec{r}\rangle$ 展开：&lt;/p&gt;
+$$
+|\vec{r}\rangle = \sum_n |n\rangle \langle n | \vec{r}\rangle \tag{53}
+$$&lt;p&gt;其中，$\langle n | \vec{r}\rangle$ 是位置态在 $|n\rangle$ 基底下的展开系数。由波函数的定义 $\phi_n(\vec{r}) = \langle \vec{r} | n\rangle$，对它求复共轭可得：&lt;/p&gt;
+$$
+\langle n | \vec{r}\rangle = \langle \vec{r} | n\rangle^* = \phi_n^*(\vec{r}) \tag{54}
+$$&lt;p&gt;因此位置态 $|\vec{r}\rangle$ 可以用能级态 $|n\rangle$ 表示：&lt;/p&gt;
+$$
+|\vec{r}\rangle = \sum_n \phi_n^*(\vec{r}) |n\rangle \tag{55}
+$$&lt;p&gt;在二次量子化中，每个态都对应一个产生算符。根据之前的推导，产生算符 $\hat{c}_n^\dagger$ 作用在真空上，会创造出状态 $|n\rangle$：&lt;/p&gt;
+$$
+|n\rangle = \hat{c}_n^\dagger |0\rangle \tag{56}
+$$&lt;p&gt;同样地，如果有一个产生算符 $\hat{\psi}^\dagger(\vec{r})$，作用在真空上，能够创造出位置在 $\vec{r}$ 的粒子：&lt;/p&gt;
+$$
+|\vec{r}\rangle = \hat{\psi}^\dagger(\vec{r}) |0\rangle \tag{57}
+$$&lt;p&gt;我们将式 (56) 和 (57) 代入式 (55)，就可以得到：&lt;/p&gt;
+$$
+\hat{\psi}^\dagger(\vec{r}) |0\rangle = \left( \sum_n \phi_n^*(\vec{r}) \hat{c}_n^\dagger \right) |0\rangle \tag{58a}
+$$&lt;p&gt;由于两个算符作用在真空态上得到相同的态，因此我们可以将两边的真空态去掉，就得到了：&lt;/p&gt;
+$$
+\hat{\psi}^\dagger(\vec{r}) = \sum_n \phi_n^*(\vec{r}) \hat{c}_n^\dagger \tag{58b}
+$$&lt;p&gt;上面这个算符我们将其定义为&lt;strong&gt;场产生算符&lt;/strong&gt;。根据之前的推导，产生算符和湮灭算符互为厄米共轭，因此将上式整体取厄米共轭就能得到&lt;strong&gt;场湮灭算符&lt;/strong&gt;：&lt;/p&gt;
+$$
+\hat{\psi}(\vec{r}) = \sum_n \phi_n(\vec{r}) \hat{c}_n \tag{59a}
+$$&lt;p&gt;场产生算符的物理意义是：在位置 $\vec{r}$ 处创造一个以 $\hat{c}_n^\dagger$ 为基底、贡献为 $\phi_n^*(\vec{r})$ 的粒子。同理，场湮灭算符则是消灭这样的粒子。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在式 (58b) 中，不要将左边的 $\hat{\psi}^\dagger(\vec{r})$ 跟波函数 $\psi$ 搞混，它是一个算符，是用波函数作为系数展开的。&lt;/li&gt;
+&lt;li&gt;右边的 $\hat{c}_n^\dagger$ 物理含义是在第 $n$ 个量子态（轨道）里制造一个粒子。&lt;/li&gt;
+&lt;li&gt;$\phi_n^*(\vec{r})$ 代表了第 $n$ 个轨道在 $\vec{r}$ 处的权重，即 $\langle n | \vec{r}\rangle$。&lt;/li&gt;
+&lt;li&gt;例如，在 $r = 0$ 处制造一个粒子，而现在有两个波：
+&lt;ul&gt;
+&lt;li&gt;波 1（$\hat{c}_1^\dagger$）：$\cos(x)$，在 $x=0$ 处值为 1。&lt;/li&gt;
+&lt;li&gt;波 2（$\hat{c}_2^\dagger$）：$\sin(x)$，在 $x=0$ 处值为 0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我们使用场产生算符：$\hat{\psi}^\dagger(0) = \sum_n \phi_n^*(0) \hat{c}_n^\dagger$
+&lt;ul&gt;
+&lt;li&gt;波 1：$\phi_1^*(0) = \cos(0) = 1$&lt;/li&gt;
+&lt;li&gt;波 2：$\phi_2^*(0) = \sin(0) = 0$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最后：$\hat{\psi}^\dagger(0) = 1 \cdot \hat{c}_1^\dagger + 0 \cdot \hat{c}_2^\dagger$&lt;/li&gt;
+&lt;li&gt;它代表了：如果要在 $r = 0$ 处创造一个粒子，余弦波占比是 1，而正弦波则不贡献。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;场算符的性质及物理意义&#34;&gt;场算符的性质及物理意义
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;1. 反对易关系&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;场算符（费米子）满足如下反对易关系（${A, B} \equiv AB + BA$）：&lt;/p&gt;
+$$
+\{ \hat{\psi}(\vec{r}), \hat{\psi}^\dagger(\vec{r}&#39;) \} = \delta(\vec{r} - \vec{r}&#39;) \tag{59b}
+$$&lt;p&gt;它说明了：在同一个位置发生产生湮灭操作会&amp;quot;撞上&amp;quot;（出现 $\delta$ 函数贡献），如果位置不同则互不影响。&lt;/p&gt;
+$$
+\{ \hat{\psi}(\vec{r}), \hat{\psi}(\vec{r}&#39;) \} = 0 \tag{60}
+$$&lt;p&gt;两个湮灭算符&lt;strong&gt;反对易&lt;/strong&gt;[^c7]——即 $\hat{\psi}(\vec{r})\hat{\psi}(\vec{r}&amp;rsquo;) = -\hat{\psi}(\vec{r}&amp;rsquo;)\hat{\psi}(\vec{r})$。它体现了费米子波函数对粒子交换的反对称性：交换两次湮灭操作的次序会带来一个负号，但物理观测量（密度、能量等）不变。&lt;/p&gt;
+$$
+\{ \hat{\psi}^\dagger(\vec{r}), \hat{\psi}^\dagger(\vec{r}&#39;) \} = 0 \tag{61}
+$$&lt;p&gt;两个产生算符也满足反对易关系。特别地，取 $\vec r=\vec r&amp;rsquo;$ 可得 $[\hat\psi^\dagger(\vec r)]^2 = 0$，即不能在同一个位置产生两个相同自旋的电子——这正是&lt;strong&gt;泡利不相容原理&lt;/strong&gt;的体现。&lt;/p&gt;
+&lt;p&gt;以下我们做式 (59b) 的推导：&lt;/p&gt;
+$$
+\{ \hat{\psi}(\vec{r}), \hat{\psi}^\dagger(\vec{r}&#39;) \} = \left\{ \sum_n \phi_n(\vec{r}) \hat{c}_n, \, \sum_m \phi_m^*(\vec{r}&#39;) \hat{c}_m^\dagger \right\} \tag{62}
+$$&lt;p&gt;我们将求和符号提出：&lt;/p&gt;
+$$
+= \sum_{n,m} \phi_n(\vec{r}) \phi_m^*(\vec{r}&#39;) \{ \hat{c}_n, \hat{c}_m^\dagger \} \tag{63}
+$$&lt;p&gt;其中我们有以下基本反对易关系（公理）：&lt;/p&gt;
+$$
+\{ \hat{c}_n, \hat{c}_m^\dagger \} = \delta_{nm} \tag{64}
+$$$$
+\{ \hat{c}_n, \hat{c}_m \} = 0 \tag{65}
+$$&lt;p&gt;因此，式 (63) 末尾的反对易子变为 $\delta_{nm}$，消掉一个求和符号：&lt;/p&gt;
+$$
+\{ \hat{\psi}(\vec{r}), \hat{\psi}^\dagger(\vec{r}&#39;) \} = \sum_n \phi_n(\vec{r}) \phi_n^*(\vec{r}&#39;) \tag{66}
+$$&lt;p&gt;由于基底 ${|n\rangle}$ 是完备的，因此：&lt;/p&gt;
+$$
+\sum_n \phi_n(\vec{r}) \phi_n^*(\vec{r}&#39;) = \delta(\vec{r} - \vec{r}&#39;) \tag{67}
+$$&lt;p&gt;证毕。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 电子密度算符&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们在 DFT 中关心的电子密度，在一次量子化中可以写成 $\rho = |\psi|^2 = \psi^* \psi$。那么在二次量子化中，可以将其表示为：&lt;/p&gt;
+$$
+\hat{n}(\vec{r}) = \hat{\psi}^\dagger(\vec{r}) \hat{\psi}(\vec{r}) \tag{68}
+$$&lt;p&gt;上式被称为**（局域）密度算符**或粒子数密度算符，其物理意义是 $\vec{r}$ 处的电子密度，与一次量子化相比只是变成了算符形式。&lt;/p&gt;
+&lt;p&gt;上式较为重要，且其产生湮灭算符顺序不能更换。对于费米子，由于泡利不相容原理，在位置 $\vec{r}$ 处（给定自旋下）只能存在一个粒子，因此使用粒子数算符只能得到两个结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原本在 $\vec{r}$ 处的态是 $|0\rangle$（没有粒子），湮灭算符先作用得到 0，说明这里粒子数为 0，无需还原。&lt;/li&gt;
+&lt;li&gt;原本在 $\vec{r}$ 处的态是 $|1\rangle$（存在一个粒子），湮灭算符先作用得到 $|0\rangle$，这时产生算符再作用上去，把态还原成 $|1\rangle$，最终知道这里粒子数为 1。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 总粒子数算符&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们将上式的电子密度在全空间积分，就能得到总的粒子数算符：&lt;/p&gt;
+$$
+\hat{N} = \int d\vec{r} \, \hat{\psi}^\dagger(\vec{r}) \hat{\psi}(\vec{r}) \tag{69}
+$$&lt;p&gt;这个算符的本征值只能为非负整数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 场算符的非厄米性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们已经知道：&lt;/p&gt;
+$$
+\hat{\psi}^\dagger(\vec{r}) \neq \hat{\psi}(\vec{r}) \tag{70}
+$$&lt;p&gt;因此，场算符不是厄米的，它本身不是一个可观测量。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;激子模型&#34;&gt;激子模型
+&lt;/h2&gt;&lt;h3 id=&#34;二次量子化表示多体项&#34;&gt;二次量子化表示多体项
+&lt;/h3&gt;&lt;p&gt;上面我们所做的一切都是为了将式 (4) 最后一项的双体相互作用表达成二次量子化形式。在求得了场算符以后，我们重新回到上面的双体相互作用项：&lt;/p&gt;
+$$
+\frac{1}{2}\sum_{i \neq j} \frac{e^2}{|\mathbf{r}_i - \mathbf{r}_j|} = \frac{1}{2}\sum_{i \neq j} V(\mathbf{r}_i - \mathbf{r}_j) \tag{71a}
+$$&lt;p&gt;我们将其写为关于 $V$ 的函数，$V$ 代表两体相互作用势函数，方便后续研究。&lt;/p&gt;
+&lt;p&gt;我们将 $V$ 从一次量子化（区分粒子编号）翻译成二次量子化（只看占据数）。对于任意算符 $\hat{O}$，我们都可以使用式 (52) $\sum_n |n\rangle \langle n| = \hat{1}$ 插入完备性表示：&lt;/p&gt;
+$$
+\hat{O} = \sum_{m,n} |m\rangle\langle m| \hat{O}|n\rangle\langle n| \tag{71b}
+$$&lt;p&gt;其中 $|n\rangle$ 为初态，$\langle m|$ 为末态，$\langle m| \hat{O}|n\rangle$ 为算符 $\hat{O}$ 在该基底下的矩阵元。&lt;/p&gt;
+&lt;p&gt;因此，我们可以将相互作用势写作如下形式：&lt;/p&gt;
+$$
+\begin{aligned}
+\hat{V} &amp;= \hat{1} \cdot \hat{V} \cdot \hat{1} \\
+&amp;= \left( \sum_{k,l} |kl\rangle \langle kl| \right) \hat{V} \left( \sum_{m,n} |mn\rangle \langle mn| \right) \\
+&amp;= \sum_{k,l,m,n} |kl\rangle \, \langle kl | \hat{V} | mn \rangle \, \langle mn|
+\end{aligned} \tag{72}
+$$&lt;p&gt;其中 $\langle kl | \hat{V} | mn \rangle$ 是矩阵元 $V_{klmn}$，它描述了这个过程发生的概率幅。我们可以将其展开为：&lt;/p&gt;
+$$
+\langle kl | V | mn \rangle = \iint d\vec{r}_1 \, d\vec{r}_2 \, \phi_k^*(\vec{r}_1) \phi_l^*(\vec{r}_2) V(\vec{r}_1 - \vec{r}_2) \phi_m(\vec{r}_1) \phi_n(\vec{r}_2) \tag{73}
+$$&lt;p&gt;最右侧的 $\phi_m \phi_n$ 为初态，$\phi_k^* \phi_l^*$ 为末态，中间为相互作用。上式的物理含义是：初态两个粒子的概率幅 × 相互作用强度 × 末态两个粒子的概率幅。其中，相互作用强度代表权重——如果两个粒子距离近，权重就大。&lt;/p&gt;
+&lt;p&gt;算符 $|kl\rangle \langle mn|$ 的物理意义是：如果系统处于 $m, n$ 态，就将状态改为 $k, l$，写成二次量子化的形式为：&lt;/p&gt;
+$$
+|kl\rangle \langle mn| = \hat{c}_k^\dagger \hat{c}_l^\dagger \hat{c}_n \hat{c}_m \tag{74}
+$$&lt;p&gt;式 (72) 代表了：$m, n$ 态上的粒子在发生相互作用以后，被湮灭算符 $\hat{c}_n \hat{c}_m$ 消灭掉，然后使用产生算符 $\hat{c}_k^\dagger \hat{c}_l^\dagger$ 在 $k, l$ 态上产生粒子。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里下标不能随意替换，需要保证和矩阵元一致。最外层对应粒子 1 从 $m$ 态到 $k$ 态的转变，内层代表粒子 2 从 $n$ 态到 $l$ 态的转变。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们将式 (71a) 重新写成二次量子化的形式：&lt;/p&gt;
+$$
+H_{\text{int}} = \frac{1}{2} \sum_{k,l,m,n} \langle kl | \hat{V} | mn \rangle \, \hat{c}_k^\dagger \hat{c}_l^\dagger \hat{c}_n \hat{c}_m \tag{75a}
+$$&lt;p&gt;并且我们了解了中间 $\langle kl | \hat{V} | mn \rangle$ 可以用积分写出来。因此，整个双体相互作用可以写作：&lt;/p&gt;
+$$
+H_{\text{int}} = \frac{1}{2} \sum_{klmn} \left[ \iint d\vec{r} \, d\vec{r}&#39; \, \phi_k^*(\vec{r}) \phi_l^*(\vec{r}&#39;) V(\vec{r}-\vec{r}&#39;) \phi_m(\vec{r}) \phi_n(\vec{r}&#39;) \right] \hat{c}_k^\dagger \hat{c}_l^\dagger \hat{c}_n \hat{c}_m \tag{75b}
+$$&lt;p&gt;我们将带有相同空间变量的项分组放在一起：&lt;/p&gt;
+$$
+H_{\text{int}} = \frac{1}{2} \iint d\vec{r} \, d\vec{r}&#39; \, V(\vec{r}-\vec{r}&#39;) \left[ \sum_k \phi_k^*(\vec{r}) \hat{c}_k^\dagger \right] \left[ \sum_l \phi_l^*(\vec{r}&#39;) \hat{c}_l^\dagger \right] \left[ \sum_n \phi_n(\vec{r}&#39;) \hat{c}_n \right] \left[ \sum_m \phi_m(\vec{r}) \hat{c}_m \right] \tag{76}
+$$&lt;p&gt;根据之前推导的场算符的定义（式 58b 和式 59a），我们可以对应上面方括号内的四项：&lt;/p&gt;
+$$
+\begin{aligned}
+\sum_k \phi_k^*(\vec{r}) \hat{c}_k^\dagger &amp;\longrightarrow \hat{\psi}^\dagger(\vec{r}) \\
+\sum_l \phi_l^*(\vec{r}&#39;) \hat{c}_l^\dagger &amp;\longrightarrow \hat{\psi}^\dagger(\vec{r}&#39;) \\
+\sum_n \phi_n(\vec{r}&#39;) \hat{c}_n &amp;\longrightarrow \hat{\psi}(\vec{r}&#39;) \\
+\sum_m \phi_m(\vec{r}) \hat{c}_m &amp;\longrightarrow \hat{\psi}(\vec{r})
+\end{aligned} \tag{77}
+$$&lt;p&gt;我们就得到了最终的二次量子化表述的双体相互作用公式：&lt;/p&gt;
+$$
+H_{\text{int}} = \frac{1}{2} \iint d\vec{r} \, d\vec{r}&#39; \, \hat{\psi}^\dagger(\vec{r}) \hat{\psi}^\dagger(\vec{r}&#39;) V(\vec{r}-\vec{r}&#39;) \hat{\psi}(\vec{r}&#39;) \hat{\psi}(\vec{r}) \tag{78}
+$$&lt;p&gt;或者，为了保证 $\vec{r}&amp;rsquo;$ 处和 $\vec{r}$ 处的算符是配对的，可以写作：&lt;/p&gt;
+$$
+H_{\text{int}} = \frac{1}{2} \iint d\vec{r} \, d\vec{r}&#39; \, V(\vec{r}-\vec{r}&#39;) \, \hat{\psi}^\dagger(\vec{r}) \hat{\psi}^\dagger(\vec{r}&#39;) \hat{\psi}(\vec{r}&#39;) \hat{\psi}(\vec{r}) \tag{79}
+$$&lt;h3 id=&#34;双带近似&#34;&gt;双带近似
+&lt;/h3&gt;&lt;p&gt;在实际的晶体中存在大量能级，但是为了研究激子，我们仅关注激子涉及的轨道，例如包含价带顶和导带底的基态激子。因此我们先考虑最简单的情况——价带顶的一个电子被激发到导带底（单激子态）。&lt;/p&gt;
+&lt;p&gt;场算符的完整定义是所有能级态的叠加：&lt;/p&gt;
+$$
+\hat{\psi}(\vec{r}) = \sum_{n, \vec{k}} \phi_{n,\vec{k}}(\vec{r}) \, \hat{c}_{n,\vec{k}} \tag{80}
+$$&lt;p&gt;其中 $n$ 是能带索引，$\vec{k}$ 是波矢。$\phi_{n,\vec{k}}(\vec{r})$ 表示：处于第 $n$ 个能带、动量为 $\vec{k}$ 的那个电子，在位置 $\vec{r}$ 处的形状（权重）。在 DFT 计算中，它就是 Kohn–Sham (KS) 轨道。&lt;/p&gt;
+&lt;p&gt;这里我们使用双带近似——仅保留价带 $n=v$ 和导带 $n=c$，将其限制在这两个带上，且仅包含单个 $\vec k$ 点：&lt;/p&gt;
+$$
+\hat{\psi}(\vec{r}) \approx \sum_{\vec{k}} \phi_{c,\vec{k}}(\vec{r}) \hat{c}_{c,\vec{k}} + \sum_{\vec{k}} \phi_{v,\vec{k}}(\vec{r}) \hat{c}_{v,\vec{k}} \equiv \hat{\psi}_c + \hat{\psi}_v \tag{81}
+$$&lt;p&gt;将式 (81) 代入式 (78)，可以得到仅包含价带、导带的两体相互作用：&lt;/p&gt;
+$$
+H_{\text{int}} = \frac{1}{2} \iint d\vec{r} \, d\vec{r}&#39; \, (\hat{\psi}_c^\dagger + \hat{\psi}_v^\dagger)(\vec{r}) \cdot (\hat{\psi}_c^\dagger + \hat{\psi}_v^\dagger)(\vec{r}&#39;) \cdot V \cdot (\hat{\psi}_c + \hat{\psi}_v)(\vec{r}&#39;) \cdot (\hat{\psi}_c + \hat{\psi}_v)(\vec{r}) \tag{82a}
+$$&lt;p&gt;上式展开后总共 16 项，代表了仅包含价带、导带所有可能的过程。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 此时我们已经认为价带顶有一个电子被激发到导带底，已经形成了激子。我们现在要做的是研究已经形成的电子-空穴对之间的相互作用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然而，这 16 项中并非所有项都有意义。例如：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$\hat{\psi}_c^\dagger \hat{\psi}_c^\dagger \hat{\psi}_c \hat{\psi}_c$：全是导带电子之间的相互作用，但我们考虑的单激子态此时导带仅有 1 个电子，双湮灭作用得 0，因此这一项在单激子态等于 0。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}_v^\dagger \hat{\psi}_v^\dagger \hat{\psi}_v \hat{\psi}_v$：代表激发完一个电子以后，价带中 $N-1$ 个价带电子两两之间的相互作用——这是价带背景的自相互作用，通常被吸收进基态能量或单粒子项中，不直接影响激子的结合能。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}_c^\dagger \hat{\psi}_c^\dagger \hat{\psi}_v \hat{\psi}_v$：同时消灭两个价带电子，产生两个导带电子（双激发），不属于单激子过程。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因此，我们需要的是在 $\vec{r}$ 处理导带电子（$\hat{\psi}_c$ 与 $\hat{\psi}_c^\dagger$）以及在 $\vec{r}&amp;rsquo;$ 处理价带电子（$\hat{\psi}_v$ 与 $\hat{\psi}_v^\dagger$）的项。由于 $\vec{r}$ 与 $\vec{r}&amp;rsquo;$ 是等价的（积分对称性），可抵消掉前面的 $1/2$ 系数，因此保留的项仅为：&lt;/p&gt;
+$$
+\hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_v^\dagger(\vec{r}&#39;) V(\vec{r}-\vec{r}&#39;) \hat{\psi}_v(\vec{r}&#39;) \hat{\psi}_c(\vec{r}) \tag{82b}
+$$&lt;p&gt;算符从右向左作用，其含义依次是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$\hat{\psi}_c(\vec{r})$：在 $\vec{r}$ 处消灭那个唯一的导带电子。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}_v(\vec{r}&amp;rsquo;)$：在 $\vec{r}&amp;rsquo;$ 处消灭一个价带背景电子。&lt;/li&gt;
+&lt;li&gt;$V(\vec{r}-\vec{r}&amp;rsquo;)$：计算这两个电子之间的库仑相互作用。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}_v^\dagger(\vec{r}&amp;rsquo;)$：把那个价带电子重新放回 $\vec{r}&amp;rsquo;$。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}_c^\dagger(\vec{r})$：把导带电子重新放回 $\vec{r}$。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;双电子到电子-空穴对&#34;&gt;双电子到电子-空穴对
+&lt;/h3&gt;&lt;p&gt;在上面的式 (82b) 中，我们描述的全是电子和电子之间的相互作用。然而，空穴本质就是电子的缺失，因此我们可以改用空穴产生/湮灭场算符代替价带电子算符。对应关系为：消灭价带电子 $\hat{\psi}_v$ 等于产生空穴 $\hat{\psi}_h^\dagger$；产生价带电子 $\hat{\psi}_v^\dagger$ 等于消灭空穴 $\hat{\psi}_h$。直接替换可得：&lt;/p&gt;
+$$
+H_{\text{int}} = \iint d\vec r \, d\vec r&#39; \, V(\vec r-\vec r&#39;) \cdot \hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_h(\vec{r}&#39;) \hat{\psi}_h^\dagger(\vec{r}&#39;) \hat{\psi}_c(\vec{r}) \tag{83}
+$$&lt;p&gt;但是目前的顺序并不是&amp;quot;左产生右湮灭&amp;quot;的标准正规序，因此我们需要交换算符顺序。由于是费米子，交换顺序要带一个负号。根据反对易关系 ${ \hat{\psi}_h(\vec{r}&amp;rsquo;), \hat{\psi}_h^\dagger(\vec{r}&amp;rsquo;) } = \delta(\vec{r}&amp;rsquo;-\vec{r}&amp;rsquo;)$ 可得：&lt;/p&gt;
+$$
+\hat{\psi}_h(\vec{r}&#39;) \hat{\psi}_h^\dagger(\vec{r}&#39;) = \delta(\vec{r}&#39; - \vec{r}&#39;) - \hat{\psi}_h^\dagger(\vec{r}&#39;) \hat{\psi}_h(\vec{r}&#39;) \tag{84}
+$$&lt;p&gt;因为算符坐标都是 $\vec{r}&amp;rsquo;$，所以 $\delta(\vec{r}&amp;rsquo; - \vec{r}&amp;rsquo;) = \delta(\mathbf 0)$，这代表无穷大的局域贡献，需要通过正则化吸收到单粒子能量中。具体地，把这一项代入式 (83) 的积分可得：&lt;/p&gt;
+$$
+H_{\delta} = \int d\vec{r} \, \hat{\psi}_c^\dagger(\vec{r}) \left[ \int d\vec{r}&#39; \, \rho_{\text{valence}}(\vec{r}&#39;) V(\vec{r}-\vec{r}&#39;) \right] \hat{\psi}_c(\vec{r}) \tag{85}
+$$&lt;p&gt;其中 $\hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_c(\vec{r})$ 是导带电子的密度算符，中间积分描述了导带电子与所有价带电子之间的库仑相互作用。因此整体的物理意义是：导带的那个电子与所有价带背景电子的库仑作用。我们可以将这一项并入到单粒子哈密顿量的本征值中去，双体相互作用部分仅计算激子相对于基态的能量变化。&lt;/p&gt;
+&lt;p&gt;因此，我们最终得到了：&lt;/p&gt;
+$$
+H_{\text{exc}} = -\iint d\vec r \, d\vec r&#39; \, \hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_h^\dagger(\vec{r}&#39;) V(\vec{r}-\vec{r}&#39;) \hat{\psi}_h(\vec{r}&#39;) \hat{\psi}_c(\vec{r}) \tag{86}
+$$&lt;p&gt;上式中，本来应该是 $V$ 的电子斥力，由于交换算符带来变号，变成了&lt;strong&gt;电子-空穴吸引相互作用&lt;/strong&gt;，这就是激子能够结合在一起的原因。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哈密顿量 $H_{\text{exc}}$ 中仅显式包含双体相互作用项，但在数值计算上已经隐含了背景电荷的修正。例如计算带隙得到 1.5 eV，这个数值已经扣除了背景电荷、核作用等。&lt;/li&gt;
+&lt;li&gt;$H_{\text{exc}}$ 在激子理论中等于&lt;strong&gt;电子-空穴的有效双体相互作用&lt;/strong&gt;，是已经包含了所有背景电子与离子影响后的、被屏蔽的双体相互作用。当我们选择价带、导带的那一刻，它已经包含了所有价带电子彼此的排斥、激子与离子背景的平衡效果——这是一个我们经过重整化后的&amp;quot;真空能级&amp;quot;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;激子哈密顿量和激子态&#34;&gt;激子哈密顿量和激子态
+&lt;/h3&gt;&lt;p&gt;我们前面推导出来的只是相互作用势能项。现在我们写出激子的整体哈密顿量，同时包含动能项和势能项：&lt;/p&gt;
+$$
+\begin{aligned}
+H_{\text{total}} = &amp; \int d\vec{r}_e \, \hat{\psi}_c^\dagger(\vec{r}_e) \left[ -\frac{\hbar^2 \nabla_e^2}{2m_e^*} + E_g \right] \hat{\psi}_c(\vec{r}_e) \\
+&amp; + \int d\vec{r}_h \, \hat{\psi}_h^\dagger(\vec{r}_h) \left[ -\frac{\hbar^2 \nabla_h^2}{2m_h^*} \right] \hat{\psi}_h(\vec{r}_h) \\
+&amp; - \iint d\vec{r}_e \, d\vec{r}_h \, \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) V(\vec{r}_e-\vec{r}_h) \hat{\psi}_h(\vec{r}_h) \hat{\psi}_c(\vec{r}_e)
+\end{aligned} \tag{87a}
+$$&lt;p&gt;第一项为电子动能项，其中 $m_e^&lt;em&gt;$ 为&lt;strong&gt;电子有效质量&lt;/strong&gt;；第二项为空穴动能项，其中 $m_h^&lt;/em&gt;$ 为&lt;strong&gt;空穴有效质量&lt;/strong&gt;[^c8]；第三项为我们以上推导出的电子-空穴吸引相互作用能。在电子动能项中还包含一项带隙值 $E_g$，这是电子跃迁到导带必须跨过的能量。&lt;/p&gt;
+&lt;p&gt;我们现在得到了激子哈密顿量，需要将其作用在激子波函数上。激子波函数我们用如下形式表示：&lt;/p&gt;
+$$
+| \Psi_{\text{exc}} \rangle = \sum_{\vec{r}_e, \vec{r}_h} \Phi(\vec{r}_e, \vec{r}_h) \, \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) | G \rangle \tag{87b}
+$$&lt;p&gt;从右往左看：$| G \rangle$ 是基态（价带满电子、导带全空）；$\hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h)$ 在 $\vec{r}_h$ 位置创造一个价带空穴，并在 $\vec{r}_e$ 位置创造一个导带电子；$\Phi(\vec{r}_e, \vec{r}_h)$ 是电子出现在 $\vec{r}_e$ 且空穴出现在 $\vec{r}_h$ 的概率幅（在均匀晶体中仅与相对距离 $\vec{r}_e - \vec{r}_h$ 有关）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; 激子波函数的完整图像可以理解为一个弥散在整个晶体中的氢原子（电子-空穴束缚态）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;wannier-方程&#34;&gt;Wannier 方程
+&lt;/h3&gt;&lt;p&gt;我们将上面得到的激子哈密顿量作用在激子态上。由于项数较多且每一项较复杂，我们将每一项分开看。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) 电子动能项作用：&lt;/strong&gt;&lt;/p&gt;
+$$
+\hat{T}_e |\Psi_{\text{exc}}\rangle = \sum_{\vec{r}_e, \vec{r}_h} \Phi(\vec{r}_e, \vec{r}_h) \int d\vec{r} \, \hat{\psi}_c^\dagger(\vec{r}) \left[ \hat{O}_e(\vec{r}) \right] \hat{\psi}_c(\vec{r}) \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{88}
+$$&lt;p&gt;为了简化，记 $\hat{O}_e = -\frac{\hbar^2 \nabla^2}{2m_e^*} + E_g$。我们主要关注的是算符部分如何相互作用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在电子动能哈密顿量 $\hat{T}_e$ 中，最右侧的电子湮灭算符 $\hat{\psi}_c(\vec{r})$ 会越过数 $\Phi(\vec{r}_e, \vec{r}_h)$，因为它是一个复数（波函数的幅值），算符可以穿透它。因此求和与积分均可往前提。&lt;/li&gt;
+&lt;li&gt;后面三个算符作用在基态上：&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\hat{\psi}_c(\vec{r}) \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{89}
+$$&lt;p&gt;前两个都是导带相关的算符，第三个是价带（空穴）产生算符，因此前两个算符可以整体与第三个算符互换（它们之间反对易子为零，互不干扰），但需注意每次互换带来的负号。将 $\hat{\psi}_h^\dagger(\vec{r}_h)$ 向前提，可得：&lt;/p&gt;
+$$
+\dots \hat{\psi}_h^\dagger(\vec{r}_h) \, \hat{\psi}_c^\dagger(\vec{r}_e) \, \hat{\psi}_c(\vec{r}) \, |G\rangle \tag{90}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里交换算符位置时，因为反对易关系需要相应地加负号；最终偶数次交换符号回到正号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;依旧看电子湮灭算符 $\hat{\psi}_c(\vec{r})$，它和紧跟在后面的 $\hat{\psi}_c^\dagger(\vec{r}_e)$ 满足反对易关系（式 59b）：${ \hat{\psi}_c(\vec{r}), \hat{\psi}_c^\dagger(\vec{r}_e) } = \delta(\vec{r} - \vec{r}_e)$。可得：&lt;/p&gt;
+$$
+\hat{\psi}_c(\vec{r}) \hat{\psi}_c^\dagger(\vec{r}_e) = \delta(\vec{r} - \vec{r}_e) - \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_c(\vec{r}) \tag{91}
+$$&lt;p&gt;这个式子作用在 $|G\rangle$ 上：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项 $\delta(\vec{r} - \vec{r}_e) |G\rangle$ 保留。&lt;/li&gt;
+&lt;li&gt;第二项 $-\hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_c(\vec{r}) |G\rangle$ 中，湮灭算符先作用在基态上，但基态的导带本身就没有电子，因此这项直接等于 0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整理可得：&lt;/p&gt;
+$$
+\hat{T}_e |\Psi_{\text{exc}}\rangle = \sum_{\vec{r}_e, \vec{r}_h} \Phi(\vec{r}_e, \vec{r}_h) \int d\vec{r} \, \hat{\psi}_c^\dagger(\vec{r}) \left[ \hat{O}_e(\vec{r}) \right] \delta(\vec{r} - \vec{r}_e) \, \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{92}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里微分算符 $\hat{O}_e(\vec{r})$ 作用在 $\delta$ 函数上，对 $\delta$ 函数求导。根据 $\delta$ 函数的性质[^c9]：&lt;/p&gt;
+$$\int d\vec{r} \, f(\vec{r}) \, \nabla^2 \delta(\vec{r}-\vec{r}_e) = \nabla^2 f(\vec{r}_e) \tag{93}$$&lt;p&gt;积分 $\int d\vec{r}$ 和 $\delta(\vec{r} - \vec{r}_e)$ 相抵消——所有 $\vec{r}$ 变成 $\vec{r}_e$：$\hat{\psi}_c^\dagger(\vec{r})$ 变成 $\hat{\psi}_c^\dagger(\vec{r}_e)$，微分算符 $\hat{O}_e(\vec{r})$ 变成 $\hat{O}_e(\vec{r}_e)$；并且因为 $\Phi$ 是关于 $\vec{r}_e$ 的函数，这个微分算符现在直接对 $\Phi$ 里的 $\vec{r}_e$ 求导。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;整理可得：&lt;/p&gt;
+$$
+\hat{T}_e |\Psi_{\text{exc}}\rangle = \sum_{\vec{r}_e, \vec{r}_h} \left[ \left( -\frac{\hbar^2 \nabla_{\vec{r}_e}^2}{2m_e^*} + E_g \right) \Phi(\vec{r}_e, \vec{r}_h) \right] \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{94}
+$$&lt;p&gt;&lt;strong&gt;(2) 空穴动能项作用：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;类似电子动能项，这里不再做详细推导。同样地，所有的 $\vec{r}$ 都变成了 $\vec{r}_h$，可得：&lt;/p&gt;
+$$
+\hat{T}_h |\Psi_{\text{exc}}\rangle = \sum_{\vec{r}_e, \vec{r}_h} \left[ \left( -\frac{\hbar^2 \nabla_{\vec{r}_h}^2}{2m_h^*} \right) \Phi(\vec{r}_e, \vec{r}_h) \right] \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{95}
+$$&lt;p&gt;&lt;strong&gt;(3) 相互作用项作用：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;将系数和积分全部提到前面：&lt;/p&gt;
+$$
+\hat{V} |\Psi_{\text{exc}}\rangle = -\sum_{\vec{r}_e, \vec{r}_h} \Phi(\vec{r}_e, \vec{r}_h) \iint d\vec{r} \, d\vec{r}&#39; \, V(\vec{r}-\vec{r}&#39;) \times \left[ \hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_h^\dagger(\vec{r}&#39;) \hat{\psi}_h(\vec{r}&#39;) \hat{\psi}_c(\vec{r}) \right] \left[ \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \right] \tag{96}
+$$&lt;p&gt;我们只关注两组算符之间的乘积：&lt;/p&gt;
+$$
+\hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_h^\dagger(\vec{r}&#39;) \, \hat{\psi}_h(\vec{r}&#39;) \, \hat{\psi}_c(\vec{r}) \cdot \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{97}
+$$&lt;p&gt;其中电子和空穴湮灭算符分别和右边的对应产生算符运用反对易关系：与&amp;quot;反对易子&amp;quot; $\delta$ 函数贡献结合，另一项中湮灭算符先作用于基态而得 0。因此式 (97) 可以写作：&lt;/p&gt;
+$$
+\hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_h^\dagger(\vec{r}&#39;) \cdot \delta(\vec{r} - \vec{r}_e) \cdot \delta(\vec{r}&#39; - \vec{r}_h) \cdot |G\rangle \tag{98}
+$$&lt;p&gt;把原本的式子拼回去：&lt;/p&gt;
+$$
+\hat{V} |\Psi_{\text{exc}}\rangle = -\sum_{\vec{r}_e, \vec{r}_h} \Phi(\vec{r}_e, \vec{r}_h) \iint d\vec{r} \, d\vec{r}&#39; \, V(\vec{r}-\vec{r}&#39;) \left[ \hat{\psi}_c^\dagger(\vec{r}) \hat{\psi}_h^\dagger(\vec{r}&#39;) \delta(\vec{r} - \vec{r}_e) \delta(\vec{r}&#39; - \vec{r}_h) |G\rangle \right] \tag{99}
+$$&lt;p&gt;双重积分被两个 $\delta$ 函数分别抵消——$\delta$ 函数强制让 $d\vec{r}$ 积分塌缩到 $\vec{r} = \vec{r}_e$，同理 $d\vec{r}&amp;rsquo;$ 塌缩到 $\vec{r}&amp;rsquo; = \vec{r}_h$。最后整理可得：&lt;/p&gt;
+$$
+\hat{V} |\Psi_{\text{exc}}\rangle = \sum_{\vec{r}_e, \vec{r}_h} \left[ -V(\vec{r}_e - \vec{r}_h) \Phi(\vec{r}_e, \vec{r}_h) \right] \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{100}
+$$&lt;p&gt;&lt;strong&gt;(4) 合并得本征方程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最后，我们将上面所有项加起来，让它等于激子总能量 $E |\Psi_{\text{exc}}\rangle$：&lt;/p&gt;
+$$
+\sum_{\vec{r}_e, \vec{r}_h} \left\{ \left[ -\frac{\hbar^2 \nabla_{\vec{r}_e}^2}{2m_e^*} + E_g -\frac{\hbar^2 \nabla_{\vec{r}_h}^2}{2m_h^*} - V(\vec{r}_e - \vec{r}_h) \right] \Phi(\vec{r}_e, \vec{r}_h) \right\} \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle = \sum_{\vec{r}_e, \vec{r}_h} \left\{ E \cdot \Phi(\vec{r}_e, \vec{r}_h) \right\} \hat{\psi}_c^\dagger(\vec{r}_e) \hat{\psi}_h^\dagger(\vec{r}_h) |G\rangle \tag{101}
+$$&lt;p&gt;由于左右两边的基底向量相同且对所有项均成立，大括号 ${\dots}$ 内的内容必须相等。于是我们仅保留系数方程：&lt;/p&gt;
+$$
+\left[ -\frac{\hbar^2 \nabla_{e}^2}{2m_e^*} - \frac{\hbar^2 \nabla_{h}^2}{2m_h^*} - V(\vec{r}_e - \vec{r}_h) \right] \Phi(\vec{r}_e, \vec{r}_h) = (E - E_g) \Phi(\vec{r}_e, \vec{r}_h) \tag{102}
+$$&lt;p&gt;上式被称为 &lt;strong&gt;Wannier 激子方程&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我们将 Wannier 方程和氢原子薛定谔方程比较一下：&lt;/p&gt;
+$$
+\left[ -\frac{\hbar^2 \nabla_e^2}{2m_0} - \frac{\hbar^2 \nabla_p^2}{2M_p} - \frac{e^2}{4\pi\epsilon_0 |\vec{r}_e - \vec{r}_p|} \right] \Psi(\vec{r}_e, \vec{r}_p) = E_{\text{total}} \Psi(\vec{r}_e, \vec{r}_p) \tag{103}
+$$&lt;p&gt;上式为氢原子方程。可以看出，Wannier 方程实际上描述的是晶体中的&amp;quot;氢原子模型&amp;quot;，二者的数学形式完全一致。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;gw--bse&#34;&gt;GW + BSE
+&lt;/h1&gt;&lt;p&gt;我们上面推导的 Wannier 方程实际上包含了三个关键的近似，导致它适用的是大半径激子，即 &lt;strong&gt;Wannier–Mott 激子&lt;/strong&gt;（或直接称为 Wannier 激子）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;有效质量近似&lt;/strong&gt;——假设能带的带边附近是完美的抛物线：&lt;/p&gt;
+$$E_{c\mathbf{k}} - E_{v\mathbf{k}} \approx E_g + \frac{\hbar^2 k^2}{2\mu^*} \tag{104}$$&lt;p&gt;我们将复杂的能带信息简化成了有效质量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;介质屏蔽近似&lt;/strong&gt;——相互作用是被极度简化的：&lt;/p&gt;
+$$W \approx \frac{1}{\epsilon_r} \frac{e^2}{|\mathbf{r}_e - \mathbf{r}_h|} \tag{105}$$&lt;p&gt;在这里我们忽略了微观原子结构，把背景当作连续介质。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;忽略交换项&lt;/strong&gt;——因为 Wannier 激子有较大的半径（约 $10^1\sim10^2$ Å），电子和空穴的短程交换作用很弱，因此在 Wannier 方程中通常忽略这一项。这会导致使用 Wannier 方程计算的单重态/三重态劈裂不准确。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于一般情形，钙钛矿等半导体中的激子大都是大半径激子，使用 Wannier 方程已经足够好。但是如果要最精确计算，必须使用 &lt;strong&gt;GW + BSE&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;gw-近似&#34;&gt;GW 近似
+&lt;/h2&gt;&lt;p&gt;我们前面推导的 Wannier 方程是基于多粒子表象的，而 GW 近似处理的是单粒子。它的目的是把 DFT 里假想的 Kohn–Sham 轨道修正为&amp;quot;真实可观测的准粒子能量&amp;quot;。换句话说，GW 是用来&amp;quot;把电子当成真正带着自能的粒子&amp;quot;，而不是 DFT 里的平均场电子。&lt;/p&gt;
+&lt;p&gt;为了替换掉 DFT 中那个近似的 $V_{xc}$，我们需要得到一个非局域的、含时的自能算符 $\Sigma$。&lt;/p&gt;
+&lt;h3 id=&#34;单粒子格林函数&#34;&gt;单粒子格林函数
+&lt;/h3&gt;&lt;p&gt;为了能够解出包含自能 $\Sigma$ 的方程（Dyson 方程），我们首先需要建立&amp;quot;传播&amp;quot;和&amp;quot;散射&amp;quot;的概念。&lt;/p&gt;
+&lt;p&gt;我们定义单粒子格林函数：&lt;/p&gt;
+$$
+G(1,2) = -i \langle \Psi_0 | T [ \hat{\psi}(1) \hat{\psi}^\dagger(2) ] | \Psi_0 \rangle \tag{106}
+$$&lt;p&gt;它的每一项含义如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1, 2$：代表时空坐标 $(\vec{r}_1, t_1)$ 和 $(\vec{r}_2, t_2)$。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}^\dagger(2)$：产生算符，意思是&amp;quot;在 $t_2$ 时刻、$\vec{r}_2$ 位置创造一个电子&amp;quot;。&lt;/li&gt;
+&lt;li&gt;$\hat{\psi}(1)$：湮灭算符，意思是&amp;quot;在 $t_1$ 时刻、$\vec{r}_1$ 位置消灭一个电子&amp;quot;。&lt;/li&gt;
+&lt;li&gt;$T$：编时算符（time-ordering）。&lt;strong&gt;它强制要求：时间晚的算符放在左边，时间早的放在右边&lt;/strong&gt;（对费米子算符每交换一次还要带一个负号）。&lt;/li&gt;
+&lt;li&gt;$\langle \Psi_0 | \dots | \Psi_0 \rangle$：期望值，表示这个过程是在系统基态 $|\Psi_0\rangle$ 上发生的。&lt;/li&gt;
+&lt;li&gt;$|G|^2$ 代表电子从 $2$ 运动到 $1$ 的概率密度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;格林函数包含两个物理过程，分别是电子传播和空穴传播：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;电子传播&lt;/strong&gt;（$t_1 &amp;gt; t_2$）：因为 $t_1$ 较晚，产生算符先作用，在 $\vec r_2$ 处加一个电子，然后电子运动，经过 $t_1 - t_2$ 时间后湮灭算符把电子拿走。这段过程描述了导带电子的运动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;空穴传播&lt;/strong&gt;（$t_1 &amp;lt; t_2$）：因为 $T$ 算符的作用，优先让湮灭算符在 $\vec r_1$ 处拿走一个电子（创造空穴），然后空穴运动，经过 $t_2 - t_1$ 时间后产生算符把电子放回。这段过程描述了价带空穴的运动。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;自由电子格林函数把时域和频域联系起来。我们先写出时域格林函数 $G_0(t)$：根据量子力学，如果一个粒子的能量是 $\epsilon_{\mathbf{k}}$，它的波函数随时间的演化遵循：&lt;/p&gt;
+$$
+\psi(t) \sim e^{-i \epsilon_{\mathbf{k}} t / \hbar} \tag{107}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 为了方便，下面取原子单位制 $\hbar=1$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而格林函数 $G_0(t)$ 描述的是：在 $t=0$ 时刻产生一个粒子，它在 $t$ 时刻还存在的概率幅。粒子必须是先产生后传播，因此它应该只在 $t&amp;gt;0$ 时存在。我们引入阶跃函数 $\theta(t)$，$G_0(t)$ 就可以写作：&lt;/p&gt;
+$$
+G_0(t) = -i \theta(t) e^{-i \epsilon_{\mathbf{k}} t} \tag{108}
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\theta(t)$ 在 $t&amp;gt;0$ 时为 1、在 $t&amp;lt;0$ 时为 0，保证因果律。&lt;/li&gt;
+&lt;li&gt;$e^{-i \epsilon_{\mathbf{k}} t}$：相位随时间旋转，这一项代表粒子有能量 $\epsilon_{\mathbf{k}}$。&lt;/li&gt;
+&lt;li&gt;前面的 $-i$ 是因为薛定谔方程左边有一个 $i$，求解的时候到了分母上，就是 $-i$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面我们将格林函数转换到频域 $\omega$，对其做傅里叶变换：&lt;/p&gt;
+$$
+G_0(\omega) = \int_{-\infty}^{+\infty} dt \, e^{i\omega t} G_0(t) \tag{109}
+$$&lt;p&gt;代入式 (108) 可得：&lt;/p&gt;
+$$
+G_0(\omega) = -i \int_{0}^{+\infty} dt \, e^{i(\omega - \epsilon_{\mathbf{k}}) t} \tag{110}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 因为 $\theta(t)$ 的存在，积分下限从 $-\infty$ 变成了 $0$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里出现数学问题：当 $t \to +\infty$ 时，指数函数是振荡且不衰减的，这个积分严格不收敛。因此我们引入一个假设——粒子不是永生的，会随时间极其缓慢地消失。这样在指数上加入一个无穷小的衰减因子 $-\eta t$（其中 $\eta \to 0^+$），上式变成：&lt;/p&gt;
+$$
+G_0(\omega) = -i \int_{0}^{+\infty} dt \, e^{i(\omega - \epsilon_{\mathbf{k}} + i\eta) t} \tag{111}
+$$&lt;p&gt;经过数学推导后，就得到了：&lt;/p&gt;
+$$
+G_0(\omega) = \frac{1}{\omega - \epsilon_{\mathbf{k}} + i\eta} \tag{112}$$&lt;ul&gt;
+&lt;li&gt;$+i\eta$ 这一项在物理上代表的边界条件是：保证了粒子只能在 $t&amp;gt;0$ 传播。&lt;/li&gt;
+&lt;li&gt;当分母为 0 时（$\omega = \epsilon_{\mathbf{k}}$），即在 $\epsilon_{\mathbf{k}}$ 处出现一个 $\delta$ 函数式的尖峰——这是电子的本征能量。&lt;/li&gt;
+&lt;li&gt;从时域上看，$G_0(t)$ 的模长为 1（$\eta\to 0$ 极限下），因此粒子寿命无限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在了解 $G(t)$ 后，我们也要了解它的逆 $G^{-1}$。&lt;/li&gt;
+&lt;li&gt;格林函数在数学上的定义是某个微分算符的逆，因此 $G^{-1}$ 本质上就是薛定谔方程里的微分算符。&lt;/li&gt;
+&lt;li&gt;含时薛定谔方程可以写作：&lt;/li&gt;
+&lt;/ul&gt;
+$$i \frac{\partial}{\partial t} \psi(t) = H \psi(t) \tag{113}$$&lt;ul&gt;
+&lt;li&gt;代入格林函数并整理可得：&lt;/li&gt;
+&lt;/ul&gt;
+$$\left( i \frac{\partial}{\partial t} - H \right) G(t) = \delta(t) \tag{114}$$&lt;ul&gt;
+&lt;li&gt;在数学上，把微分算符作用在 $G$ 上会得到一个 $\delta$ 函数。&lt;/li&gt;
+&lt;li&gt;把 $\left( i \frac{\partial}{\partial t} - H_0 \right)$ 记为 $\hat A$。&lt;/li&gt;
+&lt;li&gt;那么 $\hat A G = I$，因此 $G$ 只能是 $\hat A$ 的逆。&lt;/li&gt;
+&lt;li&gt;因此，$G^{-1}$ 等于 $\left( i \frac{\partial}{\partial t} - H_0 \right)$，也就是整体的微分算符。&lt;/li&gt;
+&lt;li&gt;因此，$G(t)$ 描述粒子的运动状态（解），$G^{-1}$ 描述粒子的运动方程（动力学）。&lt;/li&gt;
+&lt;li&gt;频域下的 $G^{-1}$ 为：&lt;/li&gt;
+&lt;/ul&gt;
+$$G^{-1}(\mathbf{k}, \omega) = \omega - \epsilon_{\mathbf{k}} + i\eta \tag{115}$$&lt;ul&gt;
+&lt;li&gt;在频域的表达下，它变成了简单的代数，如果再令 $G^{-1}=0$，那么就得到了本征关系：$\omega = \epsilon_{\mathbf{k}}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;单粒子格林函数满足如下算符方程（后面我们称之为 Dyson 方程）：&lt;/p&gt;
+$$
+G^{-1}(1,2) = G_0^{-1}(1,2) - V_H(1)\delta(1,2) - \Sigma(1,2) \tag{116}
+$$&lt;p&gt;上面我们已经了解了格林函数的逆相当于哈密顿（运动方程）算符。因此，可以写出上式各项的含义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$G^{-1}(1,2)$：相互作用系统格林函数的逆。&lt;/li&gt;
+&lt;li&gt;$G_0^{-1}(1,2)$：无相互作用（含外势）系统的格林函数逆，完整展开为 $G_0^{-1}(1,2) = \left[i\hbar \frac{\partial}{\partial t_1} + \frac{\hbar^2 \nabla_1^2}{2m} - V_{ext}(1)\right] \delta(1,2)$。&lt;/li&gt;
+&lt;li&gt;$V_H(1)$：经典平均静电势（Hartree 势）。&lt;/li&gt;
+&lt;li&gt;$\delta(1,2) = \delta(\vec{r}_1-\vec{r}_2)\delta(t_1-t_2)$：时空 $\delta$ 函数。&lt;/li&gt;
+&lt;li&gt;$\Sigma(1,2)$：自能函数，包含了所有超越平均场的多体效应（交换与关联）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;准粒子总有效哈密顿量算符可写作：&lt;/li&gt;
+&lt;/ul&gt;
+$$G^{-1}(1,2) = \left[ i\hbar \frac{\partial}{\partial t_1} - H_{\text{total}}^{\text{eff}} \right] \delta(1,2) \tag{117}$$&lt;p&gt;上式代表了真实[^d1]准粒子遵守的运动方程算符。若 $G^{-1} \psi = 0$，那就是真实准粒子的薛定谔方程。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自由格林函数的逆：&lt;/li&gt;
+&lt;/ul&gt;
+$$G_0^{-1}(1,2) = \left[ i\hbar \frac{\partial}{\partial t_1} + \frac{\hbar^2 \nabla_1^2}{2m} - V_{ext}(1) \right] \delta(1,2) \tag{118}$$&lt;p&gt;上式表示单电子在仅存在核作用下的运动方程算符，这部分没有任何电子之间的关联。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hartree 项：&lt;/li&gt;
+&lt;/ul&gt;
+$$V_H(1) \delta(1,2) = \int d3 \, v(1,3) \rho(3) = \int d\mathbf{r}_3 \frac{e^2 \rho(\mathbf{r}_3)}{|\mathbf{r}_1 - \mathbf{r}_3|} \, \delta(1,2) \tag{119}$$&lt;p&gt;上式表示电子在 $\mathbf{r}_1$ 感受到的 Hartree 势，来源是其他所有电子在 $\mathbf{r}_3$ 处的密度。它仅包含电子之间的经典排斥相互作用，不含量子的交换-关联作用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最后一项自能 $\Sigma(1,2)$ 没有显式的封闭表达式。它包含了所有经典平均场无法描述的量子效应。&lt;/li&gt;
+&lt;li&gt;因此，经过全部加和我们可以写出准粒子波动方程：&lt;/li&gt;
+&lt;/ul&gt;
+$$\left[ i\hbar \frac{\partial}{\partial t_1} + \frac{\hbar^2 \nabla_1^2}{2m} - V_{ext}(1) - V_H(1) \right] \psi(1) - \int d2 \, \Sigma(1,2) \psi(2) = 0 \tag{120}$$&lt;ul&gt;
+&lt;li&gt;在上式中，我们对原算符方程两边同乘 $\psi(2)$ 并对 $2$ 积分。因为 $G^{-1}(1,2)$ 将状态从位置 $2$ 映射到位置 $1$，为了得到位置 $1$ 的状态，必须把位置 $2$ 的波函数作为输入。&lt;/li&gt;
+&lt;li&gt;矩阵形式上，这相当于 $y_i = \sum_j A_{ij} x_j$：我们为了得到 $y_i$，输入必须是 $x_j$。&lt;/li&gt;
+&lt;li&gt;式 (120) 中除了最后一项，所有的 $\delta(1,2)$ 都把对 $2$ 的积分塌缩掉了；&lt;strong&gt;只有最后一项不是对角矩阵&lt;/strong&gt;，因此积分必须保留。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最终，我们可以将全相互作用系统的逆格林函数 $G^{-1}(\mathbf{r}_1, t_1; \mathbf{r}_2, t_2)$ 写成如下形式：&lt;/p&gt;
+$$
+\begin{aligned}
+G^{-1}(\mathbf{r}_1, t_1; \mathbf{r}_2, t_2) = &amp; \underbrace{\delta(\mathbf{r}_1 - \mathbf{r}_2)\delta(t_1 - t_2)}_{\text{时空对角化因子}} \times \Bigg[ \underbrace{i\hbar \frac{\partial}{\partial t_1}}_{\text{含时演化}} + \underbrace{\frac{\hbar^2 \nabla_{\mathbf{r}_1}^2}{2m}}_{\text{动能}} - \underbrace{V_{ext}(\mathbf{r}_1)}_{\text{原子核势}} - \underbrace{\int d\mathbf{r}_3 \frac{e^2 \rho(\mathbf{r}_3, t_1)}{|\mathbf{r}_1 - \mathbf{r}_3|}}_{\text{Hartree 平均场}} \Bigg] \\
+&amp; - \underbrace{\Sigma(\mathbf{r}_1, t_1; \mathbf{r}_2, t_2)}_{\text{量子自能}}
+\end{aligned} \tag{121}
+$$&lt;p&gt;上式方括号内的项都是局域的，因为 $\delta(\mathbf{r}_1 - \mathbf{r}_2)\delta(t_1 - t_2)$ 的存在使仅有对角项起作用。最后一项为非局域项，我们将其写成矩阵形式：&lt;/p&gt;
+$$
+\boldsymbol{\Sigma}(\omega) = \begin{pmatrix}
+\Sigma_{11}(\omega) &amp; \Sigma_{12}(\omega) &amp; \cdots \\
+\Sigma_{21}(\omega) &amp; \Sigma_{22}(\omega) &amp; \cdots \\
+\vdots &amp; \vdots &amp; \ddots
+\end{pmatrix} \tag{122}
+$$&lt;p&gt;其中，矩阵中每一项都是能量 $\omega$ 的函数。对角元和非对角元具有不同的含义：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) 对角元——轨道自己对自己的影响&lt;/strong&gt;&lt;/p&gt;
+$$
+\Sigma_{ii} = \langle \phi_i | \hat{\Sigma} | \phi_i \rangle \tag{123a}
+$$&lt;p&gt;它包含实部和虚部：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;实部 $\text{Re}[\Sigma_{ii}(\omega)]$ 代表能量的重整化——电子在轨道 $i$ 上时极化了周围的环境，导致自己的能量发生变化。因此这项修正了 DFT 计算出的能级：&lt;/p&gt;
+$$E_i^{QP} \approx \epsilon_i^{DFT} + \text{Re}[\Sigma_{ii}(E_i)] - V_{xc,ii} \tag{123b}$$&lt;p&gt;上式代表准粒子能量 = DFT 计算的能量 + GW 计算出的自能 − DFT 中近似的 $V_{xc}$（因为 DFT 计算已经包含了 $V_{xc,ii}$，要去掉以避免重复计数）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚部 $\text{Im}[\Sigma_{ii}(\omega)]$ 代表寿命的衰减——电子在轨道 $i$ 上会因为散射（电子-电子散射、电声耦合等）而跃迁到其他态，虚部越大寿命越短。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;(2) 非对角元——两个轨道之间的相互作用修正&lt;/strong&gt;&lt;/p&gt;
+$$
+\Sigma_{ij} = \langle \phi_i | \hat{\Sigma} | \phi_j \rangle \tag{123c}
+$$&lt;p&gt;在一般情况下，$H_{ij}$ 非对角元代表了电子从 $j$ 跳到 $i$ 的概率。但在自能中——正如我们上面讨论的——电子会自己极化周围的环境导致能量变化，电子跳跃时也伴随周围被极化的环境一起跳跃。因此这一项包含了电子从 $j$ 态出发、受到扰动到了 $i$ 态、然后到达的复杂过程。&lt;/p&gt;
+&lt;p&gt;同样地，这一项也包含实部和虚部：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实部 $\text{Re}[\Sigma_{ij}]$ 代表跃迁的耦合强度。&lt;/li&gt;
+&lt;li&gt;虚部 $\text{Im}[\Sigma_{ij}]$ 代表跳跃过程中受到的阻力，即发生散射的强度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在绝大多数半导体中，非对角项通常被忽略（称为 $G_0W_0$），此时对角元占主导——我们认为 DFT 计算出的波函数已经足够好，不太需要非对角元修正。但在强关联体系中，这是不可忽略的。&lt;/p&gt;
+&lt;h3 id=&#34;dyson-方程&#34;&gt;Dyson 方程
+&lt;/h3&gt;&lt;p&gt;我们将格林函数满足的算符方程 (116) 写成最简单的形式：&lt;/p&gt;
+$$
+G^{-1} = G_0^{-1} - \Sigma \tag{124}
+$$&lt;p&gt;上面我们已经了解了它的物理含义：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真实运动方程 = 自由运动方程 − 修正项&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上式两边同时从左边乘以自由格林函数 $G_0$ 可得：&lt;/p&gt;
+$$
+G_0 \cdot G^{-1} = G_0 \cdot (G_0^{-1} - \Sigma) \tag{125}
+$$&lt;p&gt;其中 $G_0 \cdot G_0^{-1}$ 为单位矩阵 $I$，整理可得：&lt;/p&gt;
+$$
+G_0 G^{-1} = I - G_0 \Sigma \tag{126}
+$$&lt;p&gt;等式两边右乘全格林函数 $G$，消掉左边的 $G^{-1}$：&lt;/p&gt;
+$$
+(G_0 G^{-1}) \cdot G = (I - G_0 \Sigma) \cdot G \tag{127a}
+$$&lt;p&gt;整理可得：&lt;/p&gt;
+$$
+G = G_0 + G_0 \Sigma G \tag{127b}
+$$&lt;p&gt;上式就是 &lt;strong&gt;Dyson 方程&lt;/strong&gt;，也是我们前面提到的算符方程（式 116）的等价形式。等式两边都有 $G$，看起来是递归的。我们把 $G$ 代入到上式右边的 $G$，整理可得：&lt;/p&gt;
+$$
+G = G_0 + G_0 \Sigma G_0 + G_0 \Sigma G_0 \Sigma G \tag{128}
+$$&lt;p&gt;如果一直代入，就会得到无限的迭代级数：&lt;/p&gt;
+$$
+G = G_0 + G_0 \Sigma G_0 + G_0 \Sigma G_0 \Sigma G_0 + G_0 \Sigma G_0 \Sigma G_0 \Sigma G_0 + \cdots \tag{129}
+$$&lt;p&gt;在 Dyson 方程中，我们把 $G_0$ 叫做传播子。上式的物理含义是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;粒子从 $i$ 到 $j$ 的总传播概率幅等于所有路径之和，包含粒子所有可能散射的路径叠加：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项 $G_0$ 代表粒子没有发生散射，直接从 $i$ 到 $j$；&lt;/li&gt;
+&lt;li&gt;第二项 $G_0 \Sigma G_0$ 代表粒子传播 $G_0$，散射了一次 $\Sigma$，然后又传播 $G_0$，到了 $j$；&lt;/li&gt;
+&lt;li&gt;第三项则是散射两次……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们切换到频域空间来看式 (128) 的最简单情形（动量守恒下 $\Sigma$ 在 $\mathbf k$ 表象对角）：&lt;/p&gt;
+$$
+G(\mathbf k, \omega) = G_0(\mathbf k, \omega) + G_0(\mathbf k, \omega) \Sigma(\mathbf k, \omega) G(\mathbf k, \omega) \tag{130}
+$$&lt;p&gt;将含有 $G$ 的项移到一边并代入 $G_0 = \frac{1}{\omega - \epsilon_k}$，可得：&lt;/p&gt;
+$$
+G(\mathbf{k}, \omega) = \frac{\frac{1}{\omega - \epsilon_k}}{1 - \frac{\Sigma}{\omega - \epsilon_k}} = \frac{1}{\omega - \epsilon_k - \Sigma(\mathbf{k}, \omega)} \tag{131}
+$$&lt;p&gt;可以看到，原本在 $\epsilon_k$ 的 DFT 能级现在移动到了 $\epsilon_k + \Sigma$ 的 GW 能级。它对应了能带图中的 $y$ 轴；$\mathbf k$ 代表了 $\mathbf k$ 空间中不同的 $\mathbf k$ 点。&lt;/p&gt;
+&lt;p&gt;当 $\omega = \epsilon_{\mathbf{k}} + \text{Re},\Sigma(\mathbf{k}, \omega)$ 时，分母实部为 0，$|G(\mathbf{k}, \omega)|$ 出现峰值，它代表了这里出现了一条能带。这个时刻的 $\omega$ 值就是准粒子能量。&lt;/p&gt;
+&lt;h3 id=&#34;双粒子格林函数&#34;&gt;双粒子格林函数
+&lt;/h3&gt;&lt;p&gt;我们需要算格林函数 $G$，因为它包含了能带信息。但是仅仅从 $G$ 的定义来看，我们无法直接解出来具体的能带结构，需要找到一个 $G$ 满足的方程，然后解这个方程。&lt;/p&gt;
+$$
+G(1,2) = -i \langle \Psi_0 | T \, \hat\psi(1) \hat\psi^\dagger(2) | \Psi_0 \rangle \tag{132}
+$$&lt;p&gt;上式是格林函数的定义。我们了解算符的定义，但不清楚 $|\Psi_0\rangle$ 的具体形式——因为我们面对的是一个真实多体系统。&lt;/p&gt;
+&lt;p&gt;我们要找的能带本征能量，本质上是微分方程的特征值（对应时间导数 $i \frac{\partial}{\partial t}$）。因此，我们需要对格林函数关于时间求导；但格林函数中的 $T$ 算符需要先写成数学上的阶跃函数形式才能求导：&lt;/p&gt;
+$$
+T \hat\psi(1) \hat\psi^\dagger(2) = \theta(t_1 - t_2) \hat\psi(1) \hat\psi^\dagger(2) - \theta(t_2 - t_1) \hat\psi^\dagger(2) \hat\psi(1) \tag{133}
+$$&lt;p&gt;前面同样提到过，当 $t_1 &amp;gt; t_2$ 时仅保留右侧第一项，反之保留第二项；负号来自费米子算符交换。&lt;/p&gt;
+&lt;p&gt;因此，格林函数 $G$ 可以写作：&lt;/p&gt;
+$$
+G(1,2) = -i \left[ \theta(t_1 - t_2) \langle \hat\psi(1) \hat\psi^\dagger(2) \rangle - \theta(t_2 - t_1) \langle \hat\psi^\dagger(2) \hat\psi(1) \rangle \right] \tag{134}
+$$&lt;p&gt;接下来对时间 $t_1$ 求导。求导会同时作用在 $\theta$ 函数和 $\hat\psi(1)$ 算符上。我们将对阶跃函数求导得到的部分称为&lt;strong&gt;边界项&lt;/strong&gt;，将对 $\hat\psi(1)$ 求导得到的部分称为&lt;strong&gt;动力学项&lt;/strong&gt;：&lt;/p&gt;
+$$
+i \frac{\partial G}{\partial t_1} = i \left( \frac{\partial G}{\partial t_1} \right)_{\theta} + i \left( \frac{\partial G}{\partial t_1} \right)_{\psi} \tag{135}
+$$&lt;p&gt;&lt;strong&gt;(1) 边界项：&lt;/strong&gt; 对 $\theta$ 函数的求导是 $\delta$ 函数，即 $\frac{\partial}{\partial t_1} \theta(t_1 - t_2) = \delta(t_1 - t_2)$。因此：&lt;/p&gt;
+$$
+i \left( \frac{\partial G}{\partial t_1} \right)_{\theta} = \delta(t_1 - t_2) \langle \hat\psi(1) \hat\psi^\dagger(2) + \hat\psi^\dagger(2) \hat\psi(1) \rangle \tag{136}
+$$&lt;p&gt;利用反对易关系 ${\hat\psi(\mathbf{r}_1), \hat\psi^\dagger(\mathbf{r}_2)} = \delta(\mathbf{r}_1 - \mathbf{r}_2)$，边界项直接变成：&lt;/p&gt;
+$$
+i \left( \frac{\partial G}{\partial t_1} \right)_{\theta} = \delta(t_1 - t_2) \delta(\mathbf{r}_1 - \mathbf{r}_2) = \delta(1,2) \tag{137}
+$$&lt;p&gt;&lt;strong&gt;(2) 动力学项：&lt;/strong&gt;&lt;/p&gt;
+$$
+i \left( \frac{\partial G}{\partial t_1} \right)_{\psi} = -i \left\langle T \left( i \frac{\partial \hat\psi(1)}{\partial t_1} \right) \hat\psi^\dagger(2) \right\rangle \tag{138}
+$$&lt;p&gt;我们直接得到了海森堡运动方程的形式：&lt;/p&gt;
+$$
+i\hbar \frac{d \hat{A}(t)}{dt} = [\hat{A}(t), \hat{H}] \tag{139}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; 算符的时间演化属于海森堡绘景，必须遵守海森堡运动方程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因此可以写作：&lt;/p&gt;
+$$
+i \left( \frac{\partial G}{\partial t_1} \right)_{\psi} = -i \langle T [\hat\psi(1), \hat H] \hat\psi^\dagger(2) \rangle \tag{140}
+$$&lt;p&gt;为了计算对易子，我们将哈密顿量拆分为动能和相互作用两部分：$\hat H = \hat H_0 + \hat H_{\text{int}}$[^d2]，其中 $\hat H_0$ 包含动能和外势能，$\hat H_{\text{int}}$ 包含电子间的相互作用能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;动能部分：&lt;/strong&gt;&lt;/p&gt;
+$$
+\left[\hat\psi(\mathbf{r}_1), \int d\mathbf{x} \, \hat\psi^\dagger(\mathbf{x}) h_0(\mathbf{x}) \hat\psi(\mathbf{x})\right] \tag{141}
+$$&lt;p&gt;利用对易公式 $[A, BC] = {A, B}C - B{A, C}$：&lt;/p&gt;
+$$
+[\hat\psi, \hat H_0] = \int d\mathbf{x} \left[ \{ \hat\psi(\mathbf{r}_1), \hat\psi^\dagger(\mathbf{x}) \} h_0(\mathbf{x}) \hat\psi(\mathbf{x}) - \hat\psi^\dagger(\mathbf{x}) h_0(\mathbf{x}) \{ \hat\psi(\mathbf{r}_1), \hat\psi(\mathbf{x}) \} \right] \tag{142}$$&lt;p&gt;其中，右侧第二项两个湮灭算符的反对易子为 0；第一项产生湮灭算符的反对易子为 $\delta(\mathbf r_1 - \mathbf x)$，与积分符号抵消：&lt;/p&gt;
+$$
+[\hat\psi, \hat H_0] = h_0(\mathbf{r}_1) \hat\psi(\mathbf{r}_1) = h_0(1) \hat\psi(1) \tag{143a}
+$$&lt;p&gt;&lt;strong&gt;相互作用部分：&lt;/strong&gt;&lt;/p&gt;
+$$
+\hat H_{\text{int}} = \frac{1}{2} \int d\mathbf{x} \, d\mathbf{y} \, v(\mathbf{x},\mathbf{y}) \hat\psi^\dagger(\mathbf{x}) \hat\psi^\dagger(\mathbf{y}) \hat\psi(\mathbf{y}) \hat\psi(\mathbf{x}) \tag{143b}
+$$&lt;p&gt;需要计算对易子 $[\hat\psi(\mathbf{r}_1), \hat\psi^\dagger(\mathbf{x}) \hat\psi^\dagger(\mathbf{y}) \hat\psi(\mathbf{y}) \hat\psi(\mathbf{x})]$。看起来繁琐，但产生算符之间反对易子为 0，产生-湮灭反对易子是 $\delta$ 函数，所以最终化简得到：&lt;/p&gt;
+$$
+[\hat\psi(1), \hat H_{\text{int}}] = \int d\mathbf{x} \, v(\mathbf{r}_1, \mathbf{x}) \hat\psi^\dagger(\mathbf{x}) \hat\psi(\mathbf{x}) \hat\psi(\mathbf{r}_1) = \int d3 \, v(1,3) \hat\psi^\dagger(3) \hat\psi(3) \hat\psi(1) \tag{144}
+$$&lt;p&gt;这里 $3$ 代表空间中任何一个位置，由于积分符号，效果上是把所有位置 $3$ 处的电子贡献加起来。&lt;/p&gt;
+&lt;p&gt;把两部分合并整理：&lt;/p&gt;
+$$
+\left[ i \frac{\partial}{\partial t_1} - h_0(1) \right] G(1,2) = \delta(1,2) - i \int d3 \, v(1,3) \langle T \hat\psi^\dagger(3)\hat\psi(3)\hat\psi(1) \hat\psi^\dagger(2) \rangle \tag{145}
+$$&lt;p&gt;我们可以看到上式右侧出现了 $\hat\psi^\dagger \hat\psi \hat\psi \hat\psi^\dagger$（四个场算符），因此被称为&lt;strong&gt;双粒子格林函数&lt;/strong&gt; $G_2$。&lt;/p&gt;
+&lt;p&gt;它说明了：如果我们要求单粒子 $G$，就要先求双粒子 $G_2$；要求 $G_2$，得先求 $G_3$……这变成了 BBGKY 等级，似乎陷入了死循环。&lt;/p&gt;
+&lt;h3 id=&#34;hedin-方程组&#34;&gt;Hedin 方程组
+&lt;/h3&gt;&lt;h4 id=&#34;schwinger-导数&#34;&gt;Schwinger 导数
+&lt;/h4&gt;&lt;p&gt;为了打破上式的死循环，Schwinger 引入了一个随时间变化的虚拟外场 $\phi$。经过数学推导，双粒子格林函数可以表示为：&lt;/p&gt;
+$$
+\langle T \hat\psi^\dagger(3)\hat\psi(3)\hat\psi(1)\hat\psi^\dagger(2) \rangle = i \frac{\delta G(1,2)}{\delta \phi(3)} + G(1,2) \langle \rho(3) \rangle \tag{146}
+$$&lt;p&gt;代回到运动方程 (145)：&lt;/p&gt;
+$$
+\left[i\frac{\partial}{\partial t_1} - h_0(1) - V_H(1)\right] G(1,2) = \delta(1,2) + i \int d3 \, v(1,3) \frac{\delta G(1,2)}{\delta \phi(3)} \tag{147}
+$$&lt;p&gt;其中多出来的 $V_H(1)$ 是做 Schwinger 替换后吸收掉式 (146) 第二项得到的 Hartree 势。我们比较一下 Dyson 方程：&lt;/p&gt;
+$$
+\left[i\frac{\partial}{\partial t_1} - h_0(1) - V_H(1)\right] G(1,2) = \delta(1,2) + \int d3 \, \Sigma(1,3) G(3,2) \tag{148}
+$$&lt;p&gt;我们就能得到 $\Sigma$ 的形式：&lt;/p&gt;
+$$
+\int d3 \, \Sigma(1,3) G(3,2) = i \int d3 \, v(1,3) \frac{\delta G(1,2)}{\delta \phi(3)} \tag{149}
+$$&lt;p&gt;上式中，$2$ 是起始点，$1$ 是终点，$3$ 是粒子发生散射的中间点。&lt;/p&gt;
+&lt;p&gt;这个方程的物理含义是：自能 $\Sigma$ 是电子通过库仑力 $v$ 和它自己引发的环境变化 $\frac{\delta G}{\delta \phi}$ 之间的耦合的结果——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左边 $G(3,2)$ 是传播子，代表电子从起点 $2$ 跑到中间点 $3$。$\Sigma(1,3)$ 则是电子在 $3$ 受到散射、到达位置 $1$。&lt;/li&gt;
+&lt;li&gt;右边 $v(1,3)$ 是位置 $1$ 和位置 $3$ 之间的库仑相互作用，$\frac{\delta G(1,2)}{\delta \phi(3)}$ 是电子从 $2$ 到 $1$ 的路途中，在位置 $3$ 发生散射的概率幅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整体描述了：电子从 $2$ 到 $3$，经过 $3$ 时由于排斥周围电子在 $3$ 产生了一个局部带正电的环境；电子随后跑到 $1$，在 $1$ 受到刚刚 $3$ 形成的正电环境影响——受到 $v(1,3)$ 的库仑相互作用。两边描述的物理过程是一致的。&lt;/p&gt;
+&lt;h4 id=&#34;逆介电函数和顶点函数&#34;&gt;逆介电函数和顶点函数
+&lt;/h4&gt;&lt;p&gt;我们有了式 (149)，为了解出自能 $\Sigma$，需要使用链式法则处理 $\frac{\delta G}{\delta \phi}$：&lt;/p&gt;
+$$
+\frac{\delta G(1,2)}{\delta \phi(3)} = \int d4 \, \frac{\delta G(1,2)}{\delta V_{\text{tot}}(4)} \frac{\delta V_{\text{tot}}(4)}{\delta \phi(3)} \tag{151}
+$$&lt;p&gt;其中 $V_{\text{tot}}$ 是包括外场扰动后的总有效势：$V_{\text{tot}} = V_{ext} + V_H + \phi$（关心变化时可写 $\delta V_{\text{tot}} = \delta\phi + \delta V_H$）。&lt;/p&gt;
+&lt;p&gt;这里出现了第四个位置 $4$，因为我们在位置 $3$ 处施加了一个虚拟外场 $\phi(3)$，这会导致不仅 $3$ 位置的电势改变，全空间其他所有位置的电势都会变化——因此我们要将所有受影响的位置 $4$ 加起来。&lt;/p&gt;
+&lt;p&gt;我们把 $\frac{\delta V_{\text{tot}}}{\delta \phi}$ 定义为逆介电函数 $\epsilon^{-1}$：&lt;/p&gt;
+$$
+\frac{\delta V_{\text{tot}}(4)}{\delta \phi(3)} = \epsilon^{-1}(4,3) \tag{152}
+$$&lt;p&gt;它描述了外场 $\phi$ 如何引起总势场的变化（产生屏蔽效应）。&lt;/p&gt;
+&lt;p&gt;我们把式 (149) 右侧库仑势 $v$ 与逆介电函数的卷积定义为 $W(1,4)$：&lt;/p&gt;
+$$
+W(1,4) = \int d3 \, v(1,3) \frac{\delta V_{\text{tot}}(4)}{\delta \phi(3)} \tag{153}
+$$&lt;p&gt;这就是 GW 近似中的 $W$——&lt;strong&gt;屏蔽库仑相互作用&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我们再看链式法则得到的另一项。根据数学恒等式 $\frac{\delta G}{\delta V} = -G \frac{\delta G^{-1}}{\delta V} G$，我们定义：&lt;/p&gt;
+$$
+\Gamma(1,2;3) = -\frac{\delta G^{-1}(1,2)}{\delta V_{\text{tot}}(3)} \tag{154}
+$$&lt;p&gt;因此可得：&lt;/p&gt;
+$$
+\frac{\delta G}{\delta V_{\text{tot}}} = G \, \Gamma \, G \tag{155}
+$$&lt;p&gt;$\Gamma$ 我们称之为&lt;strong&gt;顶点函数（vertex function）&lt;/strong&gt;。它的物理意义是：在 $3$ 处的势场变化对电子从 $1$ 到 $2$ 的逆传播有什么影响——即电子在 $3$ 点感受到外场时发生的&amp;quot;非平凡散射&amp;quot;。&lt;/p&gt;
+&lt;p&gt;我们将得到的项全部代回式 (149)，最后可得（紧凑算符记号下）：&lt;/p&gt;
+$$
+\Sigma G = i \, W G \, \Gamma G \tag{156}
+$$&lt;p&gt;我们将顶点函数中的 $G^{-1}$ 替换成 Dyson 方程中的形式：&lt;/p&gt;
+$$
+\Gamma(1,2;3) = -\frac{\delta}{\delta V(3)} \left[ G_0^{-1}(1,2) - V(1)\delta(1,2) - \Sigma(1,2) \right] \tag{157}
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一项：自由格林函数 $G_0$ 只包含动能和外势，与总势场无关，因此为 0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二项：&lt;/p&gt;
+$$-\frac{\delta [-V(1)\delta(1,2)]}{\delta V(3)} = \frac{\delta V(1)}{\delta V(3)} \delta(1,2) = \delta(1,3)\delta(1,2) \tag{158}$$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三项含 $\Sigma$，需要进一步链式法则。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此，整体可以写作：&lt;/p&gt;
+$$
+\Gamma(1,2;3) = \delta(1,2)\delta(1,3) + \frac{\delta \Sigma(1,2)}{\delta V(3)} \tag{159}
+$$&lt;p&gt;对其中 $\frac{\delta \Sigma(1,2)}{\delta V(3)}$ 再使用链式法则引入 $G$（因为 $\Sigma$ 是 $G$ 的泛函，而 $G$ 依赖于 $V$）：&lt;/p&gt;
+$$
+\frac{\delta \Sigma(1,2)}{\delta V(3)} = \int d4 \, d5 \, \frac{\delta \Sigma(1,2)}{\delta G(4,5)} \frac{\delta G(4,5)}{\delta V(3)} \tag{160}
+$$&lt;p&gt;其中 $\frac{\delta G(4,5)}{\delta V(3)}$ 这项根据前面的式 (155) 可写为：&lt;/p&gt;
+$$
+\frac{\delta G(4,5)}{\delta V(3)} = \int d6 \, d7 \, G(4,6) \, \Gamma(6,7; 3) \, G(7,5) \tag{161}
+$$&lt;p&gt;将其代回式 (159)，最终可以得到顶点方程：&lt;/p&gt;
+$$
+\Gamma(1,2;3) = \delta(1,2)\delta(1,3) + \int d4 \, d5 \, d6 \, d7 \, \frac{\delta \Sigma(1,2)}{\delta G(4,5)} G(4,6) G(7,5) \Gamma(6,7;3) \tag{162}
+$$&lt;h4 id=&#34;库仑屏蔽和极化率&#34;&gt;库仑屏蔽和极化率
+&lt;/h4&gt;&lt;p&gt;根据式 (152) 以及总有效势的定义，$\frac{\delta V(4)}{\delta \phi(3)}$ 可以写作：&lt;/p&gt;
+$$
+\frac{\delta V(4)}{\delta \phi(3)} = \frac{\delta \phi(4)}{\delta \phi(3)} + \frac{\delta V_H(4)}{\delta \phi(3)} \tag{163}
+$$&lt;p&gt;其中 $\frac{\delta \phi(4)}{\delta \phi(3)} = \delta(4,3)$。Hartree 势的定义是：&lt;/p&gt;
+$$
+V_H(4) = \int dX \, v(4, X) \rho(X) \tag{164}
+$$&lt;p&gt;它的导数可以写成：&lt;/p&gt;
+$$
+\frac{\delta V_H(4)}{\delta \phi(3)} = \int dX \, v(4, X) \frac{\delta \rho(X)}{\delta \phi(3)} \tag{165}
+$$&lt;p&gt;我们依然可以使用链式法则，将 $\frac{\delta \rho}{\delta \phi}$ 展开：&lt;/p&gt;
+$$
+\frac{\delta \rho(X)}{\delta \phi(3)} = \int dY \, \frac{\delta \rho(X)}{\delta V(Y)} \frac{\delta V(Y)}{\delta \phi(3)} \tag{166}
+$$&lt;p&gt;其中根据极化率（不可约极化）的定义 $P(X, Y) = \frac{\delta \rho(X)}{\delta V(Y)}$，上式可以写作：&lt;/p&gt;
+$$
+\frac{\delta \rho(X)}{\delta \phi(3)} = \int dY \, P(X, Y) \frac{\delta V(Y)}{\delta \phi(3)} \tag{167}
+$$&lt;p&gt;因此式 (153) 右侧第二项变成：&lt;/p&gt;
+$$
+\frac{\delta V_H(4)}{\delta \phi(3)} = \int dX \, dY \, v(4, X) P(X, Y) \frac{\delta V(Y)}{\delta \phi(3)} \tag{168}
+$$&lt;p&gt;将上式代回 (153)，那么 $W$ 可以写作：&lt;/p&gt;
+$$
+W(1,4) = \int d3 \, v(1,3) \left[ \delta(4,3) + \int dX \, dY \, v(4, X) P(X, Y) \frac{\delta V(Y)}{\delta \phi(3)} \right] \tag{169}
+$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一项为&lt;strong&gt;裸库仑相互作用&lt;/strong&gt;，代表两个电子之间的纯库仑相互作用：&lt;/p&gt;
+$$\int d3 \, v(1,3) \delta(4,3) = v(1,4) \tag{170}$$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二项为&lt;strong&gt;屏蔽修正&lt;/strong&gt;：&lt;/p&gt;
+$$\int dX \, dY \, v(4, X) P(X, Y) \left[ \int d3 \, v(1,3) \frac{\delta V(Y)}{\delta \phi(3)} \right] \tag{171}$$&lt;p&gt;屏蔽修正代表了：电子 A 排斥了周围的电子并&amp;quot;吸引&amp;quot;空穴，导致电子 A 周围形成了一圈带正电的极化云；电子 B 原本仅感受到 A 的排斥作用，但因为正极化云的存在，被抵消了一部分——这就是屏蔽。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最终可以得到 $W$ 的 Dyson 形式：&lt;/p&gt;
+$$
+W(1,2) = v(1,2) + \int d3 \, d4 \, v(1,3) \, P(3,4) \, W(4,2) \tag{173}$$&lt;p&gt;如果我们希望用格林函数 $G$ 把极化率 $P$ 表达出来，就能把微观量（$G$）和宏观响应（$P$）联系起来。&lt;/p&gt;
+&lt;p&gt;在前面（式 68），我们推导出过密度算符 $\hat\rho(1) = \hat\psi^\dagger(1) \hat\psi(1)$。根据格林函数的定义 $G(1,2) = -i \langle T \hat\psi(1)\hat\psi^\dagger(2) \rangle$，如果 $2$ 趋近于 $1$（取时间无穷小正向极限 $1^+$），那么粒子数密度可以用格林函数写出：&lt;/p&gt;
+$$
+\rho(1) = \langle \hat\psi^\dagger(1) \hat\psi(1) \rangle = -i G(1, 1^+) \tag{174}
+$$&lt;p&gt;这样就能根据极化率的定义写出格林函数的表达：&lt;/p&gt;
+$$
+P(1,2) = \frac{\delta \rho(1)}{\delta V(2)} = -i \frac{\delta G(1, 1^+)}{\delta V(2)} \tag{175}
+$$&lt;p&gt;由式 (155) $\frac{\delta G}{\delta V} = G\Gamma G$，直接代回式 (175)，可以写出极化率：&lt;/p&gt;
+$$
+P(1,2) = -i \int d3 \, d4 \, G(1, 3) G(4, 1^+) \Gamma(3, 4; 2) \tag{176}
+$$&lt;h4 id=&#34;封闭循环与-g_0w_0&#34;&gt;封闭循环与 $G_0W_0$
+&lt;/h4&gt;&lt;p&gt;根据上面的推导，我们得到了五个相互依赖的方程——&lt;strong&gt;Hedin 方程组&lt;/strong&gt;。重新写出并看一下它们的物理意义：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) 极化率方程：&lt;/strong&gt;&lt;/p&gt;
+$$
+P(1,2) = -i \int d3 \, d4 \, G(1,3) \, G(4,1^+) \, \Gamma(3,4;2) \tag{177a}
+$$&lt;p&gt;它描述了介质对外场的响应能力。尽管 $G \times G$ 看起来仅描述了一对粒子，但格林函数本身已经包括了所有电子能带和所有量子态信息的加和，因此 $P$ 表示的是整个电子海的集体响应。顶点 $\Gamma$ 描述了这一产生过程中的相互作用修正。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2) 屏蔽相互作用方程：&lt;/strong&gt;&lt;/p&gt;
+$$
+W(1,2) = v(1,2) + \int d3 \, d4 \, v(1,3) \, P(3,4) \, W(4,2) \tag{177b}
+$$&lt;p&gt;它描述了：裸库仑力 $v$ 通过被介质极化云 $P$ 反复散射，最终变成屏蔽相互作用 $W$。它表明粒子产生的极化场会导致库仑力变弱。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(3) 自能方程：&lt;/strong&gt;&lt;/p&gt;
+$$
+\Sigma(1,2) = i \int d3 \, d4 \, G(1,3) \, W(1^+,4) \, \Gamma(3,2;4) \tag{178a}
+$$&lt;p&gt;它描述了电子传播过程中：通过与自身形成的极化场耦合所产生的能量修正，以及与所有其他电子发生非经典、非局域的纠缠。中间的耦合强度由 $\Gamma$ 决定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(4) 顶点方程：&lt;/strong&gt;&lt;/p&gt;
+$$
+\Gamma(1,2;3) = \delta(1,2)\delta(1,3) + \int d4 \, d5 \, d6 \, d7 \, \frac{\delta \Sigma(1,2)}{\delta G(4,5)} G(4,6) G(7,5) \Gamma(6,7;3) \tag{179a}
+$$&lt;p&gt;它描述了粒子间相互作用的顶角修正。真实的电子不仅仅是一个点电荷，它周围笼罩着一团复杂的极化云，使得它与外界场的相互作用不再是简单的点接触（$\delta$ 函数），而是复杂的散射过程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(5) 格林函数 Dyson 方程：&lt;/strong&gt;&lt;/p&gt;
+$$
+G(1,2) = G_0(1,2) + \int d3 \, d4 \, G_0(1,3) \, \Sigma(3,4) \, G(4,2) \tag{178b}
+$$&lt;p&gt;它把所有电子间的相互作用全部封装到 $\Sigma$ 中，加到自由电子 $G_0$ 上，从而得到相互作用系统下真实的传播子 $G$。&lt;/p&gt;
+&lt;p&gt;上面五个方程构成一个封闭的自洽循环：&lt;/p&gt;
+&lt;p&gt;如果我们知道初始的 $G$ 和 $\Gamma$（假设 $\Gamma = \delta\delta$），我们就能算出介质的极化 $P$；极化又能算出屏蔽相互作用 $W$（相互作用不是常数，而是由介质状态决定的）；我们就能根据 $W, G, \Gamma$ 算出自能 $\Sigma$（如果不知道电子在什么样的介质中运动，就不知道它会被修正多少）；这时根据新的自能又能算出新的顶点修正 $\Gamma$[^d3]（当电子略微改变运动方式时，环境立刻重新组织响应它）；自能一旦改变，电子的传播 $G$ 就必须改变——回到循环开始。&lt;/p&gt;
+&lt;p&gt;上面的方程组意味着：电子不是在一个固定环境中运动，而是在一个被它自己不断重塑的环境中运动。构成循环的原因是：电子的传播、介质的响应和相互作用的有效形式并非独立物理量，而是由同一批电子共同决定的集体结果；任何一个量的改变都会通过其他量反馈回来，迫使它必须以循环、自洽的方式求解。&lt;/p&gt;
+&lt;p&gt;那么我们能不能像 DFT 那样直接迭代求解 GW 方程组？&lt;/p&gt;
+&lt;p&gt;回到 $\Sigma(\omega)$ 中，前面推导过 $\Sigma(\omega)$ 是存在虚部的，它代表了粒子的寿命（能量-时间不确定关系）：&lt;/p&gt;
+$$
+\Delta E \cdot \Delta t \sim \hbar \tag{180}
+$$&lt;p&gt;这意味着 GW 里的电子不再是一个锐利的粒子，而是一个有宽度的波包。GW 近似中电子一定会因为散射而到达别的状态，因此 $\Delta t$ 是有限的，$\Delta E$ 必须是非零的，这会导致粒子在能谱中出现能量展宽。但是 DFT 里电子寿命是无限[^d4]的，因此能带图每条线都是无限细的。当我们把有宽度的波包粒子代回去重新计算新的 $W$，得到的屏蔽效应会变弱、相互作用变强，粒子的寿命就会更短，波包会更展宽，粒子更模糊。因此迭代后的能带不再清晰，而是糊成一团。&lt;/p&gt;
+&lt;p&gt;更重要的是，GW 不是变分理论。我们使用自洽迭代求解 KS 方程的时候，理论基础是变分原理：存在一个明确的泛函，其真实解是该泛函的极值（通常是最小值）。任意试探波函数的能量期望值一定大于等于基态能量，即 $E[n] \geq E[n_0]$，唯一变量是电子密度。但 GW 的方程不是最小化某个物理量的结果，而仅仅是满足某些自洽关系，因此迭代不能保证收敛到物理解。&lt;/p&gt;
+&lt;p&gt;为了打开这组方程组的循环，我们直接忽略顶点修正，强行让 $\Gamma(1,2;3) = \delta(1,2)\delta(1,3)$（即纯粹的点接触），代回后所有的 $\Gamma$ 积分都化简。这时，极化率变成了：&lt;/p&gt;
+$$
+P(1,2) = -i \, G(1,2) \, G(2,1) \tag{181}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里通过 $\Gamma$ 的两个 $\delta$ 强制 $3 = 4 = 2$，得到的 $\delta$ 函数消掉了两个积分变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此时极化率变成了电子和空穴的简单乘积。自能方程通过同样的化简变成：&lt;/p&gt;
+$$
+\Sigma(1,2) = i \, G(1,2) \, W(1^+, 2) \tag{182}
+$$&lt;p&gt;这就是为什么它叫做 &lt;strong&gt;GW 近似&lt;/strong&gt;——电子自能只取决于传播 $G$ 与屏蔽相互作用 $W$ 的乘积。屏蔽方程由于极化率的简化而被简化，但形式没有发生改变。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;之所以叫&lt;strong&gt;准粒子近似&lt;/strong&gt;：这里的电子是有寿命的，最终会散射消失；并且它不仅是一个电子，还包括了它周围被它极化的整体电子云。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;虽然我们现在知道这组方程怎么求解，但是 GW 的第一步是构建无相互作用格林函数 $G_0$，即：&lt;/p&gt;
+$$
+G_0(\mathbf{r}, \mathbf{r}&#39;, \omega) = \sum_{n\mathbf{k}} \frac{\phi_{n\mathbf{k}}(\mathbf{r}) \phi_{n\mathbf{k}}^*(\mathbf{r}&#39;)}{\omega - \epsilon_{n\mathbf{k}} \pm i\eta} \tag{183}
+$$&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这是实空间表象下的格林函数，而我们前面推导的式 (112) 则是本征态表象下的。我们可以使用完备性关系：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{1} = \sum_{n\mathbf{k}} |n\mathbf{k}\rangle \langle n\mathbf{k}| \tag{184}$$&lt;ul&gt;
+&lt;li&gt;将格林函数转换为：&lt;/li&gt;
+&lt;/ul&gt;
+$$\begin{aligned}
+G(\mathbf{r}, \mathbf{r}&#39;) &amp;= \langle \mathbf{r} | \hat{G} | \mathbf{r}&#39; \rangle \\
+&amp;= \langle \mathbf{r} | \left( \sum_{n\mathbf{k}} |n\mathbf{k}\rangle \langle n\mathbf{k}| \right) \hat{G} \left( \sum_{m\mathbf{q}} |m\mathbf{q}\rangle \langle m\mathbf{q}| \right) | \mathbf{r}&#39; \rangle
+\end{aligned} \tag{185}$$&lt;ul&gt;
+&lt;li&gt;因为 $\hat{G}$ 在本征基底下是对角的（$\langle n\mathbf{k} | \hat{G} | m\mathbf{q} \rangle = G_{n\mathbf{k}} \delta_{nm}\delta_{\mathbf{kq}}$），因此双重求和退化为单重求和：&lt;/li&gt;
+&lt;/ul&gt;
+$$\begin{aligned}
+G(\mathbf{r}, \mathbf{r}&#39;) &amp;= \sum_{n\mathbf{k}} \underbrace{\langle \mathbf{r} | n\mathbf{k}\rangle}_{\phi_{n\mathbf{k}}(\mathbf{r})} \cdot \underbrace{\langle n\mathbf{k} | \hat{G} | n\mathbf{k} \rangle}_{\frac{1}{\omega - \epsilon_{n\mathbf{k}}}} \cdot \underbrace{\langle n\mathbf{k} | \mathbf{r}&#39; \rangle}_{\phi_{n\mathbf{k}}^*(\mathbf{r}&#39;)} \\
+&amp;= \sum_{n\mathbf{k}} \frac{\phi_{n\mathbf{k}}(\mathbf{r}) \phi_{n\mathbf{k}}^*(\mathbf{r}&#39;)}{\omega - \epsilon_{n\mathbf{k}}}
+\end{aligned} \tag{186}$$&lt;/blockquote&gt;
+&lt;p&gt;对于 $G_0$ 来说，我们需要上式中的波函数和能级。DFT 的能量虽然不准确，但波函数通常是可靠的。因此 GW 近似不再去修正波函数，而是去修正能量。&lt;/p&gt;
+&lt;p&gt;我们现在要求解准粒子哈密顿量 $H_{QP}$，已有 DFT 的哈密顿量 $H_{DFT}$：&lt;/p&gt;
+$$
+H_{QP} = T + V_{ext} + V_H + \boldsymbol{\Sigma} \tag{187}
+$$$$
+H_{DFT} = T + V_{ext} + V_H + \boldsymbol{V_{xc}} \tag{188}
+$$&lt;p&gt;因此我们需要解出来：&lt;/p&gt;
+$$
+H_{QP} = H_{DFT} + (\boldsymbol{\Sigma} - \boldsymbol{V_{xc}}) \tag{189}
+$$&lt;p&gt;虽然 $\Sigma$ 是非对角的，但 $\boldsymbol V_{xc}$ 在 KS 轨道基底下也是近似非对角占优的，且二者非对角元的大小往往可比，因此微扰项 $(\Sigma - V_{xc})$ 的非对角元会大量抵消，仅保留对角占优结构。因此我们仅计算对角元：&lt;/p&gt;
+$$
+E_{n} \approx \epsilon_{n}^{DFT} + Z_n \langle \phi_n | \Sigma(\epsilon_n) - V_{xc} | \phi_n \rangle \tag{190}
+$$&lt;p&gt;上式中 $\epsilon_{n}^{DFT}$ 是 DFT 计算的本征值；$\Sigma(\epsilon_n) - V_{xc}$ 是用自能替换掉 DFT 中近似的交换关联势；$Z_n$ 是&lt;strong&gt;准粒子重整化因子&lt;/strong&gt;（$Z_n = \left(1 - \partial \Sigma / \partial \omega \big|_{\omega=\epsilon_n}\right)^{-1}$），代表准粒子峰的相干谱权重。$Z_n$ 介于 0 和 1 之间——典型半导体中为 $0.7\sim0.8$，剩下的权重转移到非相干&amp;quot;卫星峰&amp;quot;上。&lt;/p&gt;
+&lt;p&gt;因此，在得到 DFT 计算的 $\epsilon_0$ 和 $\phi_0$ 后，构建格林函数 $G_0$ 和屏蔽 $W_0$，算出自能 $\Sigma = i G_0 W_0$，进而得到准粒子能量：&lt;/p&gt;
+$$
+E_{QP} = \epsilon_0 + Z \langle \Sigma - V_{xc} \rangle \tag{191}
+$$&lt;p&gt;这时直接输出准粒子能量 $E_{QP}$，不再进行循环——此时得到的就是 $G_0 W_0$ 近似。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;bethesalpeter-方程&#34;&gt;Bethe–Salpeter 方程
+&lt;/h2&gt;&lt;h3 id=&#34;bse-哈密顿量&#34;&gt;BSE 哈密顿量
+&lt;/h3&gt;&lt;p&gt;尽管我们在 GW 过程中涉及了&amp;quot;电子-空穴对&amp;quot;型的极化率 $P = -i GG$，但 GW 关心的本质上仍是单个电子——极化率的作用只是改变了单个电子感受到的有效势，我们关心的也只是单个电子被屏蔽后的样子。&lt;/p&gt;
+&lt;p&gt;因此，我们需要使用 &lt;strong&gt;Bethe–Salpeter 方程（BSE）&lt;/strong&gt; 去解电子-空穴对的薛定谔方程，才能得到电子和空穴是如何相互作用、形成束缚激子的。我们的目的很明确：得到双粒子格林函数。&lt;/p&gt;
+&lt;p&gt;为了得到双粒子格林函数，我们需要解以下方程：&lt;/p&gt;
+$$
+L(1,2;1&#39;,2&#39;) = \frac{\delta G(1,1&#39;)}{\delta U(2&#39;,2)} \tag{192}
+$$&lt;p&gt;其中 $U(2&amp;rsquo;, 2)$ 是外加势场（非局域），它代表在 $2$ 消灭一个粒子、在 $2&amp;rsquo;$ 产生一个粒子。$\delta U$ 代表这只是一个微扰，$\delta G$ 是电子传播受到的相应变化。&lt;/p&gt;
+&lt;p&gt;物理上：在 $(2&amp;rsquo;, 2)$ 对系统施加一个微扰，那么在 $(1, 1&amp;rsquo;)$ 的电子传播状态会发生什么变化。左侧的 $L$ 本质上是电子-空穴对的传播子。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; 为什么对电子传播施加一个微扰就变成了双粒子的传播子？我们做以下推导。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在量子力学中，系统的状态随时间演化由时间演化算符 $S$ 控制：&lt;/li&gt;
+&lt;/ul&gt;
+$$S = \exp\left( -i \int H(t) \, dt \right) \tag{193a}$$&lt;ul&gt;
+&lt;li&gt;我们在哈密顿量 $H$ 里施加一个外场 $U(\mathbf{r}, t)$，它会和电子密度 $\hat{\rho} = \hat{\psi}^\dagger \hat{\psi}$ 耦合：&lt;/li&gt;
+&lt;/ul&gt;
+$$H_{\text{total}} = H_0 + \int U(\mathbf{r}, t) \, \hat{\psi}^\dagger(\mathbf{r}) \hat{\psi}(\mathbf{r}) \, d\mathbf{r} \tag{193b}$$&lt;ul&gt;
+&lt;li&gt;因此，时间演化算符变为：&lt;/li&gt;
+&lt;/ul&gt;
+$$S[U] = \exp\left( -i \int (H_0 + U \cdot \hat{\psi}^\dagger \hat{\psi}) \, dt \right) \tag{194a}$$&lt;ul&gt;
+&lt;li&gt;如果我们对 $U$ 求导，那么 $U$ 的系数（$\hat{\psi}^\dagger \hat{\psi}$）会出现在前面：&lt;/li&gt;
+&lt;/ul&gt;
+$$\frac{\delta S}{\delta U} = \left( -i \hat{\psi}^\dagger \hat{\psi} \right) \times \exp(\dots) \tag{194b}$$&lt;ul&gt;
+&lt;li&gt;但我们要求 $\frac{\delta G(1,1&amp;rsquo;)}{\delta U(2&amp;rsquo;,2)}$，需要使用链式法则。在此之前，要写出格林函数包含时间演化算符 $S$ 的完整定义：&lt;/li&gt;
+&lt;/ul&gt;
+$$G(1, 1&#39;) = -i \frac{ \langle \Phi_0 | T [ S \, \hat{\psi}(1) \hat{\psi}^\dagger(1&#39;) ] | \Phi_0 \rangle }{ \langle \Phi_0 | S | \Phi_0 \rangle } \tag{195}$$&lt;ul&gt;
+&lt;li&gt;因此可以写出：&lt;/li&gt;
+&lt;/ul&gt;
+$$\frac{\delta G}{\delta U} = \frac{-i \langle T \, S \, \hat{\psi}(1) \hat{\psi}^\dagger(1&#39;) \hat{\psi}^\dagger(2) \hat{\psi}(2&#39;) \rangle}{\langle S \rangle} - G(1, 1&#39;) \cdot \frac{-i \langle T \, S \, \hat{\psi}^\dagger(2) \hat{\psi}(2&#39;) \rangle}{\langle S \rangle} \tag{196}$$&lt;ul&gt;
+&lt;li&gt;第一项就是双粒子格林函数 $G_2(1, 2&amp;rsquo;; 1&amp;rsquo;, 2)$，它包含了四个场算符。&lt;/li&gt;
+&lt;li&gt;第二项是单粒子格林函数乘以系统平均密度，即 $G(1, 1&amp;rsquo;) \times \langle \rho(2&amp;rsquo;,2) \rangle$。它代表了非关联部分，因为这是两个独立事件的乘积，二者没有发生任何相互作用。&lt;/li&gt;
+&lt;li&gt;如果我们希望知道外场 $U$ 对电子传播 $G$ 的纯关联贡献，必须减去这个非关联部分——剩下的才是关联 $L$：&lt;/li&gt;
+&lt;/ul&gt;
+$$L(1,2;1&#39;,2&#39;) = \frac{\delta G(1,1&#39;)}{\delta U(2&#39;,2)} \tag{197}$$&lt;/blockquote&gt;
+&lt;p&gt;我们现在得到了双粒子的传播子定义，但是我们需要找到双粒子传播子的动力学方程，即 $L$ 满足什么动力学规律。&lt;/p&gt;
+&lt;p&gt;式 (197) 是 $L$ 的定义式，而动力学传播要从这里出发再推导。我们前面知道，格林函数和它的逆满足：&lt;/p&gt;
+$$
+G \, G^{-1} = I \tag{198}
+$$&lt;p&gt;我们对上式两边对 $U$ 求导，然后右乘 $G$ 并移项可得：&lt;/p&gt;
+$$
+\frac{\delta G}{\delta U} G^{-1} + G \frac{\delta G^{-1}}{\delta U} = 0 \quad \Longrightarrow \quad \frac{\delta G}{\delta U} = -G \left( \frac{\delta G^{-1}}{\delta U} \right) G \tag{199}
+$$&lt;p&gt;它代表了：粒子先传播 $G$，然后受到一个微扰的变化 $\delta G^{-1}$，再继续传播 $G$ 的过程。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里我们需要计算的是扰动让 $G$ 改变了多少，使用现在的基准来预测扰动后 $G$ 的变化 $\delta G$。这类似于一阶微扰：&lt;/p&gt;
+$$\delta \psi_n = \sum_{m \neq n} \frac{\langle m | V | n \rangle}{E_n - E_m} \psi_m \tag{200}$$&lt;p&gt;我们求一阶微扰时使用的是没有微扰时候的能级。上式类似于式 (128) 中的第二项，仅保留了一阶微扰。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们现在需要得到 $\frac{\delta G^{-1}}{\delta U}$ 这一项。回顾式 (118) Dyson 方程，$G^{-1}$ 包含无相互作用部分加上电子之间的 Hartree 项 $V_H$ 和自能项 $\Sigma$。引入外场 $U$ 后：&lt;/p&gt;
+$$
+\begin{aligned}
+G^{-1} &amp;= (i\partial_t - T - V_{ext} - U) - (V_H + \Sigma) \\
+&amp;= G_{0,U}^{-1} - (V_H + \Sigma)
+\end{aligned} \tag{201}
+$$&lt;p&gt;然后我们对 $U$ 求导：&lt;/p&gt;
+$$
+\frac{\delta G^{-1}}{\delta U} = -\frac{\delta U}{\delta U} - \frac{\delta V_H}{\delta U} - \frac{\delta \Sigma}{\delta U} \tag{202}
+$$&lt;p&gt;其中 $-\frac{\delta U}{\delta U} = -\mathbb{I}$，而 $V_H$ 和 $\Sigma$ 都是通过 $G$ 间接依赖于 $U$ 的，因此可以写作：&lt;/p&gt;
+$$
+\begin{aligned}
+\frac{\delta G^{-1}}{\delta U} &amp;= -\mathbb{I} - \left( \frac{\delta V_H}{\delta G} \frac{\delta G}{\delta U} + \frac{\delta \Sigma}{\delta G} \frac{\delta G}{\delta U} \right) \\
+&amp;= -\mathbb{I} - \underbrace{\left( \frac{\delta V_H}{\delta G} + \frac{\delta \Sigma}{\delta G} \right)}_{K} \underbrace{\frac{\delta G}{\delta U}}_{L}
+\end{aligned} \tag{203}
+$$&lt;p&gt;我们把括号中前面那项定义为&lt;strong&gt;相互作用核&lt;/strong&gt; $K$。重新代回式 (199)：&lt;/p&gt;
+$$
+L = \frac{\delta G}{\delta U} = -G \left[ -\mathbb{I} - K \cdot L \right] G \tag{204}
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一项 $-G(-\mathbb{I})G = GG$，我们把它叫做&lt;strong&gt;无相互作用电子-空穴传播子&lt;/strong&gt; $L_0$。&lt;/li&gt;
+&lt;li&gt;第二项 $-G(-K \cdot L)G = GGKL$，写作 $L_0 K L$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最终，双粒子传播子动力学方程为：&lt;/p&gt;
+$$
+L = L_0 + L_0 \, K \, L \tag{205}
+$$&lt;p&gt;我们发现双粒子传播子方程很像单粒子 Dyson 方程（式 128），其中：&lt;/p&gt;
+$$
+L_0(1, 2; 1&#39;, 2&#39;) = G(1, 1&#39;) \times G(2&#39;, 2) \tag{206}
+$$&lt;p&gt;因此式 (205) 也可以做迭代展开：&lt;/p&gt;
+$$
+L = L_0 + L_0 K L_0 + L_0 K L_0 K L_0 + L_0 K L_0 K L_0 K L_0 + \cdots \tag{207}
+$$&lt;p&gt;它表明：双粒子的传播是两个分别与环境有无穷次耦合的粒子传播 $G$，再加上二者之间无穷次相互作用 $K$ 的卷积。&lt;/p&gt;
+&lt;p&gt;为了把 $K$ 的形式写出来，我们结合它的定义：&lt;/p&gt;
+$$
+K = \frac{\delta V_{\text{tot}}}{\delta G} = \frac{\delta V_H}{\delta G} + \frac{\delta \Sigma}{\delta G} \tag{208}
+$$&lt;p&gt;第一项 $\frac{\delta V_H}{\delta G}$ 源自 Hartree 势的变分。习惯上在 BSE 中把它称为&lt;strong&gt;交换核&lt;/strong&gt; $K^x$。这里需要小心术语：这个&amp;quot;交换&amp;quot;指的是 BSE 中的两种相互作用核之一（直接 vs. 交换），来源是 Hartree 势的变分，对应虚光子在电子-空穴对中的瞬时复合-重生过程；这跟 Hartree–Fock 中源于泡利不相容原理的&amp;quot;交换作用&amp;quot;是不同的概念[^d5]。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 Hartree 势定义：&lt;/li&gt;
+&lt;/ul&gt;
+$$V_H(1) = \int v(1, 2) \rho(2) \, d2 = -i \int v(1, 2) G(2, 2^+) \, d2 \tag{209}$$&lt;p&gt;即在点 $1$ 测得的所有其他位置 $2$ 处的电荷 $\rho(2)$ 对 $1$ 产生的库仑力的总和。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对其求导得到相互作用核 $K^x$：&lt;/li&gt;
+&lt;/ul&gt;
+$$K^x(1, 2; 3, 4) = \frac{\delta V_H(1)}{\delta G(3, 4)} \delta(1,2) \tag{210}$$&lt;p&gt;在上式中，位置 $1, 2$ 已经被作为观测点，因此需要使用 $3, 4$ 作为扰动源来求导。这个扰动对应于在 $3$ 处注入一个电子、在 $4$ 处注入一个空穴。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代入 Hartree 势的表达式：&lt;/li&gt;
+&lt;/ul&gt;
+$$\begin{aligned}
+K^x &amp;= -i \int v(1, 2) \frac{\delta G(2, 2^+)}{\delta G(3, 4)} \, d2 \\
+&amp;= -i \int v(1, 2) \delta(2, 3) \delta(2, 4) \, d2 \\
+&amp;= -i \, v(1, 3) \, \delta(3, 4)
+\end{aligned} \tag{211}$$&lt;ul&gt;
+&lt;li&gt;上式包含 $\delta(3, 4)$，即只有当我们在同一个地方放一个电子-空穴对时才起作用。它说明：只有当我们注入的电子-空穴复合时，才会有一个非零的响应场 $v$ 发射出去，产生交换核作用。复合产生的能量通过 $v$ 扩散到位置 $1$。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;量子场论中，没有超距作用，所有的力都是通过交换粒子来实现的。&lt;/strong&gt; 因此可以认为这里的电子-空穴复合产生的是虚光子；$v$ 本质上可以认为是虚光子的传播子。&amp;ldquo;虚&amp;quot;是指这种光子仅参与中间过程的能量传递。因此 $v(1, 3)$ 描述电子-空穴对复合产生的虚光子从位置 $3$ 传播到位置 $1$。&lt;/li&gt;
+&lt;li&gt;我们可以将相互作用核写作 $K^x(1, 2; 3, 4)$，它代表在 $3, 4$ 处施加扰动后，$1, 2$ 处的响应。这样的矩阵是一个四维张量，为了方便计算，我们把输入端合并、输出端合并，写作二维矩阵：&lt;/li&gt;
+&lt;/ul&gt;
+$$K_{IJ} = \begin{pmatrix} K_{11} &amp; K_{12} &amp; \dots \\ K_{21} &amp; K_{22} &amp; \dots \\ \dots &amp; \dots &amp; \dots \end{pmatrix} \tag{213}$$&lt;p&gt;输入复合指标 $J$ 代表初始电子-空穴对状态 $(v&amp;rsquo;, c&amp;rsquo;)$，输出指标 $I$ 代表最终电子-空穴对状态 $(v, c)$。一个激子由一个价带空穴 $v$ 和一个导带电子 $c$ 组成。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对其在跃迁基底下积分：&lt;/li&gt;
+&lt;/ul&gt;
+$$\langle vc | K | v&#39;c&#39; \rangle = \int d1 \, d2 \, d3 \, d4 \, \Psi^*_{vc}(1, 2) \, K(1, 2; 3, 4) \, \Psi_{v&#39;c&#39;}(3, 4) \tag{214}$$&lt;p&gt;其中双粒子波函数 $\Psi_{vc}(1, 2) = \phi_c(1) \phi^*_v(2)$（空穴在 $2$，电子在 $1$）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因此对 $K^x$ 可以写成：&lt;/li&gt;
+&lt;/ul&gt;
+$$\langle vc | K^x | v&#39;c&#39; \rangle = 2 \int d\mathbf{r} \, d\mathbf{r}&#39; \, \phi_c^*(\mathbf{r}) \phi_v(\mathbf{r}) \, v(\mathbf{r} - \mathbf{r}&#39;) \, \phi_{c&#39;}(\mathbf{r}&#39;) \phi_{v&#39;}^*(\mathbf{r}&#39;) \tag{215}$$&lt;p&gt;（前置因子 2 来源于自旋单态求和。）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上式的形式很像跃迁偶极矩 $\langle c | \mathbf{r} | v \rangle$。&lt;/li&gt;
+&lt;li&gt;我们将左边的 $\phi_c^&lt;em&gt;(\mathbf{r}) \phi_v(\mathbf{r})$ 叫做左偶极、右边的 $\phi_{c&amp;rsquo;}(\mathbf{r}&amp;rsquo;) \phi_{v&amp;rsquo;}^&lt;/em&gt;(\mathbf{r}&amp;rsquo;)$ 叫做右偶极。它的物理本质不再是带电粒子之间的静电相互作用，而是两个振荡偶极子之间通过电磁场进行的能量交换。我们把这种效应叫做&amp;quot;天线效应&amp;rdquo;，因为它具有长程性质。&lt;/li&gt;
+&lt;li&gt;这种交换作用所产生的效果是排斥效应，因为偶极振荡产生的感应极化场会阻止电子-空穴复合过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;式 (208) 的第二项 $\frac{\delta \Sigma}{\delta G}$ 是激子结合能的来源。根据 GW 近似，电子自能为 $\Sigma(1, 2) = i G(1, 2) W(1, 2)$，因此这一项可以写作：&lt;/p&gt;
+$$
+\frac{\delta \Sigma(1, 2)}{\delta G(3, 4)} = \frac{\delta [i \, G(1, 2) W(1, 2)]}{\delta G(3, 4)} \tag{216}
+$$&lt;p&gt;根据求导法则 $(uv)&amp;rsquo; = u&amp;rsquo;v + uv&amp;rsquo;$，可以写出两项：&lt;/p&gt;
+$$
+\frac{\delta [i \, G(1, 2) W(1, 2)]}{\delta G(3, 4)} = i \frac{\delta G(1, 2)}{\delta G(3, 4)} W(1, 2) + i \, G(1, 2) \frac{\delta W(1, 2)}{\delta G(3, 4)} \tag{217}
+$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;右边第一项根据 $\delta$ 函数性质为：&lt;/p&gt;
+$$\frac{\delta G(1, 2)}{\delta G(3, 4)} W(1, 2) = \delta(1, 3) \delta(2, 4) W(1, 2) \tag{218}$$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右边第二项 $\frac{\delta W}{\delta G}$ 我们设为 0——因为 $W$ 取决于介电函数 $\epsilon^{-1}$，而 $\epsilon^{-1}$ 取决于极化率 $P$，$P \sim GG$；这一项描述了&amp;quot;激子的形成反过来改变了晶体的屏蔽性质&amp;quot;。在 BSE 中我们假设激子导致的扰动不会改变整个材料的介电常数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此第二项&lt;strong&gt;直接相互作用核&lt;/strong&gt;为：&lt;/p&gt;
+$$
+K^d(1, 2; 3, 4) = -i \, W(1, 2) \, \delta(1, 3) \delta(2, 4) \tag{219}
+$$&lt;p&gt;这一项代表电子-空穴对之间的吸引作用：因为 $\delta(1, 3)$ 和 $\delta(2, 4)$ 分别&amp;quot;标记&amp;quot;了电子和空穴的位置，$W(1, 2)$ 代表屏蔽后的库仑相互作用（形式如 $\frac{1}{\epsilon r}$）。静电势能 $U \propto -|W|$ 因电子-空穴异号而为负——表示吸引势，降低体系能量。这一项就是我们常说的&lt;strong&gt;激子结合能&lt;/strong&gt;的来源。&lt;/p&gt;
+&lt;p&gt;我们写出这一项在跃迁基组下的表达：&lt;/p&gt;
+$$
+\langle vc | K^d | v&#39;c&#39; \rangle = -\int d\mathbf{r} \, d\mathbf{r}&#39; \left[ \phi_c^*(\mathbf{r}) \phi_{c&#39;}(\mathbf{r}) \right] W(\mathbf{r}, \mathbf{r}&#39;) \left[ \phi_v(\mathbf{r}&#39;) \phi_{v&#39;}^*(\mathbf{r}&#39;) \right] \tag{220}
+$$&lt;p&gt;其中 $\phi_c^&lt;em&gt;(\mathbf{r}) \phi_{c&amp;rsquo;}(\mathbf{r})$ 为导带电子在 $\mathbf r$ 处的密度重叠，$\phi_v(\mathbf{r}&amp;rsquo;) \phi_{v&amp;rsquo;}^&lt;/em&gt;(\mathbf{r}&amp;rsquo;)$[^d6] 为价带电子（空穴）在 $\mathbf r&amp;rsquo;$ 处的密度重叠。当 $c = c&amp;rsquo;$ 且 $v = v&amp;rsquo;$ 时（对角项）最大，代表静态的电子-空穴吸引。&lt;/p&gt;
+&lt;p&gt;最后，我们写出总的相互作用核：&lt;/p&gt;
+$$
+\begin{aligned}
+\langle vc | K | v&#39;c&#39; \rangle =&amp; \, 2 \int d\mathbf{r} \, d\mathbf{r}&#39; \, \phi_c^*(\mathbf{r}) \phi_v(\mathbf{r}) \, v(\mathbf{r}-\mathbf{r}&#39;) \, \phi_{c&#39;}(\mathbf{r}&#39;) \phi_{v&#39;}^*(\mathbf{r}&#39;) \\
+&amp;- \int d\mathbf{r} \, d\mathbf{r}&#39; \, \phi_c^*(\mathbf{r}) \phi_{c&#39;}(\mathbf{r}) \, W(\mathbf{r}, \mathbf{r}&#39;) \, \phi_v(\mathbf{r}&#39;) \phi_{v&#39;}^*(\mathbf{r}&#39;)
+\end{aligned} \tag{221}
+$$&lt;ul&gt;
+&lt;li&gt;第一项&lt;strong&gt;交换作用&lt;/strong&gt;（$K^x$）代表激子-激子型的远程偶极耦合，给出排斥；&lt;/li&gt;
+&lt;li&gt;第二项&lt;strong&gt;直接作用&lt;/strong&gt;（$K^d$）代表激子内电子-空穴的屏蔽库仑吸引，给出结合能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;要写出整体的 BSE 哈密顿量，价带电子跃迁到导带还需要跨越一个准粒子带隙：&lt;/p&gt;
+$$
+H_{\text{diag}} = (\epsilon_c - \epsilon_v) \delta_{vv&#39;} \delta_{cc&#39;} \tag{222}
+$$&lt;p&gt;因此，完整的 BSE 哈密顿量 $H^{BSE}$ 可以写作：&lt;/p&gt;
+$$
+H_{(vc), (v&#39;c&#39;)}^{BSE} = \underbrace{(\epsilon_c - \epsilon_v) \delta_{vv&#39;} \delta_{cc&#39;}}_{\text{准粒子能隙}} + \underbrace{2 \langle vc | v | v&#39;c&#39; \rangle}_{\text{交换排斥}} \underbrace{- \langle cc&#39; | W | vv&#39; \rangle}_{\text{直接吸引}} \tag{223}
+$$&lt;h3 id=&#34;bse-激子波函数&#34;&gt;BSE 激子波函数
+&lt;/h3&gt;&lt;p&gt;我们现在有了 BSE 的哈密顿量，要解出激子能量还需要激子态的波函数。&lt;/p&gt;
+&lt;p&gt;激子态 $|S\rangle$ 本质是在基态 $|0\rangle$ 上激发一个电子-空穴对：&lt;/p&gt;
+$$
+|S\rangle = \sum_{v, c} A_{vc} \, \hat{a}_c^\dagger \hat{a}_v \, |0\rangle \tag{224}
+$$&lt;p&gt;其中 $\hat a_c^\dagger$ 是导带轨道 $c$ 上的电子产生算符，$\hat a_v$ 是价带轨道 $v$ 上的电子湮灭算符（即等效地在价带中创造空穴）。&lt;/p&gt;
+&lt;p&gt;为了解出 $A_{vc}$，我们引入多体哈密顿量本征方程：&lt;/p&gt;
+$$
+\hat{H} |S\rangle = (E_0 + \Omega_S) |S\rangle \tag{225}
+$$&lt;p&gt;其中 $\hat{H}$ 是二次量子化的总哈密顿量算符，$E_0$ 是基态能量，$\Omega_S$ 是激子激发能量（小于带隙），即 $\Omega_S = E_{\text{gap}} - E_b$（能隙减去激子结合能）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; 在二次量子化中，总能量算符的标准定义是把单粒子哈密顿量密度积分：&lt;/p&gt;
+$$\hat{H}_0 = \int d\mathbf{r} \, \hat{\Psi}^\dagger(\mathbf{r}) \, \hat{h}(\mathbf{r}) \, \hat{\Psi}(\mathbf{r}) \tag{226}$$&lt;ul&gt;
+&lt;li&gt;代入场算符的定义式 (58)（59）：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{H}_0 = \int d\mathbf{r} \left[ \sum_j \phi_j^*(\mathbf{r}) \hat{a}_j^\dagger \right] \hat{h}(\mathbf{r}) \left[ \sum_i \phi_i(\mathbf{r}) \hat{a}_i \right] \tag{227}$$&lt;ul&gt;
+&lt;li&gt;把求和和算符 $\hat a^\dagger, \hat a$ 提到积分外（与空间坐标 $\mathbf r$ 无关）：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{H}_0 = \sum_{j, i} \hat{a}_j^\dagger \hat{a}_i \int d\mathbf{r} \, \phi_j^*(\mathbf{r}) \, \hat{h}(\mathbf{r}) \, \phi_i(\mathbf{r}) \tag{228}$$&lt;ul&gt;
+&lt;li&gt;因为 $\phi_i$ 是本征态，所以 $\hat h \phi_i = \epsilon_i \phi_i$，代入可得：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{H}_0 = \sum_i \epsilon_i \, \hat{a}_i^\dagger \hat{a}_i \tag{229}$$&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; 我们一般说本征值方程，其形式为：&lt;/p&gt;
+$$\mathbf{A} \mathbf x = \lambda \mathbf x \tag{230}$$&lt;ul&gt;
+&lt;li&gt;举个例子[^d7]，假设算符 $\mathbf A$ 可以是：&lt;/li&gt;
+&lt;/ul&gt;
+$$\mathbf{A} = \begin{pmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} \tag{231}$$&lt;ul&gt;
+&lt;li&gt;现在有一个向量 $\mathbf{x} = \begin{pmatrix} 1 \ 1 \end{pmatrix}$，验证 $\mathbf x$ 是不是 $\mathbf A$ 的本征向量——即 $\mathbf x$ 在算符 $\mathbf A$ 的作用下保持方向不变、只被整体放大或缩小。&lt;/li&gt;
+&lt;/ul&gt;
+$$\mathbf{A}\mathbf{x} = \begin{pmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 3 \end{pmatrix} \tag{232}$$&lt;ul&gt;
+&lt;li&gt;输出结果是原向量[^d8] $\mathbf x$ 的三倍，即：&lt;/li&gt;
+&lt;/ul&gt;
+$$\lambda \mathbf{x} = 3 \times \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 3 \end{pmatrix} \tag{233}$$&lt;ul&gt;
+&lt;li&gt;因此式 (230) 成立。它说明：在经过一个物理过程后，输出仅是输入的一个缩放，其方向（波函数）没有发生改变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为了解出 $A_{vc}$，我们用一个探测态 $\langle 0 | \hat{a}&lt;em&gt;{v&amp;rsquo;}^\dagger \hat{a}&lt;/em&gt;{c&amp;rsquo;}$ 左乘式 (225)[^d9]：&lt;/p&gt;
+$$
+\langle 0 | \hat{a}_{v&#39;}^\dagger \hat{a}_{c&#39;} \, \hat{H} \, |S\rangle = (E_0 + \Omega_S) \, \langle 0 | \hat{a}_{v&#39;}^\dagger \hat{a}_{c&#39;} \, |S\rangle \tag{234}
+$$&lt;p&gt;将 $|S\rangle$ 的展开式代进去：&lt;/p&gt;
+$$
+\sum_{vc} \langle 0 | \hat{a}_{v&#39;}^\dagger \hat{a}_{c&#39;} \, \hat{H} \, \hat{a}_c^\dagger \hat{a}_v | 0\rangle A_{vc} = (E_0 + \Omega_S) \sum_{vc} \langle 0 | \hat{a}_{v&#39;}^\dagger \hat{a}_{c&#39;} \, \hat{a}_c^\dagger \hat{a}_v | 0\rangle A_{vc} \tag{235}
+$$&lt;p&gt;其中，后面的 $\langle 0 | \hat{a}&lt;em&gt;{v&amp;rsquo;}^\dagger \hat{a}&lt;/em&gt;{c&amp;rsquo;} , \hat{a}&lt;em&gt;c^\dagger \hat{a}&lt;em&gt;v | 0\rangle = \delta&lt;/em&gt;{vv&amp;rsquo;}\delta&lt;/em&gt;{cc&amp;rsquo;}$。&lt;/p&gt;
+&lt;p&gt;并且我们在前面也推导出：&lt;/p&gt;
+$$
+K = K^x + K^d \tag{236}
+$$&lt;p&gt;即相互作用核是交换核和直接核之和。BSE 哈密顿量再加入动能项（准粒子带隙）后，可写作：&lt;/p&gt;
+$$
+H_{(vc), (v&#39;c&#39;)}^{BSE} = (\epsilon_c(\mathbf{k}) - \epsilon_v(\mathbf{k})) \delta_{vv&#39;} \delta_{cc&#39;} + 2 \langle cv&#39; | v | vc&#39; \rangle - \langle cc&#39; | W | vv&#39; \rangle \tag{237}
+$$&lt;p&gt;第一项是&amp;quot;动能&amp;quot;（准粒子色散）项：$\epsilon_c(\mathbf{k}) - \epsilon_v(\mathbf{k})$ 已经是 GW 修正过的准粒子能差——既包含了 $E_g$（带边能差），又包含了对 $\mathbf k$ 的色散（动能修正）。有时为了方便简写为 $(\epsilon_c - \epsilon_v)$。&lt;/p&gt;
+&lt;p&gt;因此，重新代入式 (235)，可得：&lt;/p&gt;
+$$
+\sum_{vc} \left[ (\epsilon_c - \epsilon_v)\delta_{vv&#39;}\delta_{cc&#39;} + \langle v&#39;c&#39;|K|vc\rangle \right] A_{vc} = \Omega_S \, A_{v&#39;c&#39;} \tag{238}
+$$&lt;p&gt;这就是 &lt;strong&gt;BSE 本征方程&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;现在上面式子变成了与式 (230) 一致的本征方程形式 $H \cdot \vec{A} = \Omega \cdot \vec{A}$。其中，左边的 $A_{vc}$ 是输入（所有可能的跃迁对混合在一起），右边是特定的跃迁对 $A_{v&amp;rsquo;c&amp;rsquo;}$。在数值计算中，调用线性代数库（如 LAPACK）找到满足上式的 $\Omega_S$ 和 $A_{v&amp;rsquo;c&amp;rsquo;}$。&lt;/p&gt;
+&lt;p&gt;接下来我们可以求出波函数的形式，写成基组展开：&lt;/p&gt;
+$$
+|\Psi^S\rangle = \sum_{v, c, \mathbf{k}} A_{vc\mathbf{k}}^S \, |v\mathbf{k} \to c\mathbf{k}\rangle \tag{239}
+$$&lt;p&gt;其中 $|v\mathbf{k} \to c\mathbf{k}\rangle$ 是单次跃迁，代表在某个动量点 $\mathbf k$ 把电子从价带激发到导带；$A_{vc\mathbf{k}}^S$ 代表某个特定跃迁的贡献——它的平方即为该激子在 $v\mathbf{k} \to c\mathbf{k}$ 通道的占比；然后对所有 $\mathbf k$ 点和所有能带求和。&lt;/p&gt;
+&lt;p&gt;也可以把波函数写成实空间的坐标形式：&lt;/p&gt;
+$$
+\Psi^S(\mathbf{r}_e, \mathbf{r}_h) = \sum_{v, c, \mathbf{k}} A_{vc\mathbf{k}}^S \, \phi_{c\mathbf{k}}(\mathbf{r}_e) \, \phi_{v\mathbf{k}}^*(\mathbf{r}_h) \tag{240}
+$$&lt;p&gt;它表明：激子在实空间的形状是由多个导带电子波函数 $\phi_{c\mathbf{k}}(\mathbf{r}&lt;em&gt;e)$ 和价带空穴波函数 $\phi&lt;/em&gt;{v\mathbf{k}}^*(\mathbf{r}&lt;em&gt;h)$ 的乘积，按照 $A&lt;/em&gt;{vc\mathbf{k}}^S$ 权重系数比例混合而成。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;casida-方程&#34;&gt;Casida 方程
+&lt;/h1&gt;&lt;h2 id=&#34;场算符展开&#34;&gt;场算符展开
+&lt;/h2&gt;&lt;p&gt;在前面的式 (68) 中，我们用场算符表达了电子密度算符。现在考虑自旋 $\sigma$，密度算符可以写作：&lt;/p&gt;
+$$
+\hat{\rho}(\mathbf{r}) = \sum_\sigma \hat{\psi}_\sigma^\dagger(\mathbf{r}) \, \hat{\psi}_\sigma(\mathbf{r}) \tag{241}
+$$&lt;p&gt;现在我们使用正交归一的、定态 KS 轨道 ${\phi_{p\sigma}(\mathbf{r})}$ 作为基底，将场算符展开：&lt;/p&gt;
+$$
+\hat{\psi}_\sigma(\mathbf{r}) = \sum_p \phi_{p\sigma}(\mathbf{r}) \, \hat{a}_{p\sigma} \tag{242}
+$$&lt;p&gt;上式是湮灭场算符，取厄米共轭得到产生场算符：&lt;/p&gt;
+$$
+\hat{\psi}_\sigma^\dagger(\mathbf{r}) = \sum_q \phi_{q\sigma}^*(\mathbf{r}) \, \hat{a}_{q\sigma}^\dagger \tag{243}
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$p, q$ 是 KS 轨道指标，&lt;strong&gt;遍历所有 KS 轨道（占据态和非占据态均包括在内）&lt;/strong&gt;[^e1]；&lt;/li&gt;
+&lt;li&gt;$\hat{a}&lt;em&gt;{p\sigma}$ 和 $\hat{a}&lt;/em&gt;{q\sigma}^\dagger$ 分别是作用在第 $p$、$q$ 个 KS 轨道上的湮灭算符和产生算符；&lt;/li&gt;
+&lt;li&gt;$\phi_{q\sigma}^*(\mathbf{r})$ 和 $\phi_{p\sigma}(\mathbf{r})$ 是标量函数（空间坐标确定时是确定的复数）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们将用 KS 轨道表达的场算符代入式 (241)，可得：&lt;/p&gt;
+$$
+\hat{\rho}(\mathbf{r}) = \sum_\sigma \left( \sum_q \phi_{q\sigma}^*(\mathbf{r}) \hat{a}_{q\sigma}^\dagger \right) \left( \sum_p \phi_{p\sigma}(\mathbf{r}) \hat{a}_{p\sigma} \right) \tag{244}
+$$&lt;p&gt;将求和符号合并整理：&lt;/p&gt;
+$$
+\hat{\rho}(\mathbf{r}) = \sum_{p,q,\sigma} \phi_{q\sigma}^*(\mathbf{r}) \phi_{p\sigma}(\mathbf{r}) \, \hat{a}_{q\sigma}^\dagger \hat{a}_{p\sigma} \tag{245}
+$$&lt;p&gt;如果要在某个量子态 $|\Phi(t)\rangle$ 下获得可观测电子密度 $\rho(\mathbf{r}, t)$，需要取期望值：&lt;/p&gt;
+$$
+\rho(\mathbf{r}, t) = \langle \Phi(t) | \hat{\rho}(\mathbf{r}) | \Phi(t) \rangle = \sum_{p,q,\sigma} \phi_{q\sigma}^*(\mathbf{r}) \phi_{p\sigma}(\mathbf{r}) \langle \Phi(t) | \hat{a}_{q\sigma}^\dagger \hat{a}_{p\sigma} | \Phi(t) \rangle \tag{246}
+$$&lt;p&gt;对于左右矢而言，产生/湮灭算符会改变粒子数，因此不能提出左右矢；而两个标量函数则与态空间无关。需要注意：这里的左右矢是 Fock（粒子数占据）空间的态，并非位置表象的态：&lt;/p&gt;
+$$
+| \Phi \rangle = | n_1, n_2, n_3, \dots, n_i, \dots \rangle \tag{247}
+$$&lt;p&gt;$n_i$ 表示第 $i$ 个 KS 轨道上的电子占据数（对费米子为 0 或 1）。&lt;/p&gt;
+&lt;p&gt;我们把期望值 $\langle \Phi(t) | \hat{a}&lt;em&gt;{q\sigma}^\dagger \hat{a}&lt;/em&gt;{p\sigma} | \Phi(t) \rangle$ 定义为&lt;strong&gt;单粒子约化密度矩阵&lt;/strong&gt;在 KS 轨道基底下的矩阵元，记作 $P_{pq\sigma}(t)$：&lt;/p&gt;
+$$
+P_{pq\sigma}(t) \equiv \langle \Phi(t) | \hat{a}_{q\sigma}^\dagger \hat{a}_{p\sigma} | \Phi(t) \rangle \tag{248}
+$$&lt;p&gt;在上式中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\phi_{q\sigma}^*(\mathbf{r}) \phi_{p\sigma}(\mathbf{r})$ 表达了轨道在空间中的重叠与干涉；&lt;/li&gt;
+&lt;li&gt;$P_{pq\sigma}(t)$ 表示了相应轨道乘积 $\phi_{q\sigma}^*(\mathbf{r}) \phi_{p\sigma}(\mathbf{r})$ 在 $t$ 时刻的权重。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们将空间分布属性和时间演化解耦——所有的含时演化都包含在 $P_{pq\sigma}(t)$ 中。最后，电子密度可以写作：&lt;/p&gt;
+$$
+\rho(\mathbf{r}, t) = \sum_{p,q,\sigma} P_{pq\sigma}(t) \, \phi_{q\sigma}^*(\mathbf{r}) \phi_{p\sigma}(\mathbf{r}) \tag{249}
+$$&lt;hr&gt;
+&lt;h2 id=&#34;二次量子化下的时间演化密度矩阵&#34;&gt;二次量子化下的时间演化密度矩阵
+&lt;/h2&gt;&lt;p&gt;首先回顾一下密度矩阵。在 FSSH 的推导中曾对密度矩阵下过定义：对于双态系统 $|\psi\rangle = c_1|1\rangle + c_2|2\rangle$，密度矩阵的矩阵元为 $\rho_{kj} = c_k c_j^*$，整体的密度矩阵为[^e2]：&lt;/p&gt;
+$$
+\rho = \begin{pmatrix} \rho_{11} &amp; \rho_{12} \\ \rho_{21} &amp; \rho_{22} \end{pmatrix} = \begin{pmatrix} |c_1|^2 &amp; c_1 c_2^* \\ c_2 c_1^* &amp; |c_2|^2 \end{pmatrix} \tag{250}
+$$&lt;p&gt;现在我们需要一个更一般的定义。从现在开始我们做如下约定：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\rho(\mathbf{r})$ 表示空间坐标上的真实电子密度；&lt;/li&gt;
+&lt;li&gt;$\hat{\rho}$ 表示密度算符；&lt;/li&gt;
+&lt;li&gt;$\mathbf{P}$ 表示单粒子约化密度矩阵。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么更一般的密度算符 $\hat{\rho}$ 可以写作：&lt;/p&gt;
+$$
+\hat{\rho} = \sum_i p_i \, |\Psi_i\rangle\langle\Psi_i| \tag{251}
+$$&lt;p&gt;我们可以通过这个更一般的定义式推导出式 (250)。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假设存在一个混合态系综：$|\Psi\rangle$ 以概率 $p_A$ 处于态 $|\Psi_A\rangle$，以概率 $p_B$ 处于态 $|\Psi_B\rangle$。&lt;/li&gt;
+&lt;li&gt;此时密度算符可以写作：&lt;/li&gt;
+&lt;/ul&gt;
+$$\hat{\rho} = p_A |\Psi_A\rangle\langle\Psi_A| + p_B |\Psi_B\rangle\langle\Psi_B| = \sum_k p_k |\Psi_k\rangle\langle\Psi_k| \tag{252a}$$&lt;ul&gt;
+&lt;li&gt;然后我们把每个态 $|\Psi_k\rangle$ 用一组正交归一的基底 ${|1\rangle, |2\rangle, \dots}$ 展开：&lt;/li&gt;
+&lt;/ul&gt;
+$$|\Psi_k\rangle = c_{k1} |1\rangle + c_{k2} |2\rangle = \sum_i c_{ki} |i\rangle \tag{252b}$$&lt;ul&gt;
+&lt;li&gt;在量子力学中，任何一个算符 $\hat{A}$ 在基底 ${|i\rangle}$ 下的矩阵元定义为 $A_{ij} = \langle i | \hat{A} | j \rangle$，其中 $i$ 是行指标、$j$ 是列指标。因此密度算符的矩阵元可以写作：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho_{ij} = \langle i | \hat{\rho} | j \rangle \tag{252c}$$&lt;ul&gt;
+&lt;li&gt;代入密度算符的定义式 (251)，可以得到：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho_{ij} = \sum_k p_k \langle i | \Psi_k\rangle \langle \Psi_k | j \rangle \tag{253}$$&lt;ul&gt;
+&lt;li&gt;其中 $\langle i | \Psi_k\rangle = c_{ki}$ 是展开系数；对 $\langle \Psi_k | j \rangle$ 求复共轭得到 $c_{kj}^*$。因此密度矩阵元为：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho_{ij} = \sum_k p_k \, c_{ki} \, c_{kj}^* \tag{254}$$&lt;ul&gt;
+&lt;li&gt;排成矩阵形式（以 2×2 情形为例）：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho = \begin{pmatrix} \rho_{11} &amp; \rho_{12} \\ \rho_{21} &amp; \rho_{22} \end{pmatrix} = \begin{pmatrix} \sum_k p_k \, c_{k1} c_{k1}^* &amp; \sum_k p_k \, c_{k1} c_{k2}^* \\ \sum_k p_k \, c_{k2} c_{k1}^* &amp; \sum_k p_k \, c_{k2} c_{k2}^* \end{pmatrix} \tag{255}$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这是完整的混合态密度矩阵（同时包含量子叠加和经典混合）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;纯态特例：&lt;/strong&gt; 如果系统是纯态，即只有单个 $k$（$p_1 = 1$、其余为 0），求和消失，演化为以下简单形式[^e3]：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho = \begin{pmatrix} c_1 c_1^* &amp; c_1 c_2^* \\ c_2 c_1^* &amp; c_2 c_2^* \end{pmatrix} = \begin{pmatrix} |c_1|^2 &amp; c_1 c_2^* \\ c_2 c_1^* &amp; |c_2|^2 \end{pmatrix} \tag{256}$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 退相干并不代表系统塌缩到了纯态，而只是指&lt;strong&gt;在&lt;/strong&gt;[^e4]密度矩阵中非对角元降低到 0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;例子：&lt;/strong&gt; 假设存在一个叠加态：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$|\Psi\rangle = \frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle \tag{257}$$&lt;ul&gt;
+&lt;li&gt;根据式 (256) 可以直接写出它的密度矩阵：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho = \begin{pmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{pmatrix} \tag{258}$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;非对角元 0.5 表明两个态之间存在显著的量子相干性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们使用 $\mathrm{Tr}(\rho^2)$ 来检验一个态是否是纯态——纯态 $\mathrm{Tr}(\rho^2) = 1$，混合态 $\mathrm{Tr}(\rho^2) &amp;lt; 1$。验证当前叠加态：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho^2 = \begin{pmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{pmatrix} \begin{pmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{pmatrix} = \begin{pmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{pmatrix} \tag{259}$$$$\mathrm{Tr}(\rho^2) = 0.5 + 0.5 = 1 \tag{260}$$&lt;ul&gt;
+&lt;li&gt;退相干后，两个态之间的相干性消失（非对角元为 0），此时：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho_{\text{mix}} = \begin{pmatrix} 0.5 &amp; 0 \\ 0 &amp; 0.5 \end{pmatrix} \tag{261}$$&lt;ul&gt;
+&lt;li&gt;此时的纯度为：&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho_{\text{mix}}^2 = \begin{pmatrix} 0.5 &amp; 0 \\ 0 &amp; 0.5 \end{pmatrix} \begin{pmatrix} 0.5 &amp; 0 \\ 0 &amp; 0.5 \end{pmatrix} = \begin{pmatrix} 0.25 &amp; 0 \\ 0 &amp; 0.25 \end{pmatrix} \tag{262}$$$$\mathrm{Tr}(\rho_{\text{mix}}^2) = 0.25 + 0.25 = 0.5 \tag{263}$$&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;此时已变为混合态——失去了量子相干性，只保留了&amp;quot;50% 概率在态 $|0\rangle$、50% 概率在态 $|1\rangle$&amp;ldquo;的经典概率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果对混合态进行一次测量并测到了态 $|0\rangle$，那么密度矩阵塌缩为：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+$$\rho_{\text{post}} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix} \tag{264}$$&lt;ul&gt;
+&lt;li&gt;再检验纯度：&lt;/li&gt;
+&lt;/ul&gt;
+$$\mathrm{Tr}(\rho_{\text{post}}^2) = 1 + 0 = 1 \tag{265}$$&lt;ul&gt;
+&lt;li&gt;因为观测的&amp;quot;投影&amp;quot;作用，态变成了 100% 确定&lt;strong&gt;在&lt;/strong&gt;[^e5]态 $|0\rangle$ 上的纯态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回到含时演化推导。假设一个纯态体系的含时薛定谔方程为（原子单位制 $\hbar = 1$）：&lt;/p&gt;
+$$
+i \frac{\partial |\Psi(t)\rangle}{\partial t} = \hat{H} |\Psi(t)\rangle \tag{266}
+$$&lt;p&gt;对应的左矢方程为：&lt;/p&gt;
+$$
+-i \frac{\partial \langle\Psi(t)|}{\partial t} = \langle\Psi(t)| \hat{H} \tag{267}
+$$&lt;p&gt;前面得到了密度算符（纯态下）$\hat{\mathbf P} = |\Psi\rangle\langle\Psi|$。现在对其求时间导数（链式法则）：&lt;/p&gt;
+$$
+i \frac{\partial \hat{\mathbf{P}}}{\partial t} = i \left( \frac{\partial |\Psi\rangle}{\partial t} \langle\Psi| + |\Psi\rangle \frac{\partial \langle\Psi|}{\partial t} \right) \tag{268}
+$$&lt;p&gt;然后代入式 (266) 和 (267)：&lt;/p&gt;
+$$
+i \frac{\partial \hat{\mathbf{P}}}{\partial t} = (\hat{H} |\Psi\rangle) \langle\Psi| - |\Psi\rangle (\langle\Psi| \hat{H}) = \hat{H} (|\Psi\rangle \langle\Psi|) - (|\Psi\rangle \langle\Psi|) \hat{H} = \hat{H}\hat{\mathbf{P}} - \hat{\mathbf{P}}\hat{H} \tag{269a}
+$$&lt;p&gt;上式就是密度算符与哈密顿量的对易关系。引入对易子 $[\hat{H}, \hat{\mathbf{P}}] \equiv \hat{H}\hat{\mathbf{P}} - \hat{\mathbf{P}}\hat{H}$，因此可以写作：&lt;/p&gt;
+$$
+i \frac{\partial \mathbf{P}(t)}{\partial t} = [\mathbf{H}(t), \mathbf{P}(t)] \tag{269b}
+$$&lt;p&gt;这就是 &lt;strong&gt;Liouville–von Neumann 方程&lt;/strong&gt;——它是 Casida 方程推导的出发点。下一步应当对 $\mathbf P(t) = \mathbf P^{(0)} + \delta\mathbf P(t)$ 做线性响应展开，并引入 KS 哈密顿量的扰动。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关于本章的整体提醒：&lt;/strong&gt; 本章是讲义的未完结部分，缺少 Casida 方程的核心推导（线性响应展开、KS 扰动哈密顿量、Hartree + $f_{xc}$ 耦合核、最终的 $\begin{pmatrix}A&amp;amp;B\B^&lt;em&gt;&amp;amp;A^&lt;/em&gt;\end{pmatrix}$ 矩阵形式）。如需补全可参考：Casida, M. E. &lt;em&gt;Recent Advances in Density Functional Methods, Part I&lt;/em&gt;（1995）中第 5 章 &amp;ldquo;Time-Dependent Density Functional Response Theory&amp;rdquo;，这是 Casida 方程的标准引文。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;附录&#34;&gt;附录
 &lt;/h2&gt;&lt;h3 id=&#34;参考文章&#34;&gt;参考文章
 &lt;/h3&gt;</description>
