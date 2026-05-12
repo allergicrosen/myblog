@@ -5,7 +5,7 @@
         <link>https://allergicrosen.xyz/tags/windows/</link>
         <description>Recent content in Windows on allergicrosen</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
+        <language>en-us</language>
         <copyright>allergicrosen</copyright>
         <lastBuildDate>Wed, 10 Sep 2025 23:31:43 +0800</lastBuildDate><atom:link href="https://allergicrosen.xyz/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows powershell module install</title>
@@ -65,7 +65,7 @@
 &lt;p&gt;放置模块文件：
 将整理好的 整个 &lt;code&gt;ImportExcel&lt;/code&gt; 文件夹（确保其结构正确），复制或移动到上一步创建的Modules目录下。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;sers&lt;span class=&#34;se&#34;&gt;\&amp;lt;&lt;/span&gt;你的用户名&amp;gt;&lt;span class=&#34;se&#34;&gt;\D&lt;/span&gt;ocuments&lt;span class=&#34;se&#34;&gt;\P&lt;/span&gt;owerShell&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;odules&lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;└── ImportExcel/          &amp;lt;-- 整个文件夹放在这里
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── ImportExcel/          &amp;lt;-- 整个文件夹放在这里
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ImportExcel.psd1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ImportExcel.psm1
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ├── ...

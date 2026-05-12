@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="这是一个vasp.5.4.4的编译教程（以广州超算为例）\n准备好vasp.5.4.4安装包 自行下载，或者邮件给我留言 点击发送电子邮件至liaojinbo1999@163.com ，vasp为商业软件，请确保有授权！\n好了，准备好压缩包vasp.5.4.4.tar.gz，解压，进入解压后的目录。\n">
 <title>广州超算编译安装Vasp.5.4.4</title>
 
 <link rel='canonical' href='https://allergicrosen.xyz/p/vasp_compile/'>
 
-<link rel="stylesheet" href="/scss/style.min.24f2752e4eee339566d5faaf8a2441bdd05965b02398daaa153a02ccd4cbf58d.css"><meta property='og:title' content="广州超算编译安装Vasp.5.4.4">
+<link rel="stylesheet" href="/scss/style.min.162159ea910991c195f220f2ac4186e8a4d0c148821691e1c35bee5a3cd449b3.css"><meta property='og:title' content="广州超算编译安装Vasp.5.4.4">
 <meta property='og:description' content="这是一个vasp.5.4.4的编译教程（以广州超算为例）\n准备好vasp.5.4.4安装包 自行下载，或者邮件给我留言 点击发送电子邮件至liaojinbo1999@163.com ，vasp为商业软件，请确保有授权！\n好了，准备好压缩包vasp.5.4.4.tar.gz，解压，进入解压后的目录。\n">
 <meta property='og:url' content='https://allergicrosen.xyz/p/vasp_compile/'>
 <meta property='og:site_name' content='allergicrosen'>
@@ -301,7 +301,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_937d2c1ad8e47311.png" width="300"
+                        <img src="/img/avatar_hu_6f74e8f4aff999fb.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -627,8 +627,8 @@ fill="#000000" stroke="none">
     <header class="article-header">
         <div class="article-image">
             <a href="/p/vasp_compile/">
-                <img src="/p/vasp_compile/vasp_hu_9464424f255c3d8f.webp"
-                        srcset="/p/vasp_compile/vasp_hu_9464424f255c3d8f.webp 800w, /p/vasp_compile/vasp_hu_a81a390f7cfb10ec.webp 1600w"
+                <img src="/p/vasp_compile/vasp_hu_ec5fa293a0055c3.webp"
+                        srcset="/p/vasp_compile/vasp_hu_ec5fa293a0055c3.webp 800w, /p/vasp_compile/vasp_hu_498b917ff6bb9e38.webp 1600w"
                         width="800" 
                         height="561" 
                         loading="lazy"
@@ -787,14 +787,14 @@ fill="#000000" stroke="none">
 </span></span></code></pre></div><p>打开上一级目录中自己刚复制过来的<code>makefile.include</code>发现其内容如下：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Precompiler options</span>
 </span></span><span class="line"><span class="cl"><span class="nv">CPP_OPTIONS</span><span class="o">=</span> -DHOST<span class="o">=</span><span class="se">\&#34;</span>LinuxIFC<span class="se">\&#34;\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -DMPI -DMPI_BLOCK<span class="o">=</span><span class="m">8000</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Duse_collective <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -DscaLAPACK <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -DCACHE_SIZE<span class="o">=</span><span class="m">4000</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Davoidalloc <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Duse_bse_te <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Dtbdyn <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>             -Duse_shmem
+</span></span></span><span class="line"><span class="cl">             -DMPI -DMPI_BLOCK<span class="o">=</span><span class="m">8000</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -Duse_collective <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -DscaLAPACK <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -DCACHE_SIZE<span class="o">=</span><span class="m">4000</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -Davoidalloc <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -Duse_bse_te <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -Dtbdyn <span class="se">\
+</span></span></span><span class="line"><span class="cl">             -Duse_shmem
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">CPP</span>        <span class="o">=</span> fpp -f_com<span class="o">=</span>no -free -w0  <span class="nv">$*</span><span class="k">$(</span>FUFFIX<span class="k">)</span> <span class="nv">$*</span><span class="k">$(</span>SUFFIX<span class="k">)</span> <span class="k">$(</span>CPP_OPTIONS<span class="k">)</span>
 </span></span><span class="line"><span class="cl">
@@ -901,12 +901,12 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
 </h4><h5 id="以手册为例">以手册为例：
 </h5><p>sub.sh 如下：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">VASP_BIN</span><span class="o">=</span>/your path/vasp.5.4.4/bin/vasp_std
+</span></span></span><span class="line"><span class="cl"><span class="nv">VASP_BIN</span><span class="o">=</span>/your path/vasp.5.4.4/bin/vasp_std
 </span></span><span class="line"><span class="cl">yhrun -n <span class="m">28</span> -p TH_HPC1 <span class="nv">$VASP_BIN</span>
 </span></span></code></pre></div><p>前面提到<code>yhrun</code>是交互提交作业,虽然可以提交任务，但是要保证窗口一直挂着，且不能断链，这显然是很不方便的，所以还需要<code>yhbatch</code>提交脚本。<br>
 将脚本命名为<code>run.sh</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>module purge
+</span></span></span><span class="line"><span class="cl">module purge
 </span></span><span class="line"><span class="cl">module load intel/oneapi2023.2_impi
 </span></span><span class="line"><span class="cl">module load mpi/mpich/4.1.2-gcc-11.4.0-ch4
 </span></span><span class="line"><span class="cl">module list
@@ -927,7 +927,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
     <br>
 这是我自己的脚本：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">#SBATCH -J ljb         ## Job Name</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -J ljb         ## Job Name</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -o out.%j            ## standard output</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -e err.%j              ## standard error</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#SBATCH -p mars               ## Partition</span>
@@ -1139,7 +1139,7 @@ nodelist 将会被当作是一个文件名，其中包含了所请求的结点�
         
             2024 - 
         
-        2025 allergicrosen
+        2026 allergicrosen
     </section>
     
     <section class="powerby">
